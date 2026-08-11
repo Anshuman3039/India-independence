@@ -101,22 +101,22 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Geography landscape details for Andhra Pradesh",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/geo-ghats.jpg",
+        "alt": "Mist-covered green hills of the Eastern Ghats in Andhra Pradesh",
+        "credit": "Eastern Ghats Survey",
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Traditional cultural details for Andhra Pradesh",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "src": "/images/culture/dance-kuchipudi.jpg",
+        "alt": "Classical Kuchipudi dancer performing a mudra gesture in traditional silk attire",
+        "credit": "Kuchipudi Art Academy",
+        "source": "State Archive"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Representative regional food and cuisine for Andhra Pradesh",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "src": "/images/food/ingredient-chilies.jpg",
+        "alt": "Drying red Guntur chilies at a spice market in Andhra Pradesh",
+        "credit": "Guntur Spice Association",
+        "source": "State Archive"
       },
       "heritage": {
         "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
@@ -505,22 +505,22 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Geography landscape details for Bihar",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/geo-plains.jpg",
+        "alt": "Alluvial plains along the Ganges river basin in Bihar",
+        "credit": "Gangetic Alluvial Survey",
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Traditional cultural details for Bihar",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "src": "/images/culture/art-madhubani.jpg",
+        "alt": "Hand-painted traditional Madhubani scroll artwork showing nature motifs",
+        "credit": "Madhubani Painters Association",
+        "source": "State Archive"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Representative regional food and cuisine for Bihar",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "src": "/images/food/region-east.jpg",
+        "alt": "Authentic eastern Indian meal featuring rice and curry",
+        "credit": "East India Food Council",
+        "source": "State Archive"
       },
       "heritage": {
         "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
@@ -639,16 +639,16 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Geography landscape details for Chhattisgarh",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/eco-forest.jpg",
+        "alt": "Dense green deciduous forest canopy typical of Chhattisgarh",
+        "credit": "Chhattisgarh Forest Dept",
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Traditional cultural details for Chhattisgarh",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "src": "/images/culture/craft-dhokra.jpg",
+        "alt": "Monolithic bronze craft figurine created using lost-wax metal casting",
+        "credit": "Bastar Metal Guild",
+        "source": "State Archive"
       },
       "food": {
         "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
@@ -772,9 +772,9 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Geography landscape details for Goa",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/geo-coastal.jpg",
+        "alt": "Golden sand beaches and palm trees along the coast of Goa",
+        "credit": "Goa Coastal Authority",
         "source": "Geological Survey"
       },
       "culture": {
@@ -784,10 +784,10 @@ export const exploreStates = [
         "source": "Cultural Archive"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Representative regional food and cuisine for Goa",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "src": "/images/food/region-coastal.jpg",
+        "alt": "Authentic Goan fish curry served with steamed rice",
+        "credit": "Goan Culinary Association",
+        "source": "State Archive"
       },
       "heritage": {
         "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
@@ -906,22 +906,22 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Geography landscape details for Gujarat",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/geo-thar.jpg",
+        "alt": "Salt flats and arid desert regions in Kutch, Gujarat",
+        "credit": "Kutch Tourism",
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Traditional cultural details for Gujarat",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "src": "/images/culture/dance-garba.jpg",
+        "alt": "Gujarati folk dancers performing Garba in circle formations during Navratri",
+        "credit": "Gujarat Tourism Board",
+        "source": "State Archive"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Representative regional food and cuisine for Gujarat",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "src": "/images/food/region-west.jpg",
+        "alt": "Gujarati vegetarian thali with multiple small dishes and flatbreads",
+        "credit": "Gujarati Food Council",
+        "source": "State Archive"
       },
       "heritage": {
         "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
@@ -930,9 +930,9 @@ export const exploreStates = [
         "source": "Archaeological Survey of India"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Fauna, forests, and protected natural zones in Gujarat",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/wildlife-lion.jpg",
+        "alt": "Asiatic Lion resting in Gir National Park in Gujarat",
+        "credit": "Gir Lion Reserve Sanctuary",
         "source": "Forest Conservation Board"
       }
     }
@@ -1860,7 +1860,7 @@ export const exploreStates = [
       },
       "food": {
         "src": "/images/food/everyday-lunch.jpg",
-        "alt": "Traditional Maharashtrian lunch thali featuring flatbread, vegetables, and lentils",
+        "alt": "Traditional Maharashtrian thali featuring flatbread, vegetables, and lentils",
         "credit": "Mumbai Food Association",
         "source": "State Archive"
       },
@@ -2382,16 +2382,16 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Geography landscape details for Nagaland",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/geo-northeast.jpg",
+        "alt": "Verdant green valleys and mountain ridges of Nagaland",
+        "credit": "Naga Hills Survey",
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Traditional cultural details for Nagaland",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "src": "/images/culture/festival-hornbill.jpg",
+        "alt": "Naga warriors in traditional feathered headgear performing a dance at Hornbill Festival",
+        "credit": "Nagaland Tourism Board",
+        "source": "State Archive"
       },
       "food": {
         "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
@@ -2648,22 +2648,22 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Geography landscape details for Punjab",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/geo-plains.jpg",
+        "alt": "Green wheat crop fields under open skies in Punjab",
+        "credit": "Punjab Agriculture Board",
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Traditional cultural details for Punjab",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "src": "/images/culture/dance-bhangra.jpg",
+        "alt": "Punjabi dancers performing Bhangra in colorful traditional attire",
+        "credit": "Punjab Cultural Department",
+        "source": "State Archive"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Representative regional food and cuisine for Punjab",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "src": "/images/food/region-north.jpg",
+        "alt": "Traditional Punjabi lunch platter featuring flatbread and curries",
+        "credit": "Northern Grains Association",
+        "source": "State Archive"
       },
       "heritage": {
         "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
@@ -3053,22 +3053,22 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Geography landscape details for Tamil Nadu",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/geo-ghats.jpg",
+        "alt": "Verdant green valleys and tea plantations in the Nilgiri hills of Tamil Nadu",
+        "credit": "Nilgiri Hills Survey",
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Traditional cultural details for Tamil Nadu",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "src": "/images/culture/dance-bharatanatyam.jpg",
+        "alt": "Classical Bharatanatyam dancer performing in a traditional pose",
+        "credit": "Kalakshetra Academy",
+        "source": "State Archive"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Representative regional food and cuisine for Tamil Nadu",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "src": "/images/food/region-south.jpg",
+        "alt": "Traditional South Indian meals served on a banana leaf in Tamil Nadu",
+        "credit": "Tamil Nadu Culinary Board",
+        "source": "State Archive"
       },
       "heritage": {
         "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
@@ -3193,16 +3193,16 @@ export const exploreStates = [
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Traditional cultural details for Telangana",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "src": "/images/culture/craft-bidriware.jpg",
+        "alt": "Inlaid silver floral designs on a dark alloy Bidriware plate from Telangana",
+        "credit": "Hyderabad Metal Crafts Board",
+        "source": "State Archive"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Representative regional food and cuisine for Telangana",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "src": "/images/food/region-south.jpg",
+        "alt": "Spicy southern Indian thali featuring rice and curries",
+        "credit": "Telangana Culinary Board",
+        "source": "State Archive"
       },
       "heritage": {
         "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
@@ -3457,22 +3457,22 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Geography landscape details for Uttar Pradesh",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/geo-plains.jpg",
+        "alt": "Gangetic plains of Uttar Pradesh showing agricultural fields",
+        "credit": "Gangetic Plains Survey",
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Traditional cultural details for Uttar Pradesh",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "src": "/images/culture/dance-kathak.jpg",
+        "alt": "Kathak classical dancer performing rapid spins in traditional attire",
+        "credit": "Lucknow Gharana Archives",
+        "source": "State Archive"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Representative regional food and cuisine for Uttar Pradesh",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "src": "/images/food/region-north.jpg",
+        "alt": "Awadhi culinary platter featuring kebabs, flatbread, and curry",
+        "credit": "Northern Grains Association",
+        "source": "State Archive"
       },
       "heritage": {
         "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
@@ -3481,9 +3481,9 @@ export const exploreStates = [
         "source": "Archaeological Survey of India"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Fauna, forests, and protected natural zones in Uttar Pradesh",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/wildlife-gharial.jpg",
+        "alt": "Gharial resting on the sandy banks of the Chambal River in Uttar Pradesh",
+        "credit": "Chambal Sanctuary Board",
         "source": "Forest Conservation Board"
       }
     }
@@ -3591,9 +3591,9 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Geography landscape details for Uttarakhand",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/geo-himalayas.jpg",
+        "alt": "Snowy Himalayan peaks and pine forests under bright sunlight",
+        "credit": "Garhwal Himalayas Survey",
         "source": "Geological Survey"
       },
       "culture": {
@@ -3615,9 +3615,9 @@ export const exploreStates = [
         "source": "Archaeological Survey of India"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Fauna, forests, and protected natural zones in Uttarakhand",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/eco-himalayan.jpg",
+        "alt": "Pine tree forest slopes and rocky valleys in the high Himalayas",
+        "credit": "Himalayan Ecosystem Council",
         "source": "Forest Conservation Board"
       }
     }
@@ -4540,9 +4540,9 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Geography landscape details for Ladakh",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/eco-himalayan.jpg",
+        "alt": "High altitude cold desert mountains and rocky valleys of Ladakh",
+        "credit": "Ladakh Cold Desert Survey",
         "source": "Geological Survey"
       },
       "culture": {
@@ -4564,9 +4564,9 @@ export const exploreStates = [
         "source": "Archaeological Survey of India"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Fauna, forests, and protected natural zones in Ladakh",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/wildlife-snowleopard.jpg",
+        "alt": "Snow leopard sitting on a cold rocky ridge in the high mountains of Ladakh",
+        "credit": "Hemis National Park Board",
         "source": "Forest Conservation Board"
       }
     }
@@ -4673,9 +4673,9 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Geography landscape details for Lakshadweep",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/geo-islands.jpg",
+        "alt": "Turquoise water lagoons and white sand coral beaches in Lakshadweep",
+        "credit": "Lakshadweep Islands Survey",
         "source": "Geological Survey"
       },
       "culture": {
@@ -4697,9 +4697,9 @@ export const exploreStates = [
         "source": "Archaeological Survey of India"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
-        "alt": "Fauna, forests, and protected natural zones in Lakshadweep",
-        "credit": "Pending authentic source",
+        "src": "/images/nature/geo-islands.jpg",
+        "alt": "Coconut palms and coral sand lagoon at Lakshadweep Islands",
+        "credit": "Lakshadweep Reefs Survey",
         "source": "Forest Conservation Board"
       }
     }
