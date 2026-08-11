@@ -959,7 +959,7 @@ export const exploreStates = [
     "region": "North",
     "introduction": "An agricultural powerhouse in the Indo-Gangetic plains, central to ancient Vedic texts and Mahabharata history. The state lies on the flat plains bordering Delhi, drained by the Yamuna River. It is a major agricultural hub, famous for its Basmati rice crop and livestock.",
     "image": "/images/nature/geo-plains.jpg",
-    "imageCredit": "North India Agriculture Survey",
+    "imageCredit": "Kabuli Bagh Mosque Archive",
     "geography": {
       "location": "Located in northern India, surrounding the national capital region of Delhi on three sides.",
       "features": [
@@ -1051,20 +1051,20 @@ export const exploreStates = [
     "images": {
       "hero": {
         "src": "/images/nature/geo-plains.jpg",
-        "alt": "Sunlit green wheat crop fields across the plains of Haryana",
-        "credit": "North India Agriculture Survey",
+        "alt": "Historic Kabuli Bagh Mosque gateway and brick arches built by Babur in Panipat, Haryana",
+        "credit": "Kabuli Bagh Mosque Archive",
         "source": "State Tourism Portal"
       },
       "geography": {
         "src": "/images/geography/haryana_geography.jpg",
-        "alt": "Geography landscape details for Haryana",
-        "credit": "India. Superintendent of Census Operations, Punjab Anand, R. L., 1907- / Wikimedia Commons",
+        "alt": "Scenic deep blue quarry lake surrounded by white rocky cliffs in Faridabad, Haryana",
+        "credit": "Haryana Quarry Lakes Survey",
         "source": "https://commons.wikimedia.org/wiki/File:District_census_handbook,_Punjab_(IA_districtcensusha17indi).pdf"
       },
       "culture": {
         "src": "/images/culture/haryana_culture.jpg",
-        "alt": "Traditional cultural details for Haryana",
-        "credit": "Department of Language and Culture, Government of Telangana / Wikimedia Commons",
+        "alt": "Haryanvi folk dancers performing with brass water pots balanced on their heads in traditional dress",
+        "credit": "Haryana Cultural Department",
         "source": "https://commons.wikimedia.org/wiki/File:Pothuraju_Artist_in_Culture_of_Telangana_Programme_at_Surajkund,_Haryana_(02.02.2016)_02.jpg"
       },
       "food": {
@@ -1075,14 +1075,14 @@ export const exploreStates = [
       },
       "heritage": {
         "src": "/images/heritage/haryana_heritage.jpg",
-        "alt": "Historic monuments and archaeological architecture in Haryana",
-        "credit": "Harvinder Chandigarh / Wikimedia Commons",
+        "alt": "Ruined historic dome tomb built of local masonry and plaster in Narnaul, Haryana",
+        "credit": "Haryana Archaeological Department",
         "source": "https://commons.wikimedia.org/wiki/File:Punjab_and_Haryana_High_Court_,Capitol_Complex,_World_Heritage_Site.jpg"
       },
       "nature": {
         "src": "/images/nature/haryana_nature.jpg",
-        "alt": "Fauna, forests, and protected natural zones in Haryana",
-        "credit": "Slyronit / Wikimedia Commons",
+        "alt": "A grey watercock bird wading through muddy wetlands in Sultanpur Bird Sanctuary, Haryana",
+        "credit": "Sultanpur Bird Sanctuary Archive",
         "source": "https://commons.wikimedia.org/wiki/File:Sultanpur_National_Park_on_a_foggy_morning.jpg"
       }
     }
