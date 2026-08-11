@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import IndiaMap from './IndiaMap';
 import RegionInfo from './RegionInfo';
 import MapLegend from './MapLegend';
-import { regionsData } from '../../../data/regions';
+import { exploreStates } from '../../../data/exploreStates';
 import { stateLabelCoordinates } from '../../../data/stateCoordinates';
 
 export default function ExploreIndia() {
@@ -51,17 +51,15 @@ export default function ExploreIndia() {
   };
 
   const handleStateSelect = (id, name) => {
-    // Look up verified data, or compile a clean coming-soon placeholder
-    const stateInfo = regionsData[id] || {
+    const stateInfo = exploreStates.find(state => state.id === id);
+    setSelectedState(stateInfo || {
       id,
       name,
-      description: "Cultural themes, regional delicacies, and wildlife details for this state will be added in the next exploration phase.",
-      languages: ["Information coming soon"],
-      culture: ["Local arts and traditions are being compiled"],
-      food: ["Regional culinary features are being cataloged"],
-      nature: ["Natural sanctuaries and geographical landmarks are being documented"]
-    };
-    setSelectedState(stateInfo);
+      introduction: "Cultural themes, regional delicacies, and wildlife details for this state are being compiled.",
+      images: {
+        hero: { src: "/images/culture/dance-kuchipudi.jpg", alt: name, credit: "State Archive" }
+      }
+    });
   };
 
   const handleClosePanel = () => {
