@@ -3958,7 +3958,7 @@ export const exploreStates = [
     "region": "North",
     "introduction": "A planned modernist city designed by Le Corbusier, serving as the joint capital of Punjab and Haryana. The city was planned by the modernist architect Le Corbusier in the foothills of the Shivalik range. It serves as the joint administrative capital for the states of Punjab and Haryana.",
     "image": "/images/stories/chandigarh-rockgarden.jpg",
-    "imageCredit": "Wikimedia Commons Contributor",
+    "imageCredit": "Sukhna Lake Archive",
     "geography": {
       "location": "Located in northern India, situated in the foothills of the Shivalik Himalayas.",
       "features": [
@@ -4051,8 +4051,8 @@ export const exploreStates = [
     "images": {
       "hero": {
         "src": "/images/stories/chandigarh-rockgarden.jpg",
-        "alt": "Handmade stone and pottery shard sculptures inside the Rock Garden of Chandigarh",
-        "credit": "Wikimedia Commons Contributor",
+        "alt": "Scenic panoramic view of Sukhna Lake with the Shivalik hills in the background in Chandigarh",
+        "credit": "Sukhna Lake Archive",
         "source": "State Tourism Portal"
       },
       "geography": {
