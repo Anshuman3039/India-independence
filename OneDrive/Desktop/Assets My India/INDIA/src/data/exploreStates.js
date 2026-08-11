@@ -1,0 +1,4845 @@
+// Complete factual metadata registry of all 28 States and 8 Union Territories
+export const exploreStates = [
+  {
+    "id": "ap",
+    "name": "Andhra Pradesh",
+    "type": "state",
+    "capital": "Amaravati",
+    "region": "South",
+    "introduction": "A riverine southern state with a long coastline, famous for its ancient Buddhist history, Kuchipudi classical dance, and spice crops.",
+    "image": "/images/culture/dance-kuchipudi.jpg",
+    "imageCredit": "Kuchipudi Art Academy",
+    "geography": {
+      "location": "Located in the southeastern region of India, along the Bay of Bengal.",
+      "features": [
+        "Godavari and Krishna River Basins",
+        "Eastern Ghats",
+        "Rayalaseema Plateaus"
+      ],
+      "climate": "Hot and humid tropical climate, prone to monsoon storms along the coast."
+    },
+    "culture": {
+      "languages": [
+        "Telugu"
+      ],
+      "festivals": [
+        "Ugadi (Telugu New Year)",
+        "Deccan Festival",
+        "Sankranti"
+      ],
+      "traditions": [
+        "Kuchipudi Classical Dance",
+        "Kalamkari Hand-painted Textiles",
+        "Kondapalli Wooden Toys"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Andhra Biryani",
+        "Gongura Pachadi (roselle leaf chutney)",
+        "Pesarattu (green gram crepe)"
+      ],
+      "ingredients": [
+        "Guntur red chillies",
+        "Tamarind",
+        "Rice"
+      ],
+      "traditions": "Known for having some of the spiciest regional cuisines in India, with heavy reliance on local lentils and tamarind."
+    },
+    "nature": {
+      "ecosystems": [
+        "Dry deciduous forests",
+        "River deltas",
+        "Coastal lagoons"
+      ],
+      "wildlife": [
+        "Blackbucks",
+        "Fishing Cats",
+        "Pelicans"
+      ],
+      "areas": [
+        "Araku Valley",
+        "Pulicat Lake Bird Sanctuary",
+        "Sri Venkateswara National Park"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Veerabhadra Temple at Lepakshi",
+        "Tirumala Venkateswara Temple",
+        "Belum Caves"
+      ],
+      "architecture": "Vijayanagara and Dravidian temple styles featuring detailed rock carvings and massive stone pillars."
+    },
+    "places": [
+      {
+        "name": "Lepakshi",
+        "description": "Famous for its hanging pillar and largest monolithic Nandi bull sculpture."
+      },
+      {
+        "name": "Araku Valley",
+        "description": "A hill station surrounded by thick forests and coffee plantations."
+      },
+      {
+        "name": "Amaravati",
+        "description": "Ancient site of a large Buddhist Mahachaitya stupa dating back to the 2nd century BCE."
+      }
+    ],
+    "facts": [
+      "Andhra Pradesh is home to the Tirumala temple, one of the most visited religious sites in the world.",
+      "Kalamkari art originated here as a style of storytelling using natural dyes on cotton fabric."
+    ],
+    "sources": [
+      "Archaeological Survey of India",
+      "Andhra Pradesh Tourism Portal"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/culture/dance-kuchipudi.jpg",
+        "alt": "Classical Kuchipudi dancer in red and gold silk costume performing a dance posture",
+        "credit": "Kuchipudi Art Academy",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Andhra Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Andhra Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Andhra Pradesh",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Andhra Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Andhra Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "ar",
+    "name": "Arunachal Pradesh",
+    "type": "state",
+    "capital": "Itanagar",
+    "region": "Northeast",
+    "introduction": "The Land of the Dawn-Lit Mountains, featuring thick sub-tropical forests, snow-covered Himalayan peaks, and diverse indigenous tribes.",
+    "image": "/images/stories/arunachal-monastery.jpg",
+    "imageCredit": "Tawang Buddhist Monastery / Architectural Archive",
+    "geography": {
+      "location": "Located in the extreme northeastern corner of India, bordering Bhutan, Tibet, and Myanmar.",
+      "features": [
+        "Eastern Himalayas",
+        "Brahmaputra tributaries",
+        "Ziro Valley"
+      ],
+      "climate": "Ranges from subtropical in the foothills to alpine tundra in the high mountains."
+    },
+    "culture": {
+      "languages": [
+        "Nyishi",
+        "Adi",
+        "Monpa",
+        "English"
+      ],
+      "festivals": [
+        "Losar (Tibetan New Year)",
+        "Solung",
+        "Nyokum"
+      ],
+      "traditions": [
+        "Thangka painting",
+        "Monastery mask dances",
+        "Bamboo and cane weaving"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Thukpa (noodle soup)",
+        "Momo (steamed dumplings)",
+        "Lukter (smoked pork with chilli)"
+      ],
+      "ingredients": [
+        "Fermented bamboo shoots",
+        "Local herbs",
+        "Chilli"
+      ],
+      "traditions": "Cuisine centers on boiling and smoking techniques rather than frying, utilizing local herbs and wild greens."
+    },
+    "nature": {
+      "ecosystems": [
+        "Subtropical pine forests",
+        "Alpine meadows",
+        "Rhododendron sanctuaries"
+      ],
+      "wildlife": [
+        "Takins",
+        "Snow Leopards",
+        "Hoolock Gibbons"
+      ],
+      "areas": [
+        "Namdapha National Park",
+        "Sela Pass",
+        "Talley Valley Wildlife Sanctuary"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Tawang Monastery",
+        "Bhismaknagar Fort",
+        "Itanagar Fort"
+      ],
+      "architecture": "Features traditional Buddhist monastic structures and tribal bamboo-stilt houses."
+    },
+    "places": [
+      {
+        "name": "Tawang",
+        "description": "Home to the largest Buddhist monastery in India, founded in the 17th century."
+      },
+      {
+        "name": "Ziro Valley",
+        "description": "A flat valley populated by the Apatani tribe, famous for integrated fish and rice farming."
+      },
+      {
+        "name": "Sela Pass",
+        "description": "A high-altitude mountain pass located at 13,700 feet with frozen lakes."
+      }
+    ],
+    "facts": [
+      "Tawang Monastery is the second largest Buddhist monastery in the world after the Potala Palace in Lhasa.",
+      "Arunachal Pradesh has the highest forest cover percentage of any large state in India."
+    ],
+    "sources": [
+      "National Geographic Society",
+      "Government of Arunachal Pradesh Portal"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/arunachal-monastery.jpg",
+        "alt": "The grand stone and wood facade of the Tawang Buddhist Monastery under a blue sky",
+        "credit": "Tawang Buddhist Monastery / Architectural Archive",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Arunachal Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Arunachal Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Arunachal Pradesh",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Arunachal Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Arunachal Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "as",
+    "name": "Assam",
+    "type": "state",
+    "capital": "Dispur",
+    "region": "Northeast",
+    "introduction": "Gateway to the Northeast, home to expansive tea estates, the sacred Brahmaputra River, and rare one-horned rhinos.",
+    "image": "/images/culture/festival-bihu.jpg",
+    "imageCredit": "Rongali Bihu Festival, Guwahati",
+    "geography": {
+      "location": "Located in northeastern India, situated along the valleys of the Brahmaputra and Barak Rivers.",
+      "features": [
+        "Brahmaputra Valley",
+        "Karbi Anglong Hills",
+        "Majuli River Island",
+        "Cachar Plains"
+      ],
+      "climate": "Tropical monsoon rainforest climate with heavy annual rainfall and summer river flooding."
+    },
+    "culture": {
+      "languages": [
+        "Assamese",
+        "Bodo"
+      ],
+      "festivals": [
+        "Bihu (Rongali, Kongali, Bhogali)",
+        "Ambubachi Mela",
+        "Jonbeel Mela"
+      ],
+      "traditions": [
+        "Bihu Folk Dance",
+        "Muga Golden Silk weaving",
+        "Sattriya Classical Dance"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Masor Tenga (sour fish curry)",
+        "Khar (papaya ash extract)",
+        "Aloo Pitika"
+      ],
+      "ingredients": [
+        "Banana pseudo-stem",
+        "Hilsa & local fish",
+        "Bamboo shoots"
+      ],
+      "traditions": "Uses minimal spices and focuses on organic herbs, fermented ingredients, and souring agents like elephant apple."
+    },
+    "nature": {
+      "ecosystems": [
+        "Semi-evergreen rainforests",
+        "Alluvial grasslands",
+        "Riverine wetlands"
+      ],
+      "wildlife": [
+        "Greater One-horned Rhinoceroses",
+        "Pygmy Hogs",
+        "Assamese Macaques"
+      ],
+      "areas": [
+        "Kaziranga National Park (UNESCO)",
+        "Manas National Park (UNESCO)",
+        "Dibru-Saikhowa National Park"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Kamakhya Temple",
+        "Rang Ghar (royal amphitheater)",
+        "Talatal Ghar (Ahom palace)"
+      ],
+      "architecture": "Ahom dynasty brick palaces and monasteries (sattras) designed with curved roof shapes resembling boats."
+    },
+    "places": [
+      {
+        "name": "Majuli",
+        "description": "One of the largest river islands in the world, renowned for Vaishnavite monasteries."
+      },
+      {
+        "name": "Kaziranga",
+        "description": "Host to two-thirds of the world's remaining population of the great Indian one-horned rhino."
+      },
+      {
+        "name": "Sualkuchi",
+        "description": "Known as the Manchester of Assam, dedicated entirely to handloom silk weaving."
+      }
+    ],
+    "facts": [
+      "Muga silk, native only to Assam, naturally possesses a shimmering golden-yellow tint that increases in luster with washing.",
+      "Majuli is the first island in India to be declared a district, recognized for its Vaishnavite cultural institutions (Sattras)."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Assam Tourism Portal"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/culture/festival-bihu.jpg",
+        "alt": "Assamese dancers in traditional cream and red silk attire performing the energetic Bihu dance",
+        "credit": "Rongali Bihu Festival, Guwahati",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "/images/nature/geo-northeast.jpg",
+        "alt": "Lush green crop valleys and rivers flowing through Assam",
+        "credit": "Brahmaputra River Valleys Survey",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "/images/food/everyday-chai.jpg",
+        "alt": "Workers picking fresh tea leaves in the tea gardens of Assam",
+        "credit": "Assam Tea Board",
+        "source": "State Archive"
+      },
+      "food": {
+        "src": "/images/food/region-northeast.jpg",
+        "alt": "Traditional Assamese food thali serving rice, bamboo shoot fish, and local herbs",
+        "credit": "Assamese Culinary Council",
+        "source": "State Archive"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Assam",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "/images/nature/wildlife-rhino.jpg",
+        "alt": "One-horned Indian rhinoceros standing in a wetland swamp in Assam",
+        "credit": "Kaziranga National Park Board",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "br",
+    "name": "Bihar",
+    "type": "state",
+    "capital": "Patna",
+    "region": "East",
+    "introduction": "A land of ancient spiritual learning, the cradle of Buddhism and Jainism, famous for Madhubani art and historic universities.",
+    "image": "/images/culture/art-madhubani.jpg",
+    "imageCredit": "Madhubani Painting Collection",
+    "geography": {
+      "location": "Located in eastern India, split into northern and southern halves by the Ganges River.",
+      "features": [
+        "Ganges Floodplains",
+        "Kaimur Hills",
+        "Terai Foothills"
+      ],
+      "climate": "Humid subtropical climate with hot summers and cold, dry winters."
+    },
+    "culture": {
+      "languages": [
+        "Hindi",
+        "Bhojpuri",
+        "Maithili",
+        "Magahi"
+      ],
+      "festivals": [
+        "Chhath Puja",
+        "Sama Chakeva",
+        "Shravani Mela"
+      ],
+      "traditions": [
+        "Madhubani/Mithila painting",
+        "Manjusha Folk Art",
+        "Sujini Embroidery"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Litti Chokha (roasted wheat balls with mashed vegetables)",
+        "Sattu Paratha",
+        "Thekua (sweet cookie)"
+      ],
+      "ingredients": [
+        "Sattu (roasted gram flour)",
+        "Mustard oil",
+        "Jaggery"
+      ],
+      "traditions": "Nutritious and simple cooking focused on locally milled roasted grains, which provide sustained energy during summer."
+    },
+    "nature": {
+      "ecosystems": [
+        "Riverine plains",
+        "Dry deciduous woodlands",
+        "Wetlands"
+      ],
+      "wildlife": [
+        "Ganges River Dolphins",
+        "Gharials",
+        "Sarus Cranes"
+      ],
+      "areas": [
+        "Valmiki National Park",
+        "Vikramshila Dolphin Sanctuary",
+        "Kanwar Lake Bird Sanctuary"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Mahabodhi Temple Complex (UNESCO)",
+        "Nalanda University Ruins (UNESCO)",
+        "Sher Shah Suri Mausoleum"
+      ],
+      "architecture": "Ancient brick stupas, rock-cut caves (Barabar), and medieval Afghan tomb structures."
+    },
+    "places": [
+      {
+        "name": "Bodh Gaya",
+        "description": "The site where Siddhartha Gautama achieved enlightenment under the Bodhi Tree."
+      },
+      {
+        "name": "Nalanda",
+        "description": "Ruins of one of the world's first residential universities, operating from the 5th century CE."
+      },
+      {
+        "name": "Rajgir",
+        "description": "A historic valley enclosed by hills, hosting hot springs and Buddhist-Jain shrines."
+      }
+    ],
+    "facts": [
+      "The Barabar Caves in Bihar are the oldest surviving rock-cut caves in India, dating to the Maurya Empire.",
+      "Madhubani painting was traditionally done on freshly plastered mud walls using fingers and twigs."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Archaeological Survey of India"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/culture/art-madhubani.jpg",
+        "alt": "Hand-painted traditional Madhubani scroll showing divine figures and nature motifs",
+        "credit": "Madhubani Painting Collection",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Bihar",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Bihar",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Bihar",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Bihar",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Bihar",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "cg",
+    "name": "Chhattisgarh",
+    "type": "state",
+    "capital": "Raipur",
+    "region": "Central",
+    "introduction": "A heavily forested central state rich in tribal heritage, ancient brick temples, and metallic handcrafts.",
+    "image": "/images/culture/craft-dhokra.jpg",
+    "imageCredit": "Bastar Dhokra Metal Art",
+    "geography": {
+      "location": "Located in central India, bordered by six states and characterized by hilly plateau lands.",
+      "features": [
+        "Mahanadi River Basin",
+        "Maikal Hills",
+        "Bastar Plateau"
+      ],
+      "climate": "Tropical wet and dry climate with heavy monsoonal rains."
+    },
+    "culture": {
+      "languages": [
+        "Chhattisgarhi",
+        "Hindi",
+        "Gondi"
+      ],
+      "festivals": [
+        "Bastar Dussehra",
+        "Hareli",
+        "Madai Festival"
+      ],
+      "traditions": [
+        "Dhokra Metal Casting",
+        "Panthi Dance",
+        "Pandanvani folk singing"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Chila (rice flour pancake)",
+        "Muthia (steamed rice dumplings)",
+        "Bafauri"
+      ],
+      "ingredients": [
+        "Rice",
+        "Mahua flowers",
+        "Lentils"
+      ],
+      "traditions": "Known as the Bowl of Rice, the cuisine uses rice flour extensively, often paired with forest-foraged leaves and wild berries."
+    },
+    "nature": {
+      "ecosystems": [
+        "Dense moist sal forests",
+        "Bamboo woodlands",
+        "River valleys"
+      ],
+      "wildlife": [
+        "Wild Water Buffaloes",
+        "Hill Mynas (state bird)",
+        "Tigers"
+      ],
+      "areas": [
+        "Kanger Valley National Park",
+        "Indravati Tiger Reserve",
+        "Chitrakote Falls"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Sirpur Brick Temples",
+        "Bhoramdeo Temple Complex",
+        "Kutumsar Caves"
+      ],
+      "architecture": "Nagara style stone shrines and early medieval brick masonry temples covered in sculptures."
+    },
+    "places": [
+      {
+        "name": "Chitrakote",
+        "description": "Known as the Niagara of India, a wide horseshoe waterfall on the Indravati River."
+      },
+      {
+        "name": "Sirpur",
+        "description": "Historic town on the Mahanadi River exhibiting remains of Buddhist and Hindu brick shrines."
+      },
+      {
+        "name": "Bastar",
+        "description": "Tribal heartland famous for its unique brass-casting crafts and forest customs."
+      }
+    ],
+    "facts": [
+      "Bastar Dussehra is the longest festival in the world, celebrated over 75 days.",
+      "Dhokra art uses a lost-wax casting technique that has remained unchanged since the Indus Valley Civilization."
+    ],
+    "sources": [
+      "Chhattisgarh Tourism Development Board",
+      "Archaeological Survey of India"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/culture/craft-dhokra.jpg",
+        "alt": "Monolithic bronze craft figurine created using lost-wax metal casting",
+        "credit": "Bastar Dhokra Metal Art",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Chhattisgarh",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Chhattisgarh",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Chhattisgarh",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Chhattisgarh",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Chhattisgarh",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "ga",
+    "name": "Goa",
+    "type": "state",
+    "capital": "Panaji",
+    "region": "West",
+    "introduction": "A coastal state on the Arabian Sea, combining sandy shores, spice farms, and a unique fusion of Portuguese and Konkani cultures.",
+    "image": "/images/nature/geo-coastal.jpg",
+    "imageCredit": "Coastal Eco Systems Survey",
+    "geography": {
+      "location": "Located on the southwestern coast of India, within the Konkan region.",
+      "features": [
+        "Mandovi and Zuari Rivers",
+        "Sahyadri Western Ghats",
+        "Zuarian Estuary"
+      ],
+      "climate": "Tropical monsoonal climate, warm and humid throughout the year."
+    },
+    "culture": {
+      "languages": [
+        "Konkani"
+      ],
+      "festivals": [
+        "Shigmo (Folk Festival)",
+        "Feast of St. Francis Xavier",
+        "Bonderam"
+      ],
+      "traditions": [
+        "Mando Music",
+        "Dekhni Dance",
+        "Terracotta Pottery"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Fish Curry Rice",
+        "Pork Vindaloo",
+        "Bebinca (multi-layered dessert)"
+      ],
+      "ingredients": [
+        "Kokum",
+        "Coconut milk",
+        "Toddgy vinegar",
+        "Cashew"
+      ],
+      "traditions": "Blends Portuguese cooking styles (use of vinegar, pork, and baking) with traditional coastal Konkani methods (spices, coconut)."
+    },
+    "nature": {
+      "ecosystems": [
+        "Estuarine mangroves",
+        "Coastal beaches",
+        "Evergreen rainforests"
+      ],
+      "wildlife": [
+        "Gaur (Indian Bison)",
+        "Olive Ridley Turtles",
+        "Kingfishers"
+      ],
+      "areas": [
+        "Bhagwan Mahavir Wildlife Sanctuary",
+        "Salim Ali Bird Sanctuary",
+        "Dudhsagar Falls"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Churches and Convents of Goa (UNESCO)",
+        "Mangueshi Temple",
+        "Cabo de Rama Fort"
+      ],
+      "architecture": "Baroque European-style churches and traditional Portuguese-Goan houses painted in bright colors."
+    },
+    "places": [
+      {
+        "name": "Old Goa",
+        "description": "The former Portuguese capital, hosting monumental 16th-century cathedrals."
+      },
+      {
+        "name": "Dudhsagar Falls",
+        "description": "A four-tiered waterfall on the Mandovi River descending down a Sahyadri mountain cliff."
+      },
+      {
+        "name": "Fontainhas",
+        "description": "The Latin Quarter of Panaji, preserved with narrow colonial streets and red-tiled houses."
+      }
+    ],
+    "facts": [
+      "Goa is the smallest state in India by area, but has one of the highest standards of living.",
+      "The Basilica of Bom Jesus houses the preserved mortal remains of St. Francis Xavier."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Goa Government Tourism Department"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/nature/geo-coastal.jpg",
+        "alt": "Golden sand beaches and palm trees along the coast of Goa",
+        "credit": "Coastal Eco Systems Survey",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Goa",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Goa",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Goa",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Goa",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Goa",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "gj",
+    "name": "Gujarat",
+    "type": "state",
+    "capital": "Gandhinagar",
+    "region": "West",
+    "introduction": "A historic trading state renowned for salt deserts, lion sanctuaries, and colorful folk dances.",
+    "image": "/images/stories/gujarat-landscape.jpg",
+    "imageCredit": "Kutch Tourism",
+    "geography": {
+      "location": "Situated in western India, featuring the longest coastline of any Indian state.",
+      "features": [
+        "Great Rann of Kutch",
+        "Gir Forest (Asiatic Lions)",
+        "Saputara Hills"
+      ],
+      "climate": "Arid to semi-arid climate, featuring hot summers, low rainfall, and cool desert nights during winter."
+    },
+    "culture": {
+      "languages": [
+        "Gujarati"
+      ],
+      "festivals": [
+        "Garba & Dandiya Festivals",
+        "International Kite Festival",
+        "Modhera Dance Festival"
+      ],
+      "traditions": [
+        "Garba folk dance",
+        "Patola silk tie-dye",
+        "Rogan fabric painting"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Dhokla & Khandvi",
+        "Gujarati Thali",
+        "Thepla",
+        "Undhiyu (winter vegetable pot)"
+      ],
+      "ingredients": [
+        "Gram flour (besan)",
+        "Jaggery",
+        "Peanut oil",
+        "Sesame seeds"
+      ],
+      "traditions": "Primarily vegetarian, balancing sweet, salty, and sour flavors in single dishes."
+    },
+    "nature": {
+      "ecosystems": [
+        "Arid desert scrubs",
+        "Dry deciduous forests",
+        "Wetland sanctuaries"
+      ],
+      "wildlife": [
+        "Asiatic Lions",
+        "Wild Asses",
+        "Flamingos"
+      ],
+      "areas": [
+        "Great Rann of Kutch",
+        "Gir National Park",
+        "Nalsarovar Bird Sanctuary"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Rani ki Vav Stepwell (UNESCO)",
+        "Champaner-Pavagadh Park (UNESCO)",
+        "Sun Temple at Modhera"
+      ],
+      "architecture": "Intricate subterranean stepwells (vavs) and stone temples detailed with sun wheels."
+    },
+    "places": [
+      {
+        "name": "Rann of Kutch",
+        "description": "A massive seasonal salt marsh that dries into a white salt desert in winter."
+      },
+      {
+        "name": "Gir National Park",
+        "description": "The sole natural habitat of the endangered Asiatic Lion in the wild."
+      },
+      {
+        "name": "Sabarmati Ashram",
+        "description": "The peaceful riverbank home of Mahatma Gandhi, the center of the Salt Satyagraha."
+      }
+    ],
+    "facts": [
+      "Rani ki Vav is an inverted temple stepwell built to honor an 11th-century Solanki ruler.",
+      "Gujarat hosts the world's largest ship-breaking yard at Alang."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Gujarat Tourism Portal"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/gujarat-landscape.jpg",
+        "alt": "White salt marshes of the Great Rann of Kutch stretching to the horizon",
+        "credit": "Kutch Tourism",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Gujarat",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Gujarat",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Gujarat",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Gujarat",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Gujarat",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "hr",
+    "name": "Haryana",
+    "type": "state",
+    "capital": "Chandigarh",
+    "region": "North",
+    "introduction": "An agricultural powerhouse in the Indo-Gangetic plains, central to ancient Vedic texts and Mahabharata history.",
+    "image": "/images/nature/geo-plains.jpg",
+    "imageCredit": "North India Agriculture Survey",
+    "geography": {
+      "location": "Located in northern India, surrounding the national capital region of Delhi on three sides.",
+      "features": [
+        "Ghaggar Plain",
+        "Aravalli Outcrops",
+        "Yamuna Floodplains"
+      ],
+      "climate": "Continental climate with hot summers and cold winters, heavily irrigated."
+    },
+    "culture": {
+      "languages": [
+        "Haryanvi",
+        "Hindi",
+        "Punjabi"
+      ],
+      "festivals": [
+        "Surajkund International Crafts Mela",
+        "Pinjore Heritage Festival",
+        "Teej"
+      ],
+      "traditions": [
+        "Saang Folk Theatre",
+        "Phulkari craft work",
+        "Handloom weaving"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Singri ki Sabzi",
+        "Kachri ki Chutney",
+        "Bajra Khichri"
+      ],
+      "ingredients": [
+        "Buttermilk",
+        "Bajra (pearl millet)",
+        "Basmati rice"
+      ],
+      "traditions": "Known for a simple, hearty farming diet rich in dairy, fresh butter, and homemade breads."
+    },
+    "nature": {
+      "ecosystems": [
+        "Alluvial agricultural plains",
+        "Dry deciduous scrubs",
+        "Migratory wetlands"
+      ],
+      "wildlife": [
+        "Blackbucks",
+        "Nilgai",
+        "Siberian Cranes"
+      ],
+      "areas": [
+        "Sultanpur National Park",
+        "Kalesar National Park",
+        "Morni Hills"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Kurukshetra Battlefield Monuments",
+        "Pinjore Gardens",
+        "Tomb of Ibrahim Lodi"
+      ],
+      "architecture": "Mughal and Lodhi brick monuments, and modern planned architectures in Gurgaon and Panchkula."
+    },
+    "places": [
+      {
+        "name": "Kurukshetra",
+        "description": "A historic town revered as the setting of the ancient Mahabharata war."
+      },
+      {
+        "name": "Surajkund",
+        "description": "Site of an ancient 10th-century reservoir and the world's largest crafts fair in winter."
+      },
+      {
+        "name": "Gurugram",
+        "description": "A modern financial and technology hub containing futuristic glass skyscraper blocks."
+      }
+    ],
+    "facts": [
+      "Haryana surrounds Delhi on three sides, serving as a vital industrial and economic belt.",
+      "Surajkund Crafts Mela hosts over a million visitors annually, showcasing rural artisans."
+    ],
+    "sources": [
+      "Haryana Tourism Department",
+      "Government of India Historical Record"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/nature/geo-plains.jpg",
+        "alt": "Sunlit green wheat crop fields across the plains of Haryana",
+        "credit": "North India Agriculture Survey",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Haryana",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Haryana",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Haryana",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Haryana",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Haryana",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "hp",
+    "name": "Himachal Pradesh",
+    "type": "state",
+    "capital": "Shimla",
+    "region": "North",
+    "introduction": "A breathtaking land of snow-draped mountains, green pine valleys, and vibrant Buddhist-Hindu traditions.",
+    "image": "/images/stories/himalayan-landscape.jpg",
+    "imageCredit": "Himalayan Landscape Archive",
+    "geography": {
+      "location": "Located in northwestern India, bordered by Tibet to the east and northern states.",
+      "features": [
+        "Himalayan Ranges (Dhauladhar, Pir Panjal)",
+        "Spiti Valley",
+        "Beas River",
+        "Sutlej River"
+      ],
+      "climate": "Varies from humid subtropical in the foothills to alpine cold in the high peaks."
+    },
+    "culture": {
+      "languages": [
+        "Pahari",
+        "Hindi"
+      ],
+      "festivals": [
+        "Kullu Dussehra",
+        "Losar (Tibetan New Year)",
+        "Minjar Fair"
+      ],
+      "traditions": [
+        "Kullu Nati Dance",
+        "Chamba Rumal Embroidery",
+        "Thangka painting"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Dham (traditional festive meal)",
+        "Siddu (stuffed steamed bread)",
+        "Trout Fish Curry"
+      ],
+      "ingredients": [
+        "Yogurt",
+        "Lentils",
+        "Khor (fermented drink)",
+        "Apples"
+      ],
+      "traditions": "Dham is a slow-cooked multi-course feast prepared on festive occasions by specialized chefs (botis) using wooden fires."
+    },
+    "nature": {
+      "ecosystems": [
+        "Alpine meadows (bugyals)",
+        "Coniferous pine forests",
+        "Glacial valleys"
+      ],
+      "wildlife": [
+        "Snow Leopards",
+        "Western Tragopans (endangered)",
+        "Himalayan Ibexes"
+      ],
+      "areas": [
+        "Great Himalayan National Park (UNESCO)",
+        "Pin Valley National Park",
+        "Chandra Taal Lake"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Kalka-Shimla Railway (UNESCO)",
+        "Kangra Fort",
+        "Key Monastic Complex"
+      ],
+      "architecture": "Traditional wood-and-stone dry masonry (Kath-Kuni style) designed to withstand earthquakes."
+    },
+    "places": [
+      {
+        "name": "Spiti Valley",
+        "description": "A cold desert mountain valley featuring centuries-old monasteries."
+      },
+      {
+        "name": "Dharamshala & Mcleodganj",
+        "description": "The official residence of the Dalai Lama and center of Tibetan culture in exile."
+      },
+      {
+        "name": "Shimla",
+        "description": "The former summer capital of British India, known for colonial architecture."
+      }
+    ],
+    "facts": [
+      "The Kath-Kuni building technique uses alternating layers of timber and stone without any mortar.",
+      "Hikkim village in Spiti Valley houses the highest operational post office in the world at 14,400 feet."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Himachal Tourism Board"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/himalayan-landscape.jpg",
+        "alt": "Snow-covered peaks and evergreen alpine forests of Himachal Pradesh",
+        "credit": "Himalayan Landscape Archive",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "/images/nature/eco-himalayan.jpg",
+        "alt": "Pine tree forest slopes and rocky valleys in the high Himalayas",
+        "credit": "Himalayan Ecosystem Council",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Himachal Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "/images/food/region-north.jpg",
+        "alt": "Warm regional mountain cuisine platter featuring lentils and wheat bread",
+        "credit": "Northern Grains Association",
+        "source": "State Archive"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Himachal Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "/images/nature/wildlife-snowleopard.jpg",
+        "alt": "Snow Leopard resting on a cold rocky cliff in the high altitude region",
+        "credit": "Hemis National Park Board",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "jh",
+    "name": "Jharkhand",
+    "type": "state",
+    "capital": "Ranchi",
+    "region": "East",
+    "introduction": "A land of dense woodlands and mineral wealth, home to vibrant tribal communities and sacred Jain-Hindu mountain shrines.",
+    "image": "/images/nature/eco-forest.jpg",
+    "imageCredit": "Chotanagpur Forest Survey",
+    "geography": {
+      "location": "Located in eastern India, bordered by Bihar, Odisha, West Bengal, Chhattisgarh, and UP.",
+      "features": [
+        "Chota Nagpur Plateau",
+        "Parasnath Hills",
+        "Damodar and Subarnarekha Rivers"
+      ],
+      "climate": "Humid subtropical climate with warm summers and mild winters."
+    },
+    "culture": {
+      "languages": [
+        "Santhali",
+        "Mundari",
+        "Nagpuri",
+        "Hindi"
+      ],
+      "festivals": [
+        "Sarhul (Harvest Festival)",
+        "Karam Puja",
+        "Tusu Parab"
+      ],
+      "traditions": [
+        "Chhau Mask Dance of Seraikela",
+        "Sohrai Tribal Paintings",
+        "Paitkar paintings"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Dhuska (fried rice-lentil cake)",
+        "Arsa Roti",
+        "Litti Chokha"
+      ],
+      "ingredients": [
+        "Rice flour",
+        "Chana dal",
+        "Wild roots & leaves"
+      ],
+      "traditions": "Relies on rustic forest-based produce and simple grains, with dhuska being a popular street food snack."
+    },
+    "nature": {
+      "ecosystems": [
+        "Dry and moist deciduous forests",
+        "Rocky valleys",
+        "Waterfalls"
+      ],
+      "wildlife": [
+        "Asian Elephants",
+        "Tigers",
+        "Indian Pangolins"
+      ],
+      "areas": [
+        "Betla National Park",
+        "Palamau Tiger Reserve",
+        "Hundru Falls"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Shikharji Jain Temples at Parasnath",
+        "Baidyanath Temple at Deoghar",
+        "Maluti Terracotta Temples"
+      ],
+      "architecture": "Ancient stone and brick terracotta temples, alongside sacred hillside Jain pavilions."
+    },
+    "places": [
+      {
+        "name": "Parasnath Hill",
+        "description": "The highest peak in Jharkhand, the most sacred pilgrimage site for Digambara Jains."
+      },
+      {
+        "name": "Ranchi Waterfalls",
+        "description": "A collection of scenic waterfalls including Hundru and Jonha Falls fed by plateau rivers."
+      },
+      {
+        "name": "Netarhat",
+        "description": "A quiet hill station known for dense forests and sunset views over the valley."
+      }
+    ],
+    "facts": [
+      "Jharkhand contains over 40% of the mineral reserves of India.",
+      "Sohrai paintings are tribal murals depicting local flora, fauna, and cattle, applied to mud walls during harvest."
+    ],
+    "sources": [
+      "Jharkhand Tourism Development Board",
+      "Archaeological Survey of India"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/nature/eco-forest.jpg",
+        "alt": "Dense green sal forests and canopy typical of the Jharkhand wilderness",
+        "credit": "Chotanagpur Forest Survey",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Jharkhand",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Jharkhand",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Jharkhand",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Jharkhand",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Jharkhand",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "ka",
+    "name": "Karnataka",
+    "type": "state",
+    "capital": "Bengaluru",
+    "region": "South",
+    "introduction": "A blend of high-tech hubs, ancient stone ruins, and pristine coastal mountain forests.",
+    "image": "/images/culture/craft-channapatna.jpg",
+    "imageCredit": "Channapatna Wooden Toys Collection",
+    "geography": {
+      "location": "Located in southwestern India, flanked by the Arabian Sea to the west and Western Ghats.",
+      "features": [
+        "Deccan Plateau",
+        "Western Ghats (Malnad)",
+        "Jog Falls"
+      ],
+      "climate": "Tropical monsoonal climate, humid along the coast and dry on the interior plateaus."
+    },
+    "culture": {
+      "languages": [
+        "Kannada"
+      ],
+      "festivals": [
+        "Mysore Dasara",
+        "Ugadi",
+        "Kambala Buffalo Race"
+      ],
+      "traditions": [
+        "Yakshagana Dance-Drama",
+        "Channapatna Wooden Toys",
+        "Sandalwood Carvings"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Bisi Bele Bath",
+        "Mysore Pak",
+        "Masala Dosa"
+      ],
+      "ingredients": [
+        "Rice",
+        "Coconut",
+        "Tamarind",
+        "Sandalwood extract"
+      ],
+      "traditions": "Known for its dynamic cuisine, from coastal seafood delicacies of Mangalore to rich ghee-based sweets of Mysore."
+    },
+    "nature": {
+      "ecosystems": [
+        "Tropical wet evergreen forests",
+        "Deciduous scrub",
+        "Mountain falls"
+      ],
+      "wildlife": [
+        "Asian Elephants",
+        "Bengal Tigers",
+        "Indian Leopards"
+      ],
+      "areas": [
+        "Bandipur National Park",
+        "Nagarhole National Park",
+        "Jog Falls"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Hampi Ruins (UNESCO)",
+        "Pattadakal Monuments (UNESCO)",
+        "Chennakeshava Temple at Belur"
+      ],
+      "architecture": "Hoysala and Chalukya architectural styles characterized by detailed stone star-shaped temple layouts."
+    },
+    "places": [
+      {
+        "name": "Hampi",
+        "description": "Ruins of the medieval Vijayanagara Empire capital, featuring stone temples and boulder hills."
+      },
+      {
+        "name": "Mysore",
+        "description": "A historic royal city famous for the ornate Mysore Palace and silk weaving heritage."
+      },
+      {
+        "name": "Gokarna",
+        "description": "A peaceful coastal town known for its historic temples and pristine beaches."
+      }
+    ],
+    "facts": [
+      "Hampi was the capital of the Vijayanagara Empire and once the second largest city in the world.",
+      "Bengaluru is known as the Silicon Valley of India, hosting over a third of the country's IT exports."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Karnataka State Tourism Board"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/culture/craft-channapatna.jpg",
+        "alt": "Colorful lacquered wooden toys handmade in Channapatna, Karnataka",
+        "credit": "Channapatna Wooden Toys Collection",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Karnataka",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Karnataka",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Karnataka",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Karnataka",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Karnataka",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "kl",
+    "name": "Kerala",
+    "type": "state",
+    "capital": "Thiruvananthapuram",
+    "region": "South",
+    "introduction": "A lush coastal strip on the Malabar Coast, defined by palm-fringed backwaters, spice plantations, and classical performance arts.",
+    "image": "/images/stories/kerala-landscape.jpg",
+    "imageCredit": "Kerala Houseboat Association",
+    "geography": {
+      "location": "Located in southwestern India on the coast of the Arabian Sea, flanked by the Western Ghats mountain range.",
+      "features": [
+        "Malabar Backwaters",
+        "Western Ghats (Anamudi Peak)",
+        "Spice Hills",
+        "Vembanad Lake"
+      ],
+      "climate": "Tropical monsoonal climate, receiving heavy rainfall from both southwest and northeast monsoons."
+    },
+    "culture": {
+      "languages": [
+        "Malayalam"
+      ],
+      "festivals": [
+        "Onam (Harvest Festival)",
+        "Vishu",
+        "Thrissur Pooram"
+      ],
+      "traditions": [
+        "Kathakali Dance-Drama",
+        "Kalaripayattu Martial Art",
+        "Theyyam Ritual Dance"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Avial (vegetable stew with coconut)",
+        "Appam with stew",
+        "Karimeen Pollichathu (pearl spot fish in banana leaf)"
+      ],
+      "ingredients": [
+        "Coconut",
+        "Rice",
+        "Black pepper",
+        "Cardamom"
+      ],
+      "traditions": "Cuisine relies heavily on local spices and coconut, traditionally served on banana leaves (Sadya feast)."
+    },
+    "nature": {
+      "ecosystems": [
+        "Evergreen rainforests",
+        "Mangroves",
+        "Hill ranges",
+        "Coastal lagoons"
+      ],
+      "wildlife": [
+        "Asian Elephants",
+        "Nilgiri Tahrs",
+        "Lion-tailed Macaques"
+      ],
+      "areas": [
+        "Silent Valley National Park",
+        "Periyar Tiger Reserve",
+        "Vembanad Wetland"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Padmanabhaswamy Temple",
+        "Bekal Fort",
+        "Edakkal Caves (prehistoric engravings)"
+      ],
+      "architecture": "Traditional timber architecture with sloping roofs, wooden gables, and open inner courtyards (Nalukettu)."
+    },
+    "places": [
+      {
+        "name": "Alappuzha",
+        "description": "Famous for its interconnected network of canal waterways and houseboats."
+      },
+      {
+        "name": "Munnar",
+        "description": "A scenic hill station situated at the confluence of three mountain streams."
+      },
+      {
+        "name": "Kochi",
+        "description": "A historic port city with Chinese fishing nets, Dutch palaces, and spice bazaars."
+      }
+    ],
+    "facts": [
+      "Kalaripayattu is considered one of the oldest surviving martial art forms in the world.",
+      "Vembanad Lake is the longest lake in India, hosting the famous Nehru Trophy Snake Boat Race."
+    ],
+    "sources": [
+      "Kerala State Tourism Department Portal",
+      "UNESCO MAB Programme"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/kerala-landscape.jpg",
+        "alt": "Traditional thatched-roof houseboat cruising the calm backwaters of Alappuzha, Kerala",
+        "credit": "Kerala Houseboat Association",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "/images/nature/geo-ghats.jpg",
+        "alt": "Mist-covered green hills and tea gardens of the Western Ghats in Kerala",
+        "credit": "Western Ghats Survey",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "/images/culture/dance-kathakali.jpg",
+        "alt": "Kathakali dancer with detailed green facial makeup and colorful heavy crown",
+        "credit": "Kathakali Art Center, Kochi",
+        "source": "State Archive"
+      },
+      "food": {
+        "src": "/images/food/ingredient-coconut.jpg",
+        "alt": "Green and husked coconuts harvested from Kerala palms",
+        "credit": "Coconut Research Board",
+        "source": "State Archive"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Kerala",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "/images/nature/wildlife-elephant.jpg",
+        "alt": "Asian Elephant walking through water in Periyar wildlife reserve",
+        "credit": "Periyar Elephant Reserve",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "mp",
+    "name": "Madhya Pradesh",
+    "type": "state",
+    "capital": "Bhopal",
+    "region": "Central",
+    "introduction": "The central heartland of India, containing vast teak forests, tiger habitats, and ancient Buddhist and Hindu stone architecture.",
+    "image": "/images/stories/central-wildlife.jpg",
+    "imageCredit": "Central Wildlife Reserve Board",
+    "geography": {
+      "location": "Located in central India, bordered by Uttar Pradesh, Rajasthan, Gujarat, Maharashtra, and Chhattisgarh.",
+      "features": [
+        "Malwa Plateau",
+        "Narmada River Gorge",
+        "Vindhya & Satpura Ranges",
+        "Bundelkhand Hills"
+      ],
+      "climate": "Subtropical climate with dry, hot summers and cool winters, receiving rainfall from monsoons."
+    },
+    "culture": {
+      "languages": [
+        "Hindi",
+        "Gondi",
+        "Bhili"
+      ],
+      "festivals": [
+        "Khajuraho Dance Festival",
+        "Lokrang",
+        "Tansen Music Festival"
+      ],
+      "traditions": [
+        "Gond Tribal Painting",
+        "Chanderi & Maheshwari weaving",
+        "Bagh Block Printing"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Poha Jalebi",
+        "Bhutte ka Kees (grated corn)",
+        "Dal Bafla"
+      ],
+      "ingredients": [
+        "Wheat (especially Sharbati variety)",
+        "Maize",
+        "Milk & Ghee"
+      ],
+      "traditions": "Heavy use of dairy and wheat, blending sweet and savory tastes like hot savory poha with sweet jalebi."
+    },
+    "nature": {
+      "ecosystems": [
+        "Dry deciduous teak forests",
+        "Riparian zones",
+        "Ravines"
+      ],
+      "wildlife": [
+        "Royal Bengal Tigers",
+        "Barasingha (swamp deer)",
+        "Leopards"
+      ],
+      "areas": [
+        "Kanha National Park",
+        "Bandhavgarh National Park",
+        "Pench Tiger Reserve"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Sanchi Stupa (UNESCO)",
+        "Khajuraho Temples (UNESCO)",
+        "Bhimbetka Caves (UNESCO)"
+      ],
+      "architecture": "Buddhist stone stupas, intricately carved temple walls, and rock shelters containing prehistoric art."
+    },
+    "places": [
+      {
+        "name": "Bhimbetka",
+        "description": "Rock shelters exhibiting cave paintings dating back to the Paleolithic and Mesolithic eras."
+      },
+      {
+        "name": "Khajuraho",
+        "description": "A group of Hindu and Jain temples renowned for sandstone relief work."
+      },
+      {
+        "name": "Sanchi",
+        "description": "The oldest stone structure in India, commissioned by Emperor Ashoka in the 3rd century BCE."
+      }
+    ],
+    "facts": [
+      "Bhimbetka rock shelters contain paintings that represent the oldest known traces of human life in India.",
+      "Madhya Pradesh is often referred to as the 'Tiger State' because it hosts the highest population of wild tigers in India."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Archaeological Survey of India"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/central-wildlife.jpg",
+        "alt": "Royal Bengal Tiger drinking water from a clear forest stream inside Kanha reserve",
+        "credit": "Central Wildlife Reserve Board",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "/images/nature/geo-plains.jpg",
+        "alt": "Dry deciduous forests and flat scrub plains of Madhya Pradesh",
+        "credit": "Central Indian Plateau Survey",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "/images/culture/art-gond.jpg",
+        "alt": "Traditional Gond painting depicting a tree of life filled with birds and animals",
+        "credit": "Gond Tribal Art Council",
+        "source": "State Archive"
+      },
+      "food": {
+        "src": "/images/food/region-north.jpg",
+        "alt": "Wheat bread and spicy lentil curry platters from Madhya Pradesh",
+        "credit": "Central Food Board",
+        "source": "State Archive"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Madhya Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "/images/nature/wildlife-tiger.jpg",
+        "alt": "Bengal Tiger walking through the dry deciduous forest grass",
+        "credit": "Kanha Tiger Reserve Board",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "mh",
+    "name": "Maharashtra",
+    "type": "state",
+    "capital": "Mumbai",
+    "region": "West",
+    "introduction": "A sprawling state spanning Western Ghat valleys, historic Maratha forts, and the bustling economic hub of Mumbai.",
+    "image": "/images/stories/maharashtra-citylife.jpg",
+    "imageCredit": "Gateway of India Mumbai / ASI",
+    "geography": {
+      "location": "Occupies the western and central peninsular region of India, along the Arabian Sea.",
+      "features": [
+        "Deccan Plateau",
+        "Western Ghats (Sahyadris)",
+        "Konkan Coast",
+        "Godavari River"
+      ],
+      "climate": "Tropical wet and dry climate with intense monsoonal rains on the coast and dry conditions inland."
+    },
+    "culture": {
+      "languages": [
+        "Marathi"
+      ],
+      "festivals": [
+        "Ganesh Chaturthi",
+        "Gudi Padwa",
+        "Shivaji Jayanti"
+      ],
+      "traditions": [
+        "Lavani Folk Dance",
+        "Warli Tribal Art",
+        "Kolhapur Leather Crafts"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Puran Poli (sweet flatbread)",
+        "Vada Pav",
+        "Misal Pav"
+      ],
+      "ingredients": [
+        "Peanuts",
+        "Coconut",
+        "Kokum (sour fruit)",
+        "Jaggery"
+      ],
+      "traditions": "Blends mild coastal coconut curries (Konkani) with fiery peanut and spice-based dishes of the Deccan interior."
+    },
+    "nature": {
+      "ecosystems": [
+        "Moist deciduous forests of Ghats",
+        "Scrub vegetation",
+        "Coastal marine zones"
+      ],
+      "wildlife": [
+        "Indian Giant Squirrels",
+        "Leopards",
+        "Tigers"
+      ],
+      "areas": [
+        "Tadoba Andhari National Park",
+        "Kaas Plateau (Valley of Flowers)",
+        "Koyna Sanctuary"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Ajanta & Ellora Caves (UNESCO)",
+        "Elephanta Caves",
+        "Chhatrapati Shivaji Maharaj Terminus (UNESCO)"
+      ],
+      "architecture": "Rock-cut cave shrines carved out of solid basalt rock and fortified hilltop castles."
+    },
+    "places": [
+      {
+        "name": "Ellora Caves",
+        "description": "Features the Kailasa temple, the largest monolithic rock-cut structure in the world."
+      },
+      {
+        "name": "Kaas Plateau",
+        "description": "A volcanic plateau that blossoms into a carpet of wild flowers after the monsoon."
+      },
+      {
+        "name": "Pune",
+        "description": "The historical capital of the Peshwas, known for its Maratha palaces and educational hubs."
+      }
+    ],
+    "facts": [
+      "Lonar Crater Lake in Buldhana was formed by a hypervelocity meteorite impact on basaltic rock.",
+      "The Kailasa Temple at Ellora was carved vertically downwards from the top of a basalt cliff using simple hand chisels."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Maharashtra State Archeology Portal"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/maharashtra-citylife.jpg",
+        "alt": "Gateway of India basalt stone monument standing at the edge of the Mumbai harbor",
+        "credit": "Gateway of India Mumbai / ASI",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "/images/nature/geo-ghats.jpg",
+        "alt": "Lush green mountain peaks of the Western Ghats under heavy monsoon clouds in Maharashtra",
+        "credit": "Western Ghats Research Council",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "/images/culture/art-warli.jpg",
+        "alt": "Traditional Warli tribal wall painting depicting stick figure community dancers",
+        "credit": "Warli Tribal Art Council",
+        "source": "State Archive"
+      },
+      "food": {
+        "src": "/images/food/everyday-lunch.jpg",
+        "alt": "Traditional Maharashtrian lunch thali featuring flatbread, vegetables, and lentils",
+        "credit": "Mumbai Food Association",
+        "source": "State Archive"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Maharashtra",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "/images/nature/eco-forest.jpg",
+        "alt": "Deciduous forest canopy and trail inside Sanjay Gandhi National Park",
+        "credit": "Sanjay Gandhi National Park",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "mn",
+    "name": "Manipur",
+    "type": "state",
+    "capital": "Imphal",
+    "region": "Northeast",
+    "introduction": "A land of hills and valley lakes, known for its lyrical Manipuri classical dance, handloom weaving, and Loktak Lake.",
+    "image": "/images/culture/dance-manipuri.jpg",
+    "imageCredit": "Manipuri Dance Academy",
+    "geography": {
+      "location": "Located in northeastern India, bordered by Nagaland, Mizoram, Assam, and Myanmar.",
+      "features": [
+        "Imphal Valley",
+        "Manipuri Hills",
+        "Loktak Lake"
+      ],
+      "climate": "Subtropical highland climate with mild, wet summers and cool, dry winters."
+    },
+    "culture": {
+      "languages": [
+        "Meitei (Manipuri)"
+      ],
+      "festivals": [
+        "Yaoshang (Holi)",
+        "Sangai Festival",
+        "Lai Haraoba"
+      ],
+      "traditions": [
+        "Manipuri Classical Dance",
+        "Lai Haraoba ritual theater",
+        "Phanek (handwoven sarongs)"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Eromba (mashed vegetables and fish)",
+        "Kangshoi (stew)",
+        "Chak-hao Kheer (black rice pudding)"
+      ],
+      "ingredients": [
+        "Ngari (fermented fish)",
+        "Black rice",
+        "Chameleon plant leaves"
+      ],
+      "traditions": "Cuisine relies heavily on local fresh organic herbs and organic greens, cooked simply with fermented fish."
+    },
+    "nature": {
+      "ecosystems": [
+        "Freshwater marshes",
+        "Deciduous scrub hills",
+        "Bamboo groves"
+      ],
+      "wildlife": [
+        "Sangai Deer (state animal)",
+        "Hoolock Gibbons",
+        "Migratory wildfowl"
+      ],
+      "areas": [
+        "Keibul Lamjao National Park (Loktak)",
+        "Shirui National Park",
+        "Imphal River"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Kangla Fort Ruins",
+        "Imphal War Cemetery",
+        "INA Memorial at Moirang"
+      ],
+      "architecture": "Traditional wooden and bamboo royal enclosures, and colonial British brick residencies."
+    },
+    "places": [
+      {
+        "name": "Loktak Lake",
+        "description": "The largest freshwater lake in Northeast India, famous for floating vegetative islands (phumdis)."
+      },
+      {
+        "name": "Keibul Lamjao National Park",
+        "description": "The only floating national park in the world, home to the endangered brow-antlered Sangai deer."
+      },
+      {
+        "name": "Shirui Peak",
+        "description": "Famous for the endemic Shirui Lily flower which blooms only in this mountain range."
+      }
+    ],
+    "facts": [
+      "Manipur is historically credited as the birthplace of modern Polo, derived from the local game Sagol Kangjei.",
+      "Loktak Lake houses the only floating post office in India, operating on a massive vegetation mass."
+    ],
+    "sources": [
+      "Manipur Tourism Department Portal",
+      "Government of Manipur Registry"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/culture/dance-manipuri.jpg",
+        "alt": "Manipuri classical dancers in cylindrical skirts performing a Raslila episode",
+        "credit": "Manipuri Dance Academy",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Manipur",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Manipur",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Manipur",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Manipur",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Manipur",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "ml",
+    "name": "Meghalaya",
+    "type": "state",
+    "capital": "Shillong",
+    "region": "Northeast",
+    "introduction": "The Abode of the Clouds, featuring wet highland plateaus, deep river gorges, and legendary living root bridges.",
+    "image": "/images/nature/geo-northeast.jpg",
+    "imageCredit": "Northeast Rain Forests Survey",
+    "geography": {
+      "location": "Located in northeastern India, bordered by Assam and Bangladesh.",
+      "features": [
+        "Shillong Plateau",
+        "Garo, Khasi, and Jaintia Hills",
+        "Nohkalikai Falls"
+      ],
+      "climate": "Subtropical monsoonal, hosting the wettest inhabited places on Earth."
+    },
+    "culture": {
+      "languages": [
+        "Khasi",
+        "Garo",
+        "English"
+      ],
+      "festivals": [
+        "Nongkrem Dance Festival",
+        "Wangala (Hundred Drums)",
+        "Shad Suk Mynsiem"
+      ],
+      "traditions": [
+        "Matrilineal clan customs",
+        "Eri Silk Weaving",
+        "Khasi cane basketry"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Jadoh (spiced rice cooked with pork)",
+        "Doh-Neiiong (pork with black sesame)",
+        "Nakham Bitchi (fish soup)"
+      ],
+      "ingredients": [
+        "Black sesame seeds",
+        "Pork",
+        "Fermented fish",
+        "Ginger"
+      ],
+      "traditions": "Pork-centric diet accompanied by wild ginger and black sesame seeds, utilizing local fermentation methods."
+    },
+    "nature": {
+      "ecosystems": [
+        "Subtropical rainforests",
+        "Limestone cave systems",
+        "Pine forests"
+      ],
+      "wildlife": [
+        "Clouded Leopards",
+        "Hoolock Gibbons",
+        "Pitcher Plants"
+      ],
+      "areas": [
+        "Nokrek Biosphere Reserve",
+        "Balpakram National Park",
+        "Mawsynram Wet Belt"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Living Root Bridges of Sohra",
+        "Krem Liat Prah Caves",
+        "Nartiang Monoliths"
+      ],
+      "architecture": "Unique bio-engineering works (root bridges woven from Ficus elastica trees) and ancient monolith arrays."
+    },
+    "places": [
+      {
+        "name": "Sohra (Cherrapunji)",
+        "description": "A wet plateau famous for spectacular waterfalls and natural living root bridges."
+      },
+      {
+        "name": "Mawlynnong",
+        "description": "Reputed as Asia's cleanest village, run through strict community waste recycling systems."
+      },
+      {
+        "name": "Krem Liat Prah",
+        "description": "The longest natural cave system in India, extending over 30 kilometers in limestone cliffs."
+      }
+    ],
+    "facts": [
+      "Mawsynram in Meghalaya is the wettest place on Earth, receiving over 11,800 mm of rain annually.",
+      "The living root bridges are grown over decades by guiding tree roots through hollowed hollow bamboo trunks."
+    ],
+    "sources": [
+      "UNESCO Tentative List",
+      "Government of Meghalaya Portal"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/nature/geo-northeast.jpg",
+        "alt": "Mist-shrouded green hills and tropical valleys of Meghalaya",
+        "credit": "Northeast Rain Forests Survey",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Meghalaya",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Meghalaya",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Meghalaya",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Meghalaya",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Meghalaya",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "mz",
+    "name": "Mizoram",
+    "type": "state",
+    "capital": "Aizawl",
+    "region": "Northeast",
+    "introduction": "A land of rolling blue mountain ridges, bamboo forests, and rich tribal music and weaving heritages.",
+    "image": "/images/stories/northeast-landscape.jpg",
+    "imageCredit": "Mizoram Hills Landscape Board",
+    "geography": {
+      "location": "Located in the southernmost corner of Northeast India, bordering Myanmar and Bangladesh.",
+      "features": [
+        "Mizo Hills (Lushai Hills)",
+        "Tlawng River Basin",
+        "Phawngpui Blue Mountain"
+      ],
+      "climate": "Mild sub-tropical monsoonal climate with cool winters and wet summers."
+    },
+    "culture": {
+      "languages": [
+        "Mizo",
+        "English"
+      ],
+      "festivals": [
+        "Chapchar Kut (Spring Festival)",
+        "Mim Kut",
+        "Pawl Kut"
+      ],
+      "traditions": [
+        "Cheraw (Bamboo) Dance",
+        "Puan (traditional handwoven cloths)",
+        "Bamboo hat crafting"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Bai (pork-vegetable stew)",
+        "Sawhchiar (rice-meat porridge)",
+        "Vawksa Rep (smoked pork)"
+      ],
+      "ingredients": [
+        "Sa-um (fermented pork fat)",
+        "Local chillies",
+        "Ginger"
+      ],
+      "traditions": "Very simple cooking methods with minimal oil and dry spices, utilizing boiling and smoking with organic forest herbs."
+    },
+    "nature": {
+      "ecosystems": [
+        "Subtropical wet hill forests",
+        "Thick bamboo groves",
+        "High ridges"
+      ],
+      "wildlife": [
+        "Clouded Leopards",
+        "Hoolock Gibbons",
+        "Hume's Pheasants"
+      ],
+      "areas": [
+        "Phawngpui National Park",
+        "Dampa Tiger Reserve",
+        "Vantawng Falls"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Khuangchera Puk (Caves)",
+        "Ruins of Aizawl Fort",
+        "Sibuta Lung (historic monolith)"
+      ],
+      "architecture": "Traditional Mizo bamboo stilt houses built on steep mountain slopes, with thatched roofs."
+    },
+    "places": [
+      {
+        "name": "Phawngpui",
+        "description": "The Blue Mountain, the highest peak in Mizoram, featuring pine forests and sheer cliffs."
+      },
+      {
+        "name": "Vantawng Falls",
+        "description": "The highest waterfall in Mizoram, descending 750 feet down forested hills."
+      },
+      {
+        "name": "Reiek Tlang",
+        "description": "A scenic mountain ridge offering panoramic views of the surrounding hills and Aizawl."
+      }
+    ],
+    "facts": [
+      "Chapchar Kut is celebrated after the clearing of forests for Jhum (slash-and-burn) agriculture.",
+      "The Cheraw Dance involves dancers stepping in and out of clapping bamboo poles tapped by coordinators."
+    ],
+    "sources": [
+      "Mizoram State Tourism Portal",
+      "Mizoram Cultural Registry Office"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/northeast-landscape.jpg",
+        "alt": "Green rolling hills and bamboo-covered ridges of Mizoram under cloudy skies",
+        "credit": "Mizoram Hills Landscape Board",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Mizoram",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Mizoram",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Mizoram",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Mizoram",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Mizoram",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "nl",
+    "name": "Nagaland",
+    "type": "state",
+    "capital": "Kohima",
+    "region": "Northeast",
+    "introduction": "A vibrant mountain state populated by sixteen major tribes, famous for its colorful shawls, folk songs, and the Hornbill Festival.",
+    "image": "/images/culture/festival-hornbill.jpg",
+    "imageCredit": "Kisama Heritage Village, Kohima",
+    "geography": {
+      "location": "Located in northeastern India, bordered by Assam, Arunachal, Manipur, and Myanmar.",
+      "features": [
+        "Naga Hills (Mount Saramati)",
+        "Doyang River",
+        "Dzukou Valley"
+      ],
+      "climate": "Subtropical highland climate, wet and humid with cool winter seasons."
+    },
+    "culture": {
+      "languages": [
+        "Naga dialects",
+        "Nagamese",
+        "English"
+      ],
+      "festivals": [
+        "Hornbill Festival",
+        "Sekrenyi",
+        "Moatsu"
+      ],
+      "traditions": [
+        "War Dances",
+        "Tribal Shawl Weaving",
+        "Bamboo Crafts",
+        "Woodcarving"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Boiled Pork with Raja Mircha",
+        "Galho (rice stew)",
+        "Smoked beef with local herbs"
+      ],
+      "ingredients": [
+        "Bhut Jolokia (Ghost Pepper)",
+        "Fermented soybean (akhuni)",
+        "Fermented bamboo shoots"
+      ],
+      "traditions": "Known for highly pungent dishes cooked with fermented soybean paste and extremely hot local ghost chillies."
+    },
+    "nature": {
+      "ecosystems": [
+        "Subtropical hill forests",
+        "Alpine montane flora",
+        "Wetland valleys"
+      ],
+      "wildlife": [
+        "Blyth's Tragopans",
+        "Amur Falcons",
+        "Mithuns (state animal)"
+      ],
+      "areas": [
+        "Dzukou Valley",
+        "Intanki National Park",
+        "Mount Saramati Reserve"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Kohima War Cemetery",
+        "Dimapur Kachari Ruins",
+        "Khonoma Green Village"
+      ],
+      "architecture": "Stone pillars of the ancient Kachari Kingdom and traditional carved tribal gate entries."
+    },
+    "places": [
+      {
+        "name": "Dzukou Valley",
+        "description": "A breathtaking high-altitude valley famous for seasonal lilies and bamboo trails."
+      },
+      {
+        "name": "Khonoma",
+        "description": "India's first green village, known for organic terrace farming and forest conservation."
+      },
+      {
+        "name": "Kisama Heritage Village",
+        "description": "The site where the annual Hornbill Festival is held, exhibiting tribal house designs."
+      }
+    ],
+    "facts": [
+      "Nagaland hosts the annual Hornbill Festival, bringing all 16 major tribes together to display their heritage.",
+      "Nagaland is home to the Amur Falcon migration, hosting millions of raptors annually."
+    ],
+    "sources": [
+      "Nagaland Government Tourism Department",
+      "Commonwealth War Graves Commission"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/culture/festival-hornbill.jpg",
+        "alt": "Naga warriors in traditional feathered headgear performing a dance at Hornbill Festival",
+        "credit": "Kisama Heritage Village, Kohima",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Nagaland",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Nagaland",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Nagaland",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Nagaland",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Nagaland",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "or",
+    "name": "Odisha",
+    "type": "state",
+    "capital": "Bhubaneswar",
+    "region": "East",
+    "introduction": "A coastal heritage state on the Bay of Bengal, known for its towering sandstone temples, classical arts, and the massive brackish expanse of Chilika Lake.",
+    "image": "/images/stories/odisha-culture.jpg",
+    "imageCredit": "Konark Sun Temple Carvings / ASI",
+    "geography": {
+      "location": "Located on the eastern coast of India, bordered by West Bengal, Jharkhand, Chhattisgarh, and Andhra Pradesh.",
+      "features": [
+        "Mahanadi River Delta",
+        "Chilika Lagoon",
+        "Simlipal Mountain Range",
+        "Eastern Ghats"
+      ],
+      "climate": "Tropical monsoonal climate characterized by high temperatures and heavy coastal rainfall during the monsoon months."
+    },
+    "culture": {
+      "languages": [
+        "Odia"
+      ],
+      "festivals": [
+        "Ratha Yatra (Chariot Festival)",
+        "Konark Dance Festival",
+        "Raja Parba"
+      ],
+      "traditions": [
+        "Odissi Classical Dance",
+        "Pattachitra Scroll Painting",
+        "Tarakasi Silver Filigree"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Chhena Poda (baked cheese dessert)",
+        "Dalma (lentils with vegetables)",
+        "Pakhala Bhata (fermented rice)"
+      ],
+      "ingredients": [
+        "Mustard seeds",
+        "Rice",
+        "Panch Phoron (five-spice blend)"
+      ],
+      "traditions": "Much of the traditional food is centered around the ancient temple kitchens, particularly the Mahaprasad offered at Jagannath Temple."
+    },
+    "nature": {
+      "ecosystems": [
+        "Coastal mangroves",
+        "Dry deciduous forests",
+        "Estuarine wetlands"
+      ],
+      "wildlife": [
+        "Irrawaddy Dolphins",
+        "Royal Bengal Tigers",
+        "Saltwater Crocodiles"
+      ],
+      "areas": [
+        "Bhitarkanika National Park",
+        "Simlipal Biosphere Reserve",
+        "Chilika Wildlife Sanctuary"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Konark Sun Temple (UNESCO Site)",
+        "Jagannath Temple at Puri",
+        "Udayagiri & Khandagiri Rock-cut Caves"
+      ],
+      "architecture": "Kalinga architecture, featuring dry stone masonry, curved temple spires (deula), and detailed assembly halls (jagamohana)."
+    },
+    "places": [
+      {
+        "name": "Konark",
+        "description": "Site of the monumental 13th-century Sun Temple built as a grand stone chariot."
+      },
+      {
+        "name": "Chilika Lake",
+        "description": "Asia's largest brackish lagoon, hosting thousands of migratory birds in winter."
+      },
+      {
+        "name": "Bhubaneswar",
+        "description": "The capital city, housing hundreds of heritage temples spanning a thousand years of architecture."
+      }
+    ],
+    "facts": [
+      "The stone wheels of the Konark Sun Temple are actually sundials that calculate time accurately to the minute.",
+      "Odia is recognized as one of India's classical languages, possessing a history of over 2,500 years."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Archaeological Survey of India"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/odisha-culture.jpg",
+        "alt": "Classical Odissi dancer performing in front of the stone wheels of Konark Sun Temple",
+        "credit": "Konark Sun Temple Carvings / ASI",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "/images/nature/geo-coastal.jpg",
+        "alt": "Delta plains and coastal lagoons along the Bay of Bengal coastline in Odisha",
+        "credit": "Coastal Landscapes Survey",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "/images/culture/dance-odissi.jpg",
+        "alt": "Odissi classical dancer performing in front of the stone carvings",
+        "credit": "Cultural Board",
+        "source": "State Archive"
+      },
+      "food": {
+        "src": "/images/food/region-east.jpg",
+        "alt": "Odia culinary meal spread with rice, lentils, and local vegetable curry",
+        "credit": "Odia Food Council",
+        "source": "State Archive"
+      },
+      "heritage": {
+        "src": "/images/culture/craft-talapatra.jpg",
+        "alt": "Traditional palm leaf manuscript Talapatra engravings depicting mythological scenes",
+        "credit": "ASI Archaeological Board",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "/images/nature/eco-mangroves.jpg",
+        "alt": "Dense mangrove forests and estuaries inside Bhitarkanika National Park",
+        "credit": "Odisha Forest Dept",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "pb",
+    "name": "Punjab",
+    "type": "state",
+    "capital": "Chandigarh",
+    "region": "North",
+    "introduction": "The fertile land of five rivers, agricultural heartland, and cradle of Sikhism, famous for its energetic folk culture.",
+    "image": "/images/stories/punjab-agriculture.jpg",
+    "imageCredit": "Punjab Agriculture Board",
+    "geography": {
+      "location": "Located in northwestern India, bordered by Pakistan to the west and northern states.",
+      "features": [
+        "Beas and Sutlej River Valleys",
+        "Alluvial Plains",
+        "Shivalik Hills"
+      ],
+      "climate": "Semiarid to subtropical, with extremely hot summers and cold winters."
+    },
+    "culture": {
+      "languages": [
+        "Punjabi"
+      ],
+      "festivals": [
+        "Baisakhi (Harvest Festival)",
+        "Lohri",
+        "Gurpurab"
+      ],
+      "traditions": [
+        "Bhangra & Giddha Folk Dances",
+        "Phulkari Embroidery",
+        "Gatka (martial art)"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Sarson ka Saag & Makki ki Roti",
+        "Tandoori flatbreads",
+        "Dal Makhani"
+      ],
+      "ingredients": [
+        "Mustard greens",
+        "Butter & Ghee",
+        "Whole black lentils",
+        "Paneer"
+      ],
+      "traditions": "Heavily focused on clay oven (tandoori) cooking, utilizing rich dairy fat, fresh butter, and flatbreads."
+    },
+    "nature": {
+      "ecosystems": [
+        "Riverine plains",
+        "Wetland marshes",
+        "Foothill scrubs"
+      ],
+      "wildlife": [
+        "Indus River Dolphins",
+        "Blackbucks",
+        "Migratory wildfowl"
+      ],
+      "areas": [
+        "Harike Wetland",
+        "Keshopur-Miani Wetland",
+        "Shivalik Hills"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Harmandir Sahib (Golden Temple)",
+        "Qila Mubarak at Bathinda",
+        "Jallianwala Bagh"
+      ],
+      "architecture": "Sikh temple architecture utilizing white marble domes, gold plating, and surrounding holy water pools (sarovars)."
+    },
+    "places": [
+      {
+        "name": "Amritsar",
+        "description": "The spiritual center of Sikhism, home to the monumental Golden Temple."
+      },
+      {
+        "name": "Patiala",
+        "description": "A historic princely state city known for grand palaces and traditional dress styles."
+      },
+      {
+        "name": "Harike Wetland",
+        "description": "One of the largest freshwater wetlands in northern India, hosting winter birds."
+      }
+    ],
+    "facts": [
+      "Harmandir Sahib operates the largest free community kitchen (Langar) in the world, feeding over 100,000 people daily.",
+      "Punjab is known as the Granary of India due to its leading role in the Green Revolution."
+    ],
+    "sources": [
+      "Punjab Tourism Development Corporation Portal",
+      "Shiromani Gurdwara Parbandhak Committee"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/punjab-agriculture.jpg",
+        "alt": "Bright yellow mustard flowers blooming in agricultural fields in Punjab",
+        "credit": "Punjab Agriculture Board",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Punjab",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Punjab",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Punjab",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Punjab",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Punjab",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "rj",
+    "name": "Rajasthan",
+    "type": "state",
+    "capital": "Jaipur",
+    "region": "West",
+    "introduction": "A desert state marked by grand hill forts, Rajput palaces, and vibrant folk arts that contrast with the shifting sands of the Thar.",
+    "image": "/images/stories/rajasthan-culture.jpg",
+    "imageCredit": "Mehrangarh Fort Jodhpur / ASI",
+    "geography": {
+      "location": "Situated in northwestern India, bordered by Pakistan to the west and five Indian states.",
+      "features": [
+        "Thar Desert",
+        "Aravalli Range (one of the oldest fold mountains)",
+        "Luni River",
+        "Mount Abu"
+      ],
+      "climate": "Arid to semi-arid climate, featuring hot summers, low rainfall, and cool desert nights during winter."
+    },
+    "culture": {
+      "languages": [
+        "Rajasthani",
+        "Hindi",
+        "Marwari"
+      ],
+      "festivals": [
+        "Pushkar Camel Fair",
+        "Desert Festival Jaisalmer",
+        "Teej"
+      ],
+      "traditions": [
+        "Ghoomar Dance",
+        "Kathputli Puppetry",
+        "Blue Pottery of Jaipur"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Dal Baati Churma",
+        "Ker Sangri (desert bean curry)",
+        "Pyaaz Kachori"
+      ],
+      "ingredients": [
+        "Gram flour (besan)",
+        "Bajra (pearl millet)",
+        "Ghee"
+      ],
+      "traditions": "Traditional cuisine was historically influenced by the war-like lifestyle and water scarcity, utilizing milk, buttermilk, and ghee instead of water."
+    },
+    "nature": {
+      "ecosystems": [
+        "Arid desert scrubs",
+        "Dry deciduous forests",
+        "Wetland sanctuaries"
+      ],
+      "wildlife": [
+        "Bengal Tigers",
+        "Indian Bustards (endangered)",
+        "Chinkara (desert gazelle)"
+      ],
+      "areas": [
+        "Ranthambore National Park",
+        "Keoladeo National Park (Bharatpur)",
+        "Sariska Tiger Reserve"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Amber Fort",
+        "Jantar Mantar Observatory (UNESCO)",
+        "Mehrangarh Fort at Jodhpur"
+      ],
+      "architecture": "Rajput architecture characterized by ornamental pavilions (chhatris), carved balconies (jharokhas), and sturdy stone walls."
+    },
+    "places": [
+      {
+        "name": "Jaisalmer",
+        "description": "The Golden City, known for its sandstone fort and historic merchant mansions (havelis)."
+      },
+      {
+        "name": "Udaipur",
+        "description": "The Lake City, featuring royal palaces floating on quiet water basins."
+      },
+      {
+        "name": "Keoladeo National Park",
+        "description": "A world heritage wetland sanctuary hosting hundreds of species of waterbirds."
+      }
+    ],
+    "facts": [
+      "The Aravalli Range running through Rajasthan is one of the oldest fold mountain systems in the world.",
+      "Jaipur's Jantar Mantar houses the world's largest stone sundial, the Vrihat Samrat Yantra."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Rajasthan State Tourism Department Portal"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/rajasthan-culture.jpg",
+        "alt": "Camel caravan traversing the golden sand dunes of the Thar Desert in Rajasthan",
+        "credit": "Mehrangarh Fort Jodhpur / ASI",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "/images/nature/geo-thar.jpg",
+        "alt": "Arid yellow sands of the Thar Desert under a clear sky in Rajasthan",
+        "credit": "Thar Desert Survey",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "/images/culture/art-phad.jpg",
+        "alt": "Detailed Phad scroll scroll-painting depicting local folk legends and stories",
+        "credit": "Phad Painting Collection",
+        "source": "State Archive"
+      },
+      "food": {
+        "src": "/images/food/region-west.jpg",
+        "alt": "Traditional Rajasthani Dal Baati Churma platter with ghee and spicy chutneys",
+        "credit": "Rajasthan Food Board",
+        "source": "State Archive"
+      },
+      "heritage": {
+        "src": "/images/culture/craft-bluepottery.jpg",
+        "alt": "Cobalt-blue glaze terracotta pottery plates and vases from Jaipur",
+        "credit": "Jaipur Craft Council",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "/images/nature/eco-desert.jpg",
+        "alt": "Arid desert scrub vegetation and dry soils typical of western Rajasthan",
+        "credit": "Desert Ecology Council",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "sk",
+    "name": "Sikkim",
+    "type": "state",
+    "capital": "Gangtok",
+    "region": "Northeast",
+    "introduction": "A serene Himalayan state under the shadow of Mount Kanchenjunga, famous for its Buddhist monasteries and organic agriculture.",
+    "image": "/images/nature/eco-himalayan.jpg",
+    "imageCredit": "High Himalayan Valleys Survey",
+    "geography": {
+      "location": "Located in northeastern India, nestled in the Himalayas bordering Nepal, Bhutan, and Tibet.",
+      "features": [
+        "Kanchenjunga Massif",
+        "Teesta River",
+        "Tsomgo Glacier Lake"
+      ],
+      "climate": "Ranges from subtropical in valleys to high-altitude alpine cold."
+    },
+    "culture": {
+      "languages": [
+        "Nepali",
+        "Sikkimese (Bhutia)",
+        "Lepcha",
+        "English"
+      ],
+      "festivals": [
+        "Saga Dawa",
+        "Pang Lhabsol",
+        "Losoong"
+      ],
+      "traditions": [
+        "Cham masked dances",
+        "Thangka scroll art",
+        "Carved wooden furniture"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Momo",
+        "Thukpa",
+        "Phagshapa (pork with radish)",
+        "Gundruk (fermented greens)"
+      ],
+      "ingredients": [
+        "Fermented mustard greens",
+        "Yak cheese (chhurpi)",
+        "Buckwheat",
+        "Ginger"
+      ],
+      "traditions": "Heavy Tibetan influence utilizing fermented beans, sun-dried leaves, and dense barley or buckwheat noodles."
+    },
+    "nature": {
+      "ecosystems": [
+        "Alpine tundra",
+        "Rhododendron forests",
+        "Orchid sanctuaries"
+      ],
+      "wildlife": [
+        "Red Pandas",
+        "Snow Leopards",
+        "Blood Pheasants"
+      ],
+      "areas": [
+        "Khangchendzonga National Park (UNESCO)",
+        "Tsomgo Lake",
+        "Yumthang Valley"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Rumtek Monastery",
+        "Pemayangtse Monastery",
+        "Rabdentse Ruins"
+      ],
+      "architecture": "Tibetan-style monasteries featuring sloped golden roofs, colorful murals, and prayer wheels."
+    },
+    "places": [
+      {
+        "name": "Rumtek",
+        "description": "The largest active monastery in Sikkim, the seat of the Karma Kagyu lineage."
+      },
+      {
+        "name": "Khangchendzonga Park",
+        "description": "A mixed heritage UNESCO site protecting alpine meadows and sacred peaks."
+      },
+      {
+        "name": "Tsomgo Lake",
+        "description": "A glacial lake situated at 12,400 feet, sacred to local Buddhists and Hindus."
+      }
+    ],
+    "facts": [
+      "Sikkim is the first state in India to achieve 100% organic farming status.",
+      "Sikkim contains over 500 species of wild orchids and 11 species of oak."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Government of Sikkim Organic Portal"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/nature/eco-himalayan.jpg",
+        "alt": "Snowy Himalayan slopes and pine tree valleys near Kanchenjunga in Sikkim",
+        "credit": "High Himalayan Valleys Survey",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Sikkim",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Sikkim",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Sikkim",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Sikkim",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Sikkim",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "tn",
+    "name": "Tamil Nadu",
+    "type": "state",
+    "capital": "Chennai",
+    "region": "South",
+    "introduction": "A cradle of classical Dravidian civilization, towering temple architecture, and ancient performing arts.",
+    "image": "/images/stories/tamilnadu-architecture.jpg",
+    "imageCredit": "Brihadisvara Temple Tanjore / ASI",
+    "geography": {
+      "location": "Occupies the southernmost tip of peninsular India, along the Indian Ocean.",
+      "features": [
+        "Kaveri River Basin",
+        "Western Ghats (Nilgiri Hills)",
+        "Coromandel Coastline"
+      ],
+      "climate": "Tropical climate receiving most rainfall during the northeast retreating monsoon."
+    },
+    "culture": {
+      "languages": [
+        "Tamil"
+      ],
+      "festivals": [
+        "Pongal (Harvest Festival)",
+        "Karthigai Deepam",
+        "Tamil New Year"
+      ],
+      "traditions": [
+        "Bharatanatyam Classical Dance",
+        "Carnatic Vocal & Instrumental Music",
+        "Kanchipuram Silk weaving"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Idli with Sambar & Chutney",
+        "Chettinad Pepper Chicken",
+        "Filter Coffee"
+      ],
+      "ingredients": [
+        "Curry leaves",
+        "Rice flour",
+        "Tamarind",
+        "Chana dal"
+      ],
+      "traditions": "Extremely systematic vegetarian and non-vegetarian menus served on banana leaves, relying on steamed batters and dry roasting."
+    },
+    "nature": {
+      "ecosystems": [
+        "Mountain montane grasslands (sholas)",
+        "Mangrove wetlands",
+        "Coral gulf zones"
+      ],
+      "wildlife": [
+        "Nilgiri Tahrs",
+        "Lion-tailed Macaques",
+        "Dugongs"
+      ],
+      "areas": [
+        "Mudumalai National Park",
+        "Gulf of Mannar Marine Park",
+        "Pichavaram Mangroves"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Great Living Chola Temples (UNESCO)",
+        "Mahabalipuram Monuments (UNESCO)",
+        "Madurai Meenakshi Temple"
+      ],
+      "architecture": "Dravidian architecture featuring giant pyramid-like entry gateways (gopurams) and massive pillared halls."
+    },
+    "places": [
+      {
+        "name": "Thanjavur",
+        "description": "The capital of the Cholas, home to the monumental Brihadeeswarar Temple."
+      },
+      {
+        "name": "Mamallapuram (Mahabalipuram)",
+        "description": "Coastal site of 7th-century rock-cut stone temples and relief carvings."
+      },
+      {
+        "name": "Nilgiri Railway",
+        "description": "A historic steam rack-railway ascending the blue mountains of South India."
+      }
+    ],
+    "facts": [
+      "Tamil is recognized as the oldest surviving classical language in the world, with literature dating back 2,000 years.",
+      "The Brihadeeswarar Temple in Thanjavur has a monolithic stone dome at the top weighing 80 tons."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Archaeological Survey of India"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/tamilnadu-architecture.jpg",
+        "alt": "Basalt stone Dravidian temple tower of Brihadisvara Temple against a blue sky",
+        "credit": "Brihadisvara Temple Tanjore / ASI",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Tamil Nadu",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Tamil Nadu",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Tamil Nadu",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Tamil Nadu",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Tamil Nadu",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "tg",
+    "name": "Telangana",
+    "type": "state",
+    "capital": "Hyderabad",
+    "region": "South",
+    "introduction": "A historical Deccan plateau state rich in Kakatiya heritage and vibrant Islamic-Dravidian architecture.",
+    "image": "/images/culture/craft-bidriware.jpg",
+    "imageCredit": "Hyderabad Metal Crafts Board",
+    "geography": {
+      "location": "Located on the Deccan plateau in southern India, bordered by four states.",
+      "features": [
+        "Godavari and Krishna Rivers",
+        "Deccan Traps",
+        "Ananthagiri Hills"
+      ],
+      "climate": "Semi-arid climate with hot summers and dry winter seasons."
+    },
+    "culture": {
+      "languages": [
+        "Telugu",
+        "Urdu"
+      ],
+      "festivals": [
+        "Bonalu",
+        "Bathukamma (Flower Festival)",
+        "Sammakka Saralamma Jatara"
+      ],
+      "traditions": [
+        "Bidriware Metalwork",
+        "Perini Shivatandavam dance",
+        "Pochampally Ikat weaving"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Hyderabadi Biryani",
+        "Mirchi ka Salan",
+        "Haleem"
+      ],
+      "ingredients": [
+        "Basmati rice",
+        "Saffron",
+        "Sesame seeds",
+        "Mutton"
+      ],
+      "traditions": "Strong blend of royal Nizami court Mughlai cuisine (slow-cooked meats) and spicy local Telugu flavors."
+    },
+    "nature": {
+      "ecosystems": [
+        "Dry deciduous scrublands",
+        "River gorges",
+        "Rocky plateaus"
+      ],
+      "wildlife": [
+        "Leopards",
+        "Deccan Horned Owls",
+        "Marsh Crocodiles"
+      ],
+      "areas": [
+        "Kawal Tiger Reserve",
+        "Pakhal Wildlife Sanctuary",
+        "Ananthagiri Hills"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Kakatiya Rudreshwara Ramappa Temple (UNESCO)",
+        "Golconda Fort",
+        "Charminar"
+      ],
+      "architecture": "Deccan Islamic-Persian architecture (Charminar arches) and Kakatiya stone temples with floating bricks."
+    },
+    "places": [
+      {
+        "name": "Charminar",
+        "description": "A monumental four-minaret mosque built in 1591 to mark the end of a plague."
+      },
+      {
+        "name": "Golconda Fort",
+        "description": "A fortified citadel once famous as the trading center of the world's finest diamonds."
+      },
+      {
+        "name": "Ramappa Temple",
+        "description": "Famous for its lightweight floating bricks, intricate carvings, and earthquake-proof design."
+      }
+    ],
+    "facts": [
+      "The famous Koh-i-Noor diamond was mined from the Kollur mines of Golconda in Telangana.",
+      "Pochampally village is known as the Silk City of India, famous for its unique geometric double-ikat patterns."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Telangana State Tourism Department"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/culture/craft-bidriware.jpg",
+        "alt": "Inlaid silver floral designs on a dark alloy Bidriware plate from Telangana",
+        "credit": "Hyderabad Metal Crafts Board",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Telangana",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Telangana",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Telangana",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Telangana",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Telangana",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "tr",
+    "name": "Tripura",
+    "type": "state",
+    "capital": "Agartala",
+    "region": "Northeast",
+    "introduction": "A peaceful northeastern hill state, home to the ancient Manikya dynasty, royal palaces, and giant rock-cut carvings.",
+    "image": "/images/stories/tripura-neermahal.jpg",
+    "imageCredit": "Wikimedia Commons Contributor",
+    "geography": {
+      "location": "Located in northeastern India, bordered on three sides by Bangladesh.",
+      "features": [
+        "Jampui Hills",
+        "Howrah River Basin",
+        "Dhalai Hills"
+      ],
+      "climate": "Tropical monsoon climate with high humidity and warm temperatures."
+    },
+    "culture": {
+      "languages": [
+        "Kokborok",
+        "Bengali"
+      ],
+      "festivals": [
+        "Kharchi Puja",
+        "Garia Puja",
+        "Neermahal Water Festival"
+      ],
+      "traditions": [
+        "Tripuri Bamboo weaving",
+        "Hojagiri folk dance",
+        "Rignai handloom weaving"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Mui Borok (traditional fish curry)",
+        "Chakhwi",
+        "Panch Phoron dishes"
+      ],
+      "ingredients": [
+        "Berma (fermented fish)",
+        "Bamboo shoots",
+        "Pork",
+        "Rice"
+      ],
+      "traditions": "Relies on organic fermented fish (Berma) and fresh vegetables, cooked without oil or frying."
+    },
+    "nature": {
+      "ecosystems": [
+        "Humid evergreen forests",
+        "Bamboo brakes",
+        "Lakes"
+      ],
+      "wildlife": [
+        "Phayre's Leaf Monkeys",
+        "Clouded Leopards",
+        "Hornbills"
+      ],
+      "areas": [
+        "Clouded Leopard National Park",
+        "Trishna Sanctuary",
+        "Jampui Hills"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Ujjayanta Palace",
+        "Unakoti Bas-relief Carvings",
+        "Neermahal Water Palace"
+      ],
+      "architecture": "Grand white plaster royal palaces and giant bas-relief rock carvings on forested hill faces."
+    },
+    "places": [
+      {
+        "name": "Unakoti",
+        "description": "A sacred hill displaying hundreds of giant 8th-century stone carvings of Hindu deities."
+      },
+      {
+        "name": "Neermahal",
+        "description": "A spectacular royal water palace situated in the center of Rudrasagar Lake."
+      },
+      {
+        "name": "Ujjayanta Palace",
+        "description": "A magnificent white palace in Agartala, built in 1901 by Maharaja Radha Kishore Manikya."
+      }
+    ],
+    "facts": [
+      "Unakoti means 'one less than a crore' (ten million) in Sanskrit, referencing a legend of Shiva.",
+      "Tripura is one of the leading producers of high-quality bamboo and cane products in India."
+    ],
+    "sources": [
+      "Tripura Government Tourism Department",
+      "Archaeological Survey of India"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/tripura-neermahal.jpg",
+        "alt": "A minar dome and stone arches inside Neermahal Water Palace in Tripura",
+        "credit": "Wikimedia Commons Contributor",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Tripura",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Tripura",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Tripura",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Tripura",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Tripura",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "up",
+    "name": "Uttar Pradesh",
+    "type": "state",
+    "capital": "Lucknow",
+    "region": "North",
+    "introduction": "India's most populous state, home to iconic monuments, sacred rivers, and classical dance legacies.",
+    "image": "/images/culture/dance-kathak.jpg",
+    "imageCredit": "Lucknow Gharana Archives",
+    "geography": {
+      "location": "Located in northern India, within the fertile Indo-Gangetic Plains.",
+      "features": [
+        "Ganges and Yamuna Basins",
+        "Terai foothills",
+        "Vindhya Range outcrops"
+      ],
+      "climate": "Humid subtropical to tropical wet and dry, with hot summers and cold winters."
+    },
+    "culture": {
+      "languages": [
+        "Hindi",
+        "Urdu",
+        "Awadhi",
+        "Bhojpuri"
+      ],
+      "festivals": [
+        "Kumbh Mela (UNESCO)",
+        "Taj Mahotsav",
+        "Dev Deepawali at Varanasi"
+      ],
+      "traditions": [
+        "Kathak Classical Dance",
+        "Chikan Hand Embroidery",
+        "Banarasi Silk weaving"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Awadhi Biryani",
+        "Galouti Kebab",
+        "Petha (sweet ash gourd)"
+      ],
+      "ingredients": [
+        "Kewra water",
+        "Mutton",
+        "Saffron",
+        "Rose petals"
+      ],
+      "traditions": "Highly refined royal Mughlai and Awadhi slow-cooking methods (dum pukht) using clay pots and aromatic essences."
+    },
+    "nature": {
+      "ecosystems": [
+        "Alluvial floodplains",
+        "Dry deciduous woodlands",
+        "Wetlands"
+      ],
+      "wildlife": [
+        "Barasingha (Swamp Deer)",
+        "Ganges River Dolphins",
+        "Sarus Cranes"
+      ],
+      "areas": [
+        "Dudhwa National Park",
+        "Katarniaghat Wildlife Sanctuary",
+        "Chandraprabha Sanctuary"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Taj Mahal (UNESCO)",
+        "Agra Fort (UNESCO)",
+        "Fatehpur Sikri (UNESCO)"
+      ],
+      "architecture": "Islamic-Mughal red sandstone and white marble complexes, and ancient temple ghats of Varanasi."
+    },
+    "places": [
+      {
+        "name": "Agra",
+        "description": "Home to the Taj Mahal, the 17th-century white marble monument built by Shah Jahan."
+      },
+      {
+        "name": "Varanasi (Kashi)",
+        "description": "One of the oldest continuously inhabited cities in the world, famous for riverfront stone steps (ghats)."
+      },
+      {
+        "name": "Sarnath",
+        "description": "The deer park where Gautama Buddha delivered his first sermon after attaining enlightenment."
+      }
+    ],
+    "facts": [
+      "The Taj Mahal's white marble changes color subtly depending on the time of day, from pinkish in the morning to golden at night.",
+      "The Kumbh Mela in Prayagraj is the largest gathering of humanity on Earth, visible from space."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Archaeological Survey of India"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/culture/dance-kathak.jpg",
+        "alt": "Kathak classical dancer performing rapid spins in traditional attire",
+        "credit": "Lucknow Gharana Archives",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Uttar Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Uttar Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Uttar Pradesh",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Uttar Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Uttar Pradesh",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "ut",
+    "name": "Uttarakhand",
+    "type": "state",
+    "capital": "Dehradun",
+    "region": "North",
+    "introduction": "The Devbhoomi (Land of the Gods), defined by snow-capped Himalayan peaks, glacial lakes, and yoga ashrams.",
+    "image": "/images/nature/geo-himalayas.jpg",
+    "imageCredit": "Uttarakhand Mountain Survey",
+    "geography": {
+      "location": "Located in northern India, bordered by Tibet, Nepal, and Himachal Pradesh.",
+      "features": [
+        "Garhwal and Kumaon Himalayas",
+        "Ganges River Source (Gangotri)",
+        "Nanda Devi Mountain"
+      ],
+      "climate": "Ranges from subtropical in the foothills to alpine tundra on the high peaks."
+    },
+    "culture": {
+      "languages": [
+        "Garhwali",
+        "Kumaoni",
+        "Hindi"
+      ],
+      "festivals": [
+        "Kumbh Mela at Haridwar",
+        "Nanda Devi Raj Jat",
+        "Phool Dei"
+      ],
+      "traditions": [
+        "Ramman Folk Theater (UNESCO)",
+        "Aipan Ritual Art",
+        "Garhwali folk songs"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Kafuli (thick spinach-mustard gravy)",
+        "Aloo ke Gutke",
+        "Bal Mithai (sweet chocolate-fudge candy)"
+      ],
+      "ingredients": [
+        "Pahadi potatoes",
+        "Mustard leaves",
+        "Mandua (finger millet)"
+      ],
+      "traditions": "Simple, warming high-altitude dishes focusing on coarse nutritious grains (millet) and forest-gathered herbs."
+    },
+    "nature": {
+      "ecosystems": [
+        "Alpine meadows (bugyals)",
+        "Coniferous pine forests",
+        "Glacial streams"
+      ],
+      "wildlife": [
+        "Snow Leopards",
+        "Himalayan Monals",
+        "Musk Deer"
+      ],
+      "areas": [
+        "Jim Corbett National Park",
+        "Valley of Flowers (UNESCO)",
+        "Nanda Devi Biosphere Reserve"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Kedarnath Temple",
+        "Badrinath Temple",
+        "Jageshwar Temple Complex"
+      ],
+      "architecture": "Traditional stone-and-timber shrines built using dry masonry to withstand Himalayan seismic activity."
+    },
+    "places": [
+      {
+        "name": "Valley of Flowers",
+        "description": "A high-altitude national park renowned for meadows of endemic alpine flowers."
+      },
+      {
+        "name": "Rishikesh",
+        "description": "Known as the Yoga Capital of the World, situated along the banks of the spiritual Ganges."
+      },
+      {
+        "name": "Jim Corbett National Park",
+        "description": "Established in 1936, the oldest national park in India, dedicated to tiger protection."
+      }
+    ],
+    "facts": [
+      "The Ganges River officially begins in Uttarakhand at the confluence of the Alaknanda and Bhagirathi Rivers at Devprayag.",
+      "Nanda Devi (25,643 feet) is the highest mountain peak situated entirely within India."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Uttarakhand Tourism Development Board"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/nature/geo-himalayas.jpg",
+        "alt": "Garhwal Himalayan peaks and pine forests under bright sunlight",
+        "credit": "Uttarakhand Mountain Survey",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Uttarakhand",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Uttarakhand",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Uttarakhand",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Uttarakhand",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Uttarakhand",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "wb",
+    "name": "West Bengal",
+    "type": "state",
+    "capital": "Kolkata",
+    "region": "East",
+    "introduction": "India's cultural and intellectual heartland, rich in literary legacy, art movements, and coastal delta forests.",
+    "image": "/images/stories/westbengal-everyday.jpg",
+    "imageCredit": "Victoria Memorial Hall Kolkata / ASI",
+    "geography": {
+      "location": "Located in eastern India, bordered by Nepal, Bhutan, Bangladesh, and five Indian states.",
+      "features": [
+        "Sundarbans Delta",
+        "Darjeeling Himalayas",
+        "Hooghly River",
+        "Rarh Plains"
+      ],
+      "climate": "Varies from subtropical monsoonal in the plains to alpine cold in the northern mountain ranges."
+    },
+    "culture": {
+      "languages": [
+        "Bengali"
+      ],
+      "festivals": [
+        "Durga Puja (UNESCO)",
+        "Poila Baisakh (New Year)",
+        "Poush Mela"
+      ],
+      "traditions": [
+        "Baul Mystical Music",
+        "Rabindra Sangeet",
+        "Terracotta craft of Bishnupur"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Kosha Mangsho (spicy mutton)",
+        "Luchi with Alur Dom",
+        "Rosogolla & Sandesh"
+      ],
+      "ingredients": [
+        "Mustard oil",
+        "Fish (especially Hilsa)",
+        "Rice",
+        "Panch Phoron"
+      ],
+      "traditions": "Famous for its elaborate multi-course meals and sweet dairy confections made of fresh cottage cheese (chhena)."
+    },
+    "nature": {
+      "ecosystems": [
+        "Mangrove forests",
+        "Himalayan alpine woods",
+        "Sub-tropical moist grasslands"
+      ],
+      "wildlife": [
+        "Royal Bengal Tigers",
+        "Indian Rhinoceroses",
+        "Red Pandas"
+      ],
+      "areas": [
+        "Sundarbans National Park",
+        "Jaldapara National Park",
+        "Singalila Ridge"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Victoria Memorial",
+        "Darjeeling Himalayan Railway (UNESCO)",
+        "Shantiniketan (UNESCO)"
+      ],
+      "architecture": "Terracotta temples of Bishnupur and colonial Indo-Saracenic buildings in Kolkata."
+    },
+    "places": [
+      {
+        "name": "Darjeeling",
+        "description": "Himalayan hill town famous for tea plantations and views of Mount Kanchenjunga."
+      },
+      {
+        "name": "Sundarbans",
+        "description": "The world's largest mangrove forest, home to swimming tigers and diverse avifauna."
+      },
+      {
+        "name": "Bishnupur",
+        "description": "Historic town famous for its 17th-century terracotta temples and silk sarees."
+      }
+    ],
+    "facts": [
+      "The Sundarbans mangrove forest is the only mangrove ecosystem in the world inhabited by tigers.",
+      "The Darjeeling Himalayan Railway, opened in 1881, operates narrow-gauge steam locomotives on active mountain tracks."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Government of West Bengal Portal"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/westbengal-everyday.jpg",
+        "alt": "Victoria Memorial building reflecting in the still lake waters in Kolkata",
+        "credit": "Victoria Memorial Hall Kolkata / ASI",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "/images/nature/geo-plains.jpg",
+        "alt": "Fertile green agricultural crop fields across the alluvial plains of West Bengal",
+        "credit": "Ganges Delta Plains Survey",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "/images/culture/festival-durga.jpg",
+        "alt": "Ornately decorated clay idol of Goddess Durga during Durga Puja festival",
+        "credit": "Kolkata Puja Committee",
+        "source": "State Archive"
+      },
+      "food": {
+        "src": "/images/food/ingredient-mustardoil.jpg",
+        "alt": "Mustard crops in bloom and fresh golden mustard oil jars",
+        "credit": "Mustard Crops Association",
+        "source": "State Archive"
+      },
+      "heritage": {
+        "src": "/images/culture/craft-terracotta.jpg",
+        "alt": "Bankura terracotta clay horse figurines from Bishnupur, West Bengal",
+        "credit": "Bankura Terracotta Archive",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "/images/nature/eco-mangroves.jpg",
+        "alt": "Estuarine rivers and dense sundari mangrove forests of the Sundarbans",
+        "credit": "Sundarbans Tiger Reserve",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "an",
+    "name": "Andaman and Nicobar Islands",
+    "type": "union-territory",
+    "capital": "Port Blair",
+    "region": "South",
+    "introduction": "An archipelago of tropical islands in the Bay of Bengal, known for its pristine coral reefs, dense rainforests, and colonial history.",
+    "image": "/images/stories/andaman-coastal.jpg",
+    "imageCredit": "Andaman Coastal Eco Survey",
+    "geography": {
+      "location": "An island group situated in the southeastern Bay of Bengal, closer to Myanmar than mainland India.",
+      "features": [
+        "Barren Island Volcano",
+        "Radhanagar Beach",
+        "Saddle Peak"
+      ],
+      "climate": "Tropical climate with warm temperatures throughout the year and heavy monsoonal rains."
+    },
+    "culture": {
+      "languages": [
+        "Bengali",
+        "Hindi",
+        "Tamil",
+        "Nicobarese"
+      ],
+      "festivals": [
+        "Island Tourism Festival",
+        "Monsoon Festival",
+        "Beach Festival"
+      ],
+      "traditions": [
+        "Tribal shell crafts",
+        "Nicobarese canoe making",
+        "Indigenous song forms"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Seafood platter",
+        "Coconut prawn curry",
+        "Tandoori fish"
+      ],
+      "ingredients": [
+        "Fresh catch fish",
+        "Coconut",
+        "Bananas",
+        "Local spices"
+      ],
+      "traditions": "Relies heavily on fresh marine catch and tropical fruits, blending mainland Indian spices with island preparations."
+    },
+    "nature": {
+      "ecosystems": [
+        "Tropical evergreen rainforests",
+        "Mangrove creeks",
+        "Coral reef shelves"
+      ],
+      "wildlife": [
+        "Dugongs (state animal)",
+        "Robber Crabs",
+        "Andaman Wood Pigeons"
+      ],
+      "areas": [
+        "Mahatma Gandhi Marine National Park",
+        "Mount Harriet National Park",
+        "Radhanagar Beach"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Cellular Jail at Port Blair",
+        "Ross Island British Ruins",
+        "Viper Island Gallows"
+      ],
+      "architecture": "Colonial British red-brick structures (Cellular Jail) and weathered barracks reclaimed by giant tree roots."
+    },
+    "places": [
+      {
+        "name": "Cellular Jail",
+        "description": "A historic colonial prison used by the British to exile Indian freedom fighters."
+      },
+      {
+        "name": "Havelock Island (Swaraj Dweep)",
+        "description": "Famous for Radhanagar Beach, renowned for crystal clear waters and white sands."
+      },
+      {
+        "name": "Barren Island",
+        "description": "The only active volcano in South Asia, rising directly out of the deep sea."
+      }
+    ],
+    "facts": [
+      "The Andaman and Nicobar Islands comprise over 572 islands, of which only 38 are permanently inhabited.",
+      "The indigenous Sentinelese tribe of North Sentinel Island remains completely isolated from modern civilization."
+    ],
+    "sources": [
+      "Government of India Island Archives",
+      "Andaman and Nicobar Administration Portal"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/andaman-coastal.jpg",
+        "alt": "Sandy beach and turquoise waters of Havelock Island in Andaman",
+        "credit": "Andaman Coastal Eco Survey",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Andaman and Nicobar Islands",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Andaman and Nicobar Islands",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Andaman and Nicobar Islands",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Andaman and Nicobar Islands",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Andaman and Nicobar Islands",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "ch",
+    "name": "Chandigarh",
+    "type": "union-territory",
+    "capital": "Chandigarh",
+    "region": "North",
+    "introduction": "A planned modernist city designed by Le Corbusier, serving as the joint capital of Punjab and Haryana.",
+    "image": "/images/stories/chandigarh-rockgarden.jpg",
+    "imageCredit": "Wikimedia Commons Contributor",
+    "geography": {
+      "location": "Located in northern India, situated in the foothills of the Shivalik Himalayas.",
+      "features": [
+        "Sukhna Lake",
+        "Shivalik Foothills",
+        "Patiali Rao torrent"
+      ],
+      "climate": "Subtropical continental climate with hot summers and cold, dry winters."
+    },
+    "culture": {
+      "languages": [
+        "Punjabi",
+        "Hindi",
+        "English"
+      ],
+      "festivals": [
+        "Festival of Gardens",
+        "Chrysanthemum Show",
+        "Plaza Art Festival"
+      ],
+      "traditions": [
+        "Modernist architectural heritage",
+        "Rock Garden stone-crafts",
+        "Punjabi folk arts"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Butter Chicken",
+        "Chole Bhature",
+        "Amritsari Kulcha"
+      ],
+      "ingredients": [
+        "Wheat flour",
+        "Paneer",
+        "Butter",
+        "Spices"
+      ],
+      "traditions": "Combines urban street food culture with heavy Punjabi dairy-rich specialties."
+    },
+    "nature": {
+      "ecosystems": [
+        "Foothill forest reserves",
+        "Man-made lake ecosystems",
+        "Planned green belts"
+      ],
+      "wildlife": [
+        "Sambar Deer",
+        "Peafowl",
+        "Migratory ducks"
+      ],
+      "areas": [
+        "Sukhna Lake Wildlife Sanctuary",
+        "Sukhna Lake",
+        "Zakir Hussain Rose Garden"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Le Corbusier Capitol Complex (UNESCO)",
+        "The Open Hand Monument",
+        "Nek Chand Rock Garden"
+      ],
+      "architecture": "Modernist Brutalist concrete architecture featuring grid planning, sun-breakers, and open civic spaces."
+    },
+    "places": [
+      {
+        "name": "Capitol Complex",
+        "description": "UNESCO site containing the Legislative Assembly, Secretariat, and High Court buildings."
+      },
+      {
+        "name": "Rock Garden",
+        "description": "A unique 40-acre park featuring sculptures made entirely from industrial and home waste."
+      },
+      {
+        "name": "Sukhna Lake",
+        "description": "A scenic reservoir created in 1958, serving as a sanctuary for migratory birds."
+      }
+    ],
+    "facts": [
+      "Chandigarh is one of the earliest planned post-independence cities in India, laid out in grid sectors.",
+      "The Open Hand Monument symbolizes the city's philosophy of peace: 'open to give, open to receive'."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Chandigarh Administration Portal"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/chandigarh-rockgarden.jpg",
+        "alt": "Handmade stone and pottery shard sculptures inside the Rock Garden of Chandigarh",
+        "credit": "Wikimedia Commons Contributor",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Chandigarh",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Chandigarh",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Chandigarh",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Chandigarh",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Chandigarh",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "dn",
+    "name": "Dadra and Nagar Haveli and Daman and Diu",
+    "type": "union-territory",
+    "capital": "Daman",
+    "region": "West",
+    "introduction": "A combined western territory of coastal enclaves and river valleys, blending Portuguese naval history with Warli tribal customs.",
+    "image": "/images/stories/daman-fort.jpg",
+    "imageCredit": "Wikimedia Commons Contributor",
+    "geography": {
+      "location": "Comprises four separate enclaves in western India: Diu island, Daman coast, and inland Dadra and Nagar Haveli.",
+      "features": [
+        "Daman Ganga River",
+        "Arabian Sea beaches",
+        "Diu Sand Cliffs"
+      ],
+      "climate": "Warm and humid maritime climate, receiving intense monsoonal rains."
+    },
+    "culture": {
+      "languages": [
+        "Gujarati",
+        "Hindi",
+        "Portuguese",
+        "Varli"
+      ],
+      "festivals": [
+        "Nariyal Poornima",
+        "Garba",
+        "Feast of St. John"
+      ],
+      "traditions": [
+        "Warli Tribal Art",
+        "Tarpa Dance",
+        "Portuguese-style brass bands"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Coim de Peixe (Portuguese style fish)",
+        "Dhokla",
+        "Crab Masala"
+      ],
+      "ingredients": [
+        "Seafood",
+        "Coconut",
+        "Rice",
+        "Toddgy vinegar"
+      ],
+      "traditions": "Combines sweet Gujarati vegetarian preparations with Goan-Portuguese style seafood."
+    },
+    "nature": {
+      "ecosystems": [
+        "Coastal sand dunes",
+        "Deciduous forest plateaus",
+        "Estuarine mudflats"
+      ],
+      "wildlife": [
+        "Fruit Bats",
+        "Egrets",
+        "Sea Turtles"
+      ],
+      "areas": [
+        "Vasona Lion Safari",
+        "Jampore Beach",
+        "Fudam Wildlife Sanctuary (Diu)"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Diu Fort",
+        "St. Jerome Fort at Daman",
+        "Church of Bom Jesus at Daman"
+      ],
+      "architecture": "Sixteenth-century Portuguese military fortifications and stone cathedrals with gilded altars."
+    },
+    "places": [
+      {
+        "name": "Diu Fort",
+        "description": "A massive stone fortress surrounded by the sea on three sides, built in 1535."
+      },
+      {
+        "name": "Jampore Beach",
+        "description": "A flat black-sand beach in Daman, famous for its calm waters and sunsets."
+      },
+      {
+        "name": "Silvassa",
+        "description": "The capital of Nagar Haveli, known for its Warli heritage museums and tribal gardens."
+      }
+    ],
+    "facts": [
+      "Diu was a key naval battleground in 1509, establishing Portuguese trade supremacy in the Indian Ocean.",
+      "The territory was integrated into the Indian Union in 1961, and merged into a single UT in 2020."
+    ],
+    "sources": [
+      "Union Territory Administration Portal",
+      "Archaeological Survey of India"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/daman-fort.jpg",
+        "alt": "Basalt stone walls of Moti Daman Fort overlooking the Daman lighthouse",
+        "credit": "Wikimedia Commons Contributor",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Dadra and Nagar Haveli and Daman and Diu",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Dadra and Nagar Haveli and Daman and Diu",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Dadra and Nagar Haveli and Daman and Diu",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Dadra and Nagar Haveli and Daman and Diu",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Dadra and Nagar Haveli and Daman and Diu",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "dl",
+    "name": "Delhi",
+    "type": "union-territory",
+    "capital": "New Delhi",
+    "region": "North",
+    "introduction": "The historic and political capital of India, containing layers of medieval sultanates and modern administrative avenues.",
+    "image": "/images/stories/delhi-redfort.jpg",
+    "imageCredit": "Wikimedia Commons Contributor",
+    "geography": {
+      "location": "Located in northern India, situated along the banks of the Yamuna River.",
+      "features": [
+        "Delhi Ridge (extension of Aravallis)",
+        "Yamuna Floodplains"
+      ],
+      "climate": "Overlap of semi-arid and humid subtropical climate, with extreme summer heat and dense winter fog."
+    },
+    "culture": {
+      "languages": [
+        "Hindi",
+        "Punjabi",
+        "Urdu",
+        "English"
+      ],
+      "festivals": [
+        "Phool Walon Ki Sair",
+        "Qutub Festival",
+        "Independence Day Parade"
+      ],
+      "traditions": [
+        "Sufi Qawwali music at shrines",
+        "Dastangoi (storytelling)",
+        "Zardozi embroidery"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Aloo Chaat",
+        "Chhole Bhature",
+        "Mughlai Butter Chicken",
+        "Nihari"
+      ],
+      "ingredients": [
+        "Wheat flour",
+        "Lentils",
+        "Mutton",
+        "Spices",
+        "Clarified butter"
+      ],
+      "traditions": "Deeply rooted in street food culture (chaat of Old Delhi) and rich royal Mughlai court traditions."
+    },
+    "nature": {
+      "ecosystems": [
+        "Dry deciduous scrub ridge",
+        "Riverine wetlands"
+      ],
+      "wildlife": [
+        "Nilgai",
+        "Jackals",
+        "Migratory waterfowl"
+      ],
+      "areas": [
+        "Asola Bhatti Wildlife Sanctuary",
+        "Yamuna Biodiversity Park",
+        "Okhla Bird Sanctuary"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Qutub Minar (UNESCO)",
+        "Humayun's Tomb (UNESCO)",
+        "Red Fort (UNESCO)"
+      ],
+      "architecture": "Layers of architecture: Rajput stone forts, Islamic Sultanate minarets, red sandstone Mughal palaces, and British colonial stone structures."
+    },
+    "places": [
+      {
+        "name": "Red Fort",
+        "description": "The iconic 17th-century palace built by Shah Jahan, the site of the national flag hoisting."
+      },
+      {
+        "name": "Humayun's Tomb",
+        "description": "A garden tomb built in 1570, serving as the architectural precursor to the Taj Mahal."
+      },
+      {
+        "name": "Qutub Minar",
+        "description": "A 73-meter-tall brick minaret built in 1192, detailed with delicate bands of stone carvings."
+      }
+    ],
+    "facts": [
+      "Delhi has been destroyed and rebuilt seven times across history by different ruling dynasties.",
+      "The Iron Pillar of Delhi in the Qutub complex has remained completely rust-free for over 1,600 years."
+    ],
+    "sources": [
+      "UNESCO World Heritage List",
+      "Archaeological Survey of India"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/delhi-redfort.jpg",
+        "alt": "The red sandstone walls and turrets of the Red Fort Lahori Gate in Delhi",
+        "credit": "Wikimedia Commons Contributor",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Delhi",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Delhi",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Delhi",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Delhi",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Delhi",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "jk",
+    "name": "Jammu and Kashmir",
+    "type": "union-territory",
+    "capital": "Srinagar (Summer), Jammu (Winter)",
+    "region": "North",
+    "introduction": "A breathtaking northern territory of snow-clad mountains, alpine valleys, houseboats, and saffron fields.",
+    "image": "/images/food/ingredient-saffron.jpg",
+    "imageCredit": "Pampore Saffron Fields, Kashmir",
+    "geography": {
+      "location": "Situated in the northern part of India, nestled in the Western Himalayas.",
+      "features": [
+        "Kashmir Valley",
+        "Jhelum River",
+        "Pir Panjal Range",
+        "Dal Lake"
+      ],
+      "climate": "Cool temperate climate in the valley with freezing winters, and subtropical hot climate in the southern plains of Jammu."
+    },
+    "culture": {
+      "languages": [
+        "Kashmiri",
+        "Dogri",
+        "Urdu",
+        "Gojri"
+      ],
+      "festivals": [
+        "Tulip Festival",
+        "Shikara Festival",
+        "Navreh"
+      ],
+      "traditions": [
+        "Pashmina shawl weaving",
+        "Paper-mache craft",
+        "Sufiana Kalam music"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Kashmiri Wazwan (traditional feast)",
+        "Rogan Josh",
+        "Kahwa (saffron green tea)"
+      ],
+      "ingredients": [
+        "Saffron",
+        "Dry ginger",
+        "Fennel seeds",
+        "Walnuts"
+      ],
+      "traditions": "Wazwan is a highly formal multi-course meal, traditionally prepared by master chefs (wazas) using firewood."
+    },
+    "nature": {
+      "ecosystems": [
+        "Alpine coniferous forests",
+        "Freshwater lakes",
+        "Glacial streams"
+      ],
+      "wildlife": [
+        "Hangul (Kashmir Stag - endangered)",
+        "Snow Leopards",
+        "Monals"
+      ],
+      "areas": [
+        "Dachigam National Park",
+        "Gulmarg Biosphere Reserve",
+        "Dal Lake"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Shalimar Bagh Mughal Gardens",
+        "Martand Sun Temple Ruins",
+        "Hari Parbat Fort"
+      ],
+      "architecture": "Traditional Kashmiri wooden mosques (architectural style featuring tiered roofs) and ancient stone sun temples."
+    },
+    "places": [
+      {
+        "name": "Srinagar",
+        "description": "The summer capital, famous for Dal Lake houseboats and terraced Mughal gardens."
+      },
+      {
+        "name": "Gulmarg",
+        "description": "A meadow of flowers and high-altitude ski resort with views of Nanga Parbat."
+      },
+      {
+        "name": "Martand Sun Temple",
+        "description": "Ruins of an 8th-century stone temple built by the Karkota dynasty."
+      }
+    ],
+    "facts": [
+      "Kashmir Saffron is considered among the best in the world, characterized by its deep red color and strong aroma.",
+      "Dal Lake houseboats are hand-carved from cedar wood (deodar) and require regular repair and maintenance."
+    ],
+    "sources": [
+      "Government of Jammu and Kashmir Tourism Portal",
+      "Archaeological Survey of India"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/food/ingredient-saffron.jpg",
+        "alt": "Harvested purple saffron crocus flowers displaying red stigmas",
+        "credit": "Pampore Saffron Fields, Kashmir",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Jammu and Kashmir",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Jammu and Kashmir",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Jammu and Kashmir",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Jammu and Kashmir",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Jammu and Kashmir",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "la",
+    "name": "Ladakh",
+    "type": "union-territory",
+    "capital": "Leh",
+    "region": "North",
+    "introduction": "A high-altitude cold desert territory of dry brown valleys, blue salt lakes, and ancient Tibetan monasteries.",
+    "image": "/images/nature/wildlife-snowleopard.jpg",
+    "imageCredit": "Hemis National Park Board",
+    "geography": {
+      "location": "Located in northern India, bounded by the Karakoram and Great Himalayan mountain ranges.",
+      "features": [
+        "Indus River Valley",
+        "Pangong Tso Lake",
+        "Nubra Valley"
+      ],
+      "climate": "Extremely cold arid desert climate with very low annual precipitation."
+    },
+    "culture": {
+      "languages": [
+        "Ladakhi",
+        "Tibetan",
+        "Balti"
+      ],
+      "festivals": [
+        "Hemis Festival",
+        "Ladakh Festival",
+        "Losar"
+      ],
+      "traditions": [
+        "Buddhist chanting (UNESCO)",
+        "Thangka painting",
+        "Metalware craft"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Skyu (pasta stew)",
+        "Thukpa",
+        "Butter Tea (Gur-Gur Cha)",
+        "Khambir (local bread)"
+      ],
+      "ingredients": [
+        "Barley flour (tsampa)",
+        "Yak butter",
+        "Dry apricots"
+      ],
+      "traditions": "Relies on heavy, warming foods suited for cold mountain conditions, centered around barley and yak dairy products."
+    },
+    "nature": {
+      "ecosystems": [
+        "High-altitude cold desert scrubs",
+        "Glacial streams",
+        "Salt lakes"
+      ],
+      "wildlife": [
+        "Snow Leopards",
+        "Black-necked Cranes",
+        "Tibetan Wild Asses (Kiang)"
+      ],
+      "areas": [
+        "Hemis National Park",
+        "Pangong Tso Lake",
+        "Nubra Valley sand dunes"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Leh Palace",
+        "Hemis Monastery",
+        "Alchi Temple Complex"
+      ],
+      "architecture": "Tibetan monastic fortress designs (dzong architecture) constructed from sun-dried mud bricks and heavy timber timbers."
+    },
+    "places": [
+      {
+        "name": "Leh Palace",
+        "description": "A nine-story royal palace built in the 17th century, overlooking Leh town."
+      },
+      {
+        "name": "Pangong Tso",
+        "description": "A high-altitude salt lake situated at 14,270 feet, stretching from India into Tibet."
+      },
+      {
+        "name": "Nubra Valley",
+        "description": "A high desert valley famous for its double-humped Bactrian camels and cold dunes."
+      }
+    ],
+    "facts": [
+      "Hemis National Park is the largest national park in India, famous for hosting the highest density of snow leopards.",
+      "The Buddhist chanting of Ladakh was inscribed on the UNESCO Representative List of the Intangible Cultural Heritage of Humanity."
+    ],
+    "sources": [
+      "UNESCO Intangible Cultural Heritage List",
+      "Ladakh Tourism Administration Portal"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/nature/wildlife-snowleopard.jpg",
+        "alt": "Snow leopard sitting on a cold rocky ridge in the high mountains of Ladakh",
+        "credit": "Hemis National Park Board",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Ladakh",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Ladakh",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Ladakh",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Ladakh",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Ladakh",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "ld",
+    "name": "Lakshadweep",
+    "type": "union-territory",
+    "capital": "Kavaratti",
+    "region": "South",
+    "introduction": "A tiny tropical archipelago of coral atolls, lagoons, and coconut groves in the Arabian Sea.",
+    "image": "/images/nature/geo-islands.jpg",
+    "imageCredit": "Lakshadweep Reefs Survey",
+    "geography": {
+      "location": "An island chain situated off the southwestern coast of India, in the Arabian Sea.",
+      "features": [
+        "Coral atolls",
+        "Sandy lagoons",
+        "Barrier reefs"
+      ],
+      "climate": "Tropical warm and humid maritime climate, subject to heavy monsoonal rains."
+    },
+    "culture": {
+      "languages": [
+        "Jeseri",
+        "Mahl",
+        "Malayalam"
+      ],
+      "festivals": [
+        "Eid-ul-Fitr",
+        "Milad-un-Nabi"
+      ],
+      "traditions": [
+        "Lava Dance",
+        "Coir rope weaving",
+        "Traditional boat building"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "Tuna Curry",
+        "Malabar Parotta",
+        "Coconut-based fish preparations"
+      ],
+      "ingredients": [
+        "Tuna fish",
+        "Coconut",
+        "Rice",
+        "Spices"
+      ],
+      "traditions": "Entirely dependent on fresh marine catch (especially tuna) and coconuts, with strong Malabar culinary ties."
+    },
+    "nature": {
+      "ecosystems": [
+        "Coral reefs",
+        "Sandy beach dunes",
+        "Pelagic marine zones"
+      ],
+      "wildlife": [
+        "Butterfly Fish",
+        "Hermit Crabs",
+        "Sooty Terns"
+      ],
+      "areas": [
+        "Kavaratti Lagoon",
+        "Pitti Bird Sanctuary",
+        "Bangaram Atoll"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "Ujra Mosque at Kavaratti",
+        "Traditional Coir craft centers"
+      ],
+      "architecture": "Simple coral-stone masonry mosques with intricately carved wooden ceilings and doors."
+    },
+    "places": [
+      {
+        "name": "Minicoy Island",
+        "description": "The southernmost island, famous for its historic British lighthouse and Mahl culture."
+      },
+      {
+        "name": "Pitti Island",
+        "description": "An uninhabited coral islet serving as an important nesting ground for pelagic seabirds."
+      },
+      {
+        "name": "Bangaram Atoll",
+        "description": "A clean coral lagoon ringed by white sand dunes and rich barrier reefs."
+      }
+    ],
+    "facts": [
+      "Lakshadweep means 'one hundred thousand islands' in Sanskrit and Malayalam, though it comprises only 36 islands.",
+      "All islands of Lakshadweep were formed by coral atoll reefs over millions of years."
+    ],
+    "sources": [
+      "Union Territory of Lakshadweep Official Portal",
+      "Indian Ocean Marine Census"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/nature/geo-islands.jpg",
+        "alt": "Coconut palms and coral sand lagoon at Lakshadweep Islands",
+        "credit": "Lakshadweep Reefs Survey",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Lakshadweep",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Lakshadweep",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Lakshadweep",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Lakshadweep",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Lakshadweep",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  },
+  {
+    "id": "py",
+    "name": "Puducherry",
+    "type": "union-territory",
+    "capital": "Puducherry",
+    "region": "South",
+    "introduction": "A coastal territory of four historic French enclaves, known for colonial architecture and spiritual communities.",
+    "image": "/images/stories/puducherry-french.jpg",
+    "imageCredit": "Wikimedia Commons Contributor",
+    "geography": {
+      "location": "Comprises four separate coastal enclaves: Puducherry, Karaikal, Yanam, and Mahe.",
+      "features": [
+        "Gingee River Mouth",
+        "Coromandel coastline",
+        "Ousteri Lake"
+      ],
+      "climate": "Tropical wet and dry climate with hot summers and rain seasons from the northeast monsoon."
+    },
+    "culture": {
+      "languages": [
+        "Tamil",
+        "French",
+        "Telugu",
+        "Malayalam"
+      ],
+      "festivals": [
+        "Bastille Day",
+        "Mangani Festival",
+        "French Food Festival"
+      ],
+      "traditions": [
+        "French-Tamil fusion crafts",
+        "Garadi Folk Dance",
+        "Terracotta pottery of Villianur"
+      ]
+    },
+    "food": {
+      "cuisine": [
+        "French Baguettes",
+        "Prawn Depula (spicy prawn curry)",
+        "Crepes",
+        "Ratatouille"
+      ],
+      "ingredients": [
+        "Tamarind",
+        "Coconut",
+        "Spices",
+        "Butter",
+        "Cheese"
+      ],
+      "traditions": "A unique fusion of French colonial culinary techniques (baking, butter sauces) and south Indian Tamil spices."
+    },
+    "nature": {
+      "ecosystems": [
+        "Coastal lagoons",
+        "Estuarine wetlands",
+        "Sandy beach shelves"
+      ],
+      "wildlife": [
+        "Spot-billed Pelicans",
+        "Mudskippers",
+        "Herons"
+      ],
+      "areas": [
+        "Ousteri Wetland Sanctuary",
+        "Promenade Beach",
+        "Karaikal beach dunes"
+      ]
+    },
+    "heritage": {
+      "sites": [
+        "French War Memorial",
+        "Aurobindo Ashram",
+        "Auroville Matrimandir"
+      ],
+      "architecture": "French colonial architecture characterized by grid layouts, pastel stucco walls, tall arches, and wooden shuttered windows."
+    },
+    "places": [
+      {
+        "name": "White Town",
+        "description": "The French Quarter of Puducherry, preserved with yellow colonial buildings and bougainvillea-lined streets."
+      },
+      {
+        "name": "Auroville",
+        "description": "An experimental township founded in 1968, centered on the golden geodesic dome of the Matrimandir."
+      },
+      {
+        "name": "Ousteri Lake",
+        "description": "A large man-made lake sanctuary hosting diverse resident and winter migratory bird species."
+      }
+    ],
+    "facts": [
+      "Puducherry was the chief French settlement in India from the late 17th century until its de facto merger in 1954.",
+      "Mahe enclave is located on the west coast of India, while the other three enclaves are on the east coast."
+    ],
+    "sources": [
+      "Union Territory of Puducherry Official Portal",
+      "Auroville Foundation Registry"
+    ],
+    "images": {
+      "hero": {
+        "src": "/images/stories/puducherry-french.jpg",
+        "alt": "French colonial architecture yellow facade streets in Puducherry French Quarter",
+        "credit": "Wikimedia Commons Contributor",
+        "source": "State Tourism Portal"
+      },
+      "geography": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Geography landscape details for Puducherry",
+        "credit": "Pending authentic source",
+        "source": "Geological Survey"
+      },
+      "culture": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Traditional cultural details for Puducherry",
+        "credit": "Pending authentic source",
+        "source": "Cultural Archive"
+      },
+      "food": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Representative regional food and cuisine for Puducherry",
+        "credit": "Pending authentic source",
+        "source": "State Culinary Board"
+      },
+      "heritage": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Historic monuments and archaeological architecture in Puducherry",
+        "credit": "Pending authentic source",
+        "source": "Archaeological Survey of India"
+      },
+      "nature": {
+        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "alt": "Fauna, forests, and protected natural zones in Puducherry",
+        "credit": "Pending authentic source",
+        "source": "Forest Conservation Board"
+      }
+    }
+  }
+];
