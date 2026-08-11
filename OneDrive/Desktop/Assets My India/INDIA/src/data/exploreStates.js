@@ -1205,15 +1205,15 @@ export const exploreStates = [
         "source": "https://commons.wikimedia.org/wiki/File:Kullu_Dussehra_-_main_procession.jpg"
       },
       "food": {
-        "src": "/images/food/region-north.jpg",
-        "alt": "Warm regional mountain cuisine platter featuring lentils and wheat bread",
-        "credit": "Northern Grains Association",
+        "src": "/images/food/himachal_pradesh_food.jpg",
+        "alt": "Traditional Himachali Dham thali served with rice, madra curry, dal, and local delicacies on a steel plate",
+        "credit": "Himachal Culinary Archive",
         "source": "State Archive"
       },
       "heritage": {
         "src": "/images/heritage/himachal_pradesh_heritage.jpg",
-        "alt": "Historic monuments and archaeological architecture in Himachal Pradesh",
-        "credit": "ANKAN / Wikimedia Commons",
+        "alt": "Ancient stone Shikhara temples of the Baijnath Temple Complex in Himachal Pradesh",
+        "credit": "Himachal Archaeological Department",
         "source": "https://commons.wikimedia.org/wiki/File:Shimla_Railway_Station,_Himachal_Pradesh.jpg"
       },
       "nature": {
