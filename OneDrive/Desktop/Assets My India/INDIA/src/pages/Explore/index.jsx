@@ -11,7 +11,9 @@ export default function ExplorePage() {
   
   // State variables for search query and active region filter
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeRegion, setActiveRegion] = useState('North');
+  const [activeRegion, setActiveRegion] = useState(() => {
+    return sessionStorage.getItem('explore_active_region') || 'North';
+  });
 
   // Scroll to top on route change
   useEffect(() => {
@@ -187,6 +189,7 @@ export default function ExplorePage() {
   // Region Card selection handler
   const handleSelectRegion = (regionId) => {
     setActiveRegion(regionId);
+    sessionStorage.setItem('explore_active_region', regionId);
     setTimeout(() => {
       document.getElementById('states-grid-section')?.scrollIntoView({ behavior: 'smooth' });
     }, 100);
