@@ -121,16 +121,16 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/andhra_pradesh_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Andhra Pradesh",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Ingo Mehling / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Hampi_-_Uddana_Veerabhadra_Temple_-_Hanuman_-_2.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/andhra_pradesh_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Andhra Pradesh",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Satdeep Gill / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Chicken_tikka_in_Araku_Valley,_Andhra_Pradesh_01.jpg"
       }
     }
   },
@@ -240,34 +240,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/arunachal_pradesh_geography.jpg",
         "alt": "Geography landscape details for Arunachal Pradesh",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "Praana07 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:A_Stream_in_Arunachal_Pradesh.webm"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/arunachal_pradesh_culture.jpg",
         "alt": "Traditional cultural details for Arunachal Pradesh",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "en:User:Doniv79 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Nishi_tribal_lightened.jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/arunachal_pradesh_food.jpg",
         "alt": "Representative regional food and cuisine for Arunachal Pradesh",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Sourabh.biswas003 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:20200304_211332_Traditional_Arunachal_Food_in_Tokri_Miao_Changlang,_Arunachal_Pradesh_02.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/arunachal_pradesh_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Arunachal Pradesh",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Kingshuk Mondal / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Bhavachakra_or_the_Buddhist_Wheel_of_Life_at_Tawang_Monastery,_Tawang,_Arunachal_Pradesh,_India.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/arunachal_pradesh_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Arunachal Pradesh",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Anitava Roy / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Close_wing_Basking_of_Ideopsis_similis_(Linnaeus,_1758)_-_Blue_Glassy_Tiger_WLB.jpg"
       }
     }
   },
@@ -394,10 +394,10 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/assam_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Assam",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Kunal Dalui / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Kamakhya_Temple,_Guwahati.jpg"
       },
       "nature": {
         "src": "/images/nature/wildlife-rhino.jpg",
@@ -531,16 +531,16 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/bihar_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Bihar",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Sumitsurai / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Votive_Stupas_-_Mahabodhi_Temple_Complex_-_Bodh_Gaya_(13).jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/bihar_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Bihar",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Amit De Nimi / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Live_behind_Art.jpg"
       }
     }
   },
@@ -661,22 +661,22 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/chhattisgarh_food.jpg",
         "alt": "Representative regional food and cuisine for Chhattisgarh",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Shweta1389 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Butterfly_rolls_-_by_Shweta_Kushwaha_-_Chhattisgarh_-_22.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/chhattisgarh_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Chhattisgarh",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Ms Sarah Welch / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:7th_century_reliefs_on_brick_walls,_Lakshmana_Hindu_temple,_Sirpur_Chhattisgarh_India_1.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/chhattisgarh_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Chhattisgarh",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Harminder singh saini / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Kanger_valley_National_park_BABY_monkeys.jpg"
       }
     }
   },
@@ -790,10 +790,10 @@ export const exploreStates = [
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/goa_culture.jpg",
         "alt": "Traditional cultural details for Goa",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Fredericknoronha / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Goa_Shigmo_Parade_March_2026_20.jpg"
       },
       "food": {
         "src": "/images/food/region-coastal.jpg",
@@ -802,16 +802,16 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/goa_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Goa",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Francesco Bandarin / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Churches_and_Convents_of_Goa-109276.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/goa_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Goa",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Bala Chandran / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Merogomphus_longistigma_female_2_by_Bala_Chandran.jpg"
       }
     }
   },
@@ -938,10 +938,10 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/gujarat_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Gujarat",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Snehrashmi / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Rani_ki_vav_-_Patan_-_Gujarat_-_Wall_Decorations.jpg"
       },
       "nature": {
         "src": "/images/nature/wildlife-lion.jpg",
@@ -1056,34 +1056,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/haryana_geography.jpg",
         "alt": "Geography landscape details for Haryana",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "India. Superintendent of Census Operations, Punjab Anand, R. L., 1907- / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:District_census_handbook,_Punjab_(IA_districtcensusha17indi).pdf"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/haryana_culture.jpg",
         "alt": "Traditional cultural details for Haryana",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Department of Language and Culture, Government of Telangana / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Pothuraju_Artist_in_Culture_of_Telangana_Programme_at_Surajkund,_Haryana_(02.02.2016)_02.jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/haryana_food.jpg",
         "alt": "Representative regional food and cuisine for Haryana",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Prabhat Kumar Sharma / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Playground_and_Staff_Quarters_at_Institute_of_Food_Security,_Gurugram_(Haryana).jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/haryana_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Haryana",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Harvinder Chandigarh / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Punjab_and_Haryana_High_Court_,Capitol_Complex,_World_Heritage_Site.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/haryana_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Haryana",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Slyronit / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Sultanpur_National_Park_on_a_foggy_morning.jpg"
       }
     }
   },
@@ -1199,10 +1199,10 @@ export const exploreStates = [
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/himachal_pradesh_culture.jpg",
         "alt": "Traditional cultural details for Himachal Pradesh",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Kondephy / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Kullu_Dussehra_-_main_procession.jpg"
       },
       "food": {
         "src": "/images/food/region-north.jpg",
@@ -1211,10 +1211,10 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/himachal_pradesh_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Himachal Pradesh",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "ANKAN / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Shimla_Railway_Station,_Himachal_Pradesh.jpg"
       },
       "nature": {
         "src": "/images/nature/wildlife-snowleopard.jpg",
@@ -1330,34 +1330,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/jharkhand_geography.jpg",
         "alt": "Geography landscape details for Jharkhand",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "Great Britain India Office / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Chota_Nagpur_Plateau-IGI.jpg"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/jharkhand_culture.jpg",
         "alt": "Traditional cultural details for Jharkhand",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Shreyashprashu / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Sohrai_wall_painting_jharkhand_India.jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/jharkhand_food.jpg",
         "alt": "Representative regional food and cuisine for Jharkhand",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "\u1c64\u1c67 \u1c62\u1c5f\u1c5b\u1c5f\u1c5e / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Local_market_in_Jharkhand_116.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/jharkhand_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Jharkhand",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Rohitmahali01 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Atop_View_from_Shikharji_temple_in_Parasnath_Hill_,_Giridih_,_Jharkhand.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/jharkhand_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Jharkhand",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Dev0745 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Betla_National_Park_forest_61125.jpg"
       }
     }
   },
@@ -1465,34 +1465,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/karnataka_geography.jpg",
         "alt": "Geography landscape details for Karnataka",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "Arjunullas / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Deccan_Plateau.png"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/karnataka_culture.jpg",
         "alt": "Traditional cultural details for Karnataka",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Kalyan Kumar / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Mysore_Dasara_procession.jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/karnataka_food.jpg",
         "alt": "Representative regional food and cuisine for Karnataka",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Mahi Gajwani / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath-Diu-DSC001.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/karnataka_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Karnataka",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Vyacheslav Argenberg / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Hampi,_India,_Rocky_landscape_of_Hampi,_Granite_rocks_of_Matanga_Hill.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/karnataka_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Karnataka",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Vinaysalimath / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Bandipur_Tiger_Reserve_Karnataka.jpg"
       }
     }
   },
@@ -1620,10 +1620,10 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/kerala_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Kerala",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Arun RJ / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Sree_Padmanabhaswamy_Temple_Lakshadeepam.jpg"
       },
       "nature": {
         "src": "/images/nature/wildlife-elephant.jpg",
@@ -1757,10 +1757,10 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/madhya_pradesh_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Madhya Pradesh",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Rohit Sharma / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Eastern_Gateway_of_The_Great_stupa,_Sanchi_02.jpg"
       },
       "nature": {
         "src": "/images/nature/wildlife-tiger.jpg",
@@ -1893,10 +1893,10 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/maharashtra_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Maharashtra",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Shivajidesai29 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Kailasanatha_Temple-Ellora-Aurangabad-Maharashtra-IMG_9658.jpg"
       },
       "nature": {
         "src": "/images/nature/eco-forest.jpg",
@@ -2009,34 +2009,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/manipur_geography.jpg",
         "alt": "Geography landscape details for Manipur",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "Haoreima / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Plain_of_the_Imphal_Valley_in_Manipur_state_(alias_Kangleipak)_in_Northeast_India_-_as_seen_from_an_aeroplane_-_aerial_view_08.jpg"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/manipur_culture.jpg",
         "alt": "Traditional cultural details for Manipur",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Ministry of Defence / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:The_tableau_of_the_state_of_Manipur_depicting,_great_festival_of_Yaoshang_Holi_Pala_,_gliding_down_the_Rajpath_during_the_Republic_Day_Parade_-_2006,_in_New_Delhi_on_January_26,_2006.jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/manipur_food.jpg",
         "alt": "Representative regional food and cuisine for Manipur",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Goumisao / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Manipur_shrimps.JPG"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/manipur_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Manipur",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Neilsatyam / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Classical_Meitei_Language_%E2%80%93_Speech_of_the_Kangleipak_Civilization_%E2%80%93_Tongue_of_the_Manipur_Kingdom_%E2%80%93_Old_ruins_of_the_Kangla_Fort.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/manipur_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Manipur",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Wikimedia Commons Contributor / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Keibul_lamjao_national_park.jpeg"
       }
     }
   },
@@ -2146,34 +2146,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/meghalaya_geography.jpg",
         "alt": "Geography landscape details for Meghalaya",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "Aiban-03 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Rocky_plateau_and_agricultural_fields_near_Rapleng,_East_Khasi_Hills,_Meghalaya_-_25_April_2026.jpg"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/meghalaya_culture.jpg",
         "alt": "Traditional cultural details for Meghalaya",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Debanutosh / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Nongkrem_Dance_of_Meghalaya_India.jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/meghalaya_food.jpg",
         "alt": "Representative regional food and cuisine for Meghalaya",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Gitika Gayan / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Chicken_biriyani-_My_cafe_restaurant_-_Meghalaya_DSC_009.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/meghalaya_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Meghalaya",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Wann Majaw / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Umkar_Living_Root_Bridge.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/meghalaya_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Meghalaya",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Timothy A. Gonsalves / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Map_Nokrek_Biosphere_West_Garo_Oct24_A7CR_03589.jpg"
       }
     }
   },
@@ -2281,34 +2281,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/mizoram_geography.jpg",
         "alt": "Geography landscape details for Mizoram",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "Jokomarel / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Lushai_Hills_Map_1938.png"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/mizoram_culture.jpg",
         "alt": "Traditional cultural details for Mizoram",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "chhanchhana Zote Hmar / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Aibawk,_mizoram,_india,_Mizoram_state_museum,_mizoram_history,_mizoramlushaihills,_mizo_cultural_dress,_mizoram_culture,_lushai_chief_(53878914472).jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/mizoram_food.jpg",
         "alt": "Representative regional food and cuisine for Mizoram",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Ministry of Consumer Affairs, Food and Public Distribution / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Minister_Food_%26_Civil_Supplies,_Mizoram,_Shri_John_Ratluangliana_calls_on_the_Union_Minister_for_Consumer_Affairs,_Food_and_Public_Distribution,_Shri_Ramvilas_Paswan,_in_New_Delhi_on_August_09,_2014.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/mizoram_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Mizoram",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Mapuia Hnamte / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Kawtchhuah_Ropui_Vangchhia_Mapuia_Hnamte_(2).JPG"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/mizoram_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Mizoram",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Garima Singh / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Phawngpui_national_park.jpg"
       }
     }
   },
@@ -2430,22 +2430,22 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/nagaland_food.jpg",
         "alt": "Representative regional food and cuisine for Nagaland",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Ministry of Information and Broadcasting / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Children_being_served_the_food_under_the_Mid-day_Meal_Scheme_at_a_primary_school,_Wokha_district_in_Nagaland.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/nagaland_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Nagaland",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Ly.n0m / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Kohima_War_Cemetery_(2024).jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/nagaland_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Nagaland",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Original: Samudra Bikash Hazarika Derivative work: UnpetitproleX / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Breathtaking_beauty_of_Dzukou_Valley_in_Manipur-Nagaland_border_(edit).jpg"
       }
     }
   },
@@ -2706,16 +2706,16 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/punjab_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Punjab",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "This picture has been taken by Oleg Yunakov. Contact e-mail: yunakovgmail.com. I / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Hamandir_Sahib_(Golden_Temple).jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/punjab_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Punjab",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Jaypee / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Harike.jpg"
       }
     }
   },
@@ -2964,34 +2964,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/sikkim_geography.jpg",
         "alt": "Geography landscape details for Sikkim",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "Narayan Jambunathan / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Kanchenjunga_Massif_From_Dzongri_Top_(148146457).jpeg"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/sikkim_culture.jpg",
         "alt": "Traditional cultural details for Sikkim",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Congressional Committee / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:TIBET-_SPECIAL_FOCUS_FOR_2007_(IA_gov.gpo.fdsys.CHRG-110hhrg38229).pdf"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/sikkim_food.jpg",
         "alt": "Representative regional food and cuisine for Sikkim",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "PansanLepcha / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Jhol_Momo_in_Kalimpong.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/sikkim_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Sikkim",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Bernard Gagnon / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Rumtek_Monastery_05.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/sikkim_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Sikkim",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Ritikpatle.14 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:UNESCO_WORLD_HERITAGE_SITE_IN_INDIAN.pdf"
       }
     }
   },
@@ -3117,16 +3117,16 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/tamil_nadu_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Tamil Nadu",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Ms Sarah Welch / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:A_collage_of_Great_living_Chola_temples_UNESCO_heritage_site.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/tamil_nadu_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Tamil Nadu",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Timothy A. Gonsalves / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Oriental_honey_buzzard_Mudumalai_Mar21_DSC01405.jpg"
       }
     }
   },
@@ -3235,10 +3235,10 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/telangana_geography.jpg",
         "alt": "Geography landscape details for Telangana",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "Ms Sarah Welch / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:3rd_century_BCE_to_4th_century_CE_Buddhist_monastery_and_artwork,_Phanigiri_Telangana_India_-_48.jpg"
       },
       "culture": {
         "src": "/images/culture/craft-bidriware.jpg",
@@ -3253,16 +3253,16 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/telangana_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Telangana",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Dayakargundamalla / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Rudreshwara_Temple_at_Ramappa.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/telangana_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Telangana",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Ms Sarah Welch / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Palampet_village_and_nearby_farmlands,_Telangana_India_-_3.jpg"
       }
     }
   },
@@ -3371,34 +3371,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/tripura_geography.jpg",
         "alt": "Geography landscape details for Tripura",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "Balakrishnan Valappil / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:The_WITCH_2009_10_13_9_50_jampui_hills_Tripura_(4051703646).jpg"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/tripura_culture.jpg",
         "alt": "Traditional cultural details for Tripura",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Hrishikesh1618 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Kharchi_puja_2025_tripura_mela.jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/tripura_food.jpg",
         "alt": "Representative regional food and cuisine for Tripura",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Ministry of Consumer Affairs, Food and Public Distribution / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Chief_Minister_of_Tripura,_Shri_Biplab_Kumar_Deb_meeting_the_Union_Minister_for_Consumer_Affairs,_Food_and_Public_Distribution,_Shri_Ram_Vilas_Paswan,_in_New_Delhi_on_October_26,_2018.JPG"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/tripura_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Tripura",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Kingshuk Mondal / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Ujjayanta_Palace_as_seen_from_the_midpoint_of_the_avenue_02.JPG"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/tripura_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Tripura",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Miraj Hussain / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Capped_Langur_Tripura_(2).jpg"
       }
     }
   },
@@ -3527,10 +3527,10 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/uttar_pradesh_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Uttar Pradesh",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Dhirad, picture edited by J. A. Knudsen / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_in_March_2004.jpg"
       },
       "nature": {
         "src": "/images/nature/wildlife-gharial.jpg",
@@ -3651,22 +3651,22 @@ export const exploreStates = [
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/uttarakhand_culture.jpg",
         "alt": "Traditional cultural details for Uttarakhand",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "J. M. W. Turner / Thomas Higham / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Haridwar_Kumbh_Mela_-_1850s.jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/uttarakhand_food.jpg",
         "alt": "Representative regional food and cuisine for Uttarakhand",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "akshatsgi / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Baked_groundnuts,_Uttarakhand,_India_(2017).jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/uttarakhand_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Uttarakhand",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Billjones94 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Kedarnath_Temple_in_Uttarakhand,_India,_by_Yogabrata_Chakraborty.jpg"
       },
       "nature": {
         "src": "/images/nature/eco-himalayan.jpg",
@@ -3919,34 +3919,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/andaman_and_nicobar_islands_geography.jpg",
         "alt": "Geography landscape details for Andaman and Nicobar Islands",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "SentinelHub / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Barren_Volcano,_Barren_Island,_Andaman_and_Nicobar_Islands,_India%E2%80%94Cropped.png"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/andaman_and_nicobar_islands_culture.jpg",
         "alt": "Traditional cultural details for Andaman and Nicobar Islands",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Burke, Thomas, 1887-1945 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Out_and_about_London_(IA_outaboutlondon00burk).pdf"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/andaman_and_nicobar_islands_food.jpg",
         "alt": "Representative regional food and cuisine for Andaman and Nicobar Islands",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Vyacheslav Argenberg / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Havelock_Island,_Indian_food,_Andamans.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/andaman_and_nicobar_islands_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Andaman and Nicobar Islands",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Pinakpani / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Cellular_Jail_buildings_and_museum_inside_13.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/andaman_and_nicobar_islands_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Andaman and Nicobar Islands",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "PJeganathan / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Mahatma_Gandhi_Marine_National_Park,_Pongi_Balu,_Andaman_(34653).jpg"
       }
     }
   },
@@ -4056,34 +4056,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/chandigarh_geography.jpg",
         "alt": "Geography landscape details for Chandigarh",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "Original: Biswarup Ganguly Derivative work: UnpetitproleX / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Shikara_-_Sukhna_Lake_-_Chandigarh_2016-08-07_(edit).jpg"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/chandigarh_culture.jpg",
         "alt": "Traditional cultural details for Chandigarh",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Minaxi choudhary / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Yadvindra_garden_or_Pinjore_garden,chandigarh.jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/chandigarh_food.jpg",
         "alt": "Representative regional food and cuisine for Chandigarh",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Yuvraj Singh 97 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Butter_Chicken_%26_Butter_Naan_-_Home_-_Chandigarh_-_India_-_0006.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/chandigarh_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Chandigarh",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Nicholas.iyadurai / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Chandigarh_Capitol_Complex_-_Le_Corbusier_-_Secretariat_elevation.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/chandigarh_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Chandigarh",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "UnpetitproleX / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Sukhna_gallery,_Chandigarh,_India.jpg"
       }
     }
   },
@@ -4194,34 +4194,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/dadra_and_nagar_haveli_and_daman_and_diu_geography.jpg",
         "alt": "Geography landscape details for Dadra and Nagar Haveli and Daman and Diu",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "Nizil Shah / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Damanganga_river_and_bridge_across_it_at_Daman.jpg"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/dadra_and_nagar_haveli_and_daman_and_diu_culture.jpg",
         "alt": "Traditional cultural details for Dadra and Nagar Haveli and Daman and Diu",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Ant\u00f3nio Lopes Mendes / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Tarpa_player.jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/dadra_and_nagar_haveli_and_daman_and_diu_food.jpg",
         "alt": "Representative regional food and cuisine for Dadra and Nagar Haveli and Daman and Diu",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Boby Ortain / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Authentic_Gujrati_Dhokla,_Daman,_Daman_and_Diu,_IMG_20181019_085624211.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/dadra_and_nagar_haveli_and_daman_and_diu_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Dadra and Nagar Haveli and Daman and Diu",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Hshook / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Daman_and_Diu_banner.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/dadra_and_nagar_haveli_and_daman_and_diu_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Dadra and Nagar Haveli and Daman and Diu",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Parliament of India / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Central_Goods_and_Services_Tax_Act_2017.djvu"
       }
     }
   },
@@ -4332,34 +4332,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/delhi_geography.jpg",
         "alt": "Geography landscape details for Delhi",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "Royle, J. Forbes / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Illustrations_of_the_Botany_and_other_Branches_of_the_Natural_History_of_Himalayan_Mountains_and_of_the_Flora_of_Cahsmere,_Vol._I_(IA_dli.granth.100308).pdf"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/delhi_culture.jpg",
         "alt": "Traditional cultural details for Delhi",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "President's Secretariat / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:The_President,_Smt._Pratibha_Devisingh_Patil_blessing_the_Pankhas_to_be_sent_by_her_to_the_Phool_Walon_Ki_Sair_Festival,_at_Mehrauli,_at_Rashtrapati_Bhavan,_in_New_Delhi_on_October_10,_2009.jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/delhi_food.jpg",
         "alt": "Representative regional food and cuisine for Delhi",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "ampersandyslexia / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Aloo_chaat_vendor,_Connaught_Place,_New_Delhi.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/delhi_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Delhi",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Syed Sajidul Islam / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:View_of_Qutub_Minar_(1).jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/delhi_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Delhi",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Gannu03 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Rhesus_Macaque_Mother_with_Infant_at_Asola_Bhatti_Wildlife_Sanctuary.jpg"
       }
     }
   },
@@ -4471,34 +4471,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/jammu_and_kashmir_geography.jpg",
         "alt": "Geography landscape details for Jammu and Kashmir",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "KennyOMG / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Pahalgam_Valley.jpg"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/jammu_and_kashmir_culture.jpg",
         "alt": "Traditional cultural details for Jammu and Kashmir",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Wikimedia Commons Contributor / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:World_horticultural_trade_%26_U.S._export_opportunities_-_United_States_Department_of_Agriculture,_Foreign_Agricultural_Service._(IA_CAT10659268034).pdf"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/jammu_and_kashmir_food.jpg",
         "alt": "Representative regional food and cuisine for Jammu and Kashmir",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Satishram1810 / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Traditional_dogra_food-jammu_and_kashmir-001.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/jammu_and_kashmir_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Jammu and Kashmir",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Pradeepkjoshi / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Shalimar_Bagh,_Srinagar.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/jammu_and_kashmir_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Jammu and Kashmir",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "Jyoti Chaurasia / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Dachigam_National_Park-_Jammu_%26_Kashmir.jpg"
       }
     }
   },
@@ -4614,22 +4614,22 @@ export const exploreStates = [
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/ladakh_culture.jpg",
         "alt": "Traditional cultural details for Ladakh",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "MaryOfPrag / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Historical_Hemis_festival_IV.jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/ladakh_food.jpg",
         "alt": "Representative regional food and cuisine for Ladakh",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Madhrakangri / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Ladakh_Traditional_Food.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/ladakh_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Ladakh",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Sumit Das / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Leh_Palace_-_Leh_-_Ladakh_-_View_from_Shanti_Stupa.jpg"
       },
       "nature": {
         "src": "/images/nature/wildlife-snowleopard.jpg",
@@ -4749,22 +4749,22 @@ export const exploreStates = [
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/lakshadweep_culture.jpg",
         "alt": "Traditional cultural details for Lakshadweep",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Srikeit at en.wikipedia / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Lakshadweep.ogg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/lakshadweep_food.jpg",
         "alt": "Representative regional food and cuisine for Lakshadweep",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Bombay Natural History Society / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Journal_of_the_Bombay_Natural_History_Society_(IA_journalofbombay931996bomb).pdf"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/lakshadweep_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Lakshadweep",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Bombay Natural History Society / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Journal_of_the_Bombay_Natural_History_Society_(IA_journalofbomba9131994bomb).pdf"
       },
       "nature": {
         "src": "/images/nature/geo-islands.jpg",
@@ -4883,34 +4883,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/geography/puducherry_geography.jpg",
         "alt": "Geography landscape details for Puducherry",
-        "credit": "Pending authentic source",
-        "source": "Geological Survey"
+        "credit": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:ISS014-E-18554_-_View_of_India.jpg"
       },
       "culture": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/culture/puducherry_culture.jpg",
         "alt": "Traditional cultural details for Puducherry",
-        "credit": "Pending authentic source",
-        "source": "Cultural Archive"
+        "credit": "Matthew T Rader / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:A_home_garden_in_Puducherry,_Tamil_Nadu,_India.jpg"
       },
       "food": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/food/puducherry_food.jpg",
         "alt": "Representative regional food and cuisine for Puducherry",
-        "credit": "Pending authentic source",
-        "source": "State Culinary Board"
+        "credit": "Kanaga Meena / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Puducherry_Accord_Hotel_Buffet_lunch.jpg"
       },
       "heritage": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/heritage/puducherry_heritage.jpg",
         "alt": "Historic monuments and archaeological architecture in Puducherry",
-        "credit": "Pending authentic source",
-        "source": "Archaeological Survey of India"
+        "credit": "Manuspanicker / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Puducherry-FrenchWar-Memorial.jpg"
       },
       "nature": {
-        "src": "IMAGE_REQUIRES_AUTHENTIC_SOURCE",
+        "src": "/images/nature/puducherry_nature.jpg",
         "alt": "Fauna, forests, and protected natural zones in Puducherry",
-        "credit": "Pending authentic source",
-        "source": "Forest Conservation Board"
+        "credit": "PJeganathan / Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Birdwatcher_in_Puducherry_IMG_4247.jpg"
       }
     }
   }
