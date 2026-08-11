@@ -34,7 +34,7 @@ export default function Footer({ onReplayIntro }) {
               Found incorrect information, an issue, broken link, or something that needs correction?
             </p>
             <a 
-              href="mailto:anshuman3039@gmail.com" 
+              href="mailto:anshumanbehera3039@gmail.com" 
               className="inline-flex items-center gap-2.5 text-xs md:text-sm font-sans font-semibold uppercase tracking-wider text-[#E8752A] hover:text-[#F7F4EE] transition-colors duration-300 group mt-2"
             >
               Contact us
