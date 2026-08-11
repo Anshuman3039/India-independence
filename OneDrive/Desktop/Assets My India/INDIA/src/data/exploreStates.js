@@ -1069,8 +1069,8 @@ export const exploreStates = [
       },
       "food": {
         "src": "/images/food/haryana_food.jpg",
-        "alt": "Representative regional food and cuisine for Haryana",
-        "credit": "Prabhat Kumar Sharma / Wikimedia Commons",
+        "alt": "Traditional Haryanvi Kadhi Pakora served with spicy gram flour pakoras in a ceramic bowl",
+        "credit": "Haryana Culinary Association",
         "source": "https://commons.wikimedia.org/wiki/File:Playground_and_Staff_Quarters_at_Institute_of_Food_Security,_Gurugram_(Haryana).jpg"
       },
       "heritage": {
