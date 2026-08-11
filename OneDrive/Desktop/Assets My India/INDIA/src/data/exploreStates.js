@@ -6,7 +6,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Amaravati",
     "region": "South",
-    "introduction": "A riverine southern state with a long coastline, famous for its ancient Buddhist history, Kuchipudi classical dance, and spice crops.",
+    "introduction": "A riverine southern state with a long coastline, famous for its ancient Buddhist history, Kuchipudi classical dance, and spice crops. The capital region of Amaravati is situated along the banks of the Krishna River, referencing historic Buddhist stupas. The state\u2019s early economy was built on cotton and maritime trade with Southeast Asia.",
     "image": "/images/culture/dance-kuchipudi.jpg",
     "imageCredit": "Kuchipudi Art Academy",
     "geography": {
@@ -87,7 +87,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Andhra Pradesh is home to the Tirumala temple, one of the most visited religious sites in the world.",
-      "Kalamkari art originated here as a style of storytelling using natural dyes on cotton fabric."
+      "Kalamkari art originated here as a style of storytelling using natural dyes on cotton fabric.",
+      "The state is famous for its handloom traditions, particularly the fine cotton saris of Venkatagiri and Mangalagiri.",
+      "It is also known for the prehistoric rock art sites found in Kurnool district."
     ],
     "sources": [
       "Archaeological Survey of India",
@@ -138,7 +140,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Itanagar",
     "region": "Northeast",
-    "introduction": "The Land of the Dawn-Lit Mountains, featuring thick sub-tropical forests, snow-covered Himalayan peaks, and diverse indigenous tribes.",
+    "introduction": "The Land of the Dawn-Lit Mountains, featuring thick sub-tropical forests, snow-covered Himalayan peaks, and diverse indigenous tribes. Its rugged mountains are drained by the Siang, Lohit, and Subansiri river basins before they merge into the Brahmaputra. The region is home to over twenty distinct major tribal groups, each preserving their own oral languages and customs.",
     "image": "/images/stories/arunachal-monastery.jpg",
     "imageCredit": "Tawang Buddhist Monastery / Architectural Archive",
     "geography": {
@@ -222,7 +224,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Tawang Monastery is the second largest Buddhist monastery in the world after the Potala Palace in Lhasa.",
-      "Arunachal Pradesh has the highest forest cover percentage of any large state in India."
+      "Arunachal Pradesh has the highest forest cover percentage of any large state in India.",
+      "The state shares international boundaries with three nations: Bhutan, Myanmar, and China.",
+      "Ziro Valley is a UNESCO tentative site due to its unique sustainable agriculture practices."
     ],
     "sources": [
       "National Geographic Society",
@@ -273,7 +277,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Dispur",
     "region": "Northeast",
-    "introduction": "Gateway to the Northeast, home to expansive tea estates, the sacred Brahmaputra River, and rare one-horned rhinos.",
+    "introduction": "Gateway to the Northeast, home to expansive tea estates, the sacred Brahmaputra River, and rare one-horned rhinos. The state features a unique riverine geography dominated by the annual floods of the Brahmaputra, creating fertile plains. It has a rich history linked to the Ahom dynasty which ruled the region for six centuries.",
     "image": "/images/culture/festival-bihu.jpg",
     "imageCredit": "Rongali Bihu Festival, Guwahati",
     "geography": {
@@ -356,7 +360,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Muga silk, native only to Assam, naturally possesses a shimmering golden-yellow tint that increases in luster with washing.",
-      "Majuli is the first island in India to be declared a district, recognized for its Vaishnavite cultural institutions (Sattras)."
+      "Majuli is the first island in India to be declared a district, recognized for its Vaishnavite cultural institutions (Sattras).",
+      "Assam tea is known globally for its rich, malty flavor, grown in the lowlands along the river valley.",
+      "The Majuli island in the Brahmaputra is the world's largest river island and a hub of Neo-Vaishnavite culture."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -407,7 +413,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Patna",
     "region": "East",
-    "introduction": "A land of ancient spiritual learning, the cradle of Buddhism and Jainism, famous for Madhubani art and historic universities.",
+    "introduction": "A land of ancient spiritual learning, the cradle of Buddhism and Jainism, famous for Madhubani art and historic universities. Drained by the Ganges, it features vast fertile plains that have sustained populations for thousands of years. It was the cradle of the Maurya and Gupta empires, serving as a center of early Indian learning.",
     "image": "/images/culture/art-madhubani.jpg",
     "imageCredit": "Madhubani Painting Collection",
     "geography": {
@@ -491,7 +497,9 @@ export const exploreStates = [
     ],
     "facts": [
       "The Barabar Caves in Bihar are the oldest surviving rock-cut caves in India, dating to the Maurya Empire.",
-      "Madhubani painting was traditionally done on freshly plastered mud walls using fingers and twigs."
+      "Madhubani painting was traditionally done on freshly plastered mud walls using fingers and twigs.",
+      "The ruins of Nalanda University represent one of the world's earliest residential universities, founded in the 5th century CE.",
+      "The ancient town of Bodh Gaya is the place where Siddhartha Gautama attained enlightenment under the Bodhi Tree."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -542,7 +550,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Raipur",
     "region": "Central",
-    "introduction": "A heavily forested central state rich in tribal heritage, ancient brick temples, and metallic handcrafts.",
+    "introduction": "A heavily forested central state rich in tribal heritage, ancient brick temples, and metallic handcrafts. The state's southern highlands of Bastar are known for their dense forests and indigenous tribal networks. It is a major source of iron ore and coal, contributing significantly to India's heavy industry.",
     "image": "/images/culture/craft-dhokra.jpg",
     "imageCredit": "Bastar Dhokra Metal Art",
     "geography": {
@@ -625,7 +633,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Bastar Dussehra is the longest festival in the world, celebrated over 75 days.",
-      "Dhokra art uses a lost-wax casting technique that has remained unchanged since the Indus Valley Civilization."
+      "Dhokra art uses a lost-wax casting technique that has remained unchanged since the Indus Valley Civilization.",
+      "Chhattisgarh is frequently referred to as the 'Rice Bowl of Central India' due to its cultivation of thousands of traditional rice varieties.",
+      "The Chitrakote Falls on the Indravati River is India's widest waterfall, often compared to Niagara."
     ],
     "sources": [
       "Chhattisgarh Tourism Development Board",
@@ -676,7 +686,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Panaji",
     "region": "West",
-    "introduction": "A coastal state on the Arabian Sea, combining sandy shores, spice farms, and a unique fusion of Portuguese and Konkani cultures.",
+    "introduction": "A coastal state on the Arabian Sea, combining sandy shores, spice farms, and a unique fusion of Portuguese and Konkani cultures. The coastal enclave features golden sand beaches along the Arabian Sea, framed by the Western Ghats range. Its unique cultural heritage blends traditional Konkani customs with Portuguese colonial architecture.",
     "image": "/images/nature/geo-coastal.jpg",
     "imageCredit": "Coastal Eco Systems Survey",
     "geography": {
@@ -758,7 +768,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Goa is the smallest state in India by area, but has one of the highest standards of living.",
-      "The Basilica of Bom Jesus houses the preserved mortal remains of St. Francis Xavier."
+      "The Basilica of Bom Jesus houses the preserved mortal remains of St. Francis Xavier.",
+      "Goa is India's smallest state by area, but it has one of the highest qualities of life indices.",
+      "The Basilica of Bom Jesus holds the mortal remains of St. Francis Xavier and is a UNESCO World Heritage site."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -809,7 +821,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Gandhinagar",
     "region": "West",
-    "introduction": "A historic trading state renowned for salt deserts, lion sanctuaries, and colorful folk dances.",
+    "introduction": "A historic trading state renowned for salt deserts, lion sanctuaries, and colorful folk dances. Its coastline along the Arabian Sea is the longest of any state, hosting historic ports like Lothal and Mandvi. The dry salt flats of the Rann of Kutch stand in contrast to the fertile plains of the south.",
     "image": "/images/stories/gujarat-landscape.jpg",
     "imageCredit": "Kutch Tourism",
     "geography": {
@@ -892,7 +904,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Rani ki Vav is an inverted temple stepwell built to honor an 11th-century Solanki ruler.",
-      "Gujarat hosts the world's largest ship-breaking yard at Alang."
+      "Gujarat hosts the world's largest ship-breaking yard at Alang.",
+      "Lothal was one of the southernmost cities of the ancient Indus Valley Civilization, dating back to 3700 BCE.",
+      "The Gir Forest National Park is the sole remaining natural habitat of the endangered Asiatic Lion."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -943,7 +957,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Chandigarh",
     "region": "North",
-    "introduction": "An agricultural powerhouse in the Indo-Gangetic plains, central to ancient Vedic texts and Mahabharata history.",
+    "introduction": "An agricultural powerhouse in the Indo-Gangetic plains, central to ancient Vedic texts and Mahabharata history. The state lies on the flat plains bordering Delhi, drained by the Yamuna River. It is a major agricultural hub, famous for its Basmati rice crop and livestock.",
     "image": "/images/nature/geo-plains.jpg",
     "imageCredit": "North India Agriculture Survey",
     "geography": {
@@ -1026,7 +1040,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Haryana surrounds Delhi on three sides, serving as a vital industrial and economic belt.",
-      "Surajkund Crafts Mela hosts over a million visitors annually, showcasing rural artisans."
+      "Surajkund Crafts Mela hosts over a million visitors annually, showcasing rural artisans.",
+      "Haryana surrounds the national capital Delhi on three sides, forming a key economic zone.",
+      "The site of Kurukshetra is historically associated with the events described in the Mahabharata."
     ],
     "sources": [
       "Haryana Tourism Department",
@@ -1077,7 +1093,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Shimla",
     "region": "North",
-    "introduction": "A breathtaking land of snow-draped mountains, green pine valleys, and vibrant Buddhist-Hindu traditions.",
+    "introduction": "A breathtaking land of snow-draped mountains, green pine valleys, and vibrant Buddhist-Hindu traditions. The Western Himalayas shape its terrain, with major river basins like the Sutlej, Beas, and Ravi flowing through green valleys. The local economy is driven by mountain agriculture, apple orchards, and hydroelectric power.",
     "image": "/images/stories/himalayan-landscape.jpg",
     "imageCredit": "Himalayan Landscape Archive",
     "geography": {
@@ -1161,7 +1177,9 @@ export const exploreStates = [
     ],
     "facts": [
       "The Kath-Kuni building technique uses alternating layers of timber and stone without any mortar.",
-      "Hikkim village in Spiti Valley houses the highest operational post office in the world at 14,400 feet."
+      "Hikkim village in Spiti Valley houses the highest operational post office in the world at 14,400 feet.",
+      "The Kalka-Shimla Railway is a UNESCO World Heritage mountain railway built in the late 19th century.",
+      "Great Himalayan National Park is a biodiversity hotspot conserving rare Western Tragopan pheasants."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -1212,7 +1230,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Ranchi",
     "region": "East",
-    "introduction": "A land of dense woodlands and mineral wealth, home to vibrant tribal communities and sacred Jain-Hindu mountain shrines.",
+    "introduction": "A land of dense woodlands and mineral wealth, home to vibrant tribal communities and sacred Jain-Hindu mountain shrines. The Chotanagpur Plateau defines its landscape, covered in dry deciduous forests of sal and mahua. It is rich in mineral wealth, containing India's largest deposits of coal and iron.",
     "image": "/images/nature/eco-forest.jpg",
     "imageCredit": "Chotanagpur Forest Survey",
     "geography": {
@@ -1296,7 +1314,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Jharkhand contains over 40% of the mineral reserves of India.",
-      "Sohrai paintings are tribal murals depicting local flora, fauna, and cattle, applied to mud walls during harvest."
+      "Sohrai paintings are tribal murals depicting local flora, fauna, and cattle, applied to mud walls during harvest.",
+      "The state was carved out of Bihar in 2000 to preserve the distinct cultural and tribal identity of the region.",
+      "Betla National Park was one of the first national parks in India to become a tiger conservation reserve."
     ],
     "sources": [
       "Jharkhand Tourism Development Board",
@@ -1347,7 +1367,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Bengaluru",
     "region": "South",
-    "introduction": "A blend of high-tech hubs, ancient stone ruins, and pristine coastal mountain forests.",
+    "introduction": "A blend of high-tech hubs, ancient stone ruins, and pristine coastal mountain forests. The Deccan Plateau and the Western Ghats meet here, creating a high biodiversity zone that drains into the Krishna and Kaveri. Its historical legacy includes the medieval ruins of Vijayanagara and the Hoysala temples.",
     "image": "/images/culture/craft-channapatna.jpg",
     "imageCredit": "Channapatna Wooden Toys Collection",
     "geography": {
@@ -1429,7 +1449,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Hampi was the capital of the Vijayanagara Empire and once the second largest city in the world.",
-      "Bengaluru is known as the Silicon Valley of India, hosting over a third of the country's IT exports."
+      "Bengaluru is known as the Silicon Valley of India, hosting over a third of the country's IT exports.",
+      "The ruins of Hampi represent the grand capital of the Vijayanagara Empire, showcasing sophisticated stone monuments.",
+      "Karnataka is India's primary hub for information technology, centered in the capital city of Bengaluru."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -1480,7 +1502,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Thiruvananthapuram",
     "region": "South",
-    "introduction": "A lush coastal strip on the Malabar Coast, defined by palm-fringed backwaters, spice plantations, and classical performance arts.",
+    "introduction": "A lush coastal strip on the Malabar Coast, defined by palm-fringed backwaters, spice plantations, and classical performance arts. The state lies along the Malabar Coast, backed by the high cardamom and tea plantations of the Western Ghats. Its history is marked by maritime trade in black pepper, cardamom, and coconuts with Arab and European merchants.",
     "image": "/images/stories/kerala-landscape.jpg",
     "imageCredit": "Kerala Houseboat Association",
     "geography": {
@@ -1564,7 +1586,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Kalaripayattu is considered one of the oldest surviving martial art forms in the world.",
-      "Vembanad Lake is the longest lake in India, hosting the famous Nehru Trophy Snake Boat Race."
+      "Vembanad Lake is the longest lake in India, hosting the famous Nehru Trophy Snake Boat Race.",
+      "Kerala has the highest literacy rate and the highest life expectancy of any state in India.",
+      "Traditional wooden houseboats called Kettuvallams cruise the backwaters of Alappuzha."
     ],
     "sources": [
       "Kerala State Tourism Department Portal",
@@ -1615,7 +1639,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Bhopal",
     "region": "Central",
-    "introduction": "The central heartland of India, containing vast teak forests, tiger habitats, and ancient Buddhist and Hindu stone architecture.",
+    "introduction": "The central heartland of India, containing vast teak forests, tiger habitats, and ancient Buddhist and Hindu stone architecture. The Narmada River flows through its center, carved into sandstone gorges and flanked by the Vindhya and Satpura ranges. The state contains the largest forest area in India, supporting rich wildlife sanctuaries.",
     "image": "/images/stories/central-wildlife.jpg",
     "imageCredit": "Central Wildlife Reserve Board",
     "geography": {
@@ -1699,7 +1723,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Bhimbetka rock shelters contain paintings that represent the oldest known traces of human life in India.",
-      "Madhya Pradesh is often referred to as the 'Tiger State' because it hosts the highest population of wild tigers in India."
+      "Madhya Pradesh is often referred to as the 'Tiger State' because it hosts the highest population of wild tigers in India.",
+      "The rock shelters of Bhimbetka contain some of the oldest prehistoric cave paintings in the world, dating to the Stone Age.",
+      "The Khajuraho temples are famous for their Nagara-style architectural design and stone sculptures."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -1750,7 +1776,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Mumbai",
     "region": "West",
-    "introduction": "A sprawling state spanning Western Ghat valleys, historic Maratha forts, and the bustling economic hub of Mumbai.",
+    "introduction": "A sprawling state spanning Western Ghat valleys, historic Maratha forts, and the bustling economic hub of Mumbai. The Sahyadri range of the Western Ghats divides its coastline from the vast basalt plains of the Deccan Plateau. Its economic history is centered on cotton cultivation, manufacturing, and international trade through Mumbai.",
     "image": "/images/stories/maharashtra-citylife.jpg",
     "imageCredit": "Gateway of India Mumbai / ASI",
     "geography": {
@@ -1833,7 +1859,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Lonar Crater Lake in Buldhana was formed by a hypervelocity meteorite impact on basaltic rock.",
-      "The Kailasa Temple at Ellora was carved vertically downwards from the top of a basalt cliff using simple hand chisels."
+      "The Kailasa Temple at Ellora was carved vertically downwards from the top of a basalt cliff using simple hand chisels.",
+      "The Ajanta Caves contain 30 rock-cut Buddhist temples famous for their frescoes and murals from the 2nd century BCE.",
+      "The administrative capital Mumbai is the financial heart of India and home to the Bollywood film industry."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -1884,7 +1912,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Imphal",
     "region": "Northeast",
-    "introduction": "A land of hills and valley lakes, known for its lyrical Manipuri classical dance, handloom weaving, and Loktak Lake.",
+    "introduction": "A land of hills and valley lakes, known for its lyrical Manipuri classical dance, handloom weaving, and Loktak Lake. The state consists of a central valley surrounded by green hills bordering Myanmar. It is home to the Meitei community and various hills tribes, each preserving rich dance and weaving traditions.",
     "image": "/images/culture/dance-manipuri.jpg",
     "imageCredit": "Manipuri Dance Academy",
     "geography": {
@@ -1965,7 +1993,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Manipur is historically credited as the birthplace of modern Polo, derived from the local game Sagol Kangjei.",
-      "Loktak Lake houses the only floating post office in India, operating on a massive vegetation mass."
+      "Loktak Lake houses the only floating post office in India, operating on a massive vegetation mass.",
+      "Loktak Lake is famous for its floating masses of organic matter called phumdis, which support local wildlife.",
+      "The Manipuri classical dance style is distinguished by its graceful movements and circular group patterns."
     ],
     "sources": [
       "Manipur Tourism Department Portal",
@@ -2016,7 +2046,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Shillong",
     "region": "Northeast",
-    "introduction": "The Abode of the Clouds, featuring wet highland plateaus, deep river gorges, and legendary living root bridges.",
+    "introduction": "The Abode of the Clouds, featuring wet highland plateaus, deep river gorges, and legendary living root bridges. The Garo, Khasi, and Jaintia hills form its terrain, capturing heavy monsoon rains from the Bay of Bengal. It is famous for its deep limestone caves, waterfalls, and living root bridges.",
     "image": "/images/nature/geo-northeast.jpg",
     "imageCredit": "Northeast Rain Forests Survey",
     "geography": {
@@ -2100,7 +2130,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Mawsynram in Meghalaya is the wettest place on Earth, receiving over 11,800 mm of rain annually.",
-      "The living root bridges are grown over decades by guiding tree roots through hollowed hollow bamboo trunks."
+      "The living root bridges are grown over decades by guiding tree roots through hollowed hollow bamboo trunks.",
+      "Mawsynram is recorded as the wettest place on Earth, receiving over 460 inches of annual rainfall.",
+      "The living root bridges of Cherrapunji are handmade from the aerial roots of rubber fig trees by the Khasi people."
     ],
     "sources": [
       "UNESCO Tentative List",
@@ -2151,7 +2183,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Aizawl",
     "region": "Northeast",
-    "introduction": "A land of rolling blue mountain ridges, bamboo forests, and rich tribal music and weaving heritages.",
+    "introduction": "A land of rolling blue mountain ridges, bamboo forests, and rich tribal music and weaving heritages. Its hills run in north-south ridges, covered in dense bamboo forests and evergreen trees. The indigenous Mizo society is highly egalitarian, with close-knit community networks.",
     "image": "/images/stories/northeast-landscape.jpg",
     "imageCredit": "Mizoram Hills Landscape Board",
     "geography": {
@@ -2233,7 +2265,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Chapchar Kut is celebrated after the clearing of forests for Jhum (slash-and-burn) agriculture.",
-      "The Cheraw Dance involves dancers stepping in and out of clapping bamboo poles tapped by coordinators."
+      "The Cheraw Dance involves dancers stepping in and out of clapping bamboo poles tapped by coordinators.",
+      "Mizoram has one of the highest literacy rates in India, second only to Kerala.",
+      "The Cheraw dance is a traditional folk dance performed using sliding bamboo staffs."
     ],
     "sources": [
       "Mizoram State Tourism Portal",
@@ -2284,7 +2318,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Kohima",
     "region": "Northeast",
-    "introduction": "A vibrant mountain state populated by sixteen major tribes, famous for its colorful shawls, folk songs, and the Hornbill Festival.",
+    "introduction": "A vibrant mountain state populated by sixteen major tribes, famous for its colorful shawls, folk songs, and the Hornbill Festival. The state is mountainous, with Mount Saramati marking its highest peak along the border with Myanmar. Sixteen major tribes inhabit the hills, each maintaining unique festivals, agricultural customs, and woven shawls.",
     "image": "/images/culture/festival-hornbill.jpg",
     "imageCredit": "Kisama Heritage Village, Kohima",
     "geography": {
@@ -2368,7 +2402,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Nagaland hosts the annual Hornbill Festival, bringing all 16 major tribes together to display their heritage.",
-      "Nagaland is home to the Amur Falcon migration, hosting millions of raptors annually."
+      "Nagaland is home to the Amur Falcon migration, hosting millions of raptors annually.",
+      "Nagaland is known as the 'Land of Festivals' because each tribe celebrates its own agricultural cycles throughout the year.",
+      "The Hornbill Festival is held annually in December to showcase the heritage of all tribes in one village."
     ],
     "sources": [
       "Nagaland Government Tourism Department",
@@ -2419,7 +2455,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Bhubaneswar",
     "region": "East",
-    "introduction": "A coastal heritage state on the Bay of Bengal, known for its towering sandstone temples, classical arts, and the massive brackish expanse of Chilika Lake.",
+    "introduction": "A coastal heritage state on the Bay of Bengal, known for its towering sandstone temples, classical arts, and the massive brackish expanse of Chilika Lake. Its river deltas support fertile agriculture, while Chilika Lake forms a major brackish lagoon along the coast. The cultural identity is centered on the temple town of Puri and the ancient monuments of the Kalinga style.",
     "image": "/images/stories/odisha-culture.jpg",
     "imageCredit": "Konark Sun Temple Carvings / ASI",
     "geography": {
@@ -2501,7 +2537,9 @@ export const exploreStates = [
     ],
     "facts": [
       "The stone wheels of the Konark Sun Temple are actually sundials that calculate time accurately to the minute.",
-      "Odia is recognized as one of India's classical languages, possessing a history of over 2,500 years."
+      "Odia is recognized as one of India's classical languages, possessing a history of over 2,500 years.",
+      "The Konark Sun Temple is designed as a colossal stone chariot of the Sun God with 24 carved wheels.",
+      "Odissi is one of the oldest surviving classical dance styles of India, depicted in ancient cave carvings."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -2552,7 +2590,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Chandigarh",
     "region": "North",
-    "introduction": "The fertile land of five rivers, agricultural heartland, and cradle of Sikhism, famous for its energetic folk culture.",
+    "introduction": "The fertile land of five rivers, agricultural heartland, and cradle of Sikhism, famous for its energetic folk culture. Its flat plains are drained by five major rivers, forming the wheat-growing center of northern India. The state has a rich history linked to the Sikh empire and the partition of 1947.",
     "image": "/images/stories/punjab-agriculture.jpg",
     "imageCredit": "Punjab Agriculture Board",
     "geography": {
@@ -2634,7 +2672,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Harmandir Sahib operates the largest free community kitchen (Langar) in the world, feeding over 100,000 people daily.",
-      "Punjab is known as the Granary of India due to its leading role in the Green Revolution."
+      "Punjab is known as the Granary of India due to its leading role in the Green Revolution.",
+      "The Harmandir Sahib in Amritsar, popularly known as the Golden Temple, is the most sacred shrine of Sikhism.",
+      "Punjab is known as the 'Granary of India' because it produces a major portion of the nation's wheat and rice."
     ],
     "sources": [
       "Punjab Tourism Development Corporation Portal",
@@ -2685,7 +2725,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Jaipur",
     "region": "West",
-    "introduction": "A desert state marked by grand hill forts, Rajput palaces, and vibrant folk arts that contrast with the shifting sands of the Thar.",
+    "introduction": "A desert state marked by grand hill forts, Rajput palaces, and vibrant folk arts that contrast with the shifting sands of the Thar. The Aravalli Range divides the arid western desert from the more fertile eastern plains. Its history is dominated by the Rajput clans, leaving behind massive hill forts, palaces, and lakes.",
     "image": "/images/stories/rajasthan-culture.jpg",
     "imageCredit": "Mehrangarh Fort Jodhpur / ASI",
     "geography": {
@@ -2769,7 +2809,9 @@ export const exploreStates = [
     ],
     "facts": [
       "The Aravalli Range running through Rajasthan is one of the oldest fold mountain systems in the world.",
-      "Jaipur's Jantar Mantar houses the world's largest stone sundial, the Vrihat Samrat Yantra."
+      "Jaipur's Jantar Mantar houses the world's largest stone sundial, the Vrihat Samrat Yantra.",
+      "The Thar Desert covers nearly 60 percent of the state's total area, forming a unique desert ecosystem.",
+      "Rajasthan has eight UNESCO-listed hill forts, including Chittorgarh, Mehrangarh, and Amer Fort."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -2820,7 +2862,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Gangtok",
     "region": "Northeast",
-    "introduction": "A serene Himalayan state under the shadow of Mount Kanchenjunga, famous for its Buddhist monasteries and organic agriculture.",
+    "introduction": "A serene Himalayan state under the shadow of Mount Kanchenjunga, famous for its Buddhist monasteries and organic agriculture. Mount Kanchenjunga, the third highest peak in the world, dominates the northern horizon. The state was a Buddhist monarchy until it joined the Indian Union in 1975.",
     "image": "/images/nature/eco-himalayan.jpg",
     "imageCredit": "High Himalayan Valleys Survey",
     "geography": {
@@ -2906,7 +2948,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Sikkim is the first state in India to achieve 100% organic farming status.",
-      "Sikkim contains over 500 species of wild orchids and 11 species of oak."
+      "Sikkim contains over 500 species of wild orchids and 11 species of oak.",
+      "Sikkim is India's first fully organic state, having banned synthetic chemical fertilizers and pesticides.",
+      "The state is a major biodiversity hotspot, containing over 500 species of wild orchids."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -2957,7 +3001,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Chennai",
     "region": "South",
-    "introduction": "A cradle of classical Dravidian civilization, towering temple architecture, and ancient performing arts.",
+    "introduction": "A cradle of classical Dravidian civilization, towering temple architecture, and ancient performing arts. The Kaveri River delta forms its agricultural core, while the Coromandel coast borders the east. Its cultural heritage is defined by the classical Tamil language, Dravidian stone temples, and Bharatanatyam dance.",
     "image": "/images/stories/tamilnadu-architecture.jpg",
     "imageCredit": "Brihadisvara Temple Tanjore / ASI",
     "geography": {
@@ -3039,7 +3083,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Tamil is recognized as the oldest surviving classical language in the world, with literature dating back 2,000 years.",
-      "The Brihadeeswarar Temple in Thanjavur has a monolithic stone dome at the top weighing 80 tons."
+      "The Brihadeeswarar Temple in Thanjavur has a monolithic stone dome at the top weighing 80 tons.",
+      "The Chola temples at Tanjore, Darasuram, and Gangaikonda Cholapuram are listed as UNESCO sites.",
+      "Tamil Nadu is home to the Nilgiri Mountain Railway, a historic steam-powered toy train."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -3090,7 +3136,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Hyderabad",
     "region": "South",
-    "introduction": "A historical Deccan plateau state rich in Kakatiya heritage and vibrant Islamic-Dravidian architecture.",
+    "introduction": "A historical Deccan plateau state rich in Kakatiya heritage and vibrant Islamic-Dravidian architecture. The state lies on the semi-arid Deccan Plateau, drained by the Godavari and Krishna rivers. It has a rich history shaped by the Kakatiya dynasty and the Nizams of Hyderabad.",
     "image": "/images/culture/craft-bidriware.jpg",
     "imageCredit": "Hyderabad Metal Crafts Board",
     "geography": {
@@ -3173,7 +3219,9 @@ export const exploreStates = [
     ],
     "facts": [
       "The famous Koh-i-Noor diamond was mined from the Kollur mines of Golconda in Telangana.",
-      "Pochampally village is known as the Silk City of India, famous for its unique geometric double-ikat patterns."
+      "Pochampally village is known as the Silk City of India, famous for its unique geometric double-ikat patterns.",
+      "Hyderabad is historically known as the 'City of Pearls' due to its legacy as a major global trading center.",
+      "The Ramappa Temple is a UNESCO World Heritage site celebrated for its Kakatiya-era floating bricks."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -3224,7 +3272,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Agartala",
     "region": "Northeast",
-    "introduction": "A peaceful northeastern hill state, home to the ancient Manikya dynasty, royal palaces, and giant rock-cut carvings.",
+    "introduction": "A peaceful northeastern hill state, home to the ancient Manikya dynasty, royal palaces, and giant rock-cut carvings. Its terrain consists of five major mountain ranges running north-south, separated by river valleys. The state preserves a unique history under the Manikya dynasty, which ruled the region for centuries.",
     "image": "/images/stories/tripura-neermahal.jpg",
     "imageCredit": "Wikimedia Commons Contributor",
     "geography": {
@@ -3307,7 +3355,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Unakoti means 'one less than a crore' (ten million) in Sanskrit, referencing a legend of Shiva.",
-      "Tripura is one of the leading producers of high-quality bamboo and cane products in India."
+      "Tripura is one of the leading producers of high-quality bamboo and cane products in India.",
+      "The Unakoti rock carvings represent massive bas-relief stone sculptures of Shiva dating back to the 7th century.",
+      "Neermahal is a water palace situated in the middle of Rudrasagar Lake, combining Hindu and Islamic designs."
     ],
     "sources": [
       "Tripura Government Tourism Department",
@@ -3358,7 +3408,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Lucknow",
     "region": "North",
-    "introduction": "India's most populous state, home to iconic monuments, sacred rivers, and classical dance legacies.",
+    "introduction": "India's most populous state, home to iconic monuments, sacred rivers, and classical dance legacies. The fertile Indo-Gangetic plains shape its geography, watered by the sacred Yamuna and Ganga rivers. It has been a historical center of power, serving as the heartland of the Mughal Empire and early kingdoms.",
     "image": "/images/culture/dance-kathak.jpg",
     "imageCredit": "Lucknow Gharana Archives",
     "geography": {
@@ -3443,7 +3493,9 @@ export const exploreStates = [
     ],
     "facts": [
       "The Taj Mahal's white marble changes color subtly depending on the time of day, from pinkish in the morning to golden at night.",
-      "The Kumbh Mela in Prayagraj is the largest gathering of humanity on Earth, visible from space."
+      "The Kumbh Mela in Prayagraj is the largest gathering of humanity on Earth, visible from space.",
+      "The Taj Mahal in Agra is a white marble mausoleum and one of the Seven Wonders of the Ancient and Modern World.",
+      "Varanasi, located on the banks of the Ganges, is considered one of the oldest continuously inhabited cities in the world."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -3494,7 +3546,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Dehradun",
     "region": "North",
-    "introduction": "The Devbhoomi (Land of the Gods), defined by snow-capped Himalayan peaks, glacial lakes, and yoga ashrams.",
+    "introduction": "The Devbhoomi (Land of the Gods), defined by snow-capped Himalayan peaks, glacial lakes, and yoga ashrams. The Himalayan peaks of Garhwal and Kumaon define its terrain, containing the headwaters of the Ganges and Yamuna. It is a major center for pilgrimage, forestry, and adventure trekking.",
     "image": "/images/nature/geo-himalayas.jpg",
     "imageCredit": "Uttarakhand Mountain Survey",
     "geography": {
@@ -3577,7 +3629,9 @@ export const exploreStates = [
     ],
     "facts": [
       "The Ganges River officially begins in Uttarakhand at the confluence of the Alaknanda and Bhagirathi Rivers at Devprayag.",
-      "Nanda Devi (25,643 feet) is the highest mountain peak situated entirely within India."
+      "Nanda Devi (25,643 feet) is the highest mountain peak situated entirely within India.",
+      "Valley of Flowers National Park is a UNESCO World Heritage site famous for its alpine meadows of wild flowers.",
+      "The state contains Jim Corbett National Park, India's oldest national park established in 1936."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -3628,7 +3682,7 @@ export const exploreStates = [
     "type": "state",
     "capital": "Kolkata",
     "region": "East",
-    "introduction": "India's cultural and intellectual heartland, rich in literary legacy, art movements, and coastal delta forests.",
+    "introduction": "India's cultural and intellectual heartland, rich in literary legacy, art movements, and coastal delta forests. The state stretches from the snows of the Darjeeling Himalayas down to the mangrove swamps of the Sundarbans. Its history is marked by the Bengal Renaissance and its role as the capital of British India.",
     "image": "/images/stories/westbengal-everyday.jpg",
     "imageCredit": "Victoria Memorial Hall Kolkata / ASI",
     "geography": {
@@ -3711,7 +3765,9 @@ export const exploreStates = [
     ],
     "facts": [
       "The Sundarbans mangrove forest is the only mangrove ecosystem in the world inhabited by tigers.",
-      "The Darjeeling Himalayan Railway, opened in 1881, operates narrow-gauge steam locomotives on active mountain tracks."
+      "The Darjeeling Himalayan Railway, opened in 1881, operates narrow-gauge steam locomotives on active mountain tracks.",
+      "The Sundarbans Mangrove Forest is the largest block of tidal halophytic mangroves in the world.",
+      "Durga Puja in Kolkata is recognized by UNESCO as an intangible cultural heritage of humanity."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -3762,7 +3818,7 @@ export const exploreStates = [
     "type": "union-territory",
     "capital": "Port Blair",
     "region": "South",
-    "introduction": "An archipelago of tropical islands in the Bay of Bengal, known for its pristine coral reefs, dense rainforests, and colonial history.",
+    "introduction": "An archipelago of tropical islands in the Bay of Bengal, known for its pristine coral reefs, dense rainforests, and colonial history. The archipelago consists of over five hundred islands covered in dense tropical rainforests and bordered by coral reefs. It has a unique history linked to the indigenous Andamanese tribes and the colonial penal settlement.",
     "image": "/images/stories/andaman-coastal.jpg",
     "imageCredit": "Andaman Coastal Eco Survey",
     "geography": {
@@ -3847,7 +3903,9 @@ export const exploreStates = [
     ],
     "facts": [
       "The Andaman and Nicobar Islands comprise over 572 islands, of which only 38 are permanently inhabited.",
-      "The indigenous Sentinelese tribe of North Sentinel Island remains completely isolated from modern civilization."
+      "The indigenous Sentinelese tribe of North Sentinel Island remains completely isolated from modern civilization.",
+      "Barren Island is home to the only active volcano in the Indian subcontinent.",
+      "The Cellular Jail in Port Blair was used by the British to exile political prisoners during the freedom struggle."
     ],
     "sources": [
       "Government of India Island Archives",
@@ -3898,7 +3956,7 @@ export const exploreStates = [
     "type": "union-territory",
     "capital": "Chandigarh",
     "region": "North",
-    "introduction": "A planned modernist city designed by Le Corbusier, serving as the joint capital of Punjab and Haryana.",
+    "introduction": "A planned modernist city designed by Le Corbusier, serving as the joint capital of Punjab and Haryana. The city was planned by the modernist architect Le Corbusier in the foothills of the Shivalik range. It serves as the joint administrative capital for the states of Punjab and Haryana.",
     "image": "/images/stories/chandigarh-rockgarden.jpg",
     "imageCredit": "Wikimedia Commons Contributor",
     "geography": {
@@ -3982,7 +4040,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Chandigarh is one of the earliest planned post-independence cities in India, laid out in grid sectors.",
-      "The Open Hand Monument symbolizes the city's philosophy of peace: 'open to give, open to receive'."
+      "The Open Hand Monument symbolizes the city's philosophy of peace: 'open to give, open to receive'.",
+      "Chandigarh's Rock Garden was created secretly by Nek Chand using waste materials and discarded ceramics.",
+      "The city is divided into numbered sectors, designed with grid-like streets and extensive green belts."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -4033,7 +4093,7 @@ export const exploreStates = [
     "type": "union-territory",
     "capital": "Daman",
     "region": "West",
-    "introduction": "A combined western territory of coastal enclaves and river valleys, blending Portuguese naval history with Warli tribal customs.",
+    "introduction": "A combined western territory of coastal enclaves and river valleys, blending Portuguese naval history with Warli tribal customs. The territory consists of four distinct coastal and inland enclaves along the Gulf of Khambhat. Its heritage combines local tribal traditions with centuries of Portuguese colonial administration.",
     "image": "/images/stories/daman-fort.jpg",
     "imageCredit": "Wikimedia Commons Contributor",
     "geography": {
@@ -4118,7 +4178,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Diu was a key naval battleground in 1509, establishing Portuguese trade supremacy in the Indian Ocean.",
-      "The territory was integrated into the Indian Union in 1961, and merged into a single UT in 2020."
+      "The territory was integrated into the Indian Union in 1961, and merged into a single UT in 2020.",
+      "The territories were merged into a single administrative Union Territory in 2020.",
+      "The historic forts of Diu and Daman feature massive stone ramparts built in the 16th century."
     ],
     "sources": [
       "Union Territory Administration Portal",
@@ -4169,7 +4231,7 @@ export const exploreStates = [
     "type": "union-territory",
     "capital": "New Delhi",
     "region": "North",
-    "introduction": "The historic and political capital of India, containing layers of medieval sultanates and modern administrative avenues.",
+    "introduction": "The historic and political capital of India, containing layers of medieval sultanates and modern administrative avenues. The territory lies on the banks of the Yamuna River, serving as the seat of India's national government. It has been built and destroyed multiple times, serving as the capital for dynasties like the Tomars, Mughals, and British.",
     "image": "/images/stories/delhi-redfort.jpg",
     "imageCredit": "Wikimedia Commons Contributor",
     "geography": {
@@ -4254,7 +4316,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Delhi has been destroyed and rebuilt seven times across history by different ruling dynasties.",
-      "The Iron Pillar of Delhi in the Qutub complex has remained completely rust-free for over 1,600 years."
+      "The Iron Pillar of Delhi in the Qutub complex has remained completely rust-free for over 1,600 years.",
+      "Delhi contains three UNESCO World Heritage Sites: the Red Fort, Qutub Minar, and Humayun's Tomb.",
+      "New Delhi was designed by British architect Edwin Lutyens as the imperial capital in 1911."
     ],
     "sources": [
       "UNESCO World Heritage List",
@@ -4305,7 +4369,7 @@ export const exploreStates = [
     "type": "union-territory",
     "capital": "Srinagar (Summer), Jammu (Winter)",
     "region": "North",
-    "introduction": "A breathtaking northern territory of snow-clad mountains, alpine valleys, houseboats, and saffron fields.",
+    "introduction": "A breathtaking northern territory of snow-clad mountains, alpine valleys, houseboats, and saffron fields. The territory features the fertile Kashmir Valley, the Chenab basin, and the rugged Pir Panjal mountains. It has a rich cultural heritage famous for its wooden architecture, houseboats, and wool handicrafts.",
     "image": "/images/food/ingredient-saffron.jpg",
     "imageCredit": "Pampore Saffron Fields, Kashmir",
     "geography": {
@@ -4391,7 +4455,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Kashmir Saffron is considered among the best in the world, characterized by its deep red color and strong aroma.",
-      "Dal Lake houseboats are hand-carved from cedar wood (deodar) and require regular repair and maintenance."
+      "Dal Lake houseboats are hand-carved from cedar wood (deodar) and require regular repair and maintenance.",
+      "Srinagar is the summer capital and is famous for its Mughal gardens and Dal Lake houseboats.",
+      "Kashmir is renowned for producing high-quality saffron, cultivated in the clay soils of Pampore."
     ],
     "sources": [
       "Government of Jammu and Kashmir Tourism Portal",
@@ -4442,7 +4508,7 @@ export const exploreStates = [
     "type": "union-territory",
     "capital": "Leh",
     "region": "North",
-    "introduction": "A high-altitude cold desert territory of dry brown valleys, blue salt lakes, and ancient Tibetan monasteries.",
+    "introduction": "A high-altitude cold desert territory of dry brown valleys, blue salt lakes, and ancient Tibetan monasteries. The territory lies on the high-altitude cold desert plateau of the trans-Himalayas, drained by the Indus River. The culture is closely linked to Tibetan Buddhism, characterized by mountain monasteries and seasonal festivals.",
     "image": "/images/nature/wildlife-snowleopard.jpg",
     "imageCredit": "Hemis National Park Board",
     "geography": {
@@ -4526,7 +4592,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Hemis National Park is the largest national park in India, famous for hosting the highest density of snow leopards.",
-      "The Buddhist chanting of Ladakh was inscribed on the UNESCO Representative List of the Intangible Cultural Heritage of Humanity."
+      "The Buddhist chanting of Ladakh was inscribed on the UNESCO Representative List of the Intangible Cultural Heritage of Humanity.",
+      "Hemis National Park is the largest national park in India, famous for its high density of snow leopards.",
+      "Ladakh has some of the highest motorable mountain passes in the world, including Khardung La."
     ],
     "sources": [
       "UNESCO Intangible Cultural Heritage List",
@@ -4577,7 +4645,7 @@ export const exploreStates = [
     "type": "union-territory",
     "capital": "Kavaratti",
     "region": "South",
-    "introduction": "A tiny tropical archipelago of coral atolls, lagoons, and coconut groves in the Arabian Sea.",
+    "introduction": "A tiny tropical archipelago of coral atolls, lagoons, and coconut groves in the Arabian Sea. The territory consists of thirty-six coral islands scattered in the Laccadive Sea, surrounded by shallow lagoons. The local society is matrilineal, with an economy centered on coconut cultivation and tuna fishing.",
     "image": "/images/nature/geo-islands.jpg",
     "imageCredit": "Lakshadweep Reefs Survey",
     "geography": {
@@ -4659,7 +4727,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Lakshadweep means 'one hundred thousand islands' in Sanskrit and Malayalam, though it comprises only 36 islands.",
-      "All islands of Lakshadweep were formed by coral atoll reefs over millions of years."
+      "All islands of Lakshadweep were formed by coral atoll reefs over millions of years.",
+      "Lakshadweep is India's smallest Union Territory, with a total land area of only 32 square kilometers.",
+      "Most of the islands are surrounded by vibrant coral reefs supporting a high diversity of marine life."
     ],
     "sources": [
       "Union Territory of Lakshadweep Official Portal",
@@ -4710,7 +4780,7 @@ export const exploreStates = [
     "type": "union-territory",
     "capital": "Puducherry",
     "region": "South",
-    "introduction": "A coastal territory of four historic French enclaves, known for colonial architecture and spiritual communities.",
+    "introduction": "A coastal territory of four historic French enclaves, known for colonial architecture and spiritual communities. The territory comprises four coastal enclaves along the southern peninsula, formerly under French administration. The town features a unique architectural layout with a French Quarter and a Tamil Quarter.",
     "image": "/images/stories/puducherry-french.jpg",
     "imageCredit": "Wikimedia Commons Contributor",
     "geography": {
@@ -4797,7 +4867,9 @@ export const exploreStates = [
     ],
     "facts": [
       "Puducherry was the chief French settlement in India from the late 17th century until its de facto merger in 1954.",
-      "Mahe enclave is located on the west coast of India, while the other three enclaves are on the east coast."
+      "Mahe enclave is located on the west coast of India, while the other three enclaves are on the east coast.",
+      "Auroville is an experimental universal township founded in 1968, centered on the golden dome of the Matrimandir.",
+      "The French influence is preserved in the local police uniforms, street names, and architecture."
     ],
     "sources": [
       "Union Territory of Puducherry Official Portal",
