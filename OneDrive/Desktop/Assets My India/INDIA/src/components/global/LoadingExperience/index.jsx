@@ -60,16 +60,10 @@ export default function LoadingExperience({ onComplete, forcePlay = false }) {
 
     player.volume = 1.0;
     player.currentTime = 0;
-    
-    console.log("INTRO AUDIO CREATED");
-    console.log("INTRO AUDIO SOURCE:", player.src);
-    console.log("INTRO AUDIO PLAY REQUESTED");
 
     const playOnInteraction = () => {
       if (player) {
-        console.log("INTRO AUDIO PLAY REQUESTED (INTERACTION)");
         player.play().then(() => {
-          console.log("INTRO AUDIO PLAYING (INTERACTION)");
           cleanupListeners();
         }).catch(e => console.error("INTRO AUDIO PLAY FAILED", e));
       }
@@ -84,40 +78,20 @@ export default function LoadingExperience({ onComplete, forcePlay = false }) {
     const playPromise = player.play();
     if (playPromise !== undefined) {
       playPromise
-        .then(() => {
-          console.log("INTRO AUDIO PLAYING");
-        })
+        .then(() => {})
         .catch((err) => {
-          console.error("INTRO AUDIO PLAY FAILED", err);
           window.addEventListener('click', playOnInteraction);
           window.addEventListener('keydown', playOnInteraction);
           window.addEventListener('touchstart', playOnInteraction);
         });
     }
 
-    const onLoadedMetadata = () => console.log("[EVENT] loadedmetadata");
-    const onCanPlay = () => console.log("[EVENT] canplay");
-    const onPlaying = () => console.log("[EVENT] playing");
-    const onPause = () => console.log("[EVENT] pause");
-    const onEnded = () => console.log("[EVENT] ended");
-    const onError = () => console.error("[EVENT] error:", player.error);
-
-    player.addEventListener('loadedmetadata', onLoadedMetadata);
-    player.addEventListener('canplay', onCanPlay);
-    player.addEventListener('playing', onPlaying);
-    player.addEventListener('pause', onPause);
-    player.addEventListener('ended', onEnded);
+    const onError = (e) => console.error("[EVENT] error playing loading audio:", e);
     player.addEventListener('error', onError);
 
     return () => {
       cleanupListeners();
-      player.removeEventListener('loadedmetadata', onLoadedMetadata);
-      player.removeEventListener('canplay', onCanPlay);
-      player.removeEventListener('playing', onPlaying);
-      player.removeEventListener('pause', onPause);
-      player.removeEventListener('ended', onEnded);
       player.removeEventListener('error', onError);
-      console.log("INTRO AUDIO PAUSED (UNMOUNT)");
       player.pause();
     };
   }, []);
@@ -132,17 +106,14 @@ export default function LoadingExperience({ onComplete, forcePlay = false }) {
       let currentStep = 0;
       const startVolume = player.volume;
 
-      console.log("[DEBUG] AUDIO VOLUME CHANGING (FADE OUT STARTED)");
-
       const fadeTimer = setInterval(() => {
         currentStep++;
         const newVolume = Math.max(0, startVolume * (1 - currentStep / steps));
-        console.log(`[DEBUG] AUDIO VOLUME CHANGED: ${newVolume.toFixed(2)}`);
+        player.volume = newVolume;
         
         if (newVolume <= 0.02) {
           player.volume = 0;
           player.pause();
-          console.log("[DEBUG] AUDIO PAUSED (FADE OUT COMPLETE)");
           clearInterval(fadeTimer);
         } else {
           player.volume = newVolume;

@@ -34,6 +34,31 @@ export default function ExplorePage() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [stateId, navigate]);
 
+  // Handle invalid stateId parameter (404 fallback for state lookup)
+  if (stateId && !activeState) {
+    return (
+      <PageTransition>
+        <div className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-[#F7F4EE] select-none">
+          <span className="text-xs font-sans font-semibold text-[#E8752A] uppercase tracking-[0.3em] mb-4">
+            Archive Registry
+          </span>
+          <h1 className="font-serif text-4xl md:text-5xl text-[#171717] mb-6 font-normal">
+            Chapter Not Found
+          </h1>
+          <p className="text-[#6B6B6B] font-sans text-sm md:text-base max-w-md leading-relaxed mb-8 font-light">
+            The requested State or Territory chapter does not exist in our historical archive.
+          </p>
+          <Link 
+            to="/explore" 
+            className="font-sans text-xs md:text-sm tracking-wider uppercase text-[#171717] hover:text-[#E8752A] border-b border-[#171717] hover:border-[#E8752A] pb-1 transition-colors duration-200"
+          >
+            ← Back to Explore India
+          </Link>
+        </div>
+      </PageTransition>
+    );
+  }
+
   // Development-time image system audit tool
   useEffect(() => {
     const missingPaths = [];
