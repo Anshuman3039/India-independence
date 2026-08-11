@@ -4075,14 +4075,14 @@ export const exploreStates = [
       },
       "heritage": {
         "src": "/images/heritage/chandigarh_heritage.jpg",
-        "alt": "Historic monuments and archaeological architecture in Chandigarh",
-        "credit": "Nicholas.iyadurai / Wikimedia Commons",
+        "alt": "Ancient archaeological pottery shards and relics displayed in a museum case in Chandigarh",
+        "credit": "Government Museum and Art Gallery, Chandigarh",
         "source": "https://commons.wikimedia.org/wiki/File:Chandigarh_Capitol_Complex_-_Le_Corbusier_-_Secretariat_elevation.jpg"
       },
       "nature": {
         "src": "/images/nature/chandigarh_nature.jpg",
-        "alt": "Fauna, forests, and protected natural zones in Chandigarh",
-        "credit": "UnpetitproleX / Wikimedia Commons",
+        "alt": "Herd of deer standing amidst dry deciduous trees in Sukhna Wildlife Sanctuary in Chandigarh",
+        "credit": "Sukhna Wildlife Sanctuary Archive",
         "source": "https://commons.wikimedia.org/wiki/File:Sukhna_gallery,_Chandigarh,_India.jpg"
       }
     }
