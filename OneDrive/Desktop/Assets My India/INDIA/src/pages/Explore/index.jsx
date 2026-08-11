@@ -54,7 +54,7 @@ export default function ExplorePage() {
           return;
         }
 
-        // Placeholder tags are verified and valid under Rule 7
+        // Placeholder tags are verified and valid
         if (node.src === 'IMAGE_REQUIRES_AUTHENTIC_SOURCE') {
           return;
         }
@@ -152,20 +152,36 @@ export default function ExplorePage() {
   // Get active region metadata object
   const activeRegionObj = regionalMeta.find(r => r.id === activeRegion);
 
-  // Generate Filtered Items
+  // Generate Filtered Items based on search string or active region
   let filteredItems = [];
   if (isSearching) {
     const query = searchQuery.toLowerCase().trim();
-    filteredItems = exploreStates.filter(item => 
-      item.name.toLowerCase().includes(query) ||
-      item.capital.toLowerCase().includes(query) ||
-      item.region.toLowerCase().includes(query)
-    );
+    filteredItems = exploreStates.filter(item => {
+      // 1. Match State/UT Name
+      if (item.name.toLowerCase().includes(query)) return true;
+      // 2. Match Capital Name
+      if (item.capital.toLowerCase().includes(query)) return true;
+      // 3. Match Region
+      if (item.region.toLowerCase().includes(query)) return true;
+      // 4. Match Heritage Sites
+      if (item.heritage && item.heritage.sites) {
+        if (item.heritage.sites.some(site => site.toLowerCase().includes(query))) return true;
+      }
+      // 5. Match Places to Know names
+      if (item.places) {
+        if (item.places.some(place => place.name.toLowerCase().includes(query))) return true;
+      }
+      // 6. Match description/intro keywords
+      if (item.introduction && item.introduction.toLowerCase().includes(query)) return true;
+      if (item.description && item.description.toLowerCase().includes(query)) return true;
+      
+      return false;
+    });
   } else {
     filteredItems = exploreStates.filter(item => item.region === activeRegion);
   }
 
-  // Sort alphabetically by name
+  // Sort alphabetically programmatically by name
   filteredItems.sort((a, b) => a.name.localeCompare(b.name));
 
   // Region Card selection handler
@@ -190,7 +206,7 @@ export default function ExplorePage() {
   };
   const { prev: prevState, next: nextState } = getPrevNextStates();
 
-  // Helper component to render image or placeholder under Rule 7
+  // Helper component to render image or placeholder
   const ContentImage = ({ imageNode, categoryLabel, className = "" }) => {
     if (!imageNode || imageNode.src === 'IMAGE_REQUIRES_AUTHENTIC_SOURCE') {
       return (
@@ -251,7 +267,7 @@ export default function ExplorePage() {
     }
   };
 
-  // 1. RENDER DETAILED REFINED STATE STORY (PHASE 5/6)
+  // 1. RENDER DETAILED REFINED STATE STORY
   if (activeState) {
     const images = activeState.images;
 
@@ -292,7 +308,7 @@ export default function ExplorePage() {
               </div>
             </header>
 
-            {/* Giant Banner Cover Picture / Placeholder */}
+            {/* Cover Picture / Placeholder */}
             {images.hero.src === 'IMAGE_REQUIRES_AUTHENTIC_SOURCE' ? (
               <div className="w-full h-[40vh] bg-[#EAE5D9]/40 border border-dashed border-[#171717]/15 rounded-[2px] flex flex-col items-center justify-center text-center my-10 select-none">
                 <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-wider">[ COVER LANDSCAPE PHOTOGRAPH PENDING ]</span>
@@ -338,10 +354,10 @@ export default function ExplorePage() {
               </div>
             </section>
 
-            {/* Content stream using alternating layouts */}
+            {/* Content sections */}
             <div className="space-y-20 pt-10">
 
-              {/* SECTION 02 — THE LAND (Text Left, Image Right) */}
+              {/* SECTION 02 — THE LAND */}
               <section className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
                 <div className="md:col-span-7 space-y-4">
                   <div className="flex items-center gap-3">
@@ -371,7 +387,7 @@ export default function ExplorePage() {
                 </div>
               </section>
 
-              {/* SECTION 03 — CULTURE (Image Left, Text Right) */}
+              {/* SECTION 03 — CULTURE */}
               <section className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
                 <div className="md:col-span-5 order-last md:order-first">
                   <ContentImage 
@@ -406,7 +422,7 @@ export default function ExplorePage() {
                 </div>
               </section>
 
-              {/* SECTION 04 — FOOD (Text Left, Image Right) */}
+              {/* SECTION 04 — FOOD */}
               <section className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
                 <div className="md:col-span-7 space-y-4">
                   <div className="flex items-center gap-3">
@@ -441,7 +457,7 @@ export default function ExplorePage() {
                 </div>
               </section>
 
-              {/* SECTION 05 — HERITAGE (Full-Width Banner) */}
+              {/* SECTION 05 — HERITAGE */}
               <section className="space-y-6">
                 <div className="flex items-center gap-3">
                   <span className="text-xs font-sans font-bold text-[#6B6B6B]">04</span>
@@ -449,7 +465,6 @@ export default function ExplorePage() {
                 </div>
                 <h2 className="font-serif text-3xl md:text-4xl text-[#171717] font-normal tracking-tight">Architecture & History</h2>
                 
-                {/* Full-width image or placeholder */}
                 {images.heritage.src === 'IMAGE_REQUIRES_AUTHENTIC_SOURCE' ? (
                   <div className="w-full h-[25vh] md:h-[35vh] bg-[#EAE5D9]/40 border border-dashed border-[#171717]/15 rounded-[2px] flex flex-col items-center justify-center text-center p-6 select-none my-4 shadow-sm">
                     <span className="text-xs font-sans font-bold text-[#171717]/60 uppercase tracking-widest">[ HERITAGE ARCHITECTURE IMAGERY PENDING ]</span>
@@ -485,7 +500,7 @@ export default function ExplorePage() {
                 </div>
               </section>
 
-              {/* SECTION 06 — NATURE (Image Left, Text Right) */}
+              {/* SECTION 06 — NATURE */}
               <section className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
                 <div className="md:col-span-5 order-last md:order-first">
                   <ContentImage 
@@ -509,7 +524,7 @@ export default function ExplorePage() {
                 </div>
               </section>
 
-              {/* SECTION 07 — PLACES TO KNOW (3-Column Grid) */}
+              {/* SECTION 07 — PLACES TO KNOW */}
               <section className="space-y-6">
                 <div className="flex items-center gap-3">
                   <span className="text-xs font-sans font-bold text-[#171717]">06</span>
@@ -531,7 +546,7 @@ export default function ExplorePage() {
                 </div>
               </section>
 
-              {/* SECTION 08 — DID YOU KNOW? (Bulleted facts) */}
+              {/* SECTION 08 — DID YOU KNOW? */}
               <section className="bg-[#FCFAF7] border border-[#171717]/8 p-8 rounded-[2px] shadow-sm space-y-6">
                 <div className="flex items-center gap-3">
                   <span className="text-xs font-sans font-bold text-[#E8752A]">07</span>
@@ -551,10 +566,9 @@ export default function ExplorePage() {
 
             </div>
 
-            {/* Tri-Navigation footer (Prev state, Return link, Next state) */}
+            {/* Tri-Navigation footer */}
             <div className="border-t border-[#171717]/8 pt-10 mt-20 flex flex-col md:flex-row items-center justify-between gap-6">
               
-              {/* Previous Chapter */}
               {prevState && (
                 <Link
                   to={`/explore/${prevState.id}`}
@@ -566,7 +580,6 @@ export default function ExplorePage() {
                 </Link>
               )}
 
-              {/* Center Link to Explore Grid */}
               <Link
                 to="/explore"
                 className="text-xs font-sans font-bold tracking-[0.2em] text-[#171717] hover:text-[#E8752A] transition-colors uppercase border-b border-transparent hover:border-[#E8752A] pb-0.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#E8752A]/50 rounded-[2px]"
@@ -575,7 +588,6 @@ export default function ExplorePage() {
                 Explore another part of India
               </Link>
 
-              {/* Next Chapter */}
               {nextState && (
                 <Link
                   to={`/explore/${nextState.id}`}
@@ -595,7 +607,7 @@ export default function ExplorePage() {
     );
   }
 
-  // 2. RENDER EXPLORE LANDING GRID (PHASE 4 EDITORIAL VIEW)
+  // 2. RENDER EXPLORE LANDING GRID
   return (
     <PageTransition>
       <div id="main-content" className="w-full bg-[#F7F4EE] pt-24 md:pt-32 pb-24 px-6 md:px-12 min-h-screen text-left">
@@ -650,7 +662,7 @@ export default function ExplorePage() {
             )}
           </div>
 
-          {/* 3. Conditional Layout Switch: Show search results globally immediately, or show visual regional navigation */}
+          {/* 3. Conditional Layout Switch */}
           {isSearching ? (
             /* A. SEARCH RESULTS LISTING (IMMEDIATE) */
             <div className="w-full space-y-6 animate-fade-in duration-75">
@@ -665,10 +677,10 @@ export default function ExplorePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <div className="space-y-1.5 max-w-sm">
-                    <h3 className="font-serif text-xl text-[#171717] font-normal">No results found</h3>
+                  <div className="space-y-2 max-w-sm">
+                    <h3 className="font-serif text-xl text-[#171717] font-normal uppercase tracking-wide">No Match Found</h3>
                     <p className="text-xs text-[#6B6B6B] font-sans font-light leading-relaxed">
-                      No chapters match your query "{searchQuery}". Try checking your spelling or clearing filters.
+                      Try searching for a state, territory, capital, landmark, or region.
                     </p>
                   </div>
                 </div>
@@ -715,12 +727,17 @@ export default function ExplorePage() {
                       )}
                       
                       <div className="flex flex-col mt-4">
+                        <span className="text-[9px] font-sans font-bold text-[#6B6B6B] uppercase tracking-wider block mb-1">
+                          {state.type === 'union-territory' ? 'Union Territory' : 'State'}
+                        </span>
                         <h2 className="font-serif text-2xl text-[#171717] font-normal tracking-tight group-hover:text-[#E8752A] transition-colors duration-300">
                           {state.name}
                         </h2>
-                        <span className="text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-[0.2em] mt-1 block">
-                          Capital — {state.capital}
-                        </span>
+                        <div className="flex flex-wrap gap-x-2 text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-[0.15em] mt-1 block">
+                          <span>Capital — {state.capital}</span>
+                          <span className="text-[#171717]/15">•</span>
+                          <span>Region — {state.region}</span>
+                        </div>
                         <p className="text-sm text-[#6B6B6B] font-sans font-light leading-relaxed mt-2.5 line-clamp-3">
                           {state.description || state.introduction}
                         </p>
@@ -750,18 +767,24 @@ export default function ExplorePage() {
                   else if (idx === 1) colSpan = "lg:col-span-4"; // West
                   else if (idx === 2) colSpan = "lg:col-span-4"; // East
                   else if (idx === 3) colSpan = "lg:col-span-8"; // Central
-                  // idx 4 & 5 remain col-span-6 (South & Northeast)
 
                   return (
                     <button
                       key={region.id}
                       onClick={() => handleSelectRegion(region.id)}
                       className={`group relative overflow-hidden bg-[#FCFAF7] border rounded-[2px] shadow-[0_4px_15px_rgba(0,0,0,0.015)] transition-all duration-500 ease-out cursor-pointer h-56 lg:h-80 flex flex-col justify-end p-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E8752A] focus-visible:ring-offset-2 ${colSpan} ${
-                        isSelected ? 'border-[#E8752A]/70 ring-2 ring-[#E8752A]/10' : 'border-[#171717]/8 hover:border-[#E8752A]/40'
+                        isSelected ? 'border-[#E8752A] ring-2 ring-[#E8752A]/10' : 'border-[#171717]/8 hover:border-[#E8752A]/40'
                       }`}
                       aria-current={isSelected ? 'true' : 'false'}
                       aria-label={`Explore region ${region.name}. Contains ${count} chapters.`}
                     >
+                      {/* Active Indicator Tag */}
+                      {isSelected && (
+                        <span className="absolute top-4 right-4 bg-[#E8752A]/90 text-[#F7F4EE] text-[8px] font-sans font-bold px-2 py-0.5 rounded-[2px] tracking-wider uppercase z-20 shadow-sm animate-fade-in">
+                          Active
+                        </span>
+                      )}
+
                       {/* Atmospheric background photograph */}
                       <img 
                         src={region.image} 
@@ -769,7 +792,7 @@ export default function ExplorePage() {
                         className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                         loading="lazy"
                       />
-                      {/* Gradient shadow overlay for contrast */}
+                      {/* Gradient shadow overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10 z-10" />
 
                       {/* Content block */}
@@ -789,7 +812,7 @@ export default function ExplorePage() {
                 })}
               </div>
 
-              {/* Dividing separator line */}
+              {/* Separator line */}
               <div className="w-full h-[1px] bg-[#171717]/8" />
 
               {/* Active Region Detail Heading & Card Grid */}
@@ -812,7 +835,7 @@ export default function ExplorePage() {
                   {/* List Header title */}
                   <div className="flex items-center justify-between border-b border-[#171717]/8 pb-3">
                     <span className="text-[10px] font-sans font-bold text-[#16734A] uppercase tracking-wider">
-                      States & Territories in {activeRegionObj.name} ({filteredItems.length})
+                      STATES & TERRITORIES IN {activeRegionObj.name.toUpperCase()} ({filteredItems.length})
                     </span>
                   </div>
 
@@ -858,12 +881,17 @@ export default function ExplorePage() {
                         )}
                         
                         <div className="flex flex-col mt-4">
+                          <span className="text-[9px] font-sans font-bold text-[#6B6B6B] uppercase tracking-wider block mb-1">
+                            {state.type === 'union-territory' ? 'Union Territory' : 'State'}
+                          </span>
                           <h2 className="font-serif text-2xl text-[#171717] font-normal tracking-tight group-hover:text-[#E8752A] transition-colors duration-300">
                             {state.name}
                           </h2>
-                          <span className="text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-[0.2em] mt-1 block">
-                            Capital — {state.capital}
-                          </span>
+                          <div className="flex flex-wrap gap-x-2 text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-[0.15em] mt-1 block">
+                            <span>Capital — {state.capital}</span>
+                            <span className="text-[#171717]/15">•</span>
+                            <span>Region — {state.region}</span>
+                          </div>
                           <p className="text-sm text-[#6B6B6B] font-sans font-light leading-relaxed mt-2.5 line-clamp-3">
                             {state.description || state.introduction}
                           </p>
