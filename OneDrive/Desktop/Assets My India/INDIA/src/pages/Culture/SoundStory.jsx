@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const musicCategories = [
@@ -172,6 +172,7 @@ export default function SoundStory() {
   const [activeMusicTab, setActiveMusicTab] = useState(0);
   const [activeMapRegion, setActiveMapRegion] = useState(null);
   const [activeFilmIndex, setActiveFilmIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
   const cinemaContainerRef = useRef(null);
 
   const nextFilm = () => {
@@ -181,6 +182,14 @@ export default function SoundStory() {
   const prevFilm = () => {
     setActiveFilmIndex((prev) => (prev - 1 + filmsList.length) % filmsList.length);
   };
+
+  useEffect(() => {
+    if (!isPlaying) return;
+    const interval = setInterval(() => {
+      nextFilm();
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [isPlaying, activeFilmIndex]);
 
   const music = musicCategories[activeMusicTab];
   const activeFilm = filmsList[activeFilmIndex];
@@ -411,7 +420,11 @@ export default function SoundStory() {
           <div ref={cinemaContainerRef} className="space-y-8 w-full">
             
             {/* Film frame display: Image loads only if valid path is set, otherwise typographic slate */}
-            <div className="w-full aspect-[2.35/1] md:aspect-[2.35/1] overflow-hidden bg-[#171717] border border-[#171717] relative shadow-lg">
+            <div 
+              onMouseEnter={() => setIsPlaying(false)}
+              onMouseLeave={() => setIsPlaying(true)}
+              className="w-full aspect-[2.35/1] md:aspect-[2.35/1] overflow-hidden bg-[#171717] border border-[#171717] relative shadow-lg"
+            >
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeFilm.id}
@@ -450,20 +463,35 @@ export default function SoundStory() {
 
               {/* Slider overlay controls (Floating on bottom of image for sleek look) */}
               <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center z-20">
-                <span className="text-[10px] font-sans font-bold text-white/95 uppercase tracking-widest bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-[2px]">
-                  {activeFilmIndex + 1} / {filmsList.length}
-                </span>
+                <div className="flex items-center space-x-2">
+                  <span className="text-[10px] font-sans font-bold text-white/95 uppercase tracking-widest bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-[2px]">
+                    {activeFilmIndex + 1} / {filmsList.length}
+                  </span>
+                  <button
+                    onClick={() => setIsPlaying(!isPlaying)}
+                    className="bg-black/40 hover:bg-black/75 text-white/95 text-[9px] font-sans font-bold uppercase tracking-wider px-2 py-1 rounded-[2px] border border-white/10 transition-colors cursor-pointer outline-none focus-visible:ring-1 focus-visible:ring-[#E8752A]"
+                    aria-label={isPlaying ? "Pause autoplay" : "Start autoplay"}
+                  >
+                    {isPlaying ? "⏸ PAUSE" : "▶ PLAY"}
+                  </button>
+                </div>
                 
                 <div className="flex space-x-2">
                   <button
-                    onClick={prevFilm}
+                    onClick={() => {
+                      prevFilm();
+                      setIsPlaying(false); // Pause auto-play on manual click
+                    }}
                     className="bg-black/40 hover:bg-black/75 text-white w-8 h-8 flex items-center justify-center rounded-[2px] transition-colors border border-white/10 outline-none focus-visible:ring-1 focus-visible:ring-[#E8752A] cursor-pointer"
                     aria-label="Previous film slide"
                   >
                     ←
                   </button>
                   <button
-                    onClick={nextFilm}
+                    onClick={() => {
+                      nextFilm();
+                      setIsPlaying(false); // Pause auto-play on manual click
+                    }}
                     className="bg-black/40 hover:bg-black/75 text-white w-8 h-8 flex items-center justify-center rounded-[2px] transition-colors border border-white/10 outline-none focus-visible:ring-1 focus-visible:ring-[#E8752A] cursor-pointer"
                     aria-label="Next film slide"
                   >
@@ -471,6 +499,23 @@ export default function SoundStory() {
                   </button>
                 </div>
               </div>
+            </div>
+
+            {/* Slide Progress Dots */}
+            <div className="flex justify-center space-x-1.5 pt-1">
+              {filmsList.map((film, index) => (
+                <button
+                  key={film.id}
+                  onClick={() => {
+                    setActiveFilmIndex(index);
+                    setIsPlaying(false); // Pause autoplay on manual selection
+                  }}
+                  className={`h-1.5 transition-all duration-300 rounded-full cursor-pointer outline-none ${
+                    index === activeFilmIndex ? "w-6 bg-[#E8752A]" : "w-1.5 bg-[#171717]/10 hover:bg-[#171717]/30"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
             </div>
 
             {/* Film Meta details */}
