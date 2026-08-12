@@ -14,8 +14,9 @@ export default function StoryCard({ story, index }) {
 
   return (
     <motion.div 
+      id={story.id}
       variants={cardVariants}
-      className="flex flex-col space-y-4 text-left group"
+      className="flex flex-col space-y-4 text-left group scroll-mt-24"
     >
       {/* 1. Large Visual Container */}
       <div className="w-full aspect-[4/3] overflow-hidden bg-charcoal/5 border border-charcoal/5 relative shadow-md">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import LanguageExplorer from './LanguageExplorer';
+import PeopleMap from './PeopleMap';
 import CommunityStories from './CommunityStories';
 import EverydayIndia from './EverydayIndia';
 
@@ -131,8 +132,13 @@ export default function People() {
           <LanguageExplorer />
         </motion.div>
 
-        {/* D. Communities Stories Subsection */}
+        {/* NEW: Interactive People Map Section */}
         <motion.div id="communities-explore" variants={fadeUp}>
+          <PeopleMap />
+        </motion.div>
+
+        {/* D. Communities Stories Subsection */}
+        <motion.div variants={fadeUp}>
           <CommunityStories />
         </motion.div>
 
