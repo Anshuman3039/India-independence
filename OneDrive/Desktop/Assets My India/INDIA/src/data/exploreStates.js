@@ -2688,8 +2688,8 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "/images/nature/geo-plains.jpg",
-        "alt": "Green wheat crop fields under open skies in Punjab",
+        "src": "/images/geography/punjab_geography.jpg",
+        "alt": "Vast green alluvial farming plains divided by brick walls in Punjab",
         "credit": "Punjab Agriculture Board",
         "source": "Geological Survey"
       },
@@ -2700,9 +2700,9 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "food": {
-        "src": "/images/food/region-north.jpg",
-        "alt": "Traditional Punjabi lunch platter featuring flatbread and curries",
-        "credit": "Northern Grains Association",
+        "src": "/images/food/punjab_food.jpg",
+        "alt": "Traditional Punjabi lunch thali serving Dal Makhani, Paneer curry, Raita, rice, salad, papad, and buttered Lachha Paratha",
+        "credit": "Punjab Culinary Association",
         "source": "State Archive"
       },
       "heritage": {
@@ -2825,9 +2825,9 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "/images/nature/geo-thar.jpg",
-        "alt": "Arid yellow sands of the Thar Desert under a clear sky in Rajasthan",
-        "credit": "Thar Desert Survey",
+        "src": "/images/geography/rajasthan_geography.jpg",
+        "alt": "Green mountain valley landscape in the ancient Aravalli Range of Rajasthan",
+        "credit": "Aravalli Range Survey",
         "source": "Geological Survey"
       },
       "culture": {
@@ -2837,8 +2837,8 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "food": {
-        "src": "/images/food/region-west.jpg",
-        "alt": "Traditional Rajasthani Dal Baati Churma platter with ghee and spicy chutneys",
+        "src": "/images/food/rajasthan_food.jpg",
+        "alt": "Traditional Rajasthani Dal Baati Churma lunch thali featuring baati rolls, lentil curry, churma, papad, and multiple small bowls of local curries",
         "credit": "Rajasthan Food Board",
         "source": "State Archive"
       },
@@ -2849,9 +2849,9 @@ export const exploreStates = [
         "source": "Archaeological Survey of India"
       },
       "nature": {
-        "src": "/images/nature/eco-desert.jpg",
-        "alt": "Arid desert scrub vegetation and dry soils typical of western Rajasthan",
-        "credit": "Desert Ecology Council",
+        "src": "/images/nature/rajasthan_nature.jpg",
+        "alt": "A majestic Bengal Tiger resting in the dry grass at Ranthambore Tiger Reserve in Rajasthan",
+        "credit": "Ranthambore National Park Board",
         "source": "Forest Conservation Board"
       }
     }
@@ -3509,15 +3509,15 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "/images/nature/geo-plains.jpg",
-        "alt": "Gangetic plains of Uttar Pradesh showing agricultural fields",
-        "credit": "Gangetic Plains Survey",
+        "src": "/images/geography/uttar_pradesh_geography.jpg",
+        "alt": "Varanasi riverfront stone steps (ghats) and historic temples along the Ganges River under warm sunlight in Uttar Pradesh",
+        "credit": "Varanasi Ghats Archive",
         "source": "Geological Survey"
       },
       "culture": {
-        "src": "/images/culture/dance-kathak.jpg",
-        "alt": "Kathak classical dancer performing rapid spins in traditional attire",
-        "credit": "Lucknow Gharana Archives",
+        "src": "/images/culture/uttar_pradesh_culture.jpg",
+        "alt": "A plate of round golden-brown Tunday Kebabs served with onions and dipping chutney in Lucknow, Uttar Pradesh",
+        "credit": "Lucknow Culinary Department",
         "source": "State Archive"
       },
       "food": {
@@ -3528,8 +3528,8 @@ export const exploreStates = [
       },
       "heritage": {
         "src": "/images/heritage/uttar_pradesh_heritage.jpg",
-        "alt": "Historic monuments and archaeological architecture in Uttar Pradesh",
-        "credit": "Dhirad, picture edited by J. A. Knudsen / Wikimedia Commons",
+        "alt": "The white marble Taj Mahal perfectly reflected in the serene water pool during a pink and purple sunrise in Agra, Uttar Pradesh",
+        "credit": "Taj Mahal Preservation Archive",
         "source": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_in_March_2004.jpg"
       },
       "nature": {
@@ -4219,8 +4219,8 @@ export const exploreStates = [
       },
       "nature": {
         "src": "/images/nature/dadra_and_nagar_haveli_and_daman_and_diu_nature.jpg",
-        "alt": "Fauna, forests, and protected natural zones in Dadra and Nagar Haveli and Daman and Diu",
-        "credit": "Parliament of India / Wikimedia Commons",
+        "alt": "Two Grey Crowned Cranes standing on a dry mound in front of lush green trees",
+        "credit": "Fudam Wildlife Sanctuary Archive",
         "source": "https://commons.wikimedia.org/wiki/File:The_Central_Goods_and_Services_Tax_Act_2017.djvu"
       }
     }
@@ -4333,8 +4333,8 @@ export const exploreStates = [
       },
       "geography": {
         "src": "/images/geography/delhi_geography.jpg",
-        "alt": "Geography landscape details for Delhi",
-        "credit": "Royle, J. Forbes / Wikimedia Commons",
+        "alt": "Scenic deep blue quarry lake surrounded by the green forest cover of Delhi Ridge under a monsoon sky in Delhi",
+        "credit": "Delhi Ridge Conservation Board",
         "source": "https://commons.wikimedia.org/wiki/File:Illustrations_of_the_Botany_and_other_Branches_of_the_Natural_History_of_Himalayan_Mountains_and_of_the_Flora_of_Cahsmere,_Vol._I_(IA_dli.granth.100308).pdf"
       },
       "culture": {
@@ -4345,8 +4345,8 @@ export const exploreStates = [
       },
       "food": {
         "src": "/images/food/delhi_food.jpg",
-        "alt": "Representative regional food and cuisine for Delhi",
-        "credit": "ampersandyslexia / Wikimedia Commons",
+        "alt": "A plate of classic Delhi Chhole Bhature served with two puffed golden bhaturas, spicy chickpea curry, onions, and lemon slices",
+        "credit": "Delhi Street Food Archive",
         "source": "https://commons.wikimedia.org/wiki/File:Aloo_chaat_vendor,_Connaught_Place,_New_Delhi.jpg"
       },
       "heritage": {
@@ -4370,8 +4370,8 @@ export const exploreStates = [
     "capital": "Srinagar (Summer), Jammu (Winter)",
     "region": "North",
     "introduction": "A breathtaking northern territory of snow-clad mountains, alpine valleys, houseboats, and saffron fields. The territory features the fertile Kashmir Valley, the Chenab basin, and the rugged Pir Panjal mountains. It has a rich cultural heritage famous for its wooden architecture, houseboats, and wool handicrafts.",
-    "image": "/images/food/ingredient-saffron.jpg",
-    "imageCredit": "Pampore Saffron Fields, Kashmir",
+    "image": "/images/stories/jammu_kashmir_hero.jpg",
+    "imageCredit": "Sonamarg Valley Archive",
     "geography": {
       "location": "Situated in the northern part of India, nestled in the Western Himalayas.",
       "features": [
@@ -4465,9 +4465,9 @@ export const exploreStates = [
     ],
     "images": {
       "hero": {
-        "src": "/images/food/ingredient-saffron.jpg",
-        "alt": "Harvested purple saffron crocus flowers displaying red stigmas",
-        "credit": "Pampore Saffron Fields, Kashmir",
+        "src": "/images/stories/jammu_kashmir_hero.jpg",
+        "alt": "Snow-covered Sonamarg mountain valley with pine trees in Jammu and Kashmir",
+        "credit": "Sonamarg Valley Archive",
         "source": "State Tourism Portal"
       },
       "geography": {
@@ -4478,14 +4478,14 @@ export const exploreStates = [
       },
       "culture": {
         "src": "/images/culture/jammu_and_kashmir_culture.jpg",
-        "alt": "Traditional cultural details for Jammu and Kashmir",
-        "credit": "Wikimedia Commons Contributor / Wikimedia Commons",
+        "alt": "Cultural heritage representation of Jammu and Kashmir",
+        "credit": "Jammu & Kashmir Cultural Archive",
         "source": "https://commons.wikimedia.org/wiki/File:World_horticultural_trade_%26_U.S._export_opportunities_-_United_States_Department_of_Agriculture,_Foreign_Agricultural_Service._(IA_CAT10659268034).pdf"
       },
       "food": {
         "src": "/images/food/jammu_and_kashmir_food.jpg",
-        "alt": "Representative regional food and cuisine for Jammu and Kashmir",
-        "credit": "Satishram1810 / Wikimedia Commons",
+        "alt": "A bowl of rich red Kashmiri Rogan Josh mutton curry garnished with spices and served on a platter",
+        "credit": "Kashmiri Wazwan Association",
         "source": "https://commons.wikimedia.org/wiki/File:Traditional_dogra_food-jammu_and_kashmir-001.jpg"
       },
       "heritage": {
@@ -4509,8 +4509,8 @@ export const exploreStates = [
     "capital": "Leh",
     "region": "North",
     "introduction": "A high-altitude cold desert territory of dry brown valleys, blue salt lakes, and ancient Tibetan monasteries. The territory lies on the high-altitude cold desert plateau of the trans-Himalayas, drained by the Indus River. The culture is closely linked to Tibetan Buddhism, characterized by mountain monasteries and seasonal festivals.",
-    "image": "/images/nature/wildlife-snowleopard.jpg",
-    "imageCredit": "Hemis National Park Board",
+    "image": "/images/stories/ladakh_hero.jpg",
+    "imageCredit": "Ladakh Lake Tourism Archive",
     "geography": {
       "location": "Located in northern India, bounded by the Karakoram and Great Himalayan mountain ranges.",
       "features": [
@@ -4602,15 +4602,15 @@ export const exploreStates = [
     ],
     "images": {
       "hero": {
-        "src": "/images/nature/wildlife-snowleopard.jpg",
-        "alt": "Snow leopard sitting on a cold rocky ridge in the high mountains of Ladakh",
-        "credit": "Hemis National Park Board",
+        "src": "/images/stories/ladakh_hero.jpg",
+        "alt": "Traditional Ladakhi village stupas along the shore of a deep blue high-altitude salt lake with dry mountains behind",
+        "credit": "Ladakh Lake Tourism Archive",
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "/images/nature/eco-himalayan.jpg",
-        "alt": "High altitude cold desert mountains and rocky valleys of Ladakh",
-        "credit": "Ladakh Cold Desert Survey",
+        "src": "/images/geography/ladakh_geography.jpg",
+        "alt": "A long asphalt road stretching through the dry mountain valley of Ladakh towards snow-capped peaks",
+        "credit": "Ladakh Highway Survey",
         "source": "Geological Survey"
       },
       "culture": {
