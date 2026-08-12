@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 export default function NatureClosing() {
@@ -22,7 +21,7 @@ export default function NatureClosing() {
   };
 
   return (
-    <section className="bg-[#F7F4EE] py-28 px-6 md:px-12 max-w-7xl mx-auto border-t border-[#171717]/5 text-center overflow-hidden">
+    <section className="bg-[#F7F4EE] pt-28 pb-12 px-6 md:px-12 max-w-7xl mx-auto border-t border-[#171717]/5 text-center overflow-hidden">
       <motion.div 
         variants={containerVariants}
         initial="hidden"
@@ -43,16 +42,6 @@ export default function NatureClosing() {
         >
           From mountains and forests to deserts, wetlands and coasts, India's natural world is shaped by the diversity of its land and the life that depends on it.
         </motion.p>
-
-        <motion.div variants={fadeUp} className="pt-4">
-          <Link 
-            to="/history" 
-            className="font-sans text-xs md:text-sm tracking-widest uppercase font-semibold text-white bg-[#E8752A] hover:bg-[#16734A] py-3.5 px-8 transition-colors shadow-md outline-none focus-visible:outline-[#E8752A]"
-            aria-label="Explore the interactive history section"
-          >
-            EXPLORE HISTORY →
-          </Link>
-        </motion.div>
       </motion.div>
     </section>
   );
