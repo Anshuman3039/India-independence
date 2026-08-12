@@ -217,6 +217,42 @@ const returnProgressImages = [
   { src: "/images/stories/story6-lab.jpg", label: "SCIENCE & STARTUPS", caption: "Booms in biotechnology, AI models, and startups in tech hubs." }
 ];
 
+const youthProfiles = [
+  {
+    id: "innovator",
+    title: "The Tech Innovator",
+    context: "Metropolitan Hubs (Bengaluru / Noida)",
+    desc: "Growing up alongside software platforms, remote gig networks, and tech ventures. They navigate highly competitive tech corridors, building systems for international trade while facing job market shifts and cost-of-living increases.",
+    quote: "We are building platforms for international markets from desks in Bengaluru, balancing economic potential with intense workspace shifts.",
+    image: "/images/stories/story6-lab.jpg"
+  },
+  {
+    id: "aspirant",
+    title: "The Exam Aspirant",
+    context: "Educational Centers (Kota / Patna / Delhi)",
+    desc: "Millions of students spend years in coaching centers preparing for government commissions (UPSC, railways, banks). They seek stable careers, public service security, and social status, bearing heavy psychological pressure and family hopes.",
+    quote: "Securing a government position means transforming the security of an entire family. It is a long, difficult wait, but we persist.",
+    image: "/images/stories/stories-intro-7.jpg"
+  },
+  {
+    id: "migrant",
+    title: "The Migrant Worker",
+    context: "Agrarian-Urban Corridors",
+    desc: "Young adults leaving agricultural work to find building, retail, and delivery jobs in major metropolises. They are the physical backbone of urban building, sending money home and shaping contemporary city cultures.",
+    quote: "Working in the city gives me economic independence. The earnings here support my family's agricultural inputs and sibling education.",
+    image: "/images/stories/story4-prep.jpg"
+  }
+];
+
+const buildersData = [
+  { role: "The ASHA Worker", context: "Rural Public Health", desc: "Women community health volunteers forming the baseline link between rural homes and clinics, delivering vaccines and maternal care.", id: "IT-BUILD-01" },
+  { role: "The Dryland Agronomist", context: "Agricultural Research", desc: "Scientists developing drought-resistant millet seeds to help small farmers secure yields amid irregular monsoons.", id: "IT-BUILD-02" },
+  { role: "The Systems Engineer", context: "Low-Cost Space Flight", desc: "Space systems team designing micro-satellites for global climate monitoring at a fraction of standard international costs.", id: "IT-BUILD-03" },
+  { role: "The Cooperative Leader", context: "Organic Farmer Cooperatives", desc: "Organic organizers building distribution chains to make organic mountain produce commercially viable in big cities.", id: "IT-BUILD-04" },
+  { role: "The Civic Educator", context: "Tribal Literacy Blocks", desc: "Teachers setting up mobile device learning cells in remote villages to ensure children pass secondary exams.", id: "IT-BUILD-05" },
+  { role: "The Heritage Archiver", context: "Textile Digitisation", desc: "Weavers digitizing regional patterns to establish direct online selling loops, bypassing local commission agents.", id: "IT-BUILD-06" }
+];
+
 export default function IndiaToday() {
   const [activeSection, setActiveSection] = useState("sec-01");
   const [activePromiseId, setActivePromiseId] = useState("economy");
