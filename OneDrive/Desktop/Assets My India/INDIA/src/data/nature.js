@@ -208,54 +208,329 @@ export const wildlife = [
 
 
 export const protectedAreas = {
+  "ap": {
+    name: "CORINGA WILDLIFE SANCTUARY",
+    state: "Andhra Pradesh",
+    ecosystem: "Estuarine Mangroves and Mudflats",
+    species: "Smooth-coated Otter, Fishing Cat, Saltwater Crocodile",
+    description: "Situated at the delta of the Godavari river, Coringa protects extensive mangrove forests and tidal mudflats that buffer the Bay of Bengal coast.",
+    image: "/images/nature/andhra_pradesh_nature.jpg",
+    region: "SOUTH"
+  },
+  "ar": {
+    name: "NAMDAPHA NATIONAL PARK",
+    state: "Arunachal Pradesh",
+    ecosystem: "Subtropical to Alpine Evergreen Rainforest",
+    species: "Clouded Leopard, Namdapha Flying Squirrel, Hoolock Gibbon",
+    description: "Spanning a vast elevation range in the Eastern Himalayas, Namdapha protects incredibly dense rainforests that rise into snowy mountain peaks.",
+    image: "/images/nature/arunachal_pradesh_nature.jpg",
+    region: "NORTHEAST"
+  },
   "as": {
     name: "KAZIRANGA NATIONAL PARK",
     state: "Assam",
     ecosystem: "Terai Grassland and Riverine Wetland",
     species: "Greater One-Horned Rhinoceros, Wild Water Buffalo",
-    description: "Located on the floodplains of the Brahmaputra, Kaziranga protects the world's largest population of one-horned rhinos, characterized by tall elephant grass and swampy beels."
+    description: "Located on the floodplains of the Brahmaputra, Kaziranga protects the world's largest population of one-horned rhinos, characterized by tall elephant grass and swampy beels.",
+    image: "/images/nature/wildlife-rhino.jpg",
+    region: "NORTHEAST"
+  },
+  "br": {
+    name: "VALMIKI NATIONAL PARK",
+    state: "Bihar",
+    ecosystem: "Terai Sal Forest and Moist Grasslands",
+    species: "Bengal Tiger, Indian Leopard, One-horned Rhinoceros",
+    description: "Located along the Gandak River at the Indo-Nepal border, Valmiki represents the easternmost limit of the Himalayan Terai forests.",
+    image: "/images/nature/bihar_nature.jpg",
+    region: "EAST"
+  },
+  "cg": {
+    name: "INDRAVATI NATIONAL PARK",
+    state: "Chhattisgarh",
+    ecosystem: "Dry Deciduous Sal Forest and Grasslands",
+    species: "Wild Water Buffalo, Bengal Tiger, Hill Myna",
+    description: "Named after the Indravati River, this park preserves the last remaining pure populations of the wild water buffalo in central India's deciduous woodlands.",
+    image: "/images/nature/chhattisgarh_nature.jpg",
+    region: "CENTRAL"
+  },
+  "ga": {
+    name: "BHAGWAN MAHAVIR WILDLIFE SANCTUARY",
+    state: "Goa",
+    ecosystem: "West Coast Tropical Evergreen Forest",
+    species: "Black Panther, Malabar Giant Squirrel, King Cobra",
+    description: "Nestled in the foothills of the Western Ghats, this sanctuary protects dense forest canopies and the spectacular Dudhsagar Falls.",
+    image: "/images/nature/goa_nature.jpg",
+    region: "WEST"
   },
   "gj": {
     name: "GIR FOREST NATIONAL PARK",
     state: "Gujarat",
     ecosystem: "Dry Deciduous Teak Forest and Thorn Scrub",
     species: "Asiatic Lion, Indian Leopard",
-    description: "Gir represents the last wild refuge of the Asiatic lion. The dry, rugged woodland offers ideal hunting ground and natural cover for the pride."
+    description: "Gir represents the last wild refuge of the Asiatic lion. The dry, rugged woodland offers ideal hunting ground and natural cover for the pride.",
+    image: "/images/nature/wildlife-lion.jpg",
+    region: "WEST"
   },
-  "wb": {
-    name: "SUNDARBANS NATIONAL PARK",
-    state: "West Bengal",
-    ecosystem: "Tidal Mangrove Forest and Estuaries",
-    species: "Bengal Tiger, Saltwater Crocodile",
-    description: "A UNESCO World Heritage site consisting of complex waterways, Sundarbans is the only mangrove forest in the world inhabited by tigers, who have adapted to swim in saline currents."
+  "hr": {
+    name: "SULTANPUR NATIONAL PARK",
+    state: "Haryana",
+    ecosystem: "Freshwater Wetland and Shallow Lake",
+    species: "Siberian Crane (migratory), Greater Flamingo, Blackbuck",
+    description: "Sultanpur is a seasonal wetland that acts as a vital stopover for migratory birds traversing the Central Asian Flyway.",
+    image: "/images/nature/haryana_nature.jpg",
+    region: "NORTH"
   },
-  "mp": {
-    name: "KANHA TIGER RESERVE",
-    state: "Madhya Pradesh",
-    ecosystem: "Sal Forest and Highlands Grassland",
-    species: "Bengal Tiger, Barasingha (Swamp Deer)",
-    description: "Located in the Maikal range, Kanha's dry and moist deciduous forests are home to the endangered Barasingha, conserved through forest meadow restoration projects."
+  "hp": {
+    name: "GREAT HIMALAYAN NATIONAL PARK",
+    state: "Himachal Pradesh",
+    ecosystem: "West Himalayan Temperate to Alpine Forest",
+    species: "Snow Leopard, Western Tragopan, Himalayan Musk Deer",
+    description: "A UNESCO World Heritage site, it protects high-altitude alpine meadows and glacier-fed river valleys in the western Himalayas.",
+    image: "/images/nature/wildlife-snowleopard.jpg",
+    region: "NORTH"
   },
-  "jk": {
-    name: "HEMIS NATIONAL PARK",
-    state: "Ladakh",
-    ecosystem: "High-Altitude Alpine Tundra and Rocky Steppe",
-    species: "Snow Leopard, Tibetan Wolf, Blue Sheep",
-    description: "Hemis is a massive protected wilderness in trans-Himalayan Ladakh, serving as a critical research and conservation site for snow leopards in snow-swept rocky heights."
+  "jh": {
+    name: "BETLA NATIONAL PARK",
+    state: "Jharkhand",
+    ecosystem: "Dry Deciduous Sal Forest and Bamboo Groves",
+    species: "Asian Elephant, Bengal Tiger, Sloth Bear",
+    description: "Betla comprises the undulating plateaus of Chota Nagpur, featuring thick sal forests and bamboo groves that shelter herds of wild elephants.",
+    image: "/images/nature/jharkhand_nature.jpg",
+    region: "EAST"
   },
-  "ut": {
-    name: "JIM CORBETT NATIONAL PARK",
-    state: "Uttarakhand",
-    ecosystem: "Sub-Himalayan Deciduous Forest and Terai Grasslands",
-    species: "Bengal Tiger, Asian Elephant, Indian Leopard",
-    description: "Nestled in the Himalayan foothills, Corbett is India's oldest national park, protecting riverine belts, hills, grasslands, and dense sal forests."
+  "ka": {
+    name: "BANDIPUR NATIONAL PARK",
+    state: "Karnataka",
+    ecosystem: "Dry Deciduous and Mixed Forest",
+    species: "Asian Elephant, Bengal Tiger, Indian Dhole",
+    description: "Part of the Nilgiri Biosphere Reserve, Bandipur comprises moist deciduous forests that support the largest population of wild Asian elephants in India.",
+    image: "/images/nature/karnataka_nature.jpg",
+    region: "SOUTH"
   },
   "kl": {
     name: "SILENT VALLEY NATIONAL PARK",
     state: "Kerala",
     ecosystem: "Tropical Evergreen Rainforest",
     species: "Lion-Tailed Macaque, Nilgiri Langur, Malabar Giant Squirrel",
-    description: "Located in the Kundali Hills, Silent Valley preserves an undisturbed pocket of pristine tropical rainforest, shielding unique endemic species."
+    description: "Located in the Kundali Hills, Silent Valley preserves an undisturbed pocket of pristine tropical rainforest, shielding unique endemic species.",
+    image: "/images/nature/wildlife-elephant.jpg",
+    region: "SOUTH"
+  },
+  "mp": {
+    name: "KANHA TIGER RESERVE",
+    state: "Madhya Pradesh",
+    ecosystem: "Sal Forest and Highlands Grassland",
+    species: "Bengal Tiger, Barasingha (Swamp Deer)",
+    description: "Located in the Maikal range, Kanha's dry and moist deciduous forests are home to the endangered Barasingha, conserved through forest meadow restoration projects.",
+    image: "/images/nature/wildlife-tiger.jpg",
+    region: "CENTRAL"
+  },
+  "mh": {
+    name: "TADOBA ANDHARI TIGER RESERVE",
+    state: "Maharashtra",
+    ecosystem: "Dry Deciduous Teak Forest",
+    species: "Bengal Tiger, Indian Leopard, Honey Badger",
+    description: "As Maharashtra's oldest national park, Tadoba preserves rugged hills and deep valleys covered in dry teak forests surrounding the Tadoba Lake.",
+    image: "/images/nature/eco-forest.jpg",
+    region: "WEST"
+  },
+  "mn": {
+    name: "KEIBUL LAMJAO NATIONAL PARK",
+    state: "Manipur",
+    ecosystem: "Floating Marshland (Phumdis) & Loktak Wetland",
+    species: "Sangai (Brow-antlered Deer), Hog Deer",
+    description: "The only floating national park in the world, Keibul Lamjao is composed of floating decomposed vegetation masses called phumdis on Loktak Lake.",
+    image: "/images/nature/manipur_nature.jpg",
+    region: "NORTHEAST"
+  },
+  "ml": {
+    name: "NOKREK NATIONAL PARK",
+    state: "Meghalaya",
+    ecosystem: "Tropical Moist Evergreen Forest",
+    species: "Red Panda, Pig-tailed Macaque, Asian Elephant",
+    description: "Located in the Garo Hills, Nokrek serves as a biodiversity hotspot protecting ancient citrus species and moist evergreen hill canopies.",
+    image: "/images/nature/meghalaya_nature.jpg",
+    region: "NORTHEAST"
+  },
+  "mz": {
+    name: "DAMPPA TIGER RESERVE",
+    state: "Mizoram",
+    ecosystem: "Tropical Wet Evergreen Forest",
+    species: "Clouded Leopard, Hoolock Gibbon, Malabar Pied Hornbill",
+    description: "Dampa protects a series of steep, forest-covered ridges along the Bangladesh border, representing a haven for rare subtropical birds and wild cats.",
+    image: "/images/nature/mizoram_nature.jpg",
+    region: "NORTHEAST"
+  },
+  "nl": {
+    name: "INTANKI NATIONAL PARK",
+    state: "Nagaland",
+    ecosystem: "Subtropical Moist Semi-Evergreen Forest",
+    species: "Hoolock Gibbon, Palm Civet, Tiger",
+    description: "Intanki protects a block of equatorial rainforest in Peren district, featuring tall trees and dense undergrowth that shelter rare primates.",
+    image: "/images/nature/nagaland_nature.jpg",
+    region: "NORTHEAST"
+  },
+  "or": {
+    name: "BHITARKANIKA NATIONAL PARK",
+    state: "Odisha",
+    ecosystem: "Tidal Mangroves and Wetland Delta",
+    species: "Saltwater Crocodile, Olive Ridley Turtle",
+    description: "Formed by the Brahmani and Baitarani river deltas, Bhitarkanika is India's second-largest mangrove ecosystem, hosting giant saltwater crocodiles.",
+    image: "/images/nature/eco-mangroves.jpg",
+    region: "EAST"
+  },
+  "pb": {
+    name: "HARIKE WETLAND & BIRD SANCTUARY",
+    state: "Punjab",
+    ecosystem: "Freshwater Riverine Lacustrine Wetland",
+    species: "Indus River Dolphin, Smooth-coated Otter",
+    description: "Situated at the confluence of the Beas and Sutlej rivers, Harike is one of the largest wetlands in northern India, supporting hundreds of waterfowl.",
+    image: "/images/nature/punjab_nature.jpg",
+    region: "NORTH"
+  },
+  "rj": {
+    name: "DESERT NATIONAL PARK",
+    state: "Rajasthan",
+    ecosystem: "Arid Desert Dunes and Scrubland",
+    species: "Great Indian Bustard, Desert Fox",
+    description: "Located in the Thar Desert, this park preserves the fragile sand dune ecosystem, serving as the last stronghold of the critically endangered Great Indian Bustard.",
+    image: "/images/nature/rajasthan_nature.jpg",
+    region: "WEST"
+  },
+  "sk": {
+    name: "KHANGCHENDZONGA NATIONAL PARK",
+    state: "Sikkim",
+    ecosystem: "Himalayan Sub-alpine to Alpine Meadow",
+    species: "Snow Leopard, Red Panda, Himalayan Tahr",
+    description: "A UNESCO World Heritage mixed site, it spans from temperate forests to glaciers surrounding Mount Kangchenjunga, the third highest peak.",
+    image: "/images/nature/sikkim_nature.jpg",
+    region: "NORTHEAST"
+  },
+  "tn": {
+    name: "MUDUMALAI NATIONAL PARK",
+    state: "Tamil Nadu",
+    ecosystem: "Tropical Dry and Moist Deciduous Forest",
+    species: "Bengal Tiger, Indian Gaur, Asian Elephant",
+    description: "Mudumalai shares borders with Kerala and Karnataka, forming a key corridor for elephant migrations in the Western Ghats landscape.",
+    image: "/images/nature/tamil_nadu_nature.jpg",
+    region: "SOUTH"
+  },
+  "tg": {
+    name: "KASU BRAHMANANDA REDDY NATIONAL PARK",
+    state: "Telangana",
+    ecosystem: "Deccan Thorny Scrub and Deciduous Woodland",
+    species: "Indian Civet, Jungle Cat, Monitor Lizard",
+    description: "KBR serves as an urban forest oasis in Hyderabad, preserving native scrublands, rock formations, and over a hundred bird species.",
+    image: "/images/nature/telangana_nature.jpg",
+    region: "SOUTH"
+  },
+  "tr": {
+    name: "CLOUDED LEOPARD NATIONAL PARK",
+    state: "Tripura",
+    ecosystem: "Tropical Semi-Evergreen Forest",
+    species: "Clouded Leopard, Spectacled Langur",
+    description: "Located in the Sipahijala sanctuary, this park protects moist deciduous woodland patches containing rare wild bamboo species and clouded leopards.",
+    image: "/images/nature/tripura_nature.jpg",
+    region: "NORTHEAST"
+  },
+  "up": {
+    name: "NATIONAL CHAMBAL SANCTUARY",
+    state: "Uttar Pradesh",
+    ecosystem: "Riverine Freshwater Sandy Basin",
+    species: "Gharial, Gangetic Dolphin, Mugger Crocodile",
+    description: "Stretching along the clean, fast-flowing Chambal River, this sanctuary protects the last breeding populations of the critically endangered Gharial.",
+    image: "/images/nature/wildlife-gharial.jpg",
+    region: "NORTH"
+  },
+  "ut": {
+    name: "VALLEY OF FLOWERS NATIONAL PARK",
+    state: "Uttarakhand",
+    ecosystem: "West Himalayan Alpine Meadow",
+    species: "Asiatic Black Bear, Snow Leopard, Musk Deer",
+    description: "Nestled in the high Himalayas, the Valley of Flowers is a UNESCO World Heritage site famous for its alpine meadows of wild endemic flowers.",
+    image: "/images/nature/eco-himalayan.jpg",
+    region: "NORTH"
+  },
+  "wb": {
+    name: "SUNDARBANS NATIONAL PARK",
+    state: "West Bengal",
+    ecosystem: "Tidal Mangrove Forest and Estuaries",
+    species: "Bengal Tiger, Saltwater Crocodile",
+    description: "A UNESCO World Heritage site consisting of complex waterways, Sundarbans is the only mangrove forest in the world inhabited by tigers, who have adapted to swim in saline currents.",
+    image: "/images/nature/eco-mangroves.jpg",
+    region: "EAST"
+  },
+  "an": {
+    name: "MAHATMA GANDHI MARINE NATIONAL PARK",
+    state: "Andaman & Nicobar Islands",
+    ecosystem: "Tropical Reef and Coastal Mangroves",
+    species: "Hawksbill Turtle, Dugong, Clownfish",
+    description: "Located in Wandoor, this park protects a cluster of islands containing vibrant coral reefs, seagrass beds, and mangrove creek systems.",
+    image: "/images/nature/andaman_and_nicobar_islands_nature.jpg",
+    region: "UNION TERRITORIES"
+  },
+  "ch": {
+    name: "SUKHNA WILDLIFE SANCTUARY",
+    state: "Chandigarh",
+    ecosystem: "Shivalik Foothill Dry Deciduous Scrub",
+    species: "Sambar Deer, Indian Pangolin, Golden Jackal",
+    description: "Located in the Shivalik hills, Sukhna protects catchment areas of the lake, serving as an important ecological zone for dryland wildlife.",
+    image: "/images/nature/chandigarh_nature.jpg",
+    region: "UNION TERRITORIES"
+  },
+  "dn": {
+    name: "FUDAM WILDLIFE SANCTUARY",
+    state: "Dadra & Nagar Haveli and Daman & Diu",
+    ecosystem: "Salt Marsh and Mudflats",
+    species: "Spoonbill, Painted Stork, Flamingos",
+    description: "Fudam is a small coastal wetland sanctuary in Diu protecting tidal mudflats and marshes that attract migratory waterfowl during winters.",
+    image: "/images/nature/dadra_and_nagar_haveli_and_daman_and_diu_nature.jpg",
+    region: "UNION TERRITORIES"
+  },
+  "dl": {
+    name: "ASOLA BHATTI WILDLIFE SANCTUARY",
+    state: "Delhi",
+    ecosystem: "Arid Aravalli Thorn Forest",
+    species: "Nilgai, Golden Jackal, Blackbuck",
+    description: "Located on the Southern Ridge of the Aravalli hills, Asola Bhatti represents Delhi's primary lung, protecting semi-arid scrub forests.",
+    image: "/images/nature/delhi_nature.jpg",
+    region: "UNION TERRITORIES"
+  },
+  "jk": {
+    name: "DACHIGAM NATIONAL PARK",
+    state: "Jammu & Kashmir",
+    ecosystem: "Temperate Coniferous and Deciduous Forest",
+    species: "Hangul (Kashmir Stag), Himalayan Black Bear",
+    description: "Located in the Zabarwan Range, Dachigam protects pristine coniferous forests and rivers, serving as the sole habitat of the Hangul stag.",
+    image: "/images/nature/jammu_and_kashmir_nature.jpg",
+    region: "UNION TERRITORIES"
+  },
+  "la": {
+    name: "HEMIS NATIONAL PARK",
+    state: "Ladakh",
+    ecosystem: "High-Altitude Alpine Tundra and Rocky Steppe",
+    species: "Snow Leopard, Tibetan Wolf, Blue Sheep",
+    description: "Hemis is a massive protected wilderness in trans-Himalayan Ladakh, serving as a critical research and conservation site for snow leopards in snow-swept rocky heights.",
+    image: "/images/nature/wildlife-snowleopard.jpg",
+    region: "UNION TERRITORIES"
+  },
+  "ld": {
+    name: "PITTI BIRD SANCTUARY",
+    state: "Lakshadweep",
+    ecosystem: "Coral Atoll and Pelagic Reef",
+    species: "Sooty Tern, Brown Noddy, Green Sea Turtle",
+    description: "Pitti is an uninhabited coral islet serving as a key nesting site for pelagic seabirds and sea turtles in the Arabian Sea.",
+    image: "/images/nature/geo-islands.jpg",
+    region: "UNION TERRITORIES"
+  },
+  "py": {
+    name: "OUSUDU WETLAND & BIRD SANCTUARY",
+    state: "Puducherry",
+    ecosystem: "Freshwater Lake and Aquatic Marsh",
+    species: "Spot-billed Pelican, Eurasian Spoonbill",
+    description: "Ousteri Lake is a rich freshwater wetland recognized as an important bird area, hosting hundreds of resident and migratory waterbirds.",
+    image: "/images/nature/puducherry_nature.jpg",
+    region: "UNION TERRITORIES"
   }
 };
 
