@@ -51,56 +51,112 @@ const filmsList = [
     title: "PATHER PANCHALI",
     year: "1955",
     theme: "Everyday life & realism",
-    description: "A village, a family, and an India rarely seen on the screen."
+    description: "A village, a family, and an India rarely seen on the screen.",
+    image: null, // Sourced movie-specific image can be placed here
+    bgStyle: "from-[#F2F1ED] to-[#D5D3CB]",
+    textColor: "text-[#171717]",
+    borderColor: "border-[#171717]/10",
+    lineColor: "bg-[#171717]/20",
+    subColor: "text-[#6B6B6B]",
+    labelText: "MONOCHROME REALISM — WEST BENGAL"
   },
   {
     id: "mother_india",
     title: "MOTHER INDIA",
     year: "1957",
     theme: "Rural India, resilience & nationhood",
-    description: "A story of one woman became a larger portrait of a young nation."
+    description: "A story of one woman became a larger portrait of a young nation.",
+    image: null,
+    bgStyle: "from-[#7A281E] to-[#4F1610]",
+    textColor: "text-[#F7F4EE]",
+    borderColor: "border-[#F7F4EE]/10",
+    lineColor: "bg-[#F7F4EE]/20",
+    subColor: "text-[#F7F4EE]/60",
+    labelText: "CLAY SOIL & NATIONHOOD"
   },
   {
     id: "mughal_e_azam",
     title: "MUGHAL-E-AZAM",
     year: "1960",
     theme: "History, spectacle & popular imagination",
-    description: "Cinema became spectacle — and history became imagination."
+    description: "Cinema became spectacle — and history became imagination.",
+    image: null,
+    bgStyle: "from-[#9E783B] to-[#604720]",
+    textColor: "text-[#FAF6F0]",
+    borderColor: "border-[#FAF6F0]/15",
+    lineColor: "bg-[#FAF6F0]/25",
+    subColor: "text-[#FAF6F0]/70",
+    labelText: "IMPERIAL GLASS PALACE SPECTACLE"
   },
   {
     id: "sholay",
     title: "SHOLAY",
     year: "1975",
     theme: "Popular culture & cultural memory",
-    description: "Some films become more than films. They become part of how a generation remembers itself."
+    description: "Some films become more than films. They become part of how a generation remembers itself.",
+    image: null,
+    bgStyle: "from-[#A0522D] to-[#5C2E16]",
+    textColor: "text-[#F7F4EE]",
+    borderColor: "border-[#F7F4EE]/15",
+    lineColor: "bg-[#F7F4EE]/25",
+    subColor: "text-[#F7F4EE]/75",
+    labelText: "ROCKY OUTPOSTS & OUTLAWS"
   },
   {
     id: "manthan",
     title: "MANTHAN",
     year: "1976",
     theme: "Community, cooperation & development",
-    description: "A village becomes a place where development, cooperation and power meet."
+    description: "A village becomes a place where development, cooperation and power meet.",
+    image: null,
+    bgStyle: "from-[#E8F5E9] to-[#C8E6C9]",
+    textColor: "text-[#16734A]",
+    borderColor: "border-[#16734A]/15",
+    lineColor: "bg-[#16734A]/25",
+    subColor: "text-[#16734A]/70",
+    labelText: "WHITE REVOLUTION & DEMOCRACY"
   },
   {
     id: "nayakan",
     title: "NAYAKAN",
     year: "1987",
     theme: "Regional voice & urban transformation",
-    description: "A city changes. So does the person trying to survive within it."
+    description: "A city changes. So does the person trying to survive within it.",
+    image: null,
+    bgStyle: "from-[#2C3E50] to-[#1A252F]",
+    textColor: "text-[#EAEDED]",
+    borderColor: "border-[#EAEDED]/10",
+    lineColor: "bg-[#EAEDED]/20",
+    subColor: "text-[#EAEDED]/65",
+    labelText: "RAIN-SLICKED URBAN TRANSFORMATION"
   },
   {
     id: "swades",
     title: "SWADES",
     year: "2004",
     theme: "Belonging, development & civic responsibility",
-    description: "What does it mean to return, belong and contribute?"
+    description: "What does it mean to return, belong and contribute?",
+    image: null,
+    bgStyle: "from-[#1B263B] to-[#0D1B2A]",
+    textColor: "text-[#E0E1DD]",
+    borderColor: "border-[#E8752A]/20",
+    lineColor: "bg-[#E8752A]/30",
+    subColor: "text-[#E0E1DD]/70",
+    labelText: "COSMIC ENERGY & RETURN TO ROOTS"
   },
   {
     id: "kumbalangi_nights",
     title: "KUMBALANGI NIGHTS",
     year: "2019",
     theme: "Contemporary social change",
-    description: "Sometimes the story of a changing India is found in the smallest of places."
+    description: "Sometimes the story of a changing India is found in the smallest of places.",
+    image: null,
+    bgStyle: "from-[#4A2E80] to-[#2E1F4E]",
+    textColor: "text-[#F1C40F]",
+    borderColor: "border-[#F1C40F]/15",
+    lineColor: "bg-[#F1C40F]/25",
+    subColor: "text-[#F1C40F]/70",
+    labelText: "BACKWATER LAGOON & KERALA SHORES"
   }
 ];
 
@@ -354,7 +410,7 @@ export default function SoundStory() {
           {/* Cinematic Slider Reel */}
           <div ref={cinemaContainerRef} className="space-y-8 w-full">
             
-            {/* Film frame display: Typographic slate instead of stock images */}
+            {/* Film frame display: Image loads only if valid path is set, otherwise typographic slate */}
             <div className="w-full aspect-[2.35/1] md:aspect-[2.35/1] overflow-hidden bg-[#171717] border border-[#171717] relative shadow-lg">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -365,21 +421,30 @@ export default function SoundStory() {
                   transition={{ duration: 0.4 }}
                   className="w-full h-full"
                 >
-                  <div className="w-full h-full bg-[#171717] flex items-center justify-center relative p-6 md:p-12 select-none">
-                    {/* Elegant classic film slate border */}
-                    <div className="absolute inset-4 border border-[#F7F4EE]/10 flex flex-col justify-center items-center text-center space-y-2 md:space-y-3">
-                      <span className="text-[8px] md:text-[9px] font-sans font-bold text-[#E8752A] uppercase tracking-[0.3em] opacity-85 block">
-                        LANDMARK CINEMA
-                      </span>
-                      <h4 className="font-serif text-xl md:text-4xl text-[#F7F4EE] font-normal tracking-[0.15em] uppercase px-4 leading-tight">
-                        {activeFilm.title}
-                      </h4>
-                      <div className="w-6 md:w-8 h-[1px] bg-[#F7F4EE]/25" />
-                      <span className="text-[9px] md:text-xs font-sans font-light text-[#F7F4EE]/60 tracking-wider">
-                        {activeFilm.year} • {activeFilm.theme}
-                      </span>
+                  {activeFilm.image ? (
+                    <img
+                      src={activeFilm.image}
+                      alt={`${activeFilm.title} (${activeFilm.year}) film scene`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className={`w-full h-full bg-gradient-to-br ${activeFilm.bgStyle} flex items-center justify-center relative p-6 md:p-12 select-none`}>
+                      {/* Elegant classic film slate border */}
+                      <div className={`absolute inset-4 border ${activeFilm.borderColor} flex flex-col justify-center items-center text-center space-y-2 md:space-y-3`}>
+                        <span className="text-[8px] md:text-[9px] font-sans font-bold text-[#E8752A] uppercase tracking-[0.3em] opacity-85 block">
+                          {activeFilm.labelText}
+                        </span>
+                        <h4 className={`font-serif text-xl md:text-4xl ${activeFilm.textColor} font-normal tracking-[0.15em] uppercase px-4 leading-tight`}>
+                          {activeFilm.title}
+                        </h4>
+                        <div className={`w-6 md:w-8 h-[1px] ${activeFilm.lineColor}`} />
+                        <span className={`text-[9px] md:text-xs font-sans font-light ${activeFilm.subColor} tracking-wider uppercase`}>
+                          {activeFilm.year} • {activeFilm.theme}
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </motion.div>
               </AnimatePresence>
 
