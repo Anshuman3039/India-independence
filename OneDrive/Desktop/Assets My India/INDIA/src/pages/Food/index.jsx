@@ -6,7 +6,6 @@ import Ingredients from './Ingredients';
 import FoodGeography from './FoodGeography';
 import EverydayFood from './EverydayFood';
 import FoodStories from './FoodStories';
-import FoodClosing from './FoodClosing';
 import PageTransition from '../../components/global/PageTransition';
 
 export default function Food() {
@@ -30,9 +29,6 @@ export default function Food() {
 
         {/* 6. Historical Chronicles */}
         <FoodStories />
-
-        {/* 7. Closing Statement Banner */}
-        <FoodClosing />
 
         {/* NEW: Story-driven transition to Nature */}
         <section className="bg-[#F7F4EE] pb-12 md:pb-16 px-6 md:px-12 max-w-7xl mx-auto border-t border-[#171717]/5 text-center overflow-hidden">
