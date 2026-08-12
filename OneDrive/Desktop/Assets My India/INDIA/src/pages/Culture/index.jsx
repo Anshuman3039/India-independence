@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import CultureIntro from './CultureIntro';
 import Festivals from './Festivals';
 import MusicDance from './MusicDance';
+import SoundStory from './SoundStory';
 import Art from './Art';
 import Crafts from './Crafts';
 import CulturalMap from './CulturalMap';
@@ -21,7 +22,10 @@ export default function Culture() {
         {/* 3. Music & Dance Showcase */}
         <MusicDance />
 
-        {/* 4. Visual Art Traditions */}
+        {/* 4. Sound & Story Integration */}
+        <SoundStory />
+
+        {/* 5. Visual Art Traditions */}
         <Art />
 
         {/* 5. Traditional Crafts */}
