@@ -6,7 +6,6 @@ import MusicDance from './MusicDance';
 import Art from './Art';
 import Crafts from './Crafts';
 import CulturalMap from './CulturalMap';
-import CultureClosing from './CultureClosing';
 import PageTransition from '../../components/global/PageTransition';
 
 export default function Culture() {
@@ -30,9 +29,6 @@ export default function Culture() {
 
         {/* 6. Regional Cultural Map */}
         <CulturalMap />
-
-        {/* 7. Closing Statement Banner */}
-        <CultureClosing />
 
         {/* NEW: Story-driven transition to Food */}
         <section className="bg-[#F7F4EE] pb-12 md:pb-16 px-6 md:px-12 max-w-7xl mx-auto border-t border-[#171717]/5 text-center overflow-hidden">
