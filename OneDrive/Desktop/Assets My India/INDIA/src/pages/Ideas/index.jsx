@@ -85,7 +85,8 @@ const voicesData = [
     title: "Constitutionalist & Reformer",
     description: "The chief architect of India's Constitution. He argued that political democracy is meaningless without social and economic equality, dedicating his life to fighting caste discrimination and securing rights for the marginalized.",
     ideas: ["equality", "social_justice", "democracy", "republic"],
-    image: null
+    image: null,
+    archivalRef: "Doc: Draft Constitution (1949)"
   },
   {
     id: "tagore",
@@ -93,7 +94,8 @@ const voicesData = [
     title: "Poet, Thinker & Nobel Laureate",
     description: "He imagined an India free from narrow nationalism, seeking freedom through universal humanism, creative education, and a pluralistic synthesis of cultures.",
     ideas: ["pluralism", "culture", "freedom"],
-    image: null
+    image: null,
+    archivalRef: "Essay: Nationalism (1917)"
   },
   {
     id: "gandhi",
@@ -101,7 +103,8 @@ const voicesData = [
     title: "Leader of Anti-colonial Resistance",
     description: "Champion of non-violence (Satyagraha) and religious harmony. He envisioned an India of self-reliant villages, where pluralism and ethical self-governance were central.",
     ideas: ["freedom", "pluralism", "secularism"],
-    image: null
+    image: null,
+    archivalRef: "Text: Hind Swaraj (1909)"
   },
   {
     id: "nehru",
@@ -109,7 +112,8 @@ const voicesData = [
     title: "First Prime Minister & Writer",
     description: "A builder of modern institutions who championed a secular republic, scientific temper, and planned development to raise India onto the global stage.",
     ideas: ["democracy", "scientific_temper", "secularism", "modernity", "freedom"],
-    image: null
+    image: null,
+    archivalRef: "Book: Discovery of India (1946)"
   },
   {
     id: "naidu",
@@ -117,7 +121,8 @@ const voicesData = [
     title: "Poet & Freedom Fighter",
     description: "Known as the Nightingale of India, she advocated for women's suffrage, education, and active participation in public life, bridging cultural expression and political struggle.",
     ideas: ["freedom", "culture"],
-    image: null
+    image: null,
+    archivalRef: "Poetry: Golden Threshold (1905)"
   },
   {
     id: "phule_jyotirao",
@@ -125,7 +130,8 @@ const voicesData = [
     title: "Social Reformer & Thinker",
     description: "A pioneer of anti-caste struggle and women's education in Maharashtra. He challenged traditional hierarchies and founded the Satyashodhak Samaj.",
     ideas: ["equality", "social_justice", "democracy"],
-    image: null
+    image: null,
+    archivalRef: "Treatise: Gulamgiri (1873)"
   },
   {
     id: "phule_savitribai",
@@ -133,7 +139,8 @@ const voicesData = [
     title: "Educator & Feminist Pioneer",
     description: "India's first female teacher. Alongside her husband, she established the first school for girls, advocating fiercely for universal education, gender equality, and social reform.",
     ideas: ["equality", "social_justice"],
-    image: null
+    image: null,
+    archivalRef: "Poetry: Kavya Phule (1854)"
   },
   {
     id: "periyar",
@@ -141,7 +148,8 @@ const voicesData = [
     title: "Rationalist & Social Activist",
     description: "Leader of the Self-Respect Movement. He campaigned against caste privilege and patriarchy in southern India, advocating for reason, self-respect, and equality.",
     ideas: ["equality", "social_justice"],
-    image: null
+    image: null,
+    archivalRef: "Journal: Kudi Arasu (1925)"
   },
   {
     id: "bhabha",
@@ -149,7 +157,8 @@ const voicesData = [
     title: "Nuclear Physicist & Visionary",
     description: "The founding director of India's nuclear program. He envisioned high-level scientific research as the key driver for India's technological self-reliance and modernity.",
     ideas: ["scientific_temper", "modernity"],
-    image: null
+    image: null,
+    archivalRef: "Paper: Cosmic Ray Research (1944)"
   },
   {
     id: "kalam",
@@ -157,7 +166,8 @@ const voicesData = [
     title: "Scientist & Former President",
     description: "The 'People's President' and aerospace scientist. He inspired generations with a vision of a developed, scientific, and inclusive India rooted in pluralistic values.",
     ideas: ["scientific_temper", "pluralism"],
-    image: null
+    image: null,
+    archivalRef: "Book: India 2020 (1998)"
   }
 ];
 
@@ -290,11 +300,34 @@ const continuingDecades = [
   }
 ];
 
+function ChapterConnector() {
+  return (
+    <div className="flex items-center justify-center w-full max-w-7xl mx-auto px-6 md:px-12 py-4 opacity-30 select-none pointer-events-none">
+      <div className="h-[1px] flex-grow bg-[#171717]/10"></div>
+      <div className="mx-4 w-1.5 h-1.5 rounded-full border border-[#171717]/30 bg-transparent"></div>
+      <div className="h-[1px] flex-grow bg-[#171717]/10"></div>
+    </div>
+  );
+}
+
 export default function Ideas() {
   const [selectedIdeaId, setSelectedIdeaId] = useState("freedom");
   const [activeVoiceFilter, setActiveVoiceFilter] = useState("all");
   const [activeDebateId, setActiveDebateId] = useState("d1");
   const [activeConstValId, setActiveConstValId] = useState("justice");
+  
+  const [hoveredIdeaId, setHoveredIdeaId] = useState(null);
+  const [focusedIdeaId, setFocusedIdeaId] = useState(null);
+  const [focusedConstValId, setFocusedConstValId] = useState(null);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+    const listener = (e) => setPrefersReducedMotion(e.matches);
+    mediaQuery.addEventListener('change', listener);
+    return () => mediaQuery.removeEventListener('change', listener);
+  }, []);
 
   const selectedIdeaObj = ideasData.find(i => i.id === selectedIdeaId) || ideasData[0];
 
@@ -316,7 +349,8 @@ export default function Ideas() {
     return ideasData.find(item => item.id === id)?.related || [];
   };
 
-  const activeRelations = getRelations(selectedIdeaId);
+  const activeId = hoveredIdeaId || selectedIdeaId;
+  const activeRelations = getRelations(activeId);
 
   // Filter voices based on selected idea tag
   const filteredVoices = activeVoiceFilter === "all" 
@@ -324,11 +358,11 @@ export default function Ideas() {
     : voicesData.filter(v => v.ideas.includes(activeVoiceFilter));
 
   const fadeUp = {
-    hidden: { opacity: 0, y: 15 },
+    hidden: { opacity: 0, y: prefersReducedMotion ? 0 : 15 },
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: prefersReducedMotion ? 0 : 0.7, ease: "easeOut" }
     }
   };
 
@@ -359,9 +393,17 @@ export default function Ideas() {
           </div>
         </section>
 
+        <ChapterConnector />
+
         {/* 2. The Fabric of India */}
         <section className="py-24 px-6 md:px-12 bg-[#F2EDE4] border-t border-b border-[#171717]/5">
-          <div className="max-w-7xl mx-auto space-y-12">
+          <motion.div 
+            initial={prefersReducedMotion ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true, margin: "-12% 0px" }}
+            variants={fadeUp}
+            className="max-w-7xl mx-auto space-y-12"
+          >
             
             <div className="max-w-2xl space-y-3">
               <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.2em] block">
@@ -388,7 +430,7 @@ export default function Ideas() {
                     className="w-full max-w-[500px] h-auto select-none"
                   >
                     {/* Background connection lines */}
-                    <g stroke="#171717" strokeWidth="1.2" opacity="0.12" strokeDasharray="3,3">
+                    <g stroke="#171717" strokeWidth="1.2" opacity={hoveredIdeaId ? 0.04 : 0.12} strokeDasharray="3,3" style={prefersReducedMotion ? { transition: 'none' } : { transition: 'opacity 0.6s ease-in-out' }}>
                       {/* Freedom - Democracy */}
                       <line x1={nodeCoords.freedom.x} y1={nodeCoords.freedom.y} x2={nodeCoords.democracy.x} y2={nodeCoords.democracy.y} />
                       {/* Democracy - Equality */}
@@ -411,11 +453,11 @@ export default function Ideas() {
                       <line x1={nodeCoords.modernity.x} y1={nodeCoords.modernity.y} x2={nodeCoords.republic.x} y2={nodeCoords.republic.y} />
                     </g>
 
-                    {/* Highlighted connection lines for selected node */}
-                    <g stroke="#E8752A" strokeWidth="2" opacity="0.8">
+                    {/* Highlighted connection lines for active node */}
+                    <g stroke="#E8752A" strokeWidth="2" opacity="0.85">
                       {activeRelations.map((relatedId, index) => {
                         const target = nodeCoords[relatedId];
-                        const origin = nodeCoords[selectedIdeaId];
+                        const origin = nodeCoords[activeId];
                         if (!target || !origin) return null;
                         return (
                           <line 
@@ -425,6 +467,7 @@ export default function Ideas() {
                             x2={target.x} 
                             y2={target.y} 
                             strokeDasharray="4,4"
+                            style={prefersReducedMotion ? { transition: 'none' } : { transition: 'all 0.6s cubic-bezier(0.25, 1, 0.5, 1)' }}
                           />
                         );
                       })}
@@ -434,42 +477,90 @@ export default function Ideas() {
                     {ideasData.map((node) => {
                       const coord = nodeCoords[node.id];
                       const isSelected = selectedIdeaId === node.id;
+                      const isActiveNode = activeId === node.id;
                       const isRelated = activeRelations.includes(node.id);
+                      const isMuted = activeId && !isActiveNode && !isRelated;
                       
                       let fillVal = "#FAF8F5";
                       let strokeVal = "#171717";
                       let strokeW = "1.5";
+                      let textColorClass = "fill-[#171717]/85 font-normal";
                       
                       if (isSelected) {
                         fillVal = "#E8752A";
                         strokeVal = "#E8752A";
+                        textColorClass = "fill-[#E8752A] font-bold";
+                      } else if (isActiveNode) {
+                        fillVal = "#16734A";
+                        strokeVal = "#16734A";
+                        textColorClass = "fill-[#16734A] font-bold";
                       } else if (isRelated) {
-                        fillVal = "#E8752A/10";
-                        strokeVal = "#E8752A";
+                        fillVal = "#FAF8F5";
+                        strokeVal = "#16734A";
                         strokeW = "2";
+                        textColorClass = "fill-[#171717] font-semibold";
                       }
+
+                      const transitionStyle = prefersReducedMotion 
+                        ? { transition: 'none' } 
+                        : { transition: 'all 0.5s cubic-bezier(0.25, 1, 0.5, 1)' };
 
                       return (
                         <g 
                           key={node.id} 
                           transform={`translate(${coord.x}, ${coord.y})`}
-                          className="cursor-pointer group"
+                          className="cursor-pointer group focus:outline-none"
+                          tabIndex={0}
+                          role="button"
+                          aria-pressed={isSelected}
                           onClick={() => setSelectedIdeaId(node.id)}
+                          onMouseEnter={() => setHoveredIdeaId(node.id)}
+                          onMouseLeave={() => setHoveredIdeaId(null)}
+                          onFocus={() => {
+                            setHoveredIdeaId(node.id);
+                            setFocusedIdeaId(node.id);
+                          }}
+                          onBlur={() => {
+                            setHoveredIdeaId(null);
+                            setFocusedIdeaId(null);
+                          }}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              setSelectedIdeaId(node.id);
+                            }
+                          }}
+                          style={{
+                            ...transitionStyle,
+                            opacity: isMuted ? 0.35 : 1
+                          }}
                         >
                           <circle 
                             r="12" 
                             fill={fillVal} 
                             stroke={strokeVal} 
                             strokeWidth={strokeW}
-                            className="transition-all duration-300 group-hover:scale-110" 
+                            className="transition-all duration-300" 
+                            style={{
+                              ...transitionStyle,
+                              transform: !prefersReducedMotion && (isActiveNode || isSelected) ? 'scale(1.18)' : 'scale(1)'
+                            }}
                           />
+                          {focusedIdeaId === node.id && (
+                            <circle 
+                              r="18" 
+                              fill="none" 
+                              stroke="#E8752A" 
+                              strokeWidth="1.5" 
+                              strokeDasharray="3,3" 
+                              className={prefersReducedMotion ? "" : "animate-pulse"}
+                            />
+                          )}
                           <circle r="22" fill="transparent" />
                           <text 
                             y="24"
                             textAnchor="middle"
-                            className={`font-sans text-[8px] tracking-wider uppercase font-semibold pointer-events-none transition-colors duration-300 ${
-                              isSelected ? "fill-[#E8752A]" : "fill-[#171717]/85"
-                            }`}
+                            className={`font-sans text-[8px] tracking-wider uppercase pointer-events-none transition-colors duration-300 ${textColorClass}`}
                           >
                             {node.title}
                           </text>
@@ -548,12 +639,20 @@ export default function Ideas() {
 
             </div>
 
-          </div>
+          </motion.div>
         </section>
+
+        <ChapterConnector />
 
         {/* 3. Voices in the Conversation */}
         <section className="py-28 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="space-y-16">
+          <motion.div 
+            initial={prefersReducedMotion ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true, margin: "-12% 0px" }}
+            variants={fadeUp}
+            className="space-y-16"
+          >
             
             {/* Header */}
             <div className="max-w-2xl space-y-3">
@@ -576,7 +675,7 @@ export default function Ideas() {
               <div className="flex flex-wrap gap-2">
                 <button
                   onClick={() => setActiveVoiceFilter("all")}
-                  className={`text-xs font-sans px-3 py-1 rounded-[2px] border transition-colors cursor-pointer ${
+                  className={`text-xs font-sans px-3 py-1 rounded-[2px] border transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#E8752A] focus-visible:border-[#E8752A] ${
                     activeVoiceFilter === "all"
                       ? "bg-[#171717] border-[#171717] text-[#F7F4EE]"
                       : "bg-[#F7F4EE] border-[#171717]/15 text-[#6B6B6B] hover:border-[#171717]/40"
@@ -588,7 +687,7 @@ export default function Ideas() {
                   <button
                     key={idea.id}
                     onClick={() => setActiveVoiceFilter(idea.id)}
-                    className={`text-xs font-sans px-3 py-1 rounded-[2px] border transition-colors cursor-pointer ${
+                    className={`text-xs font-sans px-3 py-1 rounded-[2px] border transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#E8752A] focus-visible:border-[#E8752A] ${
                       activeVoiceFilter === idea.id
                         ? "bg-[#171717] border-[#171717] text-[#F7F4EE]"
                         : "bg-[#F7F4EE] border-[#171717]/15 text-[#6B6B6B] hover:border-[#171717]/40"
@@ -611,14 +710,28 @@ export default function Ideas() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.98 }}
                     transition={{ duration: 0.3 }}
-                    className="bg-white border border-[#171717]/10 p-6 flex flex-col justify-between space-y-6 shadow-sm hover:border-[#E8752A]/30 transition-all duration-300"
+                    tabIndex={0}
+                    className="bg-white border border-[#171717]/10 p-6 flex flex-col justify-between space-y-6 shadow-sm hover:border-[#E8752A]/30 focus-visible:border-[#E8752A]/30 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#E8752A]/20 transition-all duration-300 group relative overflow-hidden"
                   >
-                    <div className="space-y-4">
-                      {/* Typographic Serif Initials Placeholder */}
-                      <div className="w-12 h-12 rounded-[2px] bg-[#FAF8F5] border border-[#171717]/10 flex items-center justify-center">
-                        <span className="font-serif text-lg text-[#16734A] font-semibold tracking-wider">
-                          {voice.name.split(' ').map(n => n[0]).join('')}
-                        </span>
+                    <div className="space-y-4 z-10">
+                      {/* Top Bar with Initials & Archival Reference */}
+                      <div className="flex justify-between items-start w-full">
+                        {/* Typographic Serif Initials Placeholder */}
+                        <div className="w-12 h-12 rounded-[2px] bg-[#FAF8F5] border border-[#171717]/10 flex items-center justify-center">
+                          <span className="font-serif text-lg text-[#16734A] font-semibold tracking-wider">
+                            {voice.name.split(' ').map(n => n[0]).join('')}
+                          </span>
+                        </div>
+                        
+                        {/* Genuine Archival/Work Reference */}
+                        {voice.archivalRef && (
+                          <span 
+                            className="text-[8px] font-mono text-[#16734A]/80 bg-[#16734A]/5 border border-[#16734A]/10 px-1.5 py-0.5 rounded-sm tracking-wider uppercase opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-500 ease-in-out select-none pointer-events-none"
+                            style={prefersReducedMotion ? { transition: 'none' } : { transition: 'opacity 0.5s ease-in-out' }}
+                          >
+                            {voice.archivalRef}
+                          </span>
+                        )}
                       </div>
                       
                       <div className="space-y-1">
@@ -635,7 +748,7 @@ export default function Ideas() {
                       </p>
                     </div>
 
-                    <div className="space-y-2 pt-4 border-t border-[#171717]/5">
+                    <div className="space-y-2 pt-4 border-t border-[#171717]/5 z-10">
                       <span className="text-[9px] font-sans font-bold text-[#6B6B6B]/60 uppercase tracking-widest block">
                         KEY IDEAS
                       </span>
@@ -653,17 +766,33 @@ export default function Ideas() {
                         })}
                       </div>
                     </div>
+
+                    {/* Watermark-like paper/document initials background detail */}
+                    <span 
+                      className="absolute bottom-2 right-4 font-serif text-5xl font-bold select-none pointer-events-none text-[#171717]/[0.015] group-hover:text-[#171717]/[0.05] group-focus-within:text-[#171717]/[0.05] transition-all duration-700 ease-out translate-y-1 group-hover:translate-y-0 group-focus-within:translate-y-0"
+                      style={prefersReducedMotion ? { transition: 'none' } : { transition: 'all 0.6s cubic-bezier(0.25, 1, 0.5, 1)' }}
+                    >
+                      {voice.name.split(' ').map(n => n[0]).join('')}
+                    </span>
                   </motion.div>
                 ))}
               </AnimatePresence>
             </div>
 
-          </div>
+          </motion.div>
         </section>
+
+        <ChapterConnector />
 
         {/* 4. Ideas in Debate */}
         <section className="py-24 px-6 md:px-12 bg-[#FAF8F5] border-t border-b border-[#171717]/5">
-          <div className="max-w-7xl mx-auto space-y-16">
+          <motion.div 
+            initial={prefersReducedMotion ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true, margin: "-12% 0px" }}
+            variants={fadeUp}
+            className="max-w-7xl mx-auto space-y-16"
+          >
             
             {/* Header */}
             <div className="max-w-2xl space-y-3">
@@ -768,12 +897,20 @@ export default function Ideas() {
 
             </div>
 
-          </div>
+          </motion.div>
         </section>
+
+        <ChapterConnector />
 
         {/* 5. The Constitution */}
         <section className="py-28 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="space-y-16">
+          <motion.div 
+            initial={prefersReducedMotion ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true, margin: "-12% 0px" }}
+            variants={fadeUp}
+            className="space-y-16"
+          >
             
             {/* Header */}
             <div className="max-w-2xl space-y-3">
@@ -875,16 +1012,41 @@ export default function Ideas() {
                         {/* Interactive circle tags */}
                         <g 
                           transform={`translate(${x}, ${y})`}
-                          className="cursor-pointer group"
+                          className="cursor-pointer group focus:outline-none"
+                          tabIndex={0}
+                          role="button"
+                          aria-pressed={isSelected}
                           onClick={() => setActiveConstValId(val.id)}
+                          onFocus={() => {
+                            setFocusedConstValId(val.id);
+                            setActiveConstValId(val.id);
+                          }}
+                          onBlur={() => setFocusedConstValId(null)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              setActiveConstValId(val.id);
+                            }
+                          }}
                         >
                           <circle 
                             r="28" 
                             fill={isSelected ? "#E8752A" : "#FAF8F5"} 
                             stroke={isSelected ? "#E8752A" : "#171717"} 
                             strokeWidth="1.2"
-                            className="transition-all duration-300 group-hover:scale-105" 
+                            className="transition-all duration-300" 
+                            style={prefersReducedMotion ? { transition: 'none' } : { transition: 'all 0.4s cubic-bezier(0.25, 1, 0.5, 1)', transform: isSelected ? 'scale(1.05)' : 'scale(1)' }}
                           />
+                          {focusedConstValId === val.id && (
+                            <circle 
+                              r="34" 
+                              fill="none" 
+                              stroke="#E8752A" 
+                              strokeWidth="1.5" 
+                              strokeDasharray="3,3" 
+                              className={prefersReducedMotion ? "" : "animate-pulse"}
+                            />
+                          )}
                           <text 
                             textAnchor="middle" 
                             y="3"
@@ -939,12 +1101,20 @@ export default function Ideas() {
 
             </div>
 
-          </div>
+          </motion.div>
         </section>
+
+        <ChapterConnector />
 
         {/* 6. The Conversation Continues */}
         <section className="py-24 px-6 md:px-12 bg-[#F2EDE4] border-t border-[#171717]/5">
-          <div className="max-w-7xl mx-auto space-y-16">
+          <motion.div 
+            initial={prefersReducedMotion ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true, margin: "-12% 0px" }}
+            variants={fadeUp}
+            className="max-w-7xl mx-auto space-y-16"
+          >
             
             {/* Header */}
             <div className="max-w-2xl space-y-3">
@@ -984,8 +1154,10 @@ export default function Ideas() {
               ))}
             </div>
 
-          </div>
+          </motion.div>
         </section>
+
+        <ChapterConnector />
 
         {/* 7. Closing — The Idea Continues */}
         <section className="py-32 px-6 md:px-12 max-w-4xl mx-auto text-center border-b border-[#171717]/5">
