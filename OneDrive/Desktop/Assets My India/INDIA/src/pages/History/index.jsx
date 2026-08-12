@@ -1,6 +1,7 @@
 import React from 'react';
 import HistoryIntro from './HistoryIntro';
 import Timeline from './Timeline';
+import IndiaThroughTime from './IndiaThroughTime';
 import EarlyCities from './EarlyCities';
 import IdeasThatTraveled from './IdeasThatTraveled';
 import PeopleAndPower from './PeopleAndPower';
@@ -18,6 +19,9 @@ export default function History() {
 
         {/* 2. Chronological Timeline */}
         <Timeline />
+
+        {/* NEW ADDITION: India Through Time map experience */}
+        <IndiaThroughTime />
 
         {/* 3. Ancient Bronze Age Cities */}
         <EarlyCities />
