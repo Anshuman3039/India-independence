@@ -11,6 +11,7 @@ import ExplorePage from './pages/Explore';
 import Food from './pages/Food';
 import Nature from './pages/Nature';
 import History from './pages/History';
+import Ideas from './pages/Ideas';
 import Footer from './components/global/Footer';
 
 // Simple, elegant editorial placeholder for under-development pages
@@ -88,7 +89,7 @@ export default function App() {
                 <Route path="/nature" element={<Nature />} />
                 <Route path="/history" element={<History />} />
                 <Route path="/stories" element={<Navigate to="/" replace />} />
-                <Route path="/ideas" element={<ComingSoonPage title="Ideas & Innovations" />} />
+                <Route path="/ideas" element={<Ideas />} />
                 <Route path="/india-today" element={<ComingSoonPage title="India Today" />} />
                 <Route path="*" element={<ComingSoonPage title="Archive Not Found" />} />
               </Routes>
