@@ -49,7 +49,8 @@ export default function Food() {
                 to="/nature"
                 className="group inline-flex items-center gap-2.5 font-sans text-xs md:text-sm font-bold tracking-widest uppercase text-[#171717] hover:text-[#E8752A] border-b border-[#171717]/25 hover:border-[#E8752A] pb-1.5 transition-all duration-200 focus-visible:outline-[#E8752A]"
               >
-                NEXT → NATURE
+                EXPLORE NATURE 
+                <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
               </Link>
             </div>
           </div>
