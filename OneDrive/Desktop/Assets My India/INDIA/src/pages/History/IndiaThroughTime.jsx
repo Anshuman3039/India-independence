@@ -16,10 +16,9 @@ const historicalPeriods = [
       { text: "Lothal", x: 161, y: 271 },
       { text: "Dholavira", x: 135, y: 247 }
     ],
-    // Primary highlight over Pakistan, plus adjoining parts of Northwest India
     highlightD: "M 100,240 C 120,180 140,130 170,105 C 190,110 210,120 210,150 C 210,185 195,225 195,265 C 180,295 160,315 145,310 C 130,305 110,285 100,240 Z",
     highlightCountries: ["Pakistan"],
-    color: "#E8752A" // Warm Saffron
+    color: "#E8752A" // Saffron
   },
   {
     id: "vedic",
@@ -34,7 +33,7 @@ const historicalPeriods = [
     ],
     highlightD: "M 160,130 C 205,100 260,100 310,130 C 360,165 360,200 330,230 C 280,250 230,250 190,240 Z",
     highlightCountries: [],
-    color: "#16734A" // Restrained Green
+    color: "#16734A" // Green
   },
   {
     id: "mahajanapadas",
@@ -66,8 +65,9 @@ const historicalPeriods = [
       { text: "Ujjain", x: 208, y: 259 },
       { text: "Kalinga", x: 340, y: 309 }
     ],
-    highlightD: "",
-    highlightCountries: ["India", "Pakistan", "Bangladesh", "Nepal", "Bhutan"],
+    // Custom path for India portion excluding deep south
+    highlightD: "M 189.75,122.33 L 185.1,12.91 L 191.79,9.33 L 199.45,7.15 L 209.17,16.18 L 213.06,30.95 L 234.7,38.67 L 248.85,60.81 L 247.51,76.04 L 252.75,85.52 L 252.32,94.93 L 491.15,170.78 L 492.14,177.43 L 429.9,277.32 Q 290,380 267,425 Q 210,400 160,370 L 169,329 L 110,310 Z",
+    highlightCountries: ["Pakistan", "Bangladesh", "Nepal", "Bhutan"],
     color: "#16734A"
   },
   {
@@ -106,13 +106,14 @@ const historicalPeriods = [
     title: "The Mughal Empire",
     subtitle: "Imperial Integration",
     description: "Established by Babur and expanded by Akbar and his successors, the Mughals built a highly centralized empire famous for monumental architecture (like the Taj Mahal), administrative reforms, and synthesis of Persian and local Indian traditions.",
-    note: "Approximate territorial extent at its peak under Aurangzeb (c. 1707).",
+    note: "Approximate maximum extent under Aurangzeb (c. 1707). Excludes independent deep south and northeastern hills.",
     labels: [
       { text: "Delhi", x: 226, y: 165 },
       { text: "Agra", x: 237, y: 190 }
     ],
-    highlightD: "",
-    highlightCountries: ["India", "Pakistan", "Bangladesh", "Nepal", "Bhutan"],
+    // Mughal portion of India (excluding Tamil Nadu, Kerala, and Assam)
+    highlightD: "M 189.75,122.33 L 185.1,12.91 L 191.79,9.33 L 199.45,7.15 L 209.17,16.18 L 213.06,30.95 L 234.7,38.67 L 248.85,60.81 L 247.51,76.04 L 252.75,85.52 L 252.32,94.93 L 263.49,390.27 Q 290,400 267,425 Q 210,400 160,370 L 169,329 L 110,310 Z",
+    highlightCountries: ["Pakistan", "Bangladesh"],
     color: "#E8752A"
   },
   {
@@ -169,7 +170,7 @@ const historicalPeriods = [
     title: "Republic of India",
     subtitle: "Modern Democratic Republic",
     description: "The constitution of 1950 established India as a sovereign, democratic republic. Princely states were integrated, and state borders were later reorganized along linguistic lines to form the union of states that exists today.",
-    note: "Modern international boundaries of the Republic of India.",
+    note: "Modern boundaries of the Republic of India including Jammu & Kashmir and Ladakh.",
     labels: [
       { text: "New Delhi", x: 226, y: 165 }
     ],
@@ -182,7 +183,6 @@ const historicalPeriods = [
 export default function IndiaThroughTime() {
   const [activePeriod, setActivePeriod] = useState(0);
 
-  // Handle keyboard arrow keys to move through the timeline
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowRight') {
       setActivePeriod((prev) => Math.min(prev + 1, historicalPeriods.length - 1));
@@ -235,7 +235,7 @@ export default function IndiaThroughTime() {
             </div>
 
             <div className="pt-4 mt-4 border-t border-[#171717]/5">
-              <span className="text-[9px] font-sans text-[#6B6B6B]/60 uppercase tracking-wider block">
+              <span className="text-[9px] font-sans text-[#6B6B6B]/60 uppercase tracking-wider block font-light">
                 * {period.note}
               </span>
             </div>
@@ -243,7 +243,7 @@ export default function IndiaThroughTime() {
         </div>
 
         {/* Right Column: Historical Map Workspace */}
-        <div className="lg:col-span-7 flex flex-col items-center space-y-8 w-full relative">
+        <div className="lg:col-span-7 flex flex-col items-center space-y-4 w-full relative">
           
           {/* Subcontinent Map SVG */}
           <div className="relative w-full aspect-[1/1] max-w-[480px] bg-[#FAF8F5] border border-[#171717]/5 rounded-[2px] shadow-inner p-4 flex items-center justify-center">
@@ -272,13 +272,24 @@ export default function IndiaThroughTime() {
                   {period.highlightCountries.map((cName) => {
                     const countryPath = southAsiaOutline[cName];
                     if (!countryPath) return null;
+                    
+                    // For Partition (1947), color Pakistan & Bangladesh green, India saffron
+                    let fillColor = period.color;
+                    if (period.id === "partition") {
+                      if (cName === "Pakistan" || cName === "Bangladesh") {
+                        fillColor = "#16734A"; // Green
+                      } else {
+                        fillColor = "#E8752A"; // Saffron
+                      }
+                    }
+                    
                     return (
                       <motion.path
                         key={`${period.id}-${cName}`}
                         d={countryPath}
-                        fill={period.color}
+                        fill={fillColor}
                         fillOpacity="0.25"
-                        stroke={period.color}
+                        stroke={fillColor}
                         strokeWidth="1.8"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -304,6 +315,30 @@ export default function IndiaThroughTime() {
                   )}
                 </g>
               </AnimatePresence>
+
+              {/* Optional: Line of Control and Line of Actual Control for modern/Partition reference */}
+              {activePeriod >= 9 && (
+                <>
+                  {/* Line of Control (LoC) */}
+                  <path
+                    d="M 189.75,122.33 L 189.55,109.4 L 200.77,98.83 L 190.15,89.76 L 185.58,77.24 L 180.92,60.89 L 187.37,52.78 L 207.33,57.37 L 222.0,54.58 L 234.7,38.67"
+                    fill="none"
+                    stroke="#171717"
+                    strokeWidth="1"
+                    strokeDasharray="2,3"
+                    strokeOpacity="0.4"
+                  />
+                  {/* Line of Actual Control (LAC) */}
+                  <path
+                    d="M 234.7,38.67 L 248.85,60.81 L 247.51,76.04"
+                    fill="none"
+                    stroke="#171717"
+                    strokeWidth="1"
+                    strokeDasharray="2,3"
+                    strokeOpacity="0.4"
+                  />
+                </>
+              )}
 
               {/* Dynamic Period Labels placed at actual geographical sites */}
               {period.labels.map((label, idx) => (
@@ -335,12 +370,24 @@ export default function IndiaThroughTime() {
             {/* Small Legend Overlay */}
             <div className="absolute bottom-3 left-3 bg-white/85 backdrop-blur-[2px] border border-[#171717]/5 px-2 py-1 text-[9px] font-sans text-[#6B6B6B] uppercase tracking-wider scale-90 origin-bottom-left">
               <span className="inline-block w-2.5 h-1.5 align-middle mr-1.5 rounded-sm" style={{ backgroundColor: period.color + '40', border: `1px solid ${period.color}` }} />
-              Indicative historical extent / Approximate boundaries
+              Indicative historical extent
             </div>
           </div>
 
+          {/* Subtle Cartographic Disclaimers */}
+          <div className="text-[10px] font-sans font-light text-[#6B6B6B]/60 leading-normal text-left max-w-[480px] w-full space-y-1 pt-1">
+            <p>
+              * Historical map representations are approximate and may not reflect exact historical boundaries.
+            </p>
+            {activePeriod >= 9 && (
+              <p>
+                * Present-day boundaries and disputed territories are represented according to the site's chosen reference framework.
+              </p>
+            )}
+          </div>
+
           {/* Custom Horizontal Timeline Container */}
-          <div className="w-full space-y-3">
+          <div className="w-full space-y-3 pt-4">
             <div className="flex justify-between items-center text-[10px] font-sans font-bold text-[#6B6B6B]/60 uppercase tracking-widest">
               <span>Timeline: c. 2500 BCE</span>
               <span className="text-[9px] italic text-[#E8752A] animate-pulse">Use arrow keys ← / →</span>
