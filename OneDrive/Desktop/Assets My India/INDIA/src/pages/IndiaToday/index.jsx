@@ -1,536 +1,403 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import PageTransition from '../../components/global/PageTransition';
 
-// 1. Chapter Transition Divider Component
-function SectionDivider({ text, label = "Story Continuity" }) {
-  return (
-    <div className="w-full py-20 md:py-28 px-6 md:px-12 flex flex-col items-center justify-center text-center select-none pointer-events-none">
-      <div className="w-[1px] h-14 bg-[#171717]/10 mb-6"></div>
-      {label && (
-        <span className="text-[9px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase mb-4">
-          {label}
-        </span>
-      )}
-      <p className="font-serif text-lg md:text-2xl text-[#171717]/80 italic max-w-3xl leading-relaxed">
-        "{text}"
-      </p>
-      <div className="w-[1px] h-14 bg-[#171717]/10 mt-6"></div>
-    </div>
-  );
-}
+// 1. Minimal Chapter Indicator Pill
+const chapters = [
+  { id: "hero", label: "01 OPENING" },
+  { id: "motion", label: "02 MOTION" },
+  { id: "promise-gap", label: "03 PROMISE & GAP" },
+  { id: "young-country", label: "04 YOUTH" },
+  { id: "generation-voice", label: "05 VOICES" },
+  { id: "democracy-pressure", label: "06 PRESSURE" },
+  { id: "media-polarisation", label: "07 MEDIA" },
+  { id: "words-weapons", label: "08 HOSTILITY" },
+  { id: "cjp-case-study", label: "09 CASE STUDY" },
+  { id: "democracy-speaks", label: "10 DISSENT" },
+  { id: "living-together", label: "11 LIVING TOGETHER" },
+  { id: "building", label: "12 COLLAGE" },
+  { id: "unfinished-republic", label: "13 REPUBLIC" },
+  { id: "final-statement", label: "14 FUTURE" }
+];
 
-// 2. Full-Width Documentary Break
-function DocumentaryBreak({ image, caption, label = "INDIA TODAY · 2026" }) {
-  return (
-    <div className="w-full relative h-[60vh] md:h-[70vh] overflow-hidden bg-[#171717] my-12">
-      <img 
-        src={image} 
-        alt={caption}
-        className="w-full h-full object-cover opacity-90"
-        loading="lazy"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#171717]/70 via-transparent to-transparent opacity-60"></div>
-      <div className="absolute inset-8 flex flex-col justify-between items-start z-10">
-        <span className="text-[9px] font-mono text-[#FAF8F5] bg-[#E8752A] px-2.5 py-0.5 tracking-[0.2em] uppercase">
-          {label}
-        </span>
-        <p className="font-serif text-xl md:text-3xl text-[#FAF8F5] max-w-xl leading-tight">
-          {caption}
-        </p>
-      </div>
-    </div>
-  );
-}
-
-// 3. Data Structures
-const progressSlides = [
+// 2. Data Arrays
+const motionSlides = [
   {
-    id: "space",
-    title: "LOOKING BEYOND EARTH",
-    subtitle: "India in Space",
-    desc: "India's space programme has moved from building national capability to pursuing increasingly ambitious scientific and exploration missions, including the Chandrayaan-3 lunar landing and the Aditya-L1 solar observatory.",
+    title: "SPACE EXPLORATION",
+    desc: "From launching early capability satellites to soft-landing Chandrayaan-3 near the lunar south pole and studying solar dynamics with Aditya-L1.",
+    stat: "ISRO Lunar soft-landing accomplished",
     image: "/images/stories/story6-launch.jpg",
-    label: "LAUNCH SITE · SRIHARIKOTA",
-    dataLabel: "ISRO Lunar Soft-landing Accomplished"
+    context: "Sriharikota Launch Grid"
   },
   {
-    id: "digital",
-    title: "INDIA, CONNECTED",
-    subtitle: "Digital Public Infrastructure",
-    desc: "Digital public infrastructure has transformed everyday life. Low-cost data access and the Unified Payments Interface (UPI) enable over 10 billion instant mobile financial transactions monthly.",
+    title: "DIGITAL PUBLIC INFRASTRUCTURE",
+    desc: "A baseline digital network layer providing unified identity registers, open APIs, and mobile connectivity across rural and urban districts.",
+    stat: "820 Million+ active internet users",
     image: "/images/stories/story4-prep.jpg",
-    label: "STREET VENDOR GRID · BENGALURU",
-    dataLabel: "10 Billion+ Monthly Payments (UPI)"
+    context: "Urban Internet Grid"
   },
   {
-    id: "transport",
-    title: "A COUNTRY ON THE MOVE",
-    subtitle: "Physical Transit Networks",
-    desc: "Physical connectivity is expanding rapidly. Modern transit networks—including high-speed Vande Bharat express trains, expanded highway grids, and municipal metro lines—are reshaping intercity mobility.",
+    title: "DIGITAL PAYMENTS (UPI)",
+    desc: "The Unified Payments Interface enables instant mobile banking transfers down to street-vendor stalls, bypassing standard card transaction charges.",
+    stat: "10 Billion+ monthly payments processed",
+    image: "/images/stories/story4-stall.jpg",
+    context: "Local Vendor Terminal"
+  },
+  {
+    title: "METRO RAIL MODERNISATION",
+    desc: "Rapid expansion of modern rapid transit corridors across dozens of cities, reducing intercity commutes and reshaping metropolitan labor lines.",
+    stat: "850+ Kilometers of active metro lines",
     image: "/images/stories/story1-station.jpg",
-    label: "METROPOLITAN STATION · NEW DELHI",
-    dataLabel: "Transit Expansion: Vande Bharat & Metros"
+    context: "New Delhi Metro Terminus"
   },
   {
-    id: "cities",
-    title: "CITIES IN TRANSFORMATION",
-    subtitle: "Urban Migration Hubs",
-    desc: "Metropolitan hubs like Bengaluru, Hyderabad, and Mumbai drive the service sectors, acting as magnets for labor migration, education, and software export development.",
+    title: "EXPRESSWAY GRID",
+    desc: "Heavy investments in concrete highways, elevated corridors, and bypass loops connecting major manufacturing hubs with port exits.",
+    stat: "10,000+ Kilometers added annually",
     image: "/images/stories/maharashtra-citylife.jpg",
-    label: "MARINE DRIVE · MUMBAI",
-    dataLabel: "450 Million+ Estimated Urban Citizens"
+    context: "Western Express Corridor"
   },
   {
-    id: "science",
-    title: "BUILDING WHAT COMES NEXT",
-    subtitle: "Scientific Research",
-    desc: "Ambition, investment, and challenges in engineering, AI modeling, biotechnology, and semiconductor labs. While structural barriers persist, national research continues to scale.",
+    title: "AIRPORT SYSTEMS",
+    desc: "Expansion of domestic terminal infrastructures and regional connectivity schedules to facilitate cheap flights for tier-2 city residents.",
+    stat: "150+ Operational airports nationally",
+    image: "/images/stories/maharashtra-citylife.jpg",
+    context: "Bengaluru Kempegowda Terminal"
+  },
+  {
+    title: "SEMICONDUCTOR AMBITIONS",
+    desc: "State backed capital subsidy schemes aimed at establishing local silicon fabrications, assembly plants, and logic design centers.",
+    stat: "$10 Billion national subsidy pool",
     image: "/images/stories/story6-lab.jpg",
-    label: "MICRO-LAB · BENGALURU",
-    dataLabel: "AI & Biotech Hubs Scaling"
+    context: "Bengaluru Micro-Fab Lab"
+  },
+  {
+    title: "RENEWABLE GRID INFRASTRUCTURE",
+    desc: "Scaling massive solar parks in dryland corridors and wind networks to meet emission targets and support agrarian electrification.",
+    stat: "180 GW+ total renewable power capacity",
+    image: "/images/stories/punjab-agriculture.jpg",
+    context: "Rajasthan Solar Corridor"
+  },
+  {
+    title: "CITIES IN TRANSFORMATION",
+    desc: "Unprecedented urban migration rates shaping skylines and service sectors, alongside challenges of solid waste, water networks, and air metrics.",
+    stat: "450 Million+ urban population",
+    image: "/images/stories/maharashtra-citylife.jpg",
+    context: "Mumbai Skyline at sunset"
+  },
+  {
+    title: "STARTUP ECOSYSTEM",
+    desc: "Venture capital backing dynamic solutions in logistics, digital trade platforms, biotechnology, and localized AI models.",
+    stat: "115,000+ certified startups scaling",
+    image: "/images/stories/story6-lab.jpg",
+    context: "HSR Layout Tech Hub"
   }
 ];
 
-const promiseGaps = [
+const promiseGapCards = [
   {
-    id: "economy",
+    id: "growth",
     title: "ECONOMIC ENVIRONMENT",
-    promiseText: "India is the world's fastest-growing major economy, expanding at 7%–8% annually and driving middle-class consumer demand.",
-    gapText: "Wealth remains highly concentrated; informal sector workers face job insecurity, low daily wages, and a lack of social safety nets.",
+    promise: "Fastest-growing major economy expanding at 7%–8% annually, scaling middle-class consumer demand.",
+    gap: "Wealth concentration persists; informal sector workers navigate daily wage fluctuations without social nets.",
     promiseImg: "/images/stories/maharashtra-citylife.jpg",
     gapImg: "/images/stories/story1-window.jpg",
-    line: "GROWTH ────────────────────── DISTRIBUTION",
-    indicator: "GDP Growth: 7.2% | Source: MoSPI (2024)"
+    metric: "GDP Growth: 7.2% | Source: MoSPI"
   },
   {
     id: "education",
-    title: "EDUCATIONAL ACCESS",
-    promiseText: "Massive scale-up in secondary school enrollment and expansion of local polytechnic institutions to reach rural families.",
-    gapText: "Underfunded regional state universities and quality imbalances with private systems create early academic disparity.",
+    title: "EDUCATIONAL CHANNELS",
+    promise: "Massive scale-up in secondary school enrollment and polytechnics to support rural vocational training.",
+    gap: "Imbalances in resources between state universities and private colleges create early skill disparities.",
     promiseImg: "/images/stories/stories-intro-7.jpg",
     gapImg: "/images/stories/story4-prep.jpg",
-    line: "EDUCATION ─────────────────── ACCESS",
-    indicator: "Secondary School GER: 79.6% | Source: UDISE"
+    metric: "Secondary GER: 79.6% | Source: UDISE"
   },
   {
     id: "digital",
-    title: "DIGITAL PUBLIC SPACE",
-    promiseText: "Over 800 million active internet consumers utilizing cheap mobile data tariffs to access e-finance and national portals.",
-    gapText: "Vast differences in rural female smartphone ownership and stable broadband access keep remote communities isolated.",
+    title: "DIGITAL CONNECTIVITY",
+    promise: "billions of monthly digital payments and unified registry access across distant villages.",
+    gap: "Significant differences in stable household broadband access and rural female smartphone ownership.",
     promiseImg: "/images/stories/story4-stall.jpg",
     gapImg: "/images/stories/story1-train.jpg",
-    line: "OPPORTUNITY ───────────────── INEQUALITY",
-    indicator: "Active Connected Users: 820M+ | Source: TRAI"
+    metric: "Active Mobile Users: 820M+ | Source: TRAI"
   }
-];
-
-const cjpTimeline = [
-  {
-    id: "may-origin",
-    date: "MAY 2026",
-    title: "Satirical Online Origins",
-    desc: "CJP (Cockroach Janta Party) emerges as a satirical online movement associated with student organizer Abhijeet Dipke. The movement traces its origin to a Supreme Court hearing on May 15, 2026, regarding examination processes and the subsequent viral student responses calling for systemic reforms.",
-    why: "Humor and digital satire became the vehicle for serious youth mobilisation, engaging students who felt standard political channels were unresponsive.",
-    source: "Indian Express / Media Archives",
-    image: "/images/stories/stories-intro-6.jpg",
-    type: "Digital Genesis"
-  },
-  {
-    id: "june-6",
-    date: "JUNE 6, 2026",
-    title: "First Jantar Mantar Mobilisation",
-    desc: "Hundreds of students, examination aspirants, and youth organizers gather at Jantar Mantar, New Delhi. A central demands document calls for the resignation of Union Education Minister Dharmendra Pradhan, amid intensifying concerns over NEET examination irregularities.",
-    why: "This transitioned a viral digital movement into a physical public assembly, testing the logistics of student coordination in the capital.",
-    source: "Indian Express / Commission Records",
-    image: "/images/stories/stories-intro-2.jpg",
-    type: "Public Assembly"
-  },
-  {
-    id: "june-july",
-    date: "JUNE → JULY 2026",
-    title: "Prolonged Mobilisation",
-    desc: "The Jantar Mantar protests persist for weeks. Student representatives request official audiences with commission heads and parliamentarians, focusing on structural paper leak safeguards.",
-    why: "Demonstrated sustained organization and endurance under varying summer weather conditions, drawing national editorial attention.",
-    source: "Delhi Police Logs / Youth Forum Registers",
-    image: "/images/stories/stories-intro-1.jpg",
-    type: "Sustained Assembly"
-  },
-  {
-    id: "july-20",
-    date: "JULY 20, 2026",
-    title: "Chalo Sansad: The Parliament March",
-    desc: "A planned march from Jantar Mantar toward Parliament by CJP supporters collided with security restrictions. Authorities had denied permission, deploying police barricades. Clashes followed, with documented use of tear gas and baton/lathi charges to stop the march.",
-    why: "A major point of confrontation. Reporting noted that over 60 protesters and over 100 police personnel were injured, raising concerns from human rights groups.",
-    source: "Reuters / Indian Express / PTI / Amnesty International",
-    image: "/images/stories/stories-intro-2.jpg",
-    type: "Clashes & Restrictions"
-  },
-  {
-    id: "july-25",
-    date: "JULY 25, 2026",
-    title: "Education Minister Dharmendra Pradhan Resigns",
-    desc: "Union Education Minister Dharmendra Pradhan announces his resignation as Union Education Minister. Following negotiations and commitments to exam reforms, CJP coordinators announce the formal withdrawal of Jantar Mantar assemblies.",
-    why: "A major milestone showing how youth mobilisation directly impacted cabinet appointments, though systemic debates remain open.",
-    source: "Government Gazette / Press Trust of India (PTI)",
-    image: "/images/stories/stories-intro-7.jpg",
-    type: "Resignation & Withdrawal"
-  }
-];
-
-const juneCalendar = [
-  { day: "06", active: true, title: "Protest Begins", desc: "First major Jantar Mantar assembly calling for structural audits." },
-  { day: "13", active: false },
-  { day: "20", active: false },
-  { day: "27", active: false }
-];
-
-const julyCalendar = [
-  { day: "04", active: false },
-  { day: "11", active: false },
-  { day: "18", active: true, title: "Negotiation Talks", desc: "CJP representatives meet government officers." },
-  { day: "20", active: true, title: "Chalo Sansad March", desc: "Clashes reported as police block march toward Parliament." },
-  { day: "25", active: true, title: "Minister Resigns", desc: "Education Minister Dharmendra Pradhan resigns; protest called off." }
-];
-
-const navigationItems = [
-  { id: "sec-01", label: "01 HERO" },
-  { id: "sec-02", label: "02 MOVING FORWARD" },
-  { id: "sec-03", label: "03 PROMISE & GAP" },
-  { id: "sec-04", label: "04 YOUNG INDIA" },
-  { id: "sec-05", label: "05 SOCIETY PRESSURE" },
-  { id: "sec-06", label: "06 MEDIA POLARISATION" },
-  { id: "sec-07", label: "07 WORDS AS WEAPONS" },
-  { id: "sec-08", label: "08 DEMOCRACY SPEAKS" },
-  { id: "sec-09", label: "09 CJP PROTEST CASE" },
-  { id: "sec-10", label: "10 DEMOCRACY PRESSURES" },
-  { id: "sec-11", label: "11 LIVING TOGETHER" },
-  { id: "sec-12", label: "12 REPUBLIC" }
-];
-
-// Return to Progress Montage Images
-const returnProgressImages = [
-  { src: "/images/stories/story6-launch.jpg", label: "SPACE FRONTIER", caption: "Deep-space exploration, Moon landings, and solar observatories." },
-  { src: "/images/stories/story4-prep.jpg", label: "DIGITAL INFRASTRUCTURE", caption: "Cheapest data access and global leadership in instant payments." },
-  { src: "/images/stories/story1-station.jpg", label: "MODERN TRANSIT", caption: "Vande Bharat, expressways, and municipal metros connecting towns." },
-  { src: "/images/stories/story6-lab.jpg", label: "SCIENCE & STARTUPS", caption: "Booms in biotechnology, AI models, and startups in tech hubs." }
 ];
 
 const youthProfiles = [
   {
-    id: "innovator",
-    title: "The Tech Innovator",
-    context: "Metropolitan Hubs (Bengaluru / Noida)",
-    desc: "Growing up alongside software platforms, remote gig networks, and tech ventures. They navigate highly competitive tech corridors, building systems for international trade while facing job market shifts and cost-of-living increases.",
-    quote: "We are building platforms for international markets from desks in Bengaluru, balancing economic potential with intense workspace shifts.",
+    id: "tech-innovator",
+    role: "The Tech Innovator",
+    context: "Bengaluru Tech Hub",
+    desc: "Building systems for international software markets while navigating workspace automation shifts and cost-of-living index increases.",
+    quote: "We are writing global logic from desks in Bengaluru, balancing vast industry potential with intense market shifts.",
     image: "/images/stories/story6-lab.jpg"
   },
   {
-    id: "aspirant",
-    title: "The Exam Aspirant",
-    context: "Educational Centers (Kota / Patna / Delhi)",
-    desc: "Millions of students spend years in coaching centers preparing for government commissions (UPSC, railways, banks). They seek stable careers, public service security, and social status, bearing heavy psychological pressure and family hopes.",
-    quote: "Securing a government position means transforming the security of an entire family. It is a long, difficult wait, but we persist.",
+    id: "exam-aspirant",
+    role: "The Exam Aspirant",
+    context: "Kota / Patna Coaching Grids",
+    desc: "Spending years preparing for recruitment tests (railways, public services), seeking family safety and local social status under heavy pressure.",
+    quote: "Securing a government position is how we lift an entire family. It is a long, high-stakes wait, but we persist.",
     image: "/images/stories/stories-intro-7.jpg"
   },
   {
-    id: "migrant",
-    title: "The Migrant Worker",
-    context: "Agrarian-Urban Corridors",
-    desc: "Young adults leaving agricultural work to find building, retail, and delivery jobs in major metropolises. They are the physical backbone of urban building, sending money home and shaping contemporary city cultures.",
-    quote: "Working in the city gives me economic independence. The earnings here support my family's agricultural inputs and sibling education.",
+    id: "urban-migrant",
+    role: "The Migrant Builder",
+    context: "Agrarian-Urban Corridor",
+    desc: "Leaving farming to operate gig networks, retail counters, and infrastructure construction in major metropolitan areas.",
+    quote: "Working in metropolitan logistics grants me direct independence. I support my home farm's inputs.",
     image: "/images/stories/story4-prep.jpg"
   }
 ];
 
-const buildersData = [
-  { role: "The ASHA Worker", context: "Rural Public Health", desc: "Women community health volunteers forming the baseline link between rural homes and clinics, delivering vaccines and maternal care.", id: "IT-BUILD-01" },
-  { role: "The Dryland Agronomist", context: "Agricultural Research", desc: "Scientists developing drought-resistant millet seeds to help small farmers secure yields amid irregular monsoons.", id: "IT-BUILD-02" },
-  { role: "The Systems Engineer", context: "Low-Cost Space Flight", desc: "Space systems team designing micro-satellites for global climate monitoring at a fraction of standard international costs.", id: "IT-BUILD-03" },
-  { role: "The Cooperative Leader", context: "Organic Farmer Cooperatives", desc: "Organic organizers building distribution chains to make organic mountain produce commercially viable in big cities.", id: "IT-BUILD-04" },
-  { role: "The Civic Educator", context: "Tribal Literacy Blocks", desc: "Teachers setting up mobile device learning cells in remote villages to ensure children pass secondary exams.", id: "IT-BUILD-05" },
-  { role: "The Heritage Archiver", context: "Textile Digitisation", desc: "Weavers digitizing regional patterns to establish direct online selling loops, bypassing local commission agents.", id: "IT-BUILD-06" }
+const cjpCaseTimeline = [
+  {
+    date: "MAY 2026",
+    title: "Satirical Origins & Online Emergence",
+    desc: "CJP (Cockroach Janta Party) emerges as a satirical online movement associated with student organizer Abhijeet Dipke. The movement traces its origin to a Supreme Court hearing on May 15, 2026, regarding state examination systems and the viral responses of candidates calling for systemic safeguards.",
+    source: "Indian Express / Media Archives",
+    type: "Digital Origins",
+    image: "/images/stories/stories-intro-6.jpg"
+  },
+  {
+    date: "JUNE 6, 2026",
+    title: "First Jantar Mantar Assembly",
+    desc: "Hundreds of examination aspirants, students, and coordinators mobilize physically at Jantar Mantar, New Delhi. A formal demands document calls for the resignation of Union Education Minister Dharmendra Pradhan, citing NEET irregularities.",
+    source: "Indian Express / Commission Records",
+    type: "Public Assembly",
+    image: "/images/stories/stories-intro-2.jpg"
+  },
+  {
+    date: "JUNE – JULY 2026",
+    title: "Sustained Mobilisation",
+    desc: "The assemblies persist through prolonged summer weeks. Coordinating teams organize local clean-up guilds and request meetings with commission authorities.",
+    source: "Delhi Police Logs / Representative Register",
+    type: "Sustained Protests",
+    image: "/images/stories/stories-intro-1.jpg"
+  },
+  {
+    date: "JULY 20, 2026",
+    title: "Chalo Sansad: The Parliament March",
+    desc: "CJP supporters attempted to march from Jantar Mantar toward Parliament. Authorities had denied permission and deployed security barricades. Clashes followed, with documented use of tear gas and lathi/baton charges by police.",
+    source: "Reuters / Indian Express / Amnesty International / PTI",
+    type: "Confrontation",
+    image: "/images/stories/stories-intro-2.jpg"
+  },
+  {
+    date: "JULY 25, 2026",
+    title: "Cabinet Resignation",
+    desc: "Dharmendra Pradhan resigns as Union Education Minister. Following negotiations regarding entrance reforms, CJP coordinators announce the formal withdrawal of the physical assemblies. Note: while the resignation occurred during the protest, a direct causal link remains subject to debate.",
+    source: "Government Gazette / Press Trust of India (PTI)",
+    type: "Cabinet Resignation",
+    image: "/images/stories/stories-intro-7.jpg"
+  }
 ];
 
 export default function IndiaToday() {
-  const [activeSection, setActiveSection] = useState("sec-01");
-  const [activePromiseId, setActivePromiseId] = useState("economy");
-  const [activeYouthId, setActiveYouthId] = useState("innovator");
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-  
-  // Timeline sticky control
-  const [activeTimelineIndex, setActiveTimelineIndex] = useState(0);
-  const [hoveredCalendarDay, setHoveredCalendarDay] = useState(null);
-  
-  // Builders conceptual network mapping: Science, Education, India, Democracy, Equality, Pluralism, Technology, Opportunity, Culture, Environment
-  const [hoveredBuildConcept, setHoveredBuildConcept] = useState(null);
+  const [activeChapter, setActiveChapter] = useState("hero");
+  const [motionIndex, setMotionIndex] = useState(0);
+  const [promiseId, setPromiseId] = useState("growth");
+  const [youthIndex, setYouthIndex] = useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [hoveredTimelineIdx, setHoveredTimelineIdx] = useState(null);
 
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-
+  // Dynamic Scroll Progress Line & Section Tracker
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setPrefersReducedMotion(mediaQuery.matches);
-    const listener = (e) => setPrefersReducedMotion(e.matches);
-    mediaQuery.addEventListener('change', listener);
-    return () => mediaQuery.removeEventListener('change', listener);
+    const handleScroll = () => {
+      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalScroll > 0) {
+        setScrollProgress(window.scrollY / totalScroll);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // IntersectionObserver for side scroll progress
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "-25% 0px -55% 0px",
+      rootMargin: "-35% 0px -45% 0px",
       threshold: 0
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
+          setActiveChapter(entry.target.id);
         }
       });
     }, observerOptions);
 
-    navigationItems.forEach((item) => {
-      const el = document.getElementById(item.id);
+    chapters.forEach((ch) => {
+      const el = document.getElementById(ch.id);
       if (el) observer.observe(el);
     });
 
     return () => {
-      navigationItems.forEach((item) => {
-        const el = document.getElementById(item.id);
+      chapters.forEach((ch) => {
+        const el = document.getElementById(ch.id);
         if (el) observer.unobserve(el);
       });
     };
   }, []);
 
-  // Slideshow auto advance (7s)
-  useEffect(() => {
-    if (prefersReducedMotion) return;
-    const interval = setInterval(() => {
-      setActiveSlideIndex((prev) => (prev + 1) % progressSlides.length);
-    }, 7000);
-    return () => clearInterval(interval);
-  }, [prefersReducedMotion]);
-
-  const activePromiseObj = promiseGaps.find(g => g.id === activePromiseId) || promiseGaps[0];
-  const activeYouthObj = youthProfiles.find(y => y.id === activeYouthId) || youthProfiles[0];
-  const activeTimelineObj = cjpTimeline[activeTimelineIndex] || cjpTimeline[0];
-  const activeSlideObj = progressSlides[activeSlideIndex] || progressSlides[0];
-
-  const fadeUp = {
-    hidden: { opacity: 0, y: prefersReducedMotion ? 0 : 25 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: prefersReducedMotion ? 0 : 0.8, ease: "easeOut" }
-    }
-  };
-
-  const handleScrollToSection = (id) => {
+  const handleScrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
-  // Concept mapping for final building network: Science, Education, Democracy, Equality, Technology, Pluralism, Opportunity, Culture, Environment
-  const conceptBuilderMapping = {
-    science: ["IT-BUILD-02", "IT-BUILD-03"],
-    education: ["IT-BUILD-05", "IT-BUILD-01"],
-    democracy: ["IT-BUILD-01", "IT-BUILD-04", "IT-BUILD-05"],
-    equality: ["IT-BUILD-01", "IT-BUILD-05"],
-    technology: ["IT-BUILD-03", "IT-BUILD-05"],
-    pluralism: ["IT-BUILD-06"],
-    opportunity: ["IT-BUILD-02", "IT-BUILD-04"],
-    culture: ["IT-BUILD-06"],
-    environment: ["IT-BUILD-02", "IT-BUILD-04"]
-  };
-
-  const conceptConnections = {
-    science: ["technology", "education"],
-    education: ["equality", "democracy", "opportunity"],
-    democracy: ["equality", "pluralism"],
-    equality: ["education"],
-    technology: ["science", "opportunity", "environment"],
-    pluralism: ["culture"],
-    opportunity: ["equality", "technology"],
-    culture: ["pluralism"],
-    environment: ["science"]
-  };
+  const activePromiseObj = promiseGapCards.find(c => c.id === promiseId) || promiseGapCards[0];
+  const activeSlide = motionSlides[motionIndex];
+  const activeYouth = youthProfiles[youthIndex];
 
   return (
     <PageTransition>
-      <div id="main-content" className="w-full bg-[#F7F4EE] pt-24 text-left relative flex">
+      <div className="w-full bg-[#F7F4EE] text-[#171717] min-h-screen relative font-sans">
         
-        {/* Sticky Left Navigation */}
-        <aside className="hidden lg:flex flex-col justify-between fixed left-8 top-1/4 h-3/5 w-48 z-40 select-none border-l border-[#171717]/10 pl-4 py-4">
-          <div className="space-y-1">
-            <span className="text-[8px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block mb-4">
-              INDIA TODAY INDEX
+        {/* Dynamic Scroll Progress Bar */}
+        <div 
+          className="fixed top-0 left-0 h-1 bg-[#E8752A] z-50 transition-all duration-100 ease-out" 
+          style={{ width: `${scrollProgress * 100}%` }}
+        />
+
+        {/* Minimal Floating Chapter indicators at the bottom */}
+        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-[#171717]/95 text-[#FAF8F5] px-6 py-2.5 rounded-full shadow-xl flex items-center gap-6 z-40 text-[9px] font-sans tracking-widest uppercase backdrop-blur-sm max-w-[90vw] overflow-x-auto scrollbar-none">
+          {chapters.map((ch) => {
+            const isActive = activeChapter === ch.id;
+            return (
+              <button
+                key={ch.id}
+                onClick={() => handleScrollTo(ch.id)}
+                className={`transition-all duration-300 outline-none cursor-pointer focus-visible:text-[#E8752A] ${
+                  isActive 
+                    ? "text-[#E8752A] font-semibold scale-105" 
+                    : "text-[#FAF8F5]/60 hover:text-[#FAF8F5]"
+                }`}
+              >
+                {ch.label}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* 01 — HERO / OPENING */}
+        <section id="hero" className="w-full min-h-screen flex flex-col justify-between relative overflow-hidden bg-[#171717] px-6 md:px-12 py-16">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="/images/stories/maharashtra-citylife.jpg" 
+              alt="Grandiose architectural skyline and moving traffic in urban Mumbai during twilight sunset" 
+              className="w-full h-full object-cover opacity-60 scale-102 transition-transform duration-10000 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#171717] via-[#171717]/40 to-transparent" />
+          </div>
+
+          {/* Top Hero Info */}
+          <div className="relative z-10 flex justify-between items-start pt-12">
+            <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#FAF8F5] bg-[#E8752A] px-3 py-1 rounded-sm">
+              INDIA TODAY
             </span>
-            <ul className="space-y-2.5">
-              {navigationItems.map((item) => {
-                const isActive = activeSection === item.id;
-                return (
-                  <li key={item.id}>
-                    <button
-                      onClick={() => handleScrollToSection(item.id)}
-                      className={`text-left text-[9px] font-sans tracking-widest uppercase transition-all duration-300 outline-none cursor-pointer block focus-visible:text-[#E8752A] ${
-                        isActive 
-                          ? "text-[#171717] font-semibold translate-x-1" 
-                          : "text-[#6B6B6B]/60 hover:text-[#171717]"
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-          <div className="text-[8px] font-mono text-[#6B6B6B]/50 uppercase tracking-widest">
-            STATUS: VISUAL REDESIGN
-          </div>
-        </aside>
-
-        {/* Main Content Area */}
-        <div className="flex-1 w-full lg:pl-64">
-
-          {/* 1. HERO — INDIA TODAY */}
-          <section id="sec-01" className="py-20 md:py-28 px-6 md:px-12 max-w-7xl mx-auto min-h-[90vh] flex flex-col justify-center">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              
-              <div className="lg:col-span-5 space-y-6">
-                <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.25em] block">
-                  INDIA TODAY
-                </span>
-                <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-[#171717] font-normal leading-none tracking-tight">
-                  THE INDIA<br/>WE LIVE IN
-                </h1>
-                <div className="space-y-2">
-                  <h2 className="font-serif text-lg md:text-xl text-[#16734A] font-semibold">
-                    A country moving forward.
-                  </h2>
-                  <h2 className="font-serif text-lg md:text-xl text-[#E8752A] font-semibold">
-                    A republic still being tested.
-                  </h2>
-                </div>
-                <p className="text-[#6B6B6B] font-sans text-base leading-relaxed font-light">
-                  "India today is a country of extraordinary change — ambitious, connected and increasingly confident, while still negotiating inequality, opportunity, identity and democracy."
-                </p>
-                <div className="h-[1px] w-24 bg-[#E8752A]/50"></div>
-                <div className="flex items-center gap-2 text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest">
-                  <span>METADATA RECORD</span>
-                  <span>•</span>
-                  <span>INDIA · 2026</span>
-                </div>
-              </div>
-
-              {/* Large, Colorful Documentary Photograph */}
-              <div className="lg:col-span-7 bg-white border border-[#171717]/10 p-4 shadow-sm relative overflow-hidden group">
-                <div className="aspect-[16/10] relative border border-[#171717]/5 overflow-hidden">
-                  <img 
-                    src="/images/stories/maharashtra-citylife.jpg" 
-                    alt="Full-colour Mumbai city traffic and architectural skyline at sunset"
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                  />
-                  <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
-                    FIELD NOTE · MUMBAI METRO LINE
-                  </div>
-                  <div className="absolute inset-4 border border-dashed border-white/15 pointer-events-none"></div>
-                </div>
-                <div className="flex justify-between items-center mt-3 text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest">
-                  <span>Location: Mumbai, Maharashtra</span>
-                  <span>Coordinates: 18.9220° N, 72.8347° E</span>
-                </div>
-              </div>
-
+            <div className="text-right text-[9px] font-mono text-[#FAF8F5]/60 tracking-widest">
+              RECORD ARCHIVE: IT-2026-CH01
             </div>
-          </section>
+          </div>
 
-          <SectionDivider text="India is building. A transformation written in steel, code, and orbits." />
+          {/* Middle/Bottom Main Title Block */}
+          <div className="relative z-10 max-w-4xl space-y-6 my-auto pt-24">
+            <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl text-[#FAF8F5] leading-none font-normal tracking-tight">
+              THE INDIA<br/>WE LIVE IN
+            </h1>
+            <h2 className="font-serif text-lg md:text-2xl lg:text-3xl text-[#16734A] leading-relaxed max-w-2xl font-light">
+              A country moving forward, carrying its contradictions with it.
+            </h2>
+            <div className="h-[1px] w-24 bg-[#E8752A]"></div>
+            <p className="font-sans font-light text-sm md:text-base text-[#FAF8F5]/80 max-w-xl leading-relaxed">
+              India today is a country of extraordinary change — ambitious, connected and increasingly confident, while still negotiating inequality, opportunity, identity and democracy.
+            </p>
+          </div>
 
-          {/* 2. A COUNTRY MOVING FORWARD & IMMERSIVE SLIDESHOW */}
-          <section id="sec-02" className="py-24 px-6 md:px-12 bg-[#FAF8F5] border-t border-b border-[#171717]/5">
-            <motion.div 
-              initial={prefersReducedMotion ? "visible" : "hidden"}
-              whileInView="visible"
-              viewport={{ once: true, margin: "-12% 0px" }}
-              variants={fadeUp}
-              className="max-w-7xl mx-auto space-y-16"
-            >
-              <div className="max-w-2xl space-y-3">
-                <span className="text-xs font-sans font-bold text-[#16734A] uppercase tracking-[0.2em] block">
-                  CHAPTER 02
-                </span>
-                <h2 className="font-serif text-3xl md:text-5xl text-[#171717] font-normal uppercase tracking-wider leading-tight">
-                  A COUNTRY MOVING FORWARD
-                </h2>
-                <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                  National capabilities are shifting rapidly from infrastructural backbones to frontier technology, orbital networks, and massive transit projects.
-                </p>
+          {/* Bottom details */}
+          <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center border-t border-white/10 pt-4 text-[9px] font-mono text-[#FAF8F5]/50 tracking-widest uppercase gap-2">
+            <span>Location: Mumbai Metro Zone, Maharashtra</span>
+            <span>Coordinates: 18.9220° N, 72.8347° E</span>
+          </div>
+        </section>
+
+        {/* 02 — INDIA IN MOTION (Full Width Slideshow Carousel) */}
+        <section id="motion" className="w-full py-28 px-6 md:px-12 bg-white border-b border-[#171717]/5">
+          <div className="max-w-7xl mx-auto space-y-12">
+            <div className="space-y-3">
+              <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.25em] uppercase block">
+                02 — TRANSFORMATION
+              </span>
+              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+                INDIA IN MOTION
+              </h2>
+              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light max-w-2xl leading-relaxed">
+                A visual showcase of contemporary infrastructure scaling across solar zones, digital identity networks, and transit nodes.
+              </p>
+            </div>
+
+            {/* Immersive Slide Component */}
+            <div className="bg-[#F7F4EE] border border-[#171717]/10 p-6 md:p-8 flex flex-col md:grid md:grid-cols-12 gap-8 items-stretch shadow-md rounded-sm">
+              
+              {/* Photo Area */}
+              <div className="md:col-span-8 relative aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 shadow-sm bg-[#171717]/10">
+                <img 
+                  src={activeSlide.image} 
+                  alt={activeSlide.title}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-103"
+                  loading="lazy"
+                />
+                <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
+                  {activeSlide.context}
+                </div>
+                <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
               </div>
 
-              {/* Immersive Slideshow component */}
-              <div className="bg-[#FAF8F5] border border-[#171717]/10 p-6 shadow-md max-w-5xl mx-auto flex flex-col justify-between space-y-6">
-                
-                {/* Visual Area */}
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-sm border border-[#171717]/5 bg-[#171717]/5">
-                  <AnimatePresence mode="wait">
-                    <motion.img 
-                      key={activeSlideObj.id}
-                      src={activeSlideObj.image}
-                      alt={activeSlideObj.title}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.4 }}
-                      className="w-full h-full object-cover"
-                    />
-                  </AnimatePresence>
-                  
-                  {/* Decorative corner lines */}
-                  <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
-                  
-                  <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
-                    {activeSlideObj.label}
+              {/* Text / Selector Area */}
+              <div className="md:col-span-4 flex flex-col justify-between space-y-6 pl-0 md:pl-4">
+                <div className="space-y-4">
+                  <div className="space-y-1">
+                    <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
+                      TRANSFORMATION PATHWAYS
+                    </span>
+                    <h3 className="font-serif text-2xl md:text-3xl text-[#171717] font-semibold leading-tight uppercase">
+                      {activeSlide.title}
+                    </h3>
                   </div>
-
-                  <div className="absolute bottom-4 right-4 z-10 bg-[#FAF8F5] text-[#171717] px-2 py-0.5 text-[9px] font-mono font-semibold uppercase">
-                    {activeSlideObj.dataLabel}
-                  </div>
+                  <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                    {activeSlide.desc}
+                  </p>
                 </div>
 
-                {/* Info and Navigation bar */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pt-4 border-t border-[#171717]/5">
-                  <div className="space-y-1 max-w-xl">
-                    <span className="text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-wider block">
-                      {activeSlideObj.subtitle}
+                <div className="space-y-6 pt-4 border-t border-[#171717]/5">
+                  <div className="space-y-1">
+                    <span className="text-[8px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">
+                      FACTUAL KEY MEASURE
                     </span>
-                    <h3 className="font-serif text-2xl text-[#171717] font-normal uppercase tracking-wider">
-                      {activeSlideObj.title}
-                    </h3>
-                    <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed pt-1">
-                      {activeSlideObj.desc}
-                    </p>
+                    <span className="font-serif text-sm md:text-base font-semibold text-[#171717] block">
+                      {activeSlide.stat}
+                    </span>
                   </div>
 
-                  {/* Selector Controls */}
-                  <div className="flex items-center gap-4 self-end md:self-auto">
+                  {/* Manual buttons */}
+                  <div className="flex items-center gap-4">
                     <button 
-                      onClick={() => setActiveSlideIndex((prev) => (prev - 1 + progressSlides.length) % progressSlides.length)}
-                      className="w-8 h-8 rounded-full border border-[#171717]/20 flex items-center justify-center hover:bg-[#171717] hover:text-white transition-colors duration-200 outline-none focus-visible:ring-1 focus-visible:ring-[#E8752A]"
+                      onClick={() => setMotionIndex((prev) => (prev - 1 + motionSlides.length) % motionSlides.length)}
+                      className="w-9 h-9 rounded-full border border-[#171717]/20 flex items-center justify-center hover:bg-[#171717] hover:text-white transition-colors duration-200 cursor-pointer outline-none focus-visible:ring-1 focus-visible:ring-[#E8752A]"
                     >
                       ←
                     </button>
                     <span className="text-xs font-mono text-[#6B6B6B]">
-                      {activeSlideIndex + 1} / {progressSlides.length}
+                      {motionIndex + 1} / {motionSlides.length}
                     </span>
                     <button 
-                      onClick={() => setActiveSlideIndex((prev) => (prev + 1) % progressSlides.length)}
-                      className="w-8 h-8 rounded-full border border-[#171717]/20 flex items-center justify-center hover:bg-[#171717] hover:text-white transition-colors duration-200 outline-none focus-visible:ring-1 focus-visible:ring-[#E8752A]"
+                      onClick={() => setMotionIndex((prev) => (prev + 1) % motionSlides.length)}
+                      className="w-9 h-9 rounded-full border border-[#171717]/20 flex items-center justify-center hover:bg-[#171717] hover:text-white transition-colors duration-200 cursor-pointer outline-none focus-visible:ring-1 focus-visible:ring-[#E8752A]"
                     >
                       →
                     </button>
@@ -539,1054 +406,836 @@ export default function IndiaToday() {
 
               </div>
 
-            </motion.div>
-          </section>
+            </div>
 
-          <SectionDivider text="BUT PROGRESS DOES NOT REACH EVERYONE EQUALLY." label="TRANSITION" />
+            {/* Micro thumbnail links */}
+            <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
+              {motionSlides.map((s, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setMotionIndex(idx)}
+                  className={`px-3 py-1.5 border rounded-sm text-[8px] font-mono uppercase tracking-widest transition-all duration-300 ${
+                    idx === motionIndex 
+                      ? "bg-[#171717] border-[#171717] text-white" 
+                      : "bg-[#F7F4EE]/50 border-[#171717]/10 text-[#6B6B6B] hover:text-[#171717] hover:border-[#171717]/30"
+                  }`}
+                >
+                  {s.title.split(" ")[0]}
+                </button>
+              ))}
+            </div>
 
-          {/* 3. THE PROMISE & THE GAP */}
-          <section id="sec-03" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-            <motion.div 
-              initial={prefersReducedMotion ? "visible" : "hidden"}
-              whileInView="visible"
-              viewport={{ once: true, margin: "-12% 0px" }}
-              variants={fadeUp}
-              className="space-y-16"
-            >
-              <div className="max-w-2xl space-y-3">
-                <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.25em] block">
-                  CHAPTER 03
+          </div>
+        </section>
+
+        {/* 03 — THE PROMISE & THE GAP (Split Screen Composition) */}
+        <section id="promise-gap" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="space-y-16">
+            <div className="space-y-3">
+              <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
+                03 — THE CONTRADICTION
+              </span>
+              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+                THE PROMISE & THE GAP
+              </h2>
+              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light max-w-2xl leading-relaxed">
+                Growth vectors do not automatically distribute opportunity equally. We examine structural contrasts across urban growth and accessibility.
+              </p>
+            </div>
+
+            {/* Split Switcher Tabs */}
+            <div className="flex flex-wrap items-center gap-3 border-b border-[#171717]/5 pb-6">
+              {promiseGapCards.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => setPromiseId(item.id)}
+                  className={`px-4 py-2 border rounded-sm text-[9px] font-sans font-semibold tracking-wider transition-all duration-300 cursor-pointer outline-none ${
+                    item.id === promiseId
+                      ? "bg-[#171717] border-[#171717] text-white scale-102"
+                      : "bg-white border-[#171717]/10 text-[#6B6B6B] hover:text-[#171717] hover:border-[#171717]/30"
+                  }`}
+                >
+                  {item.title}
+                </button>
+              ))}
+            </div>
+
+            {/* Immersive symmetrical split layout with full color images */}
+            <div className="bg-white border border-[#171717]/10 p-6 md:p-8 rounded-sm shadow-sm space-y-6">
+              <div className="flex justify-between items-center pb-4 border-b border-[#171717]/5">
+                <h3 className="font-serif text-xl md:text-2xl font-bold uppercase tracking-wider text-[#171717]">
+                  {activePromiseObj.title}
+                </h3>
+                <span className="text-[9px] font-mono text-[#6B6B6B] bg-[#F7F4EE] px-2 py-0.5 rounded-sm">
+                  {activePromiseObj.metric}
                 </span>
-                <h2 className="font-serif text-3xl md:text-5xl text-[#171717] font-normal leading-tight">
-                  THE PROMISE & THE GAP
-                </h2>
-                <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                  We balance the growth vectors of the fastest-growing major economy with the structural challenges of access and wealth distribution.
-                </p>
               </div>
 
-              {/* Selector horizontal list */}
-              <div className="flex flex-wrap items-center gap-3 border-b border-[#171717]/5 pb-6">
-                {promiseGaps.map((item) => {
-                  const isSelected = item.id === activePromiseId;
-                  return (
-                    <button
-                      key={item.id}
-                      onClick={() => setActivePromiseId(item.id)}
-                      className={`px-3 py-1.5 border rounded-sm text-[9px] font-sans font-semibold tracking-wider transition-all duration-300 outline-none cursor-pointer ${
-                        isSelected 
-                          ? "bg-[#171717] border-[#171717] text-white scale-105" 
-                          : "bg-[#FAF8F5] border-[#171717]/10 text-[#6B6B6B] hover:text-[#171717] hover:border-[#171717]/30"
-                      }`}
-                    >
-                      {item.title.split(" vs ")[0]}
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Editorial Split Comparison Panel */}
-              <div className="bg-[#FAF8F5] border border-[#171717]/10 p-6 md:p-8 shadow-sm space-y-8 min-h-[380px]">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={activePromiseObj.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.3 }}
-                    className="space-y-6"
-                  >
-                    <div>
-                      <span className="text-[10px] font-sans font-bold text-[#6B6B6B]/60 uppercase tracking-widest block mb-1">
-                        AXIS COMPARISON
-                      </span>
-                      <h3 className="font-serif text-2xl text-[#171717] uppercase tracking-wider font-semibold">
-                        {activePromiseObj.title}
-                      </h3>
-                    </div>
-
-                    {/* Visually rich comparison with colour photography */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-4 border-t border-[#171717]/5">
-                      
-                      {/* Left: The Promise (Green highlight) */}
-                      <div className="space-y-4 flex flex-col justify-between">
-                        <div className="space-y-2">
-                          <span className="text-[10px] font-sans font-bold text-[#16734A] uppercase tracking-widest block">
-                            THE PROMISE
-                          </span>
-                          <p className="text-xs md:text-sm font-sans font-light text-[#171717] leading-relaxed">
-                            {activePromiseObj.promiseText}
-                          </p>
-                        </div>
-                        <div className="aspect-[16/9] border border-[#171717]/10 overflow-hidden relative rounded-sm shadow-sm">
-                          <img 
-                            src={activePromiseObj.promiseImg} 
-                            alt="The Promise visual representation"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </div>
-
-                      {/* Right: The Gap (Orange highlight) */}
-                      <div className="space-y-4 border-t md:border-t-0 md:border-l border-[#171717]/5 pt-6 md:pt-0 pl-0 md:pl-8 flex flex-col justify-between">
-                        <div className="space-y-2">
-                          <span className="text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-widest block">
-                            THE GAP
-                          </span>
-                          <p className="text-xs md:text-sm font-sans font-light text-[#171717] leading-relaxed">
-                            {activePromiseObj.gapText}
-                          </p>
-                        </div>
-                        <div className="aspect-[16/9] border border-[#171717]/10 overflow-hidden relative rounded-sm shadow-sm">
-                          <img 
-                            src={activePromiseObj.gapImg} 
-                            alt="The Gap visual representation"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </div>
-
-                    </div>
-
-                    {/* Connecting line */}
-                    <div className="hidden md:block py-2 text-center text-[9px] font-mono text-[#6B6B6B]/40 uppercase tracking-widest">
-                      {activePromiseObj.line}
-                    </div>
-
-                    <div className="pt-4 border-t border-[#171717]/5 flex justify-between items-center text-[9px] font-mono text-[#6B6B6B]/60 uppercase tracking-wider">
-                      <span>{activePromiseObj.indicator}</span>
-                    </div>
-
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-
-            </motion.div>
-          </section>
-
-          <SectionDivider text="And the generation growing up inside this transformation is demanding opportunity." />
-
-          {/* 4. A YOUNG INDIA */}
-          <section id="sec-04" className="py-24 px-6 md:px-12 bg-[#FAF8F5] border-t border-b border-[#171717]/5">
-            <motion.div 
-              initial={prefersReducedMotion ? "visible" : "hidden"}
-              whileInView="visible"
-              viewport={{ once: true, margin: "-12% 0px" }}
-              variants={fadeUp}
-              className="max-w-7xl mx-auto space-y-16"
-            >
-              
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <div className="lg:col-span-5 space-y-4">
-                  <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.25em] block">
-                    CHAPTER 04
-                  </span>
-                  <h2 className="font-serif text-3xl md:text-5xl text-[#171717] font-normal leading-tight">
-                    A YOUNG INDIA
-                  </h2>
-                  <h3 className="font-serif text-lg text-[#16734A] italic font-normal">
-                    "A generation growing up with more connectivity, more information and more ambition than ever before."
-                  </h3>
-                  <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                    India is one of the world's youngest large societies. Its future is being imagined by a generation growing up in a rapidly shifting economic environment.
-                  </p>
-                  <div className="space-y-1.5 pt-4">
-                    <span className="text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-wider block">
-                      BUT ASPIRATION NEEDS OPPORTUNITY.
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-2">
+                
+                {/* Left Split: The Promise */}
+                <div className="space-y-4 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-wider uppercase block">
+                      THE PROMISE
                     </span>
-                    {/* Visual Chain vector */}
-                    <div className="flex items-center gap-2 text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest">
-                      <span>EDUCATION</span>
-                      <span>→</span>
-                      <span>SKILLS</span>
-                      <span>→</span>
-                      <span>EMPLOYMENT</span>
-                      <span>→</span>
-                      <span>MOBILITY</span>
-                      <span>→</span>
-                      <span>FUTURE</span>
-                    </div>
+                    <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                      {activePromiseObj.promise}
+                    </p>
                   </div>
-                </div>
-
-                <div className="lg:col-span-7 bg-[#FAF8F5] border border-[#171717]/10 p-4 shadow-sm relative overflow-hidden group">
-                  <div className="aspect-[16/9] relative border border-[#171717]/5 overflow-hidden">
+                  <div className="aspect-[16/10] border border-[#171717]/10 overflow-hidden relative rounded-sm shadow-sm">
                     <img 
-                      src={activeYouthObj.image} 
-                      alt={activeYouthObj.title}
-                      className="w-full h-full object-cover transition-all duration-700"
+                      src={activePromiseObj.promiseImg} 
+                      alt="The Promise context visual" 
+                      className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-2 border border-dashed border-white/10 pointer-events-none"></div>
-                  </div>
-                  <div className="flex justify-between items-center mt-2.5 text-[8px] font-mono text-[#6B6B6B] uppercase tracking-wider">
-                    <span>Active Profile: {activeYouthObj.title}</span>
-                    <span>Ref: Generation Archive IT-YOUTH</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Aspirational switcher */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                
-                <div className="lg:col-span-8 bg-white border border-[#171717]/10 p-6 md:p-8 shadow-sm flex flex-col justify-between min-h-[320px]">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={activeYouthObj.id}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.3 }}
-                      className="space-y-6"
-                    >
-                      <div className="space-y-1">
-                        <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase tracking-widest block">
-                          GENERATIONAL VOICE
-                        </span>
-                        <h3 className="font-serif text-2xl text-[#171717] uppercase tracking-wider font-normal">
-                          {activeYouthObj.title}
-                        </h3>
-                        <span className="text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-wider block">
-                          Context: {activeYouthObj.context}
-                        </span>
-                      </div>
-
-                      <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                        {activeYouthObj.desc}
-                      </p>
-
-                      <div className="bg-[#FAF8F5] border-l-2 border-[#E8752A] p-4 italic font-serif text-xs md:text-sm text-[#171717]">
-                        "{activeYouthObj.quote}"
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-
-                <div className="lg:col-span-4 flex flex-col space-y-3 justify-center">
-                  <span className="text-[10px] font-sans font-bold text-[#6B6B6B]/60 uppercase tracking-[0.2em] block mb-1">
-                    ASPIRATIONAL VOICES
-                  </span>
-                  {youthProfiles.map((y) => {
-                    const isSelected = y.id === activeYouthId;
-                    return (
-                      <button
-                        key={y.id}
-                        onClick={() => setActiveYouthId(y.id)}
-                        className={`p-4 border text-left transition-all duration-300 w-full cursor-pointer focus-visible:ring-1 focus-visible:ring-[#E8752A] outline-none ${
-                          isSelected
-                            ? "bg-[#171717] border-[#171717] text-white"
-                            : "bg-white border-[#171717]/10 text-[#171717] hover:bg-[#FAF8F5]"
-                        }`}
-                      >
-                        <h4 className="font-serif text-sm font-semibold block mb-0.5">{y.title}</h4>
-                        <span className={`text-[9px] font-sans block ${isSelected ? "text-white/70" : "text-[#6B6B6B]"}`}>
-                          {y.context}
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-
-              </div>
-
-            </motion.div>
-          </section>
-
-          {/* 5. A SOCIETY UNDER PRESSURE */}
-          <section id="sec-05" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-            <div className="max-w-2xl space-y-4">
-              <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.25em] block">
-                CHAPTER 05
-              </span>
-              <h2 className="font-serif text-3xl md:text-5xl text-[#171717] font-normal leading-tight">
-                A SOCIETY UNDER PRESSURE
-              </h2>
-              <span className="font-serif text-lg md:text-xl text-[#16734A] italic block font-normal">
-                "How does a diverse democracy remain cohesive when disagreement becomes increasingly intense?"
-              </span>
-              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                As physical and digital networks expand, social and political disagreements intensify, presenting complex challenges to public discourse and shared spaces.
-              </p>
-            </div>
-          </section>
-
-          {/* 6. MEDIA, INFORMATION & POLARISATION */}
-          <section id="sec-06" className="py-24 px-6 md:px-12 bg-[#F2EDE4] border-t border-b border-[#171717]/5">
-            <div className="max-w-7xl mx-auto space-y-16">
-              
-              <div className="max-w-2xl space-y-3">
-                <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.2em] block">
-                  CHAPTER 06
-                </span>
-                <h2 className="font-serif text-3xl md:text-5xl text-[#171717] font-normal leading-tight">
-                  WHO TELLS THE STORY?
-                </h2>
-                <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                  More information does not always mean more understanding. We map the contemporary ecosystem of television, digital creator columns, and algorithmic networks.
-                </p>
-              </div>
-
-              {/* Typographic Information network visual */}
-              <div className="bg-white border border-[#171717]/10 p-6 md:p-8 max-w-4xl mx-auto text-center space-y-8">
-                <span className="text-[10px] font-sans font-bold text-[#16734A] uppercase tracking-widest block">
-                  MEDIA DISTRIBUTION CHANNELS
-                </span>
-                
-                <div className="flex flex-col items-center justify-center space-y-4">
-                  <span className="font-serif text-lg font-semibold bg-[#171717] text-white px-4 py-1">NEWS SQUARE</span>
-                  <div className="w-[1px] h-8 bg-[#171717]/20"></div>
-                  
-                  <div className="grid grid-cols-3 gap-8 w-full max-w-2xl text-center">
-                    <div className="space-y-1">
-                      <span className="text-[10px] font-sans font-bold text-[#E8752A] block">TELEVISION</span>
-                      <p className="text-[10px] font-sans font-light text-[#6B6B6B] leading-tight">National broadcasts & daily debates</p>
-                    </div>
-                    <div className="space-y-1">
-                      <span className="text-[10px] font-sans font-bold text-[#E8752A] block">DIGITAL OUTLETS</span>
-                      <p className="text-[10px] font-sans font-light text-[#6B6B6B] leading-tight">Independent sites & podcasts</p>
-                    </div>
-                    <div className="space-y-1">
-                      <span className="text-[10px] font-sans font-bold text-[#E8752A] block">SOCIAL PLATFORMS</span>
-                      <p className="text-[10px] font-sans font-light text-[#6B6B6B] leading-tight">WhatsApp corridors & creators</p>
-                    </div>
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-[#171717]/5">
-                  <span className="text-xs font-serif text-[#171717] italic block">
-                    "Algorithmic amplification prioritizes engagement over verification, fostering media polarisation alongside unprecedented informational diversity."
-                  </span>
-                </div>
-              </div>
-
-            </div>
-          </section>
-
-          {/* 7. WHEN WORDS BECOME WEAPONS */}
-          <section id="sec-07" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-            <div className="max-w-3xl space-y-6">
-              <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.25em] block">
-                CHAPTER 07
-              </span>
-              <h2 className="font-serif text-3xl md:text-5xl text-[#171717] font-normal leading-tight">
-                WHEN DISAGREEMENT BECOMES HOSTILITY
-              </h2>
-              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                The documented prevalence of hate speech and coordinated online hostility poses severe challenges to social cohesion. To protect the public square, we distinguish political criticism from incitement and hate speech, seeking paths toward balanced dialogue.
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-[#171717]/5 text-center">
-                <div className="p-3 bg-[#FAF8F5] border border-[#171717]/10"><span className="text-[9px] font-sans font-bold text-[#16734A] block">CRITICISM</span><p className="text-[10px] text-[#6B6B6B] pt-1">Democratic review</p></div>
-                <div className="p-3 bg-[#FAF8F5] border border-[#171717]/10"><span className="text-[9px] font-sans font-bold text-[#E8752A] block">INSULT</span><p className="text-[10px] text-[#6B6B6B] pt-1">Personal friction</p></div>
-                <div className="p-3 bg-[#FAF8F5] border border-[#171717]/10"><span className="text-[9px] font-sans font-bold text-[#E8752A] block">INCITEMENT</span><p className="text-[10px] text-[#6B6B6B] pt-1">Direct hostility call</p></div>
-                <div className="p-3 bg-[#FAF8F5] border border-[#171717]/10"><span className="text-[9px] font-sans font-bold text-[#E8752A] block">HATE SPEECH</span><p className="text-[10px] text-[#6B6B6B] pt-1">Targeted profiling</p></div>
-              </div>
-            </div>
-          </section>
-
-          {/* 8. DEMOCRACY SPEAKS & DISAGREES */}
-          <section id="sec-08" className="py-24 px-6 md:px-12 bg-[#FAF8F5] border-t border-b border-[#171717]/5">
-            <div className="max-w-7xl mx-auto space-y-16">
-              
-              <div className="max-w-2xl space-y-3">
-                <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.2em] block">
-                  CHAPTER 08
-                </span>
-                <h2 className="font-serif text-3xl md:text-5xl text-[#171717] font-normal leading-tight">
-                  DEMOCRACY DISAGREES
-                </h2>
-                <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                  Disagreement is a core element of a living republic. Dissent is expressed through courts, elections, public debates, and assemblies, balancing the maintenance of public order with constitutional rights.
-                </p>
-              </div>
-
-              {/* Graphic separation */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-                <div className="p-6 bg-white border border-[#171717]/10 shadow-sm flex flex-col justify-between">
-                  <span className="text-[10px] font-sans font-bold text-[#16734A] uppercase tracking-wider block mb-2">DEMOCRACY SPEAKS</span>
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    Electoral representation, judicial reviews, news analysis, and peaceful civic petitions drive national feedback and institutional audits.
-                  </p>
-                </div>
-                <div className="p-6 bg-white border border-[#171717]/10 shadow-sm flex flex-col justify-between">
-                  <span className="text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-wider block mb-2">DEMOCRACY CONTESTS</span>
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    Public street mobilisations and campus assemblies highlight systemic gaps, asserting democratic representation when institutional channels stall.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </section>
-
-          <SectionDivider text="Sometimes that demand becomes a public voice. One protest became a national conversation." />
-
-          {/* 9. JANTAR MANTAR PROTEST TIMELINE (CJP Case Study) */}
-          <section id="sec-09" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-            <motion.div 
-              initial={prefersReducedMotion ? "visible" : "hidden"}
-              whileInView="visible"
-              viewport={{ once: true, margin: "-12% 0px" }}
-              variants={fadeUp}
-              className="space-y-16"
-            >
-              
-              <div className="max-w-2xl space-y-4">
-                <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.25em] block">
-                  CHAPTER 09
-                </span>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
-                  CASE STUDY · CJP / COCKROACH JANTA PARTY
-                </span>
-                <h2 className="font-serif text-3xl md:text-5xl text-[#171717] font-normal leading-tight">
-                  JANTAR MANTAR · NEW DELHI
-                </h2>
-                <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                  We document the chronological milestone events of the student protest assembly at Delhi's Jantar Mantar, detailing CJP claims, police coordinates, and official responses.
-                </p>
-              </div>
-
-              {/* Interactive Calendar Progress Visual */}
-              <div className="bg-[#FAF8F5] border border-[#171717]/10 p-6 max-w-4xl mx-auto space-y-6">
-                <span className="text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-widest block text-center">
-                  JUNE – JULY CALENDAR PROGRESSION
-                </span>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 border-t border-[#171717]/5">
+                {/* Right Split: The Gap */}
+                <div className="space-y-4 border-t md:border-t-0 md:border-l border-[#171717]/5 pt-6 md:pt-0 pl-0 md:pl-8 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <span className="text-[9px] font-mono font-bold text-[#171717] block">JUNE 2026</span>
-                    <div className="flex items-center gap-2">
-                      {juneCalendar.map((d, i) => (
-                        <button 
-                          key={i} 
-                          onMouseEnter={() => d.active && setHoveredCalendarDay(d)}
-                          onMouseLeave={() => setHoveredCalendarDay(null)}
-                          className={`px-3 py-1.5 border text-xs font-mono rounded-sm transition-all duration-300 outline-none ${
-                            d.active 
-                              ? "bg-[#E8752A]/10 border-[#E8752A] text-[#E8752A] cursor-help font-semibold" 
-                              : "bg-white/40 border-[#171717]/5 text-[#6B6B6B]/40"
-                          }`}
-                        >
-                          {d.day}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <span className="text-[9px] font-mono font-bold text-[#171717] block">JULY 2026</span>
-                    <div className="flex items-center gap-2">
-                      {julyCalendar.map((d, i) => (
-                        <button 
-                          key={i} 
-                          onMouseEnter={() => d.active && setHoveredCalendarDay(d)}
-                          onMouseLeave={() => setHoveredCalendarDay(null)}
-                          className={`px-3 py-1.5 border text-xs font-mono rounded-sm transition-all duration-300 outline-none ${
-                            d.active 
-                              ? "bg-[#16734A]/10 border-[#16734A] text-[#16734A] cursor-help font-semibold" 
-                              : "bg-white/40 border-[#171717]/5 text-[#6B6B6B]/40"
-                          }`}
-                        >
-                          {d.day}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="min-h-[50px] bg-white border border-[#171717]/5 p-2 rounded-sm flex items-center justify-center">
-                  {hoveredCalendarDay ? (
-                    <div className="text-left w-full">
-                      <span className="text-[9px] font-sans font-bold text-[#E8752A] uppercase block">
-                        MILESTONE: {hoveredCalendarDay.title}
-                      </span>
-                      <p className="text-[10px] font-sans font-light text-[#6B6B6B] leading-tight">
-                        {hoveredCalendarDay.desc}
-                      </p>
-                    </div>
-                  ) : (
-                    <span className="text-[9px] font-sans font-light text-[#6B6B6B]/60 italic">
-                      Hover over highlighted dates to view corresponding verified milestones.
+                    <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-wider uppercase block">
+                      THE GAP
                     </span>
-                  )}
+                    <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                      {activePromiseObj.gap}
+                    </p>
+                  </div>
+                  <div className="aspect-[16/10] border border-[#171717]/10 overflow-hidden relative rounded-sm shadow-sm">
+                    <img 
+                      src={activePromiseObj.gapImg} 
+                      alt="The Gap context visual" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* Section Continuity tag block */}
+        <div className="w-full py-16 flex flex-col items-center justify-center text-center select-none pointer-events-none">
+          <div className="w-[1px] h-12 bg-[#171717]/10 mb-4"></div>
+          <span className="text-[9px] font-sans font-bold text-[#E8752A] tracking-[0.2em] uppercase">
+            Story Continuity
+          </span>
+          <p className="font-serif text-lg text-[#6B6B6B] italic max-w-md pt-2">
+            "But connectivity does not automatically mean equality."
+          </p>
+        </div>
+
+        {/* 04 — A YOUNG COUNTRY */}
+        <section id="young-country" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5">
+          <div className="max-w-7xl mx-auto space-y-16">
+            
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              
+              <div className="lg:col-span-5 space-y-6">
+                <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.25em] uppercase block">
+                  04 — DEMOGRAPHY
+                </span>
+                <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+                  A YOUNG COUNTRY
+                </h2>
+                <h3 className="font-serif text-lg md:text-xl text-[#E8752A] italic leading-relaxed">
+                  "A generation growing up with more connectivity, more information and more ambition than ever before."
+                </h3>
+                <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
+                  India is one of the world's youngest large populations. But youth also face a fundamental question: What kind of future will this young country be able to offer?
+                </p>
+
+                {/* Progress vector links */}
+                <div className="space-y-2 pt-4">
+                  <span className="text-[9px] font-sans font-bold text-[#171717]/70 uppercase block">
+                    ASPIRATIONAL STAGES
+                  </span>
+                  <div className="flex flex-wrap items-center gap-2 text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest">
+                    <span>EDUCATION</span>
+                    <span>→</span>
+                    <span>SKILLS</span>
+                    <span>→</span>
+                    <span>EMPLOYMENT</span>
+                    <span>→</span>
+                    <span>MOBILITY</span>
+                    <span>→</span>
+                    <span>FUTURE</span>
+                  </div>
                 </div>
               </div>
 
-              {/* Sticky timeline storytelling: Left sticky image, right scrolling text */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-16 border-t border-[#171717]/15">
-                
-                {/* Left sticky column */}
-                <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-                  <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-wider uppercase block">
-                    TIMELINE ARCHIVE FOCUS
-                  </span>
-                  
-                  {/* Dynamic full colour image */}
-                  <div className="bg-white border border-[#171717]/10 p-4 shadow-sm relative overflow-hidden">
-                    <div className="aspect-[4/3] relative border border-[#171717]/5 overflow-hidden">
-                      <AnimatePresence mode="wait">
-                        <motion.img 
-                          key={activeTimelineObj.id}
-                          src={activeTimelineObj.image}
-                          alt={activeTimelineObj.title}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
+              {/* Large, Colourful Photograph of Indian Youth */}
+              <div className="lg:col-span-7 bg-[#F7F4EE] border border-[#171717]/10 p-4 shadow-md rounded-sm relative overflow-hidden group">
+                <div className="aspect-[16/9] relative border border-[#171717]/5 overflow-hidden">
+                  <img 
+                    src="/images/stories/stories-intro-7.jpg" 
+                    alt="Full-colour portrait of students studying in an educational park setting" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
+                    YOUTH ARCHIVE FOCUS
+                  </div>
+                  <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
+                </div>
+                <div className="flex justify-between items-center mt-3 text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest">
+                  <span>Location: Chandigarh Academic Block</span>
+                  <span>Documentary Grid</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+        {/* 05 — VOICE OF A GENERATION */}
+        <section id="generation-voice" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="space-y-16">
+            <div className="space-y-3 text-center">
+              <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
+                05 — PARTICIPATION
+              </span>
+              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+                VOICE OF A GENERATION
+              </h2>
+              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light max-w-2xl mx-auto leading-relaxed">
+                A democracy is heard in the voices of its youngest citizens. We present multiple profiles reflecting varying economic and professional paths.
+              </p>
+            </div>
+
+            {/* Profile cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
+              {youthProfiles.map((p, idx) => {
+                const isSelected = idx === youthIndex;
+                return (
+                  <div
+                    key={p.id}
+                    onClick={() => setYouthIndex(idx)}
+                    className={`bg-white border p-6 flex flex-col justify-between space-y-6 shadow-sm rounded-sm transition-all duration-300 cursor-pointer ${
+                      isSelected 
+                        ? "border-[#16734A] scale-102 ring-1 ring-[#16734A]" 
+                        : "border-[#171717]/10 hover:border-[#16734A]/50"
+                    }`}
+                  >
+                    <div className="space-y-4">
+                      <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/5 bg-[#171717]/5">
+                        <img 
+                          src={p.image} 
+                          alt={p.role} 
                           className="w-full h-full object-cover"
                         />
-                      </AnimatePresence>
-                      <div className="absolute inset-2 border border-dashed border-white/15 pointer-events-none"></div>
-                    </div>
-                    <div className="flex justify-between items-center mt-3 text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest">
-                      <span>Milestone: {activeTimelineObj.date}</span>
-                      <span>Archive Focus</span>
-                    </div>
-                  </div>
-
-                  <div className="space-y-1">
-                    <h4 className="font-serif text-lg font-semibold text-[#171717]">
-                      {activeTimelineObj.title}
-                    </h4>
-                    <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase block">
-                      Category: {activeTimelineObj.type}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Right scrolling column */}
-                <div className="lg:col-span-7 space-y-8">
-                  {cjpTimeline.map((item, idx) => {
-                    const isActive = activeTimelineIndex === idx;
-                    return (
-                      <div 
-                        key={item.id}
-                        onClick={() => setActiveTimelineIndex(idx)}
-                        className={`p-6 border text-left rounded-sm cursor-pointer transition-all duration-300 focus-visible:ring-1 focus-visible:ring-[#E8752A] outline-none ${
-                          isActive 
-                            ? "bg-white border-[#E8752A] shadow-md scale-102" 
-                            : "bg-white/40 border-[#171717]/10 opacity-70 hover:opacity-100"
-                        }`}
-                      >
-                        <div className="flex justify-between items-center border-b border-[#171717]/5 pb-3 mb-4">
-                          <span className="font-serif text-xl font-semibold text-[#E8752A]">
-                            {item.date}
-                          </span>
-                          <span className="text-[8px] font-mono text-[#6B6B6B] bg-[#FAF8F5] px-1.5 py-0.5 rounded-sm uppercase tracking-widest">
-                            STEP 0{idx + 1}
-                          </span>
-                        </div>
-
-                        <div className="space-y-4">
-                          <h4 className="font-serif text-lg text-[#171717] font-semibold leading-snug">
-                            {item.title}
-                          </h4>
-                          
-                          <div className="space-y-1">
-                            <span className="text-[8px] font-sans font-bold text-[#16734A] uppercase tracking-wider block">
-                              WHAT HAPPENED
-                            </span>
-                            <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                              {item.desc}
-                            </p>
-                          </div>
-
-                          <div className="space-y-1">
-                            <span className="text-[8px] font-sans font-bold text-[#E8752A] uppercase tracking-wider block">
-                              WHY IT MATTERED
-                            </span>
-                            <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                              {item.why}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="pt-4 mt-6 border-t border-[#171717]/5 text-[8px] font-mono text-[#6B6B6B]/40 uppercase tracking-widest">
-                          Source: {item.source}
-                        </div>
                       </div>
-                    );
-                  })}
-                </div>
-
-              </div>
-
-              {/* JULY 20 — CHALO SANSAD MARCH DETAILED SPLIT */}
-              <div className="bg-[#FAF8F5] border border-[#171717]/10 p-8 shadow-sm space-y-8 max-w-4xl mx-auto rounded-sm mt-16">
-                
-                <div className="text-center space-y-2">
-                  <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.25em] block">
-                    TIMELINE CRITICAL EVENT
-                  </span>
-                  <h2 className="font-serif text-4xl md:text-5xl text-[#171717] font-normal tracking-tight">
-                    JULY 20, 2026
-                  </h2>
-                  <h3 className="font-serif text-xl text-[#16734A] uppercase tracking-wide">
-                    CHALO SANSAD — THE MARCH TO PARLIAMENT
-                  </h3>
-                </div>
-
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed max-w-2xl mx-auto text-center border-b border-[#171717]/5 pb-6">
-                  CJP supporters attempted to march from Jantar Mantar toward Parliament. Security barricades were deployed, and clashes followed with reported use of tear gas and baton/lathi charges.
-                </p>
-
-                {/* Symmetrical Split Accounts */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-4">
-                  
-                  {/* Left: Protesters' Account */}
-                  <div className="space-y-3 pr-0 md:pr-6">
-                    <span className="text-[10px] font-sans font-bold text-[#16734A] uppercase tracking-widest block">
-                      PROTESTERS' POSITION
-                    </span>
-                    <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                      Asserted their democratic right to peaceful assembly and speech, demanding direct cabinet dialogue regarding NEET calendar reforms and exam corruption accountability.
-                    </p>
-                  </div>
-
-                  {/* Right: State Response / Police Position */}
-                  <div className="space-y-3 pl-0 md:pl-6 border-t md:border-t-0 md:border-l border-[#171717]/5 pt-6 md:pt-0">
-                    <span className="text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-widest block">
-                      POLICE / STATE POSITION
-                    </span>
-                    <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                      Stated that permission for the march toward Parliament had been denied due to security zones, and barricades were deployed to regulate movement and maintain public order.
-                    </p>
-                  </div>
-
-                </div>
-
-                {/* Conflict Statistics & Sourcing */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-[#171717]/5 text-center items-center">
-                  <div>
-                    <span className="text-[9px] font-mono text-[#6B6B6B] uppercase block">INJURIES</span>
-                    <p className="text-xs font-sans font-semibold text-[#171717] pt-1">
-                      60+ Protesters & 100+ Police Personnel Reported Injured
-                    </p>
-                  </div>
-                  <div>
-                    <span className="text-[9px] font-mono text-[#6B6B6B] uppercase block">REPORTED ACTION</span>
-                    <p className="text-xs font-sans font-semibold text-[#171717] pt-1">
-                      Tear Gas & Baton Charges Used at Barricades
-                    </p>
-                  </div>
-                  <div>
-                    <span className="text-[9px] font-mono text-[#6B6B6B] uppercase block">HUMAN RIGHTS REPORT</span>
-                    <p className="text-xs font-sans font-semibold text-[#171717] pt-1">
-                      Amnesty expressed concerns regarding excessive force
-                    </p>
-                  </div>
-                </div>
-
-                <div className="text-center pt-6 border-t border-[#171717]/5">
-                  <span className="text-[10px] font-sans font-bold text-[#E8752A] uppercase block mb-1">
-                    THE SYSTEMIC QUESTION
-                  </span>
-                  <p className="font-serif text-lg text-[#171717] italic">
-                    "When does maintaining public order become excessive restriction of dissent?"
-                  </p>
-                </div>
-
-                <div className="text-right text-[8px] font-mono text-[#6B6B6B]/60 uppercase tracking-widest">
-                  Sources: India Today · Reuters · ThePrint · Amnesty International
-                </div>
-
-              </div>
-
-              {/* JULY 25 CABINET RESIGNATION */}
-              <div className="bg-[#FAF8F5] border border-[#171717]/10 p-8 shadow-sm space-y-6 max-w-4xl mx-auto rounded-sm mt-12 text-center">
-                <span className="text-xs font-sans font-bold text-[#16734A] uppercase tracking-[0.25em] block">
-                  TIMELINE RESOLUTION
-                </span>
-                
-                <h2 className="font-serif text-4xl md:text-5xl text-[#171717] font-normal leading-tight">
-                  JULY 25, 2026
-                </h2>
-                <h3 className="font-serif text-xl text-[#E8752A] uppercase tracking-wide">
-                  MINISTER DHARMENDRA PRADHAN RESIGNS
-                </h3>
-
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] max-w-xl mx-auto leading-relaxed">
-                  Following prolonged negotiations and the July 20 clashes, Education Minister Dharmendra Pradhan resigned. CJP representatives subsequently called off the physical Jantar Mantar assemblies, shifting focus to inquiry panel follow-ups.
-                </p>
-
-                {/* Timeline flow vector */}
-                <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 py-4 border-t border-[#171717]/5 max-w-2xl mx-auto">
-                  <span className="text-[10px] font-sans font-bold text-[#171717]/60">DEMAND</span>
-                  <span className="text-[#171717]/20">→</span>
-                  <span className="text-[10px] font-sans font-bold text-[#171717]/60">NEGOTIATION</span>
-                  <span className="text-[#171717]/20">→</span>
-                  <span className="text-[10px] font-sans font-bold text-[#16734A] font-semibold">RESIGNATION</span>
-                  <span className="text-[#171717]/20">→</span>
-                  <span className="text-[10px] font-sans font-bold text-[#171717]/60">PROTEST WITHDRAWAL</span>
-                </div>
-              </div>
-
-              {/* AFTERMATH MATRIX */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto pt-8 border-t border-[#171717]/5">
-                
-                <div className="p-5 bg-white border border-[#171717]/10 shadow-sm space-y-3">
-                  <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase tracking-widest block">
-                    WHAT WAS ACHIEVED
-                  </span>
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    Cabinet level accountability through the resignation of Dharmendra Pradhan, illustrating direct democratic impact.
-                  </p>
-                </div>
-
-                <div className="p-5 bg-white border border-[#171717]/10 shadow-sm space-y-3">
-                  <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase tracking-widest block">
-                    WHAT WAS ACCEPTED
-                  </span>
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    Parliamentary reviews of criminal codes penalizing examination leakages and formulation of auditing boards.
-                  </p>
-                </div>
-
-                <div className="p-5 bg-white border border-[#171717]/10 shadow-sm space-y-3">
-                  <span className="text-[9px] font-sans font-bold text-[#E8752A] uppercase tracking-widest block">
-                    WHAT REMAINS
-                  </span>
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    Long waits in state commission recruitment calendars and infrastructure imbalances in state coaching universities.
-                  </p>
-                </div>
-
-              </div>
-
-            </motion.div>
-          </section>
-
-          <SectionDivider text="But the larger question remains: how does a democracy respond to dissent?" />
-
-          {/* 10. DEMOCRACY UNDER PRESSURE */}
-          <section id="sec-10" className="py-24 px-6 md:px-12 bg-[#FAF8F5] border-t border-b border-[#171717]/5">
-            <motion.div 
-              initial={prefersReducedMotion ? "visible" : "hidden"}
-              whileInView="visible"
-              viewport={{ once: true, margin: "-12% 0px" }}
-              variants={fadeUp}
-              className="max-w-7xl mx-auto space-y-16"
-            >
-              <div className="max-w-2xl space-y-3">
-                <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.25em] block">
-                  CHAPTER 10
-                </span>
-                <h2 className="font-serif text-3xl md:text-5xl text-[#171717] font-normal leading-tight">
-                  DEMOCRACY UNDER PRESSURE
-                </h2>
-                <span className="font-serif text-lg md:text-xl text-[#16734A] italic block font-normal">
-                  "Democracy is a continuous practice."
-                </span>
-                <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                  The health of a democracy is tested by how its institutions balance disagreement, civic expression, and state authority.
-                </p>
-              </div>
-
-              {/* Democratic Contradictions interactive cards */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  { from: "MORE PARTICIPATION", to: "MORE POLARISATION", desc: "Voter turnouts scale new records, while public reasoning becomes highly polarized across digital echo chambers." },
-                  { from: "MORE INFORMATION", to: "MORE MISINFORMATION", desc: "Cheapest mobile data access reaches billions, alongside systemic distributions of unverified news and rumors." },
-                  { from: "MORE CONNECTIVITY", to: "MORE ECHO CHAMBERS", desc: "Instant mobile payment corridors expand trade, while social networks segment citizens into localized ideological groups." },
-                  { from: "MORE EXPRESSION", to: "MORE CONFLICT", desc: "State channels accommodate countless regional student representations, while public dissent faces intense local restriction." }
-                ].map((item, idx) => (
-                  <div 
-                    key={idx}
-                    className="p-5 bg-white border border-[#171717]/10 hover:border-[#E8752A]/30 shadow-sm flex flex-col justify-between space-y-6 transition-all duration-300"
-                  >
-                    <div className="space-y-3">
-                      <div className="flex justify-between items-center text-[9px] font-mono text-[#6B6B6B] uppercase font-semibold">
-                        <span>{item.from}</span>
-                        <span>↕</span>
-                        <span>{item.to}</span>
+                      <div className="space-y-1">
+                        <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
+                          {p.context}
+                        </span>
+                        <h4 className="font-serif text-lg font-bold text-[#171717]">
+                          {p.role}
+                        </h4>
                       </div>
                       <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                        {item.desc}
+                        {p.desc}
                       </p>
                     </div>
-                    <span className="text-[8px] font-mono text-[#6B6B6B]/40 uppercase tracking-widest block">
-                      CONTRADICTION VECTOR 0{idx+1}
-                    </span>
-                  </div>
-                ))}
-              </div>
 
-            </motion.div>
-          </section>
-
-          <SectionDivider text="And beyond politics, the republic is lived every day." />
-
-          {/* 11. LIVING TOGETHER */}
-          <section id="sec-11" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-            <motion.div 
-              initial={prefersReducedMotion ? "visible" : "hidden"}
-              whileInView="visible"
-              viewport={{ once: true, margin: "-12% 0px" }}
-              variants={fadeUp}
-              className="space-y-16"
-            >
-              
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <div className="lg:col-span-5 space-y-6">
-                  <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.25em] block">
-                    CHAPTER 11
-                  </span>
-                  <h2 className="font-serif text-3xl md:text-5xl text-[#171717] font-normal leading-tight animate-pulse">
-                    LIVING TOGETHER
-                  </h2>
-                  <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                    "The republic is not only experienced in Parliament or on television. It is lived every day by millions of people who share the same streets, trains, markets and cities."
-                  </p>
-                  <div className="h-[1px] w-16 bg-[#16734A]/50"></div>
-                  <span className="text-[10px] font-sans font-bold text-[#16734A] uppercase tracking-widest block">
-                    EVERYDAY COEXISTENCE
-                  </span>
-                </div>
-
-                {/* High quality visual of shared train Coach */}
-                <div className="lg:col-span-7 bg-[#FAF8F5] border border-[#171717]/10 p-4 shadow-sm relative overflow-hidden group">
-                  <div className="aspect-[16/9] relative border border-[#171717]/5 overflow-hidden">
-                    <img 
-                      src="/images/stories/story1-train.jpg" 
-                      alt="Full-colour view inside a general class compartment of the Indian Railways"
-                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                    />
-                    <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
-                      COEXISTENCE ARCHIVE: IT-LIVE-01
+                    <div className="bg-[#F7F4EE] border-l-2 border-[#16734A] p-3 text-[11px] font-serif text-[#171717] italic">
+                      "{p.quote}"
                     </div>
-                    <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
                   </div>
-                  <div className="flex justify-between items-center mt-3 text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest">
-                    <span>Subject: The Shared Railway Passenger Coach</span>
-                    <span>Documentary Record</span>
-                  </div>
+                );
+              })}
+            </div>
+
+          </div>
+        </section>
+
+        {/* Section Continuity tag block */}
+        <div className="w-full py-16 flex flex-col items-center justify-center text-center select-none pointer-events-none">
+          <div className="w-[1px] h-12 bg-[#171717]/10 mb-4"></div>
+          <span className="text-[9px] font-sans font-bold text-[#E8752A] tracking-[0.2em] uppercase">
+            Story Continuity
+          </span>
+          <p className="font-serif text-lg text-[#6B6B6B] italic max-w-md pt-2">
+            "And the generation growing up inside this transformation is demanding opportunity."
+          </p>
+        </div>
+
+        {/* 06 — DEMOCRACY UNDER PRESSURE */}
+        <section id="democracy-pressure" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5">
+          <div className="max-w-7xl mx-auto space-y-16">
+            
+            <div className="max-w-3xl space-y-6">
+              <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.25em] uppercase block">
+                06 — THE INSTITUTIONS
+              </span>
+              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+                DEMOCRACY UNDER PRESSURE
+              </h2>
+              <h3 className="font-serif text-lg md:text-xl text-[#E8752A] italic leading-relaxed">
+                "When political disagreement becomes identity, what happens to democratic conversation?"
+              </h3>
+              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
+                The health of a democracy is tested by how its institutions balance disagreement, civic expression, and state authority. We ask questions rather than declare static political conclusions.
+              </p>
+            </div>
+
+            {/* Split Symmetrical areas asking balanced questions */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-4">
+              
+              <div className="p-6 bg-[#F7F4EE] border border-[#171717]/10 rounded-sm shadow-sm space-y-3">
+                <span className="text-[10px] font-sans font-bold text-[#16734A] uppercase tracking-wider block">
+                  DEMOCRATIC REPRESENTATION
+                </span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Supporters point to rising voter turnout, digital grievances registry channels, and deep regional legislative representation across federal assemblies.
+                </p>
+              </div>
+
+              <div className="p-6 bg-[#F7F4EE] border border-[#171717]/10 rounded-sm shadow-sm space-y-3">
+                <span className="text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-wider block">
+                  CIVIC SPACE QUESTIONS
+                </span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Critics raise concerns over regulatory pressure on independent media outlets, political speech restrictions, and police deployments during capital protests.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+        {/* 07 — MEDIA POLARISATION (Floating News Headline Ecosystem) */}
+        <section id="media-polarisation" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="space-y-16">
+            <div className="space-y-3 text-center">
+              <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
+                07 — INFORMATION
+              </span>
+              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+                WHO TELLS THE STORY?
+              </h2>
+              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light max-w-2xl mx-auto leading-relaxed">
+                People increasingly encounter the same country through very different information environments. We map the fragmented news and television ecosystem.
+              </p>
+            </div>
+
+            {/* Overlapping box elements */}
+            <div className="bg-[#FAF8F5] border border-[#171717]/10 p-8 rounded-sm max-w-4xl mx-auto space-y-8 relative overflow-hidden">
+              <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-center">
+                CONFLATING PUBLIC NEWS HEADLINES · CASE EXAMPLE
+              </span>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-4 border-t border-[#171717]/5">
+                
+                <div className="p-5 bg-white border-l-2 border-[#16734A] space-y-2 shadow-xs">
+                  <span className="text-[8px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">OUTLET A BROADCAST</span>
+                  <h4 className="font-serif text-sm font-semibold text-[#171717] leading-snug">
+                    "EXAM SAFETY SECURED: REGULATORY BILL PENALIZES INTERFERENCE METICULOUSLY"
+                  </h4>
+                  <p className="text-[10px] font-sans font-light text-[#6B6B6B] leading-relaxed">
+                    Emphasizes official updates regarding security bills, technological audits, and state safeguard measures.
+                  </p>
+                </div>
+
+                <div className="p-5 bg-white border-l-2 border-[#E8752A] space-y-2 shadow-xs">
+                  <span className="text-[8px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">OUTLET B BROADCAST</span>
+                  <h4 className="font-serif text-sm font-semibold text-[#171717] leading-snug">
+                    "ASPIRANTS REGISTER ALLEGATIONS: STRUCTURAL DELAYS REMAIN IN CENTRAL SCHEDULING"
+                  </h4>
+                  <p className="text-[10px] font-sans font-light text-[#6B6B6B] leading-relaxed">
+                    Focuses on candidate narratives, prolonged waiting queues, and civil calls for administrative decentralisation.
+                  </p>
                 </div>
 
               </div>
 
-              {/* Triptych of Coexistence */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-[#171717]/5">
-                <div className="p-5 bg-white border border-[#171717]/10 shadow-sm space-y-2">
-                  <h4 className="font-serif text-base text-[#171717] font-semibold uppercase tracking-wider">
-                    The General Coach
-                  </h4>
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    Passengers of diverse faiths, dialects, and economic classes sharing meals, resources, and conversations over journeys crossing thousands of miles.
-                  </p>
-                </div>
+              <div className="text-center pt-6 border-t border-[#171717]/5 text-xs font-serif text-[#171717] italic">
+                "Partisan media echo chambers and digital feed filters amplify engagement over consensus, segmenting public debate."
+              </div>
+            </div>
 
-                <div className="p-5 bg-white border border-[#171717]/10 shadow-sm space-y-2">
-                  <h4 className="font-serif text-base text-[#171717] font-semibold uppercase tracking-wider">
-                    Urban Markets & Streets
-                  </h4>
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    Mixed-population marketplaces negotiating language variations and economic transactions daily, forming stable social habits of coexistence.
-                  </p>
-                </div>
+          </div>
+        </section>
 
-                <div className="p-5 bg-white border border-[#171717]/10 shadow-sm space-y-2">
-                  <h4 className="font-serif text-base text-[#171717] font-semibold uppercase tracking-wider">
-                    Neighborhood Peace Guilds
-                  </h4>
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    Civic committees in mixed quarters working continuously behind the scenes to preempt local disputes and coordinate neighborhood trust.
-                  </p>
-                </div>
+        {/* 08 — WORDS AS WEAPONS (Typographic Word Cloud / Graphic Art) */}
+        <section id="words-weapons" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5">
+          <div className="max-w-5xl mx-auto space-y-12 text-center">
+            
+            <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
+              08 — PUBLIC SPEECH
+            </span>
+            <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+              WHEN DISAGREEMENT BECOMES HOSTILITY
+            </h2>
+            
+            {/* Typographic Visual Treatment */}
+            <div className="py-12 border-t border-b border-[#171717]/10 flex flex-col items-center justify-center space-y-4 select-none relative overflow-hidden bg-[#FAF8F5]/30">
+              
+              <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 max-w-3xl opacity-80">
+                <span className="font-serif text-2xl md:text-4xl text-[#E8752A]/50 tracking-wider">POLARISATION</span>
+                <span className="font-sans text-xs tracking-widest text-[#171717]/30">INCITEMENT</span>
+                <span className="font-serif text-lg text-[#171717]/60 italic">Online Hostility</span>
+                <span className="font-mono text-sm tracking-wider text-[#E8752A]/40">ECHO CHAMBER</span>
+                <span className="font-serif text-3xl md:text-5xl text-[#171717]/80 font-normal">HATE SPEECH</span>
+                <span className="font-sans text-sm tracking-widest text-[#16734A]/40 font-bold">ALGORITHMIC FEED</span>
               </div>
 
-              {/* Interactive builders conceptual network */}
-              <div className="pt-16 border-t border-[#171717]/10 space-y-8">
-                <div className="max-w-xl mx-auto text-center space-y-2">
-                  <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-wider block">
-                    THE CONCEPTUAL NETWORK
-                  </span>
-                  <h3 className="font-serif text-2xl text-[#171717] font-normal uppercase tracking-wider">
-                    THE INDIA WE ARE BUILDING
-                  </h3>
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    India's future depends on how these values develop together. Hover over any value node to reveal matching everyday builders and trace related concepts.
-                  </p>
-                </div>
+              <p className="font-serif text-xs md:text-sm text-[#6B6B6B] italic pt-6 max-w-lg leading-relaxed">
+                "What happens to a plural society when disagreement becomes hostility?"
+              </p>
+            </div>
 
-                {/* Value node grid switcher */}
-                <div className="flex flex-wrap justify-center items-center gap-3 py-6 bg-white/40 border border-[#171717]/10 max-w-4xl mx-auto rounded-sm">
-                  {Object.keys(conceptBuilderMapping).map((concept) => {
-                    const isHovered = hoveredBuildConcept === concept;
-                    const isRelated = hoveredBuildConcept && conceptConnections[hoveredBuildConcept]?.includes(concept);
-                    return (
-                      <button
-                        key={concept}
-                        onMouseEnter={() => setHoveredBuildConcept(concept)}
-                        onMouseLeave={() => setHoveredBuildConcept(null)}
-                        className={`px-3 py-1.5 border rounded-sm text-[9px] font-mono tracking-widest uppercase transition-all duration-300 outline-none cursor-pointer ${
-                          isHovered 
-                            ? "bg-[#171717] border-[#171717] text-white scale-105" 
-                            : isRelated
-                              ? "bg-[#16734A]/10 border-[#16734A] text-[#16734A]"
-                              : "bg-[#FAF8F5] border-[#171717]/10 text-[#6B6B6B]"
-                        }`}
-                      >
-                        {concept}
-                      </button>
-                    );
-                  })}
-                </div>
+            <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light max-w-2xl mx-auto leading-relaxed pt-2">
+              We analyze the rise of targeted inflammatory political rhetoric and coordinated online misinformation, assessing their long-term impact on neighborhood cohesion.
+            </p>
 
-                {/* Builders cards mapping */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {buildersData.map((builder) => {
-                    const hasActiveConcept = hoveredBuildConcept !== null;
-                    const isMapped = hasActiveConcept && conceptBuilderMapping[hoveredBuildConcept]?.includes(builder.id);
+          </div>
+        </section>
+
+        {/* Section Continuity tag block */}
+        <div className="w-full py-16 flex flex-col items-center justify-center text-center select-none pointer-events-none">
+          <div className="w-[1px] h-12 bg-[#171717]/10 mb-4"></div>
+          <span className="text-[9px] font-sans font-bold text-[#E8752A] tracking-[0.2em] uppercase">
+            Story Continuity
+          </span>
+          <p className="font-serif text-lg text-[#6B6B6B] italic max-w-md pt-2">
+            "Sometimes that demand becomes a public voice."
+          </p>
+        </div>
+
+        {/* 09 — CJP PROTEST CASE STUDY */}
+        <section id="cjp-case-study" className="w-full py-28 px-6 md:px-12 max-w-6xl mx-auto">
+          <div className="space-y-16">
+            
+            <div className="text-center space-y-3">
+              <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
+                09 — CASE STUDY
+              </span>
+              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+                A CASE STUDY IN DEMOCRATIC DISSENT
+              </h2>
+              <h3 className="font-serif text-lg md:text-xl text-[#16734A] italic leading-normal">
+                The CJP Jantar Mantar Protests
+              </h3>
+              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light max-w-2xl mx-auto leading-relaxed">
+                A chronological, document-backed case study tracing the physical mobilization at New Delhi's Jantar Mantar. It represents approximately 10–15% of the overall India Today visual index.
+              </p>
+            </div>
+
+            {/* Central chronology timeline */}
+            <div className="relative border-l-2 border-[#171717]/10 pl-6 md:pl-10 space-y-12 max-w-4xl mx-auto">
+              
+              {cjpCaseTimeline.map((item, idx) => {
+                const isHovered = hoveredTimelineIdx === idx;
+                
+                return (
+                  <div
+                    key={idx}
+                    onMouseEnter={() => setHoveredTimelineIdx(idx)}
+                    onMouseLeave={() => setHoveredTimelineIdx(null)}
+                    className={`relative p-6 bg-white border rounded-sm shadow-sm transition-all duration-300 ${
+                      isHovered 
+                        ? "border-[#E8752A] scale-[1.01] shadow-md" 
+                        : "border-[#171717]/10 opacity-90"
+                    }`}
+                  >
+                    {/* Circle marker on line */}
+                    <div className="absolute -left-[31px] md:-left-[47px] top-7 w-3 h-3 rounded-full bg-[#FAF8F5] border-2 border-[#E8752A] z-10 transition-transform duration-300" />
                     
-                    return (
-                      <div 
-                        key={builder.id}
-                        className={`bg-white border p-6 flex flex-col justify-between space-y-6 shadow-sm transition-all duration-300 relative group ${
-                          hasActiveConcept 
-                            ? isMapped 
-                              ? "border-[#16734A] scale-102 opacity-100" 
-                              : "opacity-30 border-[#171717]/5"
-                            : "border-[#171717]/10 hover:border-[#16734A]/30"
-                        }`}
-                      >
-                        <div className="space-y-4">
-                          <div className="space-y-1">
-                            <h4 className="font-serif text-lg text-[#171717] font-semibold">
-                              {builder.role}
-                            </h4>
-                            <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase tracking-wider block">
-                              {builder.context}
-                            </span>
-                          </div>
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 border-b border-[#171717]/5 pb-3 mb-4">
+                      <span className="font-serif text-lg font-bold text-[#E8752A]">
+                        {item.date}
+                      </span>
+                      <span className="text-[8px] font-mono text-[#16734A] bg-[#FAF8F5] px-2 py-0.5 rounded-sm uppercase tracking-widest font-bold">
+                        {item.type}
+                      </span>
+                    </div>
 
-                          <div className="w-12 h-[1px] bg-[#171717]/5"></div>
-
-                          <div className="space-y-1.5">
-                            <span className="text-[9px] font-sans font-bold text-[#6B6B6B]/60 uppercase tracking-widest block">
-                              WHY THEIR VOICE MATTERS
-                            </span>
-                            <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                              {builder.desc}
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="pt-4 border-t border-[#171717]/5 flex justify-between items-center text-[8px] font-mono text-[#6B6B6B]/50 uppercase tracking-widest">
-                          <span>ARCHIVE · INDIA TODAY</span>
-                          <span>{builder.id}</span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-
-              </div>
-
-              {/* RETURN TO PROGRESS SLIDESHOW / CAROUSEL */}
-              <div className="pt-16 border-t border-[#171717]/10 space-y-8">
-                <div className="max-w-2xl mx-auto text-center space-y-2">
-                  <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-wider block">
-                    TRANSFORMATION OVERVIEW
-                  </span>
-                  <h3 className="font-serif text-2xl text-[#171717] font-normal uppercase tracking-wider">
-                    INDIA IS BUILDING ENORMOUSLY
-                  </h3>
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    India is not only dealing with challenges. It is concurrently building massive projects in science, space, and physical infrastructure. This balance is central to the republic.
-                  </p>
-                </div>
-
-                {/* Colour progress montage grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {returnProgressImages.map((img, idx) => (
-                    <div 
-                      key={idx}
-                      className="bg-white border border-[#171717]/10 p-4 shadow-sm hover:border-[#16734A]/30 transition-all duration-300 flex flex-col justify-between"
-                    >
-                      <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/5">
-                        <img 
-                          src={img.src} 
-                          alt={img.caption}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="pt-4 space-y-1">
-                        <span className="text-[9px] font-sans font-bold text-[#E8752A] uppercase tracking-widest block">
-                          {img.label}
-                        </span>
-                        <p className="text-[11px] font-sans font-light text-[#6B6B6B] leading-snug">
-                          {img.caption}
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                      
+                      <div className="md:col-span-8 space-y-3">
+                        <h4 className="font-serif text-base md:text-lg font-bold text-[#171717] leading-snug">
+                          {item.title}
+                        </h4>
+                        <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                          {item.desc}
                         </p>
                       </div>
+
+                      <div className="md:col-span-4 bg-[#F7F4EE] border border-[#171717]/5 p-3 rounded-sm relative aspect-[4/3] overflow-hidden">
+                        <img 
+                          src={item.image} 
+                          alt={item.title} 
+                          className="w-full h-full object-cover rounded-sm"
+                        />
+                      </div>
+
                     </div>
-                  ))}
+
+                    <div className="pt-3 mt-4 border-t border-[#171717]/5 text-[8px] font-mono text-[#6B6B6B]/40 uppercase tracking-widest text-right">
+                      Source: {item.source}
+                    </div>
+                  </div>
+                );
+              })}
+
+            </div>
+
+            {/* JULY 20 CONFRONTATION DETAIL CARD */}
+            <div className="bg-[#F7F4EE] border border-[#171717]/10 p-8 rounded-sm max-w-4xl mx-auto shadow-sm space-y-6">
+              <div className="text-center space-y-2 border-b border-[#171717]/5 pb-4">
+                <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
+                  SPECIAL DETAILED TIMELINE NODE
+                </span>
+                <h3 className="font-serif text-2xl md:text-3xl text-[#171717] font-normal">
+                  JULY 20, 2026 — CHALO SANSAD CONFRONTATION
+                </h3>
+              </div>
+
+              <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed max-w-2xl mx-auto text-center">
+                A planned march from Jantar Mantar to Parliament collided with security restrictions. Police blocked routes using barricades. Clashes followed, with reported use of tear gas and baton/lathi charges.
+              </p>
+
+              {/* Protesters vs State split panel */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
+                  <span className="text-[9px] font-sans font-bold text-[#16734A] tracking-wider uppercase block mb-2">
+                    PROTESTERS' POSITION
+                  </span>
+                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                    Asserted their democratic right to peaceful assembly and speech, demanding direct cabinet dialogue regarding NEET calendar reforms and exam corruption accountability.
+                  </p>
+                </div>
+
+                <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
+                  <span className="text-[9px] font-sans font-bold text-[#E8752A] tracking-wider uppercase block mb-2">
+                    POLICE / STATE POSITION
+                  </span>
+                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                    Stated that permission for the march toward Parliament had been denied due to security zones, and barricades were deployed to regulate movement and maintain public order.
+                  </p>
                 </div>
               </div>
 
-            </motion.div>
-          </section>
-
-          {/* 12. THE UNFINISHED REPUBLIC */}
-          <section id="sec-12" className="py-32 px-6 md:px-12 max-w-4xl mx-auto min-h-[60vh] flex flex-col justify-center">
-            <motion.div 
-              initial={prefersReducedMotion ? "visible" : "hidden"}
-              whileInView="visible"
-              viewport={{ once: true, margin: "-12% 0px" }}
-              variants={fadeUp}
-              className="space-y-8"
-            >
-              <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.25em] block">
-                THE UNFINISHED REPUBLIC
-              </span>
-              <h2 className="font-serif text-4xl md:text-6xl text-[#171717] font-normal leading-tight">
-                "India is not a finished idea."
-              </h2>
-              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed max-w-3xl">
-                It is something every generation inherits, questions, reshapes and passes forward.
-              </p>
-              
-              <div className="space-y-1.5 pt-8">
-                <h3 className="font-serif text-2xl md:text-4xl text-[#16734A] tracking-wider uppercase font-semibold">
-                  THE STORY CONTINUES.
-                </h3>
-                <h3 className="font-serif text-2xl md:text-4xl text-[#E8752A] tracking-wider uppercase font-semibold">
-                  INDIA IS STILL BECOMING.
-                </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-[#171717]/5 text-center">
+                <div>
+                  <span className="text-[8px] font-mono text-[#6B6B6B] uppercase block">INJURIES</span>
+                  <p className="text-xs font-sans font-semibold text-[#171717] pt-1">
+                    60+ Protesters & 100+ Police Personnel Reported Injured
+                  </p>
+                </div>
+                <div>
+                  <span className="text-[8px] font-mono text-[#6B6B6B] uppercase block">HUMAN RIGHTS RECORD</span>
+                  <p className="text-xs font-sans font-semibold text-[#171717] pt-1">
+                    Amnesty International raised serious concerns over unnecessary force
+                  </p>
+                </div>
               </div>
-            </motion.div>
-          </section>
 
-          {/* Conclusion */}
-          <section className="py-32 px-6 md:px-12 max-w-4xl mx-auto text-center space-y-16">
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={{
-                hidden: { opacity: 0 },
-                visible: { 
-                  opacity: 1,
-                  transition: { staggerChildren: prefersReducedMotion ? 0 : 0.25 }
-                }
-              }}
-              className="space-y-12"
-            >
-              <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.3em] block">
-                THE REPUBLIC REMAINS A QUESTION
+              <div className="text-right text-[8px] font-mono text-[#6B6B6B]/50 uppercase tracking-widest pt-2">
+                Source Log: India Today · Reuters · ThePrint · Amnesty International
+              </div>
+            </div>
+
+            {/* Cabinet Resignation Note */}
+            <div className="bg-[#FAF8F5] border border-[#171717]/10 p-6 rounded-sm max-w-4xl mx-auto shadow-xs text-center space-y-4">
+              <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">
+                CHRONOLOGICAL RESOLUTION METADATA
               </span>
-              
-              <h2 className="font-serif text-4xl md:text-5xl lg:text-7xl text-[#171717] font-normal leading-tight">
-                ITS FUTURE IS NOT WRITTEN YET.
-              </h2>
-              
-              <div className="h-[1px] w-12 bg-[#171717]/10 mx-auto"></div>
-              
-              <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed max-w-md mx-auto italic">
-                It is built every day — in classrooms, laboratories, farms, streets, courts, workplaces, homes and public squares.
+              <h4 className="font-serif text-lg md:text-xl font-bold text-[#171717] uppercase tracking-wider">
+                Resignation of Education Minister Dharmendra Pradhan
+              </h4>
+              <p className="text-xs font-sans font-light text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed">
+                Union Education Minister Dharmendra Pradhan resigned on July 25, 2026. Following cabinet negotiations, physical protests were formally called off. Note: while the resignation followed the period of student mobilisation, a direct causal link has not been independently established.
               </p>
-            </motion.div>
-          </section>
+            </div>
 
+            {/* AFTERMATH MATRIX */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto pt-4">
+              <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
+                <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase block mb-2">ACHIEVED</span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Ministerial resignation meeting a key demand, establishing cabinet level accountability.
+                </p>
+              </div>
+              <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
+                <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase block mb-2">ACCEPTED</span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Criminal code revisions for examination fraud and structural audit teams for entrance boards.
+                </p>
+              </div>
+              <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
+                <span className="text-[9px] font-sans font-bold text-[#E8752A] uppercase block mb-2">REMAINS</span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Resource inequalities in rural schools and coaching delays for provincial recruitment boards.
+                </p>
+              </div>
+            </div>
+
+            {/* Sources section */}
+            <div className="max-w-4xl mx-auto pt-6 border-t border-[#171717]/10 text-right">
+              <span className="text-[9px] font-mono text-[#6B6B6B]/60 uppercase tracking-widest block mb-2">
+                VERIFIABLE INQUIRY SOURCES
+              </span>
+              <div className="flex justify-end items-center gap-4 text-[9px] font-mono text-[#E8752A] uppercase tracking-wider">
+                <a href="https://indianexpress.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Indian Express</a>
+                <span>·</span>
+                <a href="https://www.reuters.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Reuters</a>
+                <span>·</span>
+                <a href="https://theprint.in" target="_blank" rel="noopener noreferrer" className="hover:underline">ThePrint</a>
+                <span>·</span>
+                <a href="https://www.amnesty.org" target="_blank" rel="noopener noreferrer" className="hover:underline">Amnesty</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* Section Continuity tag block */}
+        <div className="w-full py-16 flex flex-col items-center justify-center text-center select-none pointer-events-none">
+          <div className="w-[1px] h-12 bg-[#171717]/10 mb-4"></div>
+          <span className="text-[9px] font-sans font-bold text-[#E8752A] tracking-[0.2em] uppercase">
+            Story Continuity
+          </span>
+          <p className="font-serif text-lg text-[#6B6B6B] italic max-w-md pt-2">
+            "But the larger question remains: how does a democracy respond to dissent?"
+          </p>
         </div>
+
+        {/* 10 — DEMOCRACY SPEAKS */}
+        <section id="democracy-speaks" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5">
+          <div className="max-w-7xl mx-auto space-y-12">
+            
+            <div className="max-w-3xl space-y-4">
+              <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.25em] uppercase block">
+                10 — CIVIC LIFE
+              </span>
+              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+                DEMOCRACY SPEAKS
+              </h2>
+              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
+                Democracy is not only what happens on election day. It also lives in daily disagreement, public debate, judicial reviews, local assemblies, and peaceful demonstrations.
+              </p>
+            </div>
+
+            {/* Symmetrical components Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+              <div className="p-5 bg-[#FAF8F5] border border-[#171717]/10 rounded-sm">
+                <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase block mb-1">Elections & Courts</span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Constitutional check and balance through active high courts and voting schedules that cycle power.
+                </p>
+              </div>
+              <div className="p-5 bg-[#FAF8F5] border border-[#171717]/10 rounded-sm">
+                <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase block mb-1">Public Debate</span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Academic platforms and public seminars discussing central codes, agrarian support, and labor rules.
+                </p>
+              </div>
+              <div className="p-5 bg-[#FAF8F5] border border-[#171717]/10 rounded-sm">
+                <span className="text-[9px] font-sans font-bold text-[#E8752A] uppercase block mb-1">Local Assemblies</span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Panchayat groups and student unions articulating local resources directly to state authorities.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* 11 — LIVING TOGETHER ( एवरीडे प्लुरल इंडिया ) */}
+        <section id="living-together" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="space-y-16">
+            
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              
+              <div className="lg:col-span-5 space-y-6">
+                <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
+                  11 — COEXISTENCE
+                </span>
+                <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+                  LIVING TOGETHER
+                </h2>
+                <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
+                  The republic is experienced in the trains, markets, workspaces, and neighborhoods shared by millions of people daily. We explore this ability to coexist despite regional and cultural differences.
+                </p>
+                <div className="h-[1px] w-12 bg-[#16734A]"></div>
+                <span className="text-xs font-serif text-[#16734A] italic block">
+                  "Everyday interactions in shared public spaces form the structural fabric of our democracy."
+                </span>
+              </div>
+
+              {/* Spliced Colour photo of General Train coach */}
+              <div className="lg:col-span-7 bg-white border border-[#171717]/10 p-4 shadow-md rounded-sm relative overflow-hidden group">
+                <div className="aspect-[16/10] relative border border-[#171717]/5 overflow-hidden">
+                  <img 
+                    src="/images/stories/story1-train.jpg" 
+                    alt="Full-colour view inside a general class compartment of the Indian Railways with passengers" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
+                    COEXISTENCE GRID: GENERAL RAILWAY COACH
+                  </div>
+                  <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
+                </div>
+                <div className="flex justify-between items-center mt-3 text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest">
+                  <span>Subject: The Shared Railway Passenger Coach</span>
+                  <span>Documentary Log</span>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Grid of regional pluralistic slates */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-[#171717]/5">
+              <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
+                <span className="text-[9px] font-sans font-bold text-[#16734A] block mb-1">LANGUAGES</span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Dozens of regional tongues and dialects interacting within metropolitan logistics networks daily.
+                </p>
+              </div>
+              <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
+                <span className="text-[9px] font-sans font-bold text-[#16734A] block mb-1">NEIGHBORHOODS</span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Mixed quarters balancing shared local grids, water pipes, and public lanes.
+                </p>
+              </div>
+              <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
+                <span className="text-[9px] font-sans font-bold text-[#E8752A] block mb-1">SHARED SPACES</span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Markets, platforms, and workspace blocks where commercial logic overrides socio-ideological polarization.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* 12 — THE INDIA WE ARE BUILDING */}
+        <section id="building" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5">
+          <div className="max-w-7xl mx-auto space-y-12">
+            <div className="max-w-2xl space-y-2">
+              <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.25em] uppercase block">
+                12 — THE WORKPLACE
+              </span>
+              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+                THE INDIA WE ARE BUILDING
+              </h2>
+              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
+                India is being built simultaneously through technology, labor, institutions, culture and everyday choices.
+              </p>
+            </div>
+
+            {/* Dynamic visual montage collage */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6">
+              {[
+                { src: "/images/stories/story6-launch.jpg", title: "SPACE", desc: "Scientific progress" },
+                { src: "/images/stories/story4-prep.jpg", title: "UPI", desc: "Digital public payments" },
+                { src: "/images/stories/story1-station.jpg", title: "METRO", desc: "Transport grids" },
+                { src: "/images/stories/story6-lab.jpg", title: "STARTUPS", desc: "Technology sectors" }
+              ].map((item, idx) => (
+                <div 
+                  key={idx} 
+                  className="bg-[#FAF8F5] border border-[#171717]/10 p-4 rounded-sm shadow-xs hover:border-[#16734A]/30 transition-all duration-300 flex flex-col justify-between"
+                >
+                  <div className="aspect-[4/3] overflow-hidden rounded-sm relative border border-[#171717]/5">
+                    <img src={item.src} alt={item.title} className="w-full h-full object-cover" />
+                  </div>
+                  <div className="pt-3 space-y-0.5">
+                    <span className="text-[9px] font-mono text-[#E8752A] uppercase block font-bold">{item.title}</span>
+                    <span className="text-[10px] font-sans font-light text-[#6B6B6B] block">{item.desc}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+
+        {/* 13 — THE UNFINISHED REPUBLIC */}
+        <section id="unfinished-republic" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="space-y-16">
+            
+            <div className="max-w-2xl space-y-4">
+              <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
+                13 — THE INHERITANCE
+              </span>
+              <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717]">
+                THE UNFINISHED REPUBLIC
+              </h2>
+              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
+                The constitutional promises of Freedom, Equality, Democracy, and Pluralism are not static benchmarks. They remain active points of contestation.
+              </p>
+            </div>
+
+            {/* Tripartite Grid: Progress vs Pressure vs Possibility */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
+              
+              <div className="p-6 bg-white border border-[#171717]/10 rounded-sm shadow-sm space-y-3">
+                <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-wider uppercase block">
+                  PROGRESS
+                </span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Significant reductions in structural poverty, digital infrastructure connectivity, and world-class space technology programs.
+                </p>
+              </div>
+
+              <div className="p-6 bg-white border border-[#171717]/10 rounded-sm shadow-sm space-y-3">
+                <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-wider uppercase block">
+                  PRESSURE
+                </span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Intensifying media polarization, youth recruitment irregularities, and constraints on peaceful assembly.
+                </p>
+              </div>
+
+              <div className="p-6 bg-white border border-[#171717]/10 rounded-sm shadow-sm space-y-3">
+                <span className="text-[10px] font-sans font-bold text-[#171717]/60 tracking-wider uppercase block">
+                  POSSIBILITY
+                </span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  A large young workforce pushing for administrative safeguards, educational reform, and structural opportunity.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+        {/* 14 — FINAL STATEMENT */}
+        <section id="final-statement" className="w-full py-32 px-6 md:px-12 max-w-4xl mx-auto text-center space-y-12">
+          <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
+            THE CONCLUSION
+          </span>
+          
+          <h2 className="font-serif text-4xl md:text-6xl text-[#171717] font-normal leading-tight">
+            "India is not a finished idea."
+          </h2>
+          
+          <div className="space-y-2 max-w-lg mx-auto">
+            <p className="text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+              Every generation inherits it.
+            </p>
+            <p className="text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+              Every generation changes it.
+            </p>
+          </div>
+
+          <div className="h-[1px] w-12 bg-[#171717]/15 mx-auto"></div>
+
+          <h3 className="font-serif text-3xl md:text-5xl lg:text-6xl text-[#16734A] tracking-wider uppercase font-semibold leading-tight">
+            ITS FUTURE<br/>IS NOT WRITTEN YET.
+          </h3>
+
+          <div className="pb-12 text-[9px] font-mono text-[#6B6B6B]/40 uppercase tracking-widest">
+            THE STORY CONTINUES
+          </div>
+        </section>
 
       </div>
     </PageTransition>
