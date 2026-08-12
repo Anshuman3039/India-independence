@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import LanguageExplorer from './LanguageExplorer';
 import PeopleMap from './PeopleMap';
@@ -25,7 +26,7 @@ export default function People() {
   };
 
   return (
-    <section id="people-section" className="bg-[#F7F4EE] py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto border-t border-[#171717]/5 overflow-hidden">
+    <section id="people-section" className="bg-[#F7F4EE] pt-24 md:pt-32 pb-12 md:pb-16 px-6 md:px-12 max-w-7xl mx-auto border-t border-[#171717]/5 overflow-hidden">
       <motion.div 
         variants={containerVariants}
         initial="hidden"
@@ -145,6 +146,33 @@ export default function People() {
         {/* E. Everyday Life Strip Subsection */}
         <motion.div id="everyday-explore" variants={fadeUp}>
           <EverydayIndia />
+        </motion.div>
+
+        {/* F. Transition to Culture Page */}
+        <motion.div 
+          variants={fadeUp}
+          className="border-t border-[#171717]/5 pt-20 pb-4 text-center flex flex-col items-center space-y-6 max-w-2xl mx-auto"
+        >
+          <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.25em] block">
+            NEXT: CULTURE
+          </span>
+          <div className="space-y-3">
+            <h3 className="font-serif text-3xl md:text-4xl text-[#171717] font-normal leading-tight">
+              From the people, a culture takes shape.
+            </h3>
+            <p className="text-[#6B6B6B] font-sans text-sm md:text-base leading-relaxed font-light">
+              Languages, crafts, rituals, food, music, celebrations and everyday traditions are not separate from the people who live them. They are how generations carry memory, meaning and identity forward.
+            </p>
+          </div>
+          <div className="pt-2">
+            <Link 
+              to="/culture"
+              className="group inline-flex items-center gap-2.5 font-sans text-xs md:text-sm font-bold tracking-widest uppercase text-[#171717] hover:text-[#E8752A] border-b border-[#171717]/25 hover:border-[#E8752A] pb-1.5 transition-all duration-200 focus-visible:outline-[#E8752A]"
+            >
+              EXPLORE CULTURE 
+              <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
+            </Link>
+          </div>
         </motion.div>
 
       </motion.div>

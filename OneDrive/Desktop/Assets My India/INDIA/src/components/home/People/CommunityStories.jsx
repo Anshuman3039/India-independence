@@ -14,7 +14,7 @@ export default function CommunityStories() {
   };
 
   return (
-    <div className="space-y-12 md:space-y-16 py-12 border-t border-[#171717]/5 text-left">
+    <div className="space-y-12 md:space-y-16 pt-12 pb-0 border-t border-[#171717]/5 text-left">
       
       {/* Subsection Headers */}
       <div className="space-y-3 max-w-xl">
