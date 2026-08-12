@@ -193,100 +193,328 @@ export const ingredients = [
 
 
 export const geography = {
-  "or": {
-    name: "ODISHA",
+  "ap": {
+    name: "ANDHRA PRADESH",
+    image: "/images/food/ingredient-chilies.jpg",
     dishes: [
-      { name: "Pakhala", desc: "Fermented rice soaked in cold water, served with curd, mustard-fried greens, and mashed potatoes to ease hot weather." },
-      { name: "Dalma", desc: "A nutritious, non-oil stew of split chickpeas cooked with raw papaya, green banana, eggplant, and dry-roasted spices." },
-      { name: "Pitha traditions", desc: "Griddled, steamed, or fried rice cakes prepared during seasonal agricultural celebrations (Raja festival)." }
+      { name: "Gongura Pachadi", desc: "A tangy, fiery chutney prepared from sorrel leaves (gongura) pounded with green chilies, garlic, and hot oil." },
+      { name: "Rayalaseema Ragi Sangati", desc: "Steamed finger-millet dumplings served with spicy chicken or vegetable gravy." },
+      { name: "Andhra Biryani", desc: "A fragrant rice dish cooked with short-grain rice, spiced chicken, fried onions, and ghee." }
     ]
   },
-  "kl": {
-    name: "KERALA",
+  "ar": {
+    name: "ARUNACHAL PRADESH",
+    image: "/images/food/arunachal_pradesh_food.jpg",
     dishes: [
-      { name: "Appam with Ishtu", desc: "Lacy fermented rice pancakes with soft spongy centers, served with a mild, cardamom-infused coconut milk stew." },
-      { name: "Puttu", desc: "Steamed cylinders of ground rice and grated coconut layers, typically eaten with spicy chickpea curry (Kadala)." },
-      { name: "Coastal Seafood", desc: "Fresh marine catches simmered in spicy, sour gravies seasoned with local tamarind (Kodampuli) and coconut." }
-    ]
-  },
-  "rj": {
-    name: "RAJASTHAN",
-    dishes: [
-      { name: "Dal Baati Churma", desc: "Wood-fired baked wheat balls (Baati) crushed and soaked in ghee, served with spiced mixed lentils and sweet powdered wheat." },
-      { name: "Bajra-based Foods", desc: "Pearl millet flatbreads (Sogra) prepared in winter, accompanied by garlic chutney and jaggery." },
-      { name: "Ker Sangri", desc: "A unique dryland dish made of wild desert berries (Ker) and dried beans (Sangri) simmered in mustard oil and spices." }
-    ]
-  },
-  "pb": {
-    name: "PUNJAB",
-    dishes: [
-      { name: "Sarson ka Saag", desc: "Slow-simmered mustard greens enriched with spinach and bathua leaves, finished with a dollop of white butter." },
-      { name: "Makki di Roti", desc: "Golden flatbreads rolled from maize flour, griddled, and traditionally paired with mustard greens in winter." },
-      { name: "Lentil & tandoor traditions", desc: "Whole black urad dal simmered overnight, and tandoori-baked whole-wheat flatbreads." }
-    ]
-  },
-  "tn": {
-    name: "TAMIL NADU",
-    dishes: [
-      { name: "Ven Pongal", desc: "A comforting breakfast dish of rice and split yellow mung lentils cooked soft, tempered with ghee, pepper, and cashews." },
-      { name: "Idli & Dosa", desc: "Everyday steamed rice cakes and griddled crepes accompanied by spicy coconut chutneys and hot sambar." },
-      { name: "Chettinad preparations", desc: "Deeply aromatic dishes using freshly roasted spices like fennel, star anise, and stone flower (Kalpasi)." }
+      { name: "Chura Sabji", desc: "A warming soup cooked with fermented yak cheese, fresh herbs, and small hot chilies." },
+      { name: "Lukter", desc: "Smoked dry meat flakes pounded with birds-eye chilies and local aromatic spices." },
+      { name: "Pehak", desc: "A savory condiment paste prepared by fermenting soy beans with ginger and bird's-eye chilies." }
     ]
   },
   "as": {
     name: "ASSAM",
+    image: "/images/food/region-northeast.jpg",
     dishes: [
-      { name: "Rice-based cuisines", desc: "Sticky rice (Bora saul) steamed in bamboo tubes or eaten dry with curd and jaggery as breakfast (Jolpan)." },
-      { name: "Khar", desc: "A digestive preparation made by filtering water through charred sun-dried banana trunk ashes, cooked with seasonal vegetables." },
-      { name: "Masor Tenga", desc: "A refreshing, sour freshwater fish curry made using tomatoes, lemon, or dried elephant apple (Outenga)." }
+      { name: "Masor Tenga", desc: "A refreshing, sour freshwater fish curry flavored with tomatoes and lemon juice." },
+      { name: "Assamese Khar", desc: "A alkaline starter stew filtered through banana-leaf ashes, cooked with raw papaya." },
+      { name: "Outenga Dal", desc: "Yellow lentils simmered with dried elephant apple slices for a unique fruity sourness." }
+    ]
+  },
+  "br": {
+    name: "BIHAR",
+    image: "/images/food/region-east.jpg",
+    dishes: [
+      { name: "Litti Chokha", desc: "Wheat balls stuffed with roasted gram flour (sattu) baked on open embers and dipped in ghee, served with mashed eggplant." },
+      { name: "Sattu Paratha", desc: "Flatbreads stuffed with dry spiced roasted chickpea flour, providing daily agricultural nutrition." },
+      { name: "Thekua", desc: "A rustic deep-fried sweet biscuit prepared from wheat flour, fennel seeds, dry coconut, and sugarcane jaggery." }
+    ]
+  },
+  "cg": {
+    name: "CHHATTISGARH",
+    image: "/images/food/chhattisgarh_food.jpg",
+    dishes: [
+      { name: "Chhela Roti", desc: "Thin, savory rice-flour crepes griddled on cast-iron pans and served with spicy tomato chutney." },
+      { name: "Fara", desc: "Steamed rice-flour cylinders tossed in oil with mustard seeds, sesame, and fresh coriander." },
+      { name: "Bore Basi", desc: "Cold fermented rice soaked in water, eaten in summer with pickle, green chilies, and onions." }
+    ]
+  },
+  "ga": {
+    name: "GOA",
+    image: "/images/food/region-coastal.jpg",
+    dishes: [
+      { name: "Fish Curry Rice", desc: "Fresh sea catch simmered in coconut milk gravy flavored with red chilies, turmeric, and local kokum fruit." },
+      { name: "Pork Vindaloo", desc: "A highly spiced, tangy dish prepared with vinegar, red chilies, garlic, and local spices." },
+      { name: "Bebinca", desc: "A rich multi-layered traditional dessert baked with coconut milk, egg yolks, flour, and sugar." }
     ]
   },
   "gj": {
     name: "GUJARAT",
+    image: "/images/food/region-west.jpg",
     dishes: [
-      { name: "Gujarati Thali", desc: "A sprawling vegetarian feast balancing sweet, salty, sour, and spicy dishes (shaak, dal, kadhi, rotli)." },
-      { name: "Dhokla & Khandvi", desc: "Savory fermented gram-flour cakes steamed soft, and rolled chickpea flour sheets tempered with mustard seeds." },
-      { name: "Undhiyu", desc: "A rich, mixed winter vegetable dish cooked upside-down in earthen pots fired from above, seasoned with green garlic." }
+      { name: "Gujarati Thali", desc: "A multi-dish vegetarian feast showcasing dhokla, shaak, sweet kadhi, and flatbreads." },
+      { name: "Handvo", desc: "A savory baked cake made of fermented lentils, rice, mixed vegetables, and tempered mustard seeds." },
+      { name: "Undhiyu", desc: "A seasonal winter vegetable dish prepared upside-down in underground clay pots with green garlic." }
     ]
   },
-  "mh": {
-    name: "MAHARASHTRA",
+  "hr": {
+    name: "HARYANA",
+    image: "/images/food/haryana_food.jpg",
     dishes: [
-      { name: "Vada Pav", desc: "Mumbai's signature street burger featuring a spicy fried potato dumpling in a soft bread roll with garlic chutney." },
-      { name: "Puran Poli", desc: "A sweet flatbread stuffed with a soft, sweet paste of split bengal gram (chana dal) and jaggery, flavored with cardamom." },
-      { name: "Misal Pav", desc: "A spicy curry made of sprouted moth beans (usal), topped with crunchy farsan mix, onions, and served with bread rolls." }
+      { name: "Bajra Khichri", desc: "Pearl millet slow-cooked with split green gram, serving as a hearty winter staple with ghee." },
+      { name: "Hara Dhania Cholia", desc: "Green chickpeas cooked in an onion-tomato gravy with fresh coriander and ginger." },
+      { name: "Singri ki Sabji", desc: "Dried desert beans tossed with local yogurt, mustard seeds, and dry whole spices." }
     ]
   },
-  "ap": {
-    name: "ANDHRA PRADESH",
+  "hp": {
+    name: "HIMACHAL PRADESH",
+    image: "/images/food/himachal_pradesh_food.jpg",
     dishes: [
-      { name: "Gongura Pachadi", desc: "A tangy, fiery chutney prepared from sorrel leaves (gongura) pounded with green chilies, garlic, and hot oil." },
-      { name: "Andhra Chili Chicken", desc: "A dry-spiced pan-fried chicken dish seasoned with Guntur red and green chilies, curry leaves, and ginger." },
-      { name: "Pootharekulu", desc: "A delicate, paper-thin sweet wrapper made from rice starch, stuffed with sugar/jaggery dust and pure ghee." }
+      { name: "Himachali Siddu", desc: "Yeast-leavened wheat dough stuffed with poppy seeds, walnut paste, or split lentils, steamed and served with ghee." },
+      { name: "Madra", desc: "A creamy, slow-cooked chickpea curry prepared in a spiced yogurt gravy flavored with cardamom." },
+      { name: "Chha Gosht", desc: "Marinated meat slow-simmered in a rich yogurt and gram-flour sauce with local mountain herbs." }
     ]
   },
-  "up": {
-    name: "UTTAR PRADESH",
+  "jh": {
+    name: "JHARKHAND",
+    image: "/images/food/jharkhand_food.jpg",
     dishes: [
-      { name: "Galouti Kebab", desc: "Melt-in-the-mouth minced meat patties flavored with raw papaya paste and a blend of over 100 aromatic dry spices." },
-      { name: "Baati Chokha", desc: "Wheat balls baked over cow-dung cakes, dipped in pure ghee, and paired with smoky mashed eggplant and potatoes." },
-      { name: "Mathura Petha / Peda", desc: "Translucent sugar-candied ash gourd blocks, and soft caramelized milk fudge rounds seasoned with cardamom." }
-    ]
-  },
-  "wb": {
-    name: "WEST BENGAL",
-    dishes: [
-      { name: "Machher Jhol", desc: "A light, comforting freshwater fish curry simmered with potatoes, pointed gourd, ginger, and cumin in pungent mustard oil." },
-      { name: "Shorshe Ilish", desc: "Hilsa fish steaks slow-steamed in a thick paste of sharp yellow mustard seeds, green chilies, and coconut milk." },
-      { name: "Sweets (Roshogolla & Sandesh)", desc: "Soft, spongy cheese balls boiled in sugar syrup, and dry milk fudge squares made of date-palm jaggery (nolen gur)." }
+      { name: "Duska", desc: "Deep-fried savory pancakes made from a batter of soaked rice and split bengal gram, served with potato curry." },
+      { name: "Chilka Roti", desc: "A traditional crepe prepared from a thin batter of local brown rice flour, cooked on flat griddles." },
+      { name: "Madua ki Roti", desc: "Earthy, nutritious flatbreads rolled from finger millet (ragi) flour, cooked on open fires." }
     ]
   },
   "ka": {
     name: "KARNATAKA",
+    image: "/images/food/karnataka_food.jpg",
     dishes: [
-      { name: "Bisi Bele Bath", desc: "A comforting hot dish of rice, lentils, and mixed vegetables cooked together with a spicy roasted masala powder." },
-      { name: "Mysore Pak", desc: "A rich, porous sweet prepared by roasting chickpea flour in large quantities of bubbling hot ghee and sugar syrup." },
-      { name: "Neer Dosa", desc: "Paper-thin, light, and lacy crêpes prepared from a thin unfermented rice batter, served with fresh coconut chutney." }
+      { name: "Bisi Bele Bath", desc: "A comforting, hot rice and lentil pot cooked with mixed vegetables, tamarind, and roasted spices." },
+      { name: "Ragi Mudde", desc: "Steamed finger-millet balls swallowed whole, serving as a primary source of slow-release energy for farmers." },
+      { name: "Neer Dosa", desc: "Soft, lacy, paper-thin crepes prepared from a light, unfermented rice batter, served with coconut chutney." }
+    ]
+  },
+  "kl": {
+    name: "KERALA",
+    image: "/images/food/ingredient-coconut.jpg",
+    dishes: [
+      { name: "Appam with Ishtu", desc: "Lacy, fermented rice pancakes served with a mild, cardamon-infused coconut milk vegetable or meat stew." },
+      { name: "Puttu", desc: "Steamed cylinders of ground rice and grated coconut layers, eaten with black chickpea curry." },
+      { name: "Malabar Biryani", desc: "A fragrant rice dish cooked with short-grain Khaima rice, spiced chicken, fried onions, and ghee." }
+    ]
+  },
+  "mp": {
+    name: "MADHYA PRADESH",
+    image: "/images/food/region-north.jpg",
+    dishes: [
+      { name: "Bhutte ka Kees", desc: "Grated sweet corn slow-cooked in milk, seasoned with mustard seeds, green chilies, and fresh coconut." },
+      { name: "Indori Poha-Jalebi", desc: "Flattened rice seasoned with turmeric and steamed, topped with sev, and paired with sweet crispy jalebis." },
+      { name: "Dal Bafla", desc: "Boiled and baked wheat dough balls dipped in pure ghee, served with spiced mixed lentils and mango pickle." }
+    ]
+  },
+  "mh": {
+    name: "MAHARASHTRA",
+    image: "/images/food/everyday-lunch.jpg",
+    dishes: [
+      { name: "Misal Pav", desc: "A fiery-spiced curry made of sprouted moth beans, topped with crunchy farsan mix and raw onions." },
+      { name: "Pithla Bhakri", desc: "A rustic chickpea-flour porridge seasoned with garlic and green chilies, paired with sorghum flatbreads." },
+      { name: "Puran Poli", desc: "Sweet wheat flatbreads stuffed with a cooked paste of split chana dal and jaggery." }
+    ]
+  },
+  "mn": {
+    name: "MANIPUR",
+    image: "/images/food/manipur_food.jpg",
+    dishes: [
+      { name: "Eromba", desc: "A traditional mashed dish of boiled vegetables and fish, flavored with hot chilies and fermented fish." },
+      { name: "Kangshoi", desc: "A comforting, oil-free vegetable stew flavored with sliced onions, ginger, and dried fish." },
+      { name: "Chak-Hao Kheer", desc: "A rich, aromatic purple dessert made by boiling Manipuri black sticky rice with milk and cardamom." }
+    ]
+  },
+  "ml": {
+    name: "MEGHALAYA",
+    image: "/images/food/meghalaya_food.jpg",
+    dishes: [
+      { name: "Jadoh", desc: "Fragrant red hill-rice cooked with smoked pork or chicken stock, ginger, and local wild greens." },
+      { name: "Dohneiiong", desc: "A rich, savory pork stew cooked with roasted black sesame paste, ginger-garlic, and green chilies." },
+      { name: "Tungrymbai", desc: "A pungent tribal condiment paste made from fermented soy beans, cooked with ginger, garlic, and chili." }
+    ]
+  },
+  "mz": {
+    name: "MIZORAM",
+    image: "/images/food/mizoram_food.jpg",
+    dishes: [
+      { name: "Bai", desc: "An oil-free vegetable stew made of boiled mustard leaves, pumpkin, and beans, seasoned with fermented pork fat." },
+      { name: "Vawksa Rep", desc: "Smoked pork strips stir-fried with fresh mustard greens, ginger-garlic, and bird's-eye chilies." },
+      { name: "Sawhchiar", desc: "A comforting porridge of local rice cooked with chicken or pork stock and mild black peppercorns." }
+    ]
+  },
+  "nl": {
+    name: "NAGALAND",
+    image: "/images/food/nagaland_food.jpg",
+    dishes: [
+      { name: "Axone (Akhuni)", desc: "Pork or vegetable stews seasoned with a pungent paste of fermented soy beans, garlic, and chilies." },
+      { name: "Smoked Pork with Anishi", desc: "Smoked pork pieces cooked with dried yam leaves paste and bird's-eye chilies." },
+      { name: "Galho", desc: "A comforting rice-and-lentil pot cooked with seasonal wild forest greens and smoked meats." }
+    ]
+  },
+  "or": {
+    name: "ODISHA",
+    image: "/images/food/region-east.jpg",
+    dishes: [
+      { name: "Pakhala", desc: "Fermented rice soaked in cold water, served with curd, mustard-fried greens, and mashed potatoes to beat summer heat." },
+      { name: "Dalma", desc: "A nutritious stew of split yellow lentils cooked with raw papaya, green banana, eggplant, and dry-roasted spices." },
+      { name: "Chhena Poda", desc: "A baked cheese dessert made of fresh cottage cheese kneaded with sugar, cardamom, and baked in leaf-lined pans." }
+    ]
+  },
+  "pb": {
+    name: "PUNJAB",
+    image: "/images/food/punjab_food.jpg",
+    dishes: [
+      { name: "Sarson ka Saag", desc: "Slow-simmered mustard greens enriched with bathua leaves, finished with butter and ginger." },
+      { name: "Makki di Roti", desc: "Golden flatbreads made of stone-ground yellow maize flour, griddled on iron pans." },
+      { name: "Pindi Chole", desc: "Chickpeas slow-boiled with black tea leaves, dry-spiced with pomegranate seeds and dry mango powder." }
+    ]
+  },
+  "rj": {
+    name: "RAJASTHAN",
+    image: "/images/food/rajasthan_food.jpg",
+    dishes: [
+      { name: "Dal Baati Churma", desc: "Oven-baked wheat balls dipped in pure ghee, served with spiced mixed lentils and sweet wheat powder." },
+      { name: "Ker Sangri", desc: "A unique dryland dish made of wild desert berries and dried beans simmered in mustard oil." },
+      { name: "Lal Maas", desc: "A hot, fiery mutton curry prepared with garlic, spices, and a large amount of local Mathania red chilies." }
+    ]
+  },
+  "sk": {
+    name: "SIKKIM",
+    image: "/images/food/sikkim_food.jpg",
+    dishes: [
+      { name: "Momo & Thukpa", desc: "Steamed flour dumplings filled with vegetables or meat, and hot noodle soups with winter greens." },
+      { name: "Sha Phaley", desc: "Deep-fried bread pockets stuffed with spiced minced meat, served with a hot chili dip." },
+      { name: "Sinki", desc: "A traditional winter preserve made by fermenting radish roots in underground pits, cooked into soups." }
+    ]
+  },
+  "tn": {
+    name: "TAMIL NADU",
+    image: "/images/food/region-south.jpg",
+    dishes: [
+      { name: "Ven Pongal", desc: "A comforting breakfast pot of rice and split mung lentils cooked soft, tempered with ghee, pepper, and ginger." },
+      { name: "Idli & Dosa", desc: "Fermented steamed rice cakes and griddled crepes paired with coconut chutneys and hot tamarind sambar." },
+      { name: "Chettinad Kozhi", desc: "A highly aromatic chicken curry prepared with freshly roasted coriander, fennel, dry red chilies, and kalpasi." }
+    ]
+  },
+  "tg": {
+    name: "TELANGANA",
+    image: "/images/food/region-south.jpg",
+    dishes: [
+      { name: "Sarvapindi", desc: "A savory, crispy rice-flour pancake containing peanuts, chana dal, sesame seeds, green chilies, and curry leaves." },
+      { name: "Jonna Rotte", desc: "Soft, paper-thin flatbreads made from sorghum millet flour, cooked on hot clay griddles." },
+      { name: "Sakinalu", desc: "A deep-fried concentric ring snack made of rice flour and sesame seeds, prepared during Sankranti." }
+    ]
+  },
+  "tr": {
+    name: "TRIPURA",
+    image: "/images/food/tripura_food.jpg",
+    dishes: [
+      { name: "Mui Borok", desc: "Local stews flavored with fermented fish, boiled without oil along with seasonal herbs and potatoes." },
+      { name: "Kosoi Bwtwi", desc: "A traditional oil-free stew prepared from green beans, garlic, and fermented fish seasoning." },
+      { name: "Wahan Mosdeng", desc: "Pounded roasted pork cubes seasoned with roasted green chilies, raw onions, and fresh ginger." }
+    ]
+  },
+  "up": {
+    name: "UTTAR PRADESH",
+    image: "/images/food/region-north.jpg",
+    dishes: [
+      { name: "Galouti Kebab", desc: "Melt-in-the-mouth minced meat patties flavored with raw papaya paste and a blend of over 100 dry spices." },
+      { name: "Tehri", desc: "A yellow spiced rice pot cooked with potatoes, green peas, cauliflower, and tempered with cumin." },
+      { name: "Malaiyo", desc: "A seasonal winter dessert made by whipping fresh milk cream under morning dew, flavored with saffron." }
+    ]
+  },
+  "ut": {
+    name: "UTTARAKHAND",
+    image: "/images/food/uttarakhand_food.jpg",
+    dishes: [
+      { name: "Kafuli", desc: "A thick, green curry of slow-boiled spinach and fenugreek leaves, thickened with rice paste and cooked in mustard oil." },
+      { name: "Bhang ki Chutney", desc: "A tangy, nutty condiment prepared from roasted hemp seeds pounded with mint, coriander, and lemon juice." },
+      { name: "Aloo Ke Gutke", desc: "Parboiled mountain potatoes stir-fried with dry red chilies and jakhiya seeds." }
+    ]
+  },
+  "wb": {
+    name: "WEST BENGAL",
+    image: "/images/food/ingredient-mustardoil.jpg",
+    dishes: [
+      { name: "Machher Jhol", desc: "A light, comforting freshwater fish curry simmered with potatoes and cumin in pungent mustard oil." },
+      { name: "Shorshe Ilish", desc: "Hilsa fish steaks slow-steamed in a thick paste of sharp yellow mustard seeds and green chilies." },
+      { name: "Shukto", desc: "A bitter-sweet starter stew of mixed vegetables in a ginger-mustard milk broth." }
+    ]
+  },
+  "an": {
+    name: "ANDAMAN & NICOBAR ISLANDS",
+    image: "/images/food/andaman_and_nicobar_islands_food.jpg",
+    dishes: [
+      { name: "Coastal Fish Curry", desc: "Fresh marine catches cooked in spicy tamarind and coconut milk gravy." },
+      { name: "Coconut Prawn Curry", desc: "Succulent prawns simmered in warm spices, squeezed coconut milk, and curry leaves." },
+      { name: "Nicobarese Pandanus Bread", desc: "A dense, boiled bread prepared from the starchy pulp of the wild pandanus fruit." }
+    ]
+  },
+  "ch": {
+    name: "CHANDIGARH",
+    image: "/images/food/chandigarh_food.jpg",
+    dishes: [
+      { name: "Tandoori Roti & Dal", desc: "Clay-oven baked whole-wheat flatbreads, served with slow-cooked buttery black lentils." },
+      { name: "Paneer Tikka", desc: "Cubes of fresh cottage cheese marinated in spiced yogurt and grilled on skewers." },
+      { name: "Chhole Bhature", desc: "Spicy chickpea curry paired with deep-fried leavened flatbreads and pickles." }
+    ]
+  },
+  "dn": {
+    name: "DADRA & NAGAR HAVELI AND DAMAN & DIU",
+    image: "/images/food/dadra_and_nagar_haveli_and_daman_and_diu_food.jpg",
+    dishes: [
+      { name: "Crab Masala", desc: "Fresh crabs cooked in a spicy gravy of roasted coconut, dry red chilies, and garlic." },
+      { name: "Ubadiyu", desc: "A traditional winter dish of mixed root vegetables and beans cooked upside-down in clay pots lined with local leaves." },
+      { name: "Val ni Khichdi", desc: "A comforting rice pot cooked with sprouted field beans, turmeric, and dry spices." }
+    ]
+  },
+  "dl": {
+    name: "DELHI",
+    image: "/images/food/delhi_food.jpg",
+    dishes: [
+      { name: "Butter Chicken", desc: "Tandoor-roasted chicken simmered in a smooth, creamy tomato gravy sweetened with butter." },
+      { name: "Aloo Chaat", desc: "Crispy deep-fried potato cubes tossed with spice powders, tangy tamarind chutney, and fresh coriander." },
+      { name: "Nihari", desc: "A slow-cooked beef or mutton shank stew flavored with dry ginger, fennel seeds, and served with naan." }
+    ]
+  },
+  "jk": {
+    name: "JAMMU & KASHMIR",
+    image: "/images/food/jammu_and_kashmir_food.jpg",
+    dishes: [
+      { name: "Kashmiri Rogan Josh", desc: "Mutton pieces simmered in a rich gravy colored with local cockscomb flowers and Kashmiri red chilies." },
+      { name: "Gustaba", desc: "Soft minced lamb dumplings cooked in a rich, cardamom-flavored yogurt gravy." },
+      { name: "Kashmiri Kahwa", desc: "A green tea brew prepared with saffron strands, crushed almonds, cinnamon, and cardamom." }
+    ]
+  },
+  "la": {
+    name: "LADAKH",
+    image: "/images/food/ladakh_food.jpg",
+    dishes: [
+      { name: "Tsampa", desc: "Roasted barley flour kneaded with hot butter tea, serving as a calorie-dense mountain staple." },
+      { name: "Skyu", desc: "A comforting winter soup containing thumb-sized wheat dough discs, root vegetables, and meat pieces." },
+      { name: "Gur-Gur Chai", desc: "Traditional salty tea churned with tea leaves, baking soda, milk, and yak butter." }
+    ]
+  },
+  "ld": {
+    name: "LAKSHADWEEP",
+    image: "/images/food/lakshadweep_food.jpg",
+    dishes: [
+      { name: "Mas Kadhila", desc: "A dry coconut-based curry cooked with shredded skipjack tuna fillets and curry leaves." },
+      { name: "Coconut Octopus Fry", desc: "Octopus stir-fried with fresh coconut slices, green chilies, turmeric, and onion." },
+      { name: "Kadlakka", desc: "A sweet pudding prepared from ground rice, coconut milk, sugar, and cooked eggs." }
+    ]
+  },
+  "py": {
+    name: "PUDUCHERRY",
+    image: "/images/food/puducherry_food.jpg",
+    dishes: [
+      { name: "Creole Fish Curry", desc: "A fusion curry combining local Tamil spices with French techniques, simmered in coconut milk." },
+      { name: "Pondicherry Vindail", desc: "A regional adaptation of vindaloo cooked with local vinegar, spices, and curry leaves." },
+      { name: "Kourma", desc: "A rich, mildly spiced vegetable stew prepared with cashews, coconut paste, and cream." }
     ]
   }
 };
