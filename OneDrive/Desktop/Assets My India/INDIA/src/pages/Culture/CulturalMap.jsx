@@ -26,8 +26,12 @@ export default function CulturalMap() {
   };
 
   const handleStateSelect = (id, name) => {
-    const data = regions[id] || null;
-    setSelectedState({ id, name, data });
+    let targetId = id;
+    if (id === 'dd') {
+      targetId = 'dn';
+    }
+    const data = regions[targetId] || null;
+    setSelectedState({ id: targetId, name: data ? data.name : name, data });
   };
 
   const handleClose = () => {
@@ -210,14 +214,49 @@ export default function CulturalMap() {
             )}
           </div>
 
+          {/* Selector Dropdown for Mobile accessibility and selecting smaller regions */}
+          <div className="w-full max-w-xs pt-4">
+            <label htmlFor="state-selector" className="text-[9px] font-sans font-bold text-[#6B6B6B]/60 uppercase tracking-widest block mb-1.5 text-center lg:text-left">
+              Jump to State / Territory
+            </label>
+            <select
+              id="state-selector"
+              value={selectedState?.id || ""}
+              onChange={(e) => {
+                const id = e.target.value;
+                if (id) {
+                  const name = regions[id].name;
+                  handleStateSelect(id, name);
+                } else {
+                  handleClose();
+                }
+              }}
+              className="w-full bg-white border border-[#171717]/15 px-3 py-2 text-xs text-[#171717] font-sans rounded-none focus:border-[#E8752A] outline-none transition-colors appearance-none cursor-pointer text-center lg:text-left"
+              style={{
+                backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23171717' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.2' d='m6 8 4 4 4-4'/%3E%3C/svg%3E")`,
+                backgroundPosition: 'right 0.75rem center',
+                backgroundSize: '1rem',
+                backgroundRepeat: 'no-repeat',
+                paddingRight: '2rem'
+              }}
+            >
+              <option value="">Select Region...</option>
+              {Object.entries(regions).map(([id, state]) => (
+                <option key={id} value={id}>
+                  {state.name}
+                </option>
+              ))}
+            </select>
+          </div>
+
           <div className="flex items-center space-x-6 text-[10px] font-sans font-semibold tracking-wider text-[#6B6B6B]">
             <div className="flex items-center space-x-2">
               <span className="w-2.5 h-2.5 bg-[#E8752A]/10 border border-[#E8752A] rounded-sm" />
-              <span>POPULATED EXAMPLES (OR, KL, WB)</span>
+              <span>SELECTED REGION</span>
             </div>
             <div className="flex items-center space-x-2">
               <span className="w-2.5 h-2.5 bg-charcoal/5 border border-charcoal/20 rounded-sm" />
-              <span>OTHER ARCHIVES</span>
+              <span>REGIONAL ARCHIVE</span>
             </div>
           </div>
 

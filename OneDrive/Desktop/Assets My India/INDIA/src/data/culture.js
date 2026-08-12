@@ -348,28 +348,292 @@ export const crafts = [
 
 
 export const regions = {
-  "or": {
-    name: "ODISHA",
-    language: "Odia",
-    dance: "Odissi",
-    art: "Pattachitra Paintings",
-    craft: "Dhokra Metalwork",
-    festival: "Rath Yatra"
+  "ap": {
+    name: "ANDHRA PRADESH",
+    language: "Telugu",
+    dance: "Kuchipudi (classical solo & dance-drama)",
+    art: "Kalamkari (fabric hand-painting)",
+    craft: "Kondapalli Toys (softwood figurines)",
+    festival: "Ugadi (Telugu New Year), Brahmotsavam"
+  },
+  "ar": {
+    name: "ARUNACHAL PRADESH",
+    language: "Nyishi, Adi, Mishmi, Monpa",
+    dance: "Bardo Chham (mask dance), Ponung folk dance",
+    art: "Thangka painting traditions",
+    craft: "Sherdukpen weaving, bamboo and cane baskets",
+    festival: "Lossar (Monpa New Year), Solung, Nyokum"
+  },
+  "as": {
+    name: "ASSAM",
+    language: "Assamese, Bodo",
+    dance: "Sattriya (classical), Bihu (folk dance)",
+    art: "Manuscript painting on sanchi bark",
+    craft: "Muga Silk Weaving, Bell Metal Craft of Sarthebari",
+    festival: "Rongali Bihu, Ambubachi Mela at Kamakhya Temple"
+  },
+  "br": {
+    name: "BIHAR",
+    language: "Maithili, Bhojpuri, Magahi",
+    dance: "Jat-Jatin folk dance, Bidesia theatre",
+    art: "Madhubani (Mithila scroll painting), Tikuli art",
+    craft: "Sikki Grass crafts, Patharkatti stone carving",
+    festival: "Chhath Puja (solar worship), Sonepur Mela"
+  },
+  "cg": {
+    name: "CHHATTISGARH",
+    language: "Chhattisgarhi, Gondi",
+    dance: "Panthi Satnami dance, Raut Nacha folk dance",
+    art: "Pithora tribal paintings, Godna tattoos",
+    craft: "Bastar Dhokra (brass casting), Terracotta art",
+    festival: "Bastar Dussehra (75-day tribal assembly), Hareli"
+  },
+  "ga": {
+    name: "GOA",
+    language: "Konkani",
+    dance: "Dekhni (semi-classical), Fugdi (women's circle dance)",
+    art: "Kaavi mural art (red oxide plaster etching)",
+    craft: "Terracotta pottery, coconut shell carving, brass lamps",
+    festival: "Shigmo (spring carnival), Feast of St. Francis Xavier"
+  },
+  "gj": {
+    name: "GUJARAT",
+    language: "Gujarati",
+    dance: "Garba, Dandiya Raas (circular folk dances)",
+    art: "Pithora tribal murals, Rogan oil paint art on fabric",
+    craft: "Patola double-ikat weaving, Kutch mirror-work embroidery",
+    festival: "Uttarayan (Kite Festival), Navratri"
+  },
+  "hr": {
+    name: "HARYANA",
+    language: "Haryanvi, Hindi",
+    dance: "Saang (folk musical theatre), Dhamal (drum dance)",
+    art: "Phulkari embroidery (shared heritage), clay pottery",
+    craft: "Panipat handlooms, wood carving, iron-smithing",
+    festival: "Surajkund International Crafts Mela, Teej"
+  },
+  "hp": {
+    name: "HIMACHAL PRADESH",
+    language: "Pahari (including Kangri, Mandyali, Chambeali)",
+    dance: "Nati (collective circular folk dance)",
+    art: "Kangra miniature painting (Pahari school)",
+    craft: "Chamba Rumal (double-sided embroidery), Kullu shawls",
+    festival: "Kullu Dussehra (deities gathering), Minjar Fair"
+  },
+  "jh": {
+    name: "JHARKHAND",
+    language: "Santali, Mundari, Kurukh, Khortha",
+    dance: "Chhau (martial mask dance), Jhumair folk dance",
+    art: "Sohrai and Khovar tribal mural paintings",
+    craft: "Paitkar scroll painting, bamboo basketry, wood carving",
+    festival: "Sarhul (spring flower festival), Karma festival"
+  },
+  "ka": {
+    name: "KARNATAKA",
+    language: "Kannada",
+    dance: "Yakshagana (epic dance-drama), Dollu Kunitha (drum dance)",
+    art: "Mysore painting (gesso work), Chittara tribal murals",
+    craft: "Channapatna Toys (lacquered wood), Bidriware (silver inlay)",
+    festival: "Mysuru Dasara (elephants palace parade), Ugadi"
   },
   "kl": {
     name: "KERALA",
     language: "Malayalam",
-    dance: "Kathakali",
-    art: "Mural Painting traditions",
-    craft: "Aranmula Kannadi metal mirrors",
-    festival: "Onam"
+    dance: "Kathakali, Mohiniyattam, Theyyam (ritual dance-drama)",
+    art: "Temple mural painting, Kalamezhuthu floor art",
+    craft: "Aranmula metal mirrors, Coir craft, Nettur Petti boxes",
+    festival: "Onam (harvest), Thrissur Pooram (temple feast)"
+  },
+  "mp": {
+    name: "MADHYA PRADESH",
+    language: "Hindi, Malvi, Bundeli, Gondi",
+    dance: "Matki folk dance, Maach (musical folk theatre)",
+    art: "Gond tribal painting, Bagh woodblock prints",
+    craft: "Chanderi and Maheshwari handloom weaving, Dhokra metalwork",
+    festival: "Khajuraho Dance Festival, Lokrang, Bhagoria tribal mela"
+  },
+  "mh": {
+    name: "MAHARASHTRA",
+    language: "Marathi",
+    dance: "Lavani (energetic folk dance), Koli dance (fisherfolk)",
+    art: "Warli tribal painting (geometric rice paste art)",
+    craft: "Paithani silk sarees (peacock border), Kolhapuri chappals",
+    festival: "Ganesh Chaturthi (monumental community celebrations)"
+  },
+  "mn": {
+    name: "MANIPUR",
+    language: "Meitei (Manipuri)",
+    dance: "Manipuri Ras Lila (classical), Thang-Ta (martial dance)",
+    art: "Thangka and court painting traditions",
+    craft: "Longpi Black Stone Pottery (clay and serpentinite stone)",
+    festival: "Yaoshang (Holi with traditional dancing), Sangai Festival"
+  },
+  "ml": {
+    name: "MEGHALAYA",
+    language: "Khasi, Garo, Pnar",
+    dance: "Nongkrem (Khasi dance), Wangala (Garo drum dance)",
+    art: "Weaving and body ornamentation traditions",
+    craft: "Bamboo and cane bridge weaving, cane stool craft",
+    festival: "Shad Suk Mynsiem, Wangala (Hundred Drums Festival)"
+  },
+  "mz": {
+    name: "MIZORAM",
+    language: "Mizo",
+    dance: "Cheraw (bamboo dance with clicking sticks), Chheihlam",
+    art: "Traditional Mizo puan textile patterns",
+    craft: "Bamboo basketry, hat weaving, traditional loin loom",
+    festival: "Chapchar Kut (spring harvest celebration), Mim Kut"
+  },
+  "nl": {
+    name: "NAGALAND",
+    language: "Naga languages (Ao, Angami, Sema, Lotha)",
+    dance: "Zeliang folk dance, tribal war dances",
+    art: "Wood carving on morungs, shell ornamentation",
+    craft: "Naga loin-loom shawls (marking social rank), beadwork",
+    festival: "Hornbill Festival (unity gathering of all tribes)"
+  },
+  "or": {
+    name: "ODISHA",
+    language: "Odia",
+    dance: "Odissi (classical), Purulia/Seraikela Chhau, Gotipua",
+    art: "Pattachitra scroll paintings, Palm-leaf etching",
+    craft: "Cuttack Silver Filigree (Tarakasi), Dhokra metalwork",
+    festival: "Ratha Yatra (Puri Chariot Festival), Konark Dance Festival"
+  },
+  "pb": {
+    name: "PUNJAB",
+    language: "Punjabi",
+    dance: "Bhangra (men's harvest dance), Giddha (women's folk dance)",
+    art: "Phulkari flower embroidery (geometric satin stitch)",
+    craft: "Jutti leather footwear, wood inlay work, clay pottery",
+    festival: "Lohri, Baisakhi (harvest & establishment of Khalsa)"
+  },
+  "rj": {
+    name: "RAJASTHAN",
+    language: "Rajasthani (Marwari, Mewari, Jaipuri)",
+    dance: "Ghoomar (royal circular dance), Kalbelya (snake-charmer dance)",
+    art: "Phad scroll painting, Pichwai (shrinathji temple hangings)",
+    craft: "Jaipur Blue Pottery, Sanganeri block print, Kathputli puppets",
+    festival: "Pushkar Camel Fair, Teej, Desert Festival Jaisalmer"
+  },
+  "sk": {
+    name: "SIKKIM",
+    language: "Nepali, Bhutia, Lepcha",
+    dance: "Singhi Chham (snow lion dance), Yak Chham mask dances",
+    art: "Thangka painting (Buddhist scroll painting on cotton/silk)",
+    craft: "Choktse tables (folding hand-carved wood), carpet weaving",
+    festival: "Saga Dawa (sacred Buddhist festival), Pang Lhabsol"
+  },
+  "tn": {
+    name: "TAMIL NADU",
+    language: "Tamil",
+    dance: "Bharatanatyam (classical), Karakattam & Therukoothu",
+    art: "Tanjore gold-foil relief painting, Kolam floor patterns",
+    craft: "Kanchipuram Silk Weaving, Temple stone carving, Swamimalai Bronze",
+    festival: "Pongal (four-day harvest festival), Karthigai Deepam"
+  },
+  "tg": {
+    name: "TELANGANA",
+    language: "Telugu, Urdu",
+    dance: "Perini Sivatandavam (ancient warrior dance)",
+    art: "Cheriyal Scroll Painting (stylized storytelling canvas)",
+    craft: "Pemberthi Brassware, Pochampally Ikat (weaving), Bidriware",
+    festival: "Bathukamma (flower stack festival), Bonalu"
+  },
+  "tr": {
+    name: "TRIPURA",
+    language: "Kokborok, Bengali",
+    dance: "Garia (harvest worship dance), Hojagiri (balancing folk dance)",
+    art: "Tribal body tattoo designs, weaving patterns",
+    craft: "Bamboo and cane crafts (highly detailed screens and furniture)",
+    festival: "Kharchi Puja (worship of fourteen deities)"
+  },
+  "up": {
+    name: "UTTAR PRADESH",
+    language: "Hindi, Awadhi, Urdu, Bhojpuri",
+    dance: "Kathak (classical), Ramlila (epic theatrical enactment)",
+    art: "Sanjhi paper stenciling (Mathura temple art)",
+    craft: "Banarasi Silk Weaving, Chikankari embroidery of Lucknow",
+    festival: "Kumbh Mela (spiritual bathing assembly), Lathmar Holi"
+  },
+  "uk": {
+    name: "UTTARAKHAND",
+    language: "Garhwali, Kumaoni",
+    dance: "Choliya (sword folk dance), Jhora community dance",
+    art: "Aipan ritual floor art (drawn with red clay and rice paste)",
+    craft: "Likhai (wood carving on house frames), copperware",
+    festival: "Nanda Devi Raj Jat, Ganga Aarti at Haridwar"
   },
   "wb": {
     name: "WEST BENGAL",
     language: "Bengali",
-    dance: "Chhau & Baul traditions",
-    art: "Patua scroll paintings",
-    craft: "Terracotta clay craftsmanship",
-    festival: "Durga Puja"
+    dance: "Purulia Chhau mask dance, Baul folk music-singing",
+    art: "Patua Scroll Painting (Alpana floor art)",
+    craft: "Bishnupur Terracotta tiles, Dokra metalcraft, Kantha embroidery",
+    festival: "Durga Puja (UNESCO representative list), Poila Baisakh"
+  },
+  "an": {
+    name: "ANDAMAN & NICOBAR ISLANDS",
+    language: "Nicobarese, Bengali, Tamil, Telugu, Hindi",
+    dance: "Nicobarese tribal circular dance",
+    art: "Shell art, tribal cave drawings",
+    craft: "Cane and bamboo basketry, coconut shell carvings",
+    festival: "Island Tourism Festival, Ossuary Feast (ancestor remembrance)"
+  },
+  "ch": {
+    name: "CHANDIGARH",
+    language: "Punjabi, Hindi",
+    dance: "Giddha and Bhangra folk forms, street plays",
+    art: "Rock Garden sculpture art (recycled waste installations)",
+    craft: "Modern architectural design, pottery",
+    festival: "Rose Festival, Plaza Carnival"
+  },
+  "dn": {
+    name: "DADRA & NAGAR HAVELI AND DAMAN & DIU",
+    language: "Gujarati, Konkani, Marathi, Warli",
+    dance: "Tarpa dance (performed to double-reed wind instrument), Gheria",
+    art: "Warli paintings, kaavi plaster etchings",
+    craft: "Tortoiseshell carving, leather slippers, bamboo mats",
+    festival: "Tarpa Festival, Nariyal Poornima"
+  },
+  "dl": {
+    name: "DELHI",
+    language: "Hindi, Punjabi, Urdu, English",
+    dance: "Kathak, contemporary performance arts, street theatre",
+    art: "Mughal miniature painting heritage, street graffiti art",
+    craft: "Ivory style carving, pottery of Uttam Nagar, Zardozi embroidery",
+    festival: "Qutub Festival, Phool Walon Ki Sair, India Art Fair"
+  },
+  "jk": {
+    name: "JAMMU & KASHMIR",
+    language: "Kashmiri, Dogri, Urdu",
+    dance: "Rouf (women's rhythmic folk dance), Kud dance of Jammu",
+    art: "Kashmiri papier-mâché painting (detailed gold & lacquer)",
+    craft: "Pashmina shawls (fine wool), Silk hand-knotted carpets",
+    festival: "Tulip Festival, Shikara Festival, Eid-ul-Fitr, Shivratri"
+  },
+  "la": {
+    name: "LADAKH",
+    language: "Ladakhi (Bhoti)",
+    dance: "Cham Masked Dance (performed by Buddhist monks in monasteries)",
+    art: "Buddhist Thangka painting on scrolls, sand mandalas",
+    craft: "Metal engraving (prayer wheels, tea kettles), wood block printing",
+    festival: "Hemis Festival, Losar (Tibetan New Year)"
+  },
+  "ld": {
+    name: "LAKSHADWEEP",
+    language: "Jeseri, Mahl, Malayalam",
+    dance: "Lava dance (rhythmic folk dance), Kolkali",
+    art: "Coral-motif wall reliefs, Islamic calligraphy",
+    craft: "Coir rope twisting, coconut shell crafts, boat building",
+    festival: "Eid-ul-Fitr, Milad-un-Nabi"
+  },
+  "py": {
+    name: "PUDUCHERRY",
+    language: "Tamil, French, Telugu, Malayalam",
+    dance: "Garadi (ancient dance celebrating monkey army victories)",
+    art: "French-colonial architecture, Tanjore painting",
+    craft: "Terracotta toys of Vilianur, handmade paper, Auroville pottery",
+    festival: "Fête de Pondichéry, Pongal, Bastille Day"
   }
 };
