@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import southAsiaOutline from '../../data/south_asia_outline.json';
 
 const historicalPeriods = [
   {
@@ -10,12 +11,14 @@ const historicalPeriods = [
     description: "Centred around the Indus and Ghaggar-Hakra river basins, this civilization featured highly planned cities, brick architecture, advanced drainage systems, and extensive trade networks. It represents one of the earliest urban societies in human history, characterized by decentralized authority rather than a single unified empire.",
     note: "Approximate extent of urban settlements. Reconstructed from archaeological sites.",
     labels: [
-      { text: "Harappa", x: 125, y: 140 },
-      { text: "Mohenjo-daro", x: 75, y: 220 },
-      { text: "Lothal", x: 115, y: 310 }
+      { text: "Harappa", x: 169, y: 128 },
+      { text: "Mohenjo-daro", x: 107, y: 188 },
+      { text: "Lothal", x: 161, y: 271 },
+      { text: "Dholavira", x: 135, y: 247 }
     ],
-    // Highlighting Balochistan, Indus Valley, Punjab, Gujarat
-    highlightD: "M 50,240 C 65,180 90,130 120,105 C 150,110 180,120 180,150 C 180,185 160,225 160,265 C 145,295 125,315 110,310 C 90,305 70,285 50,240 Z",
+    // Primary highlight over Pakistan, plus adjoining parts of Northwest India
+    highlightD: "M 100,240 C 120,180 140,130 170,105 C 190,110 210,120 210,150 C 210,185 195,225 195,265 C 180,295 160,315 145,310 C 130,305 110,285 100,240 Z",
+    highlightCountries: ["Pakistan"],
     color: "#E8752A" // Warm Saffron
   },
   {
@@ -26,10 +29,11 @@ const historicalPeriods = [
     description: "Following the decline of the Indus cities, populations migrated east toward the fertile Indo-Gangetic plains. Early tribal kingdoms (Janapadas) emerged, supported by agricultural iron-age settlements. This period laid the structural foundations of early Indian philosophy, literature, and social structures.",
     note: "Primary area of late Vedic settlements and early cultural influence.",
     labels: [
-      { text: "Kuru", x: 170, y: 140 },
-      { text: "Panchala", x: 215, y: 160 }
+      { text: "Kuru", x: 226, y: 165 },
+      { text: "Panchala", x: 255, y: 175 }
     ],
-    highlightD: "M 120,110 C 155,90 200,90 240,115 C 280,140 280,165 260,190 C 220,210 180,210 150,200 C 130,170 120,140 120,110 Z",
+    highlightD: "M 160,130 C 205,100 260,100 310,130 C 360,165 360,200 330,230 C 280,250 230,250 190,240 Z",
+    highlightCountries: [],
     color: "#16734A" // Restrained Green
   },
   {
@@ -40,12 +44,13 @@ const historicalPeriods = [
     description: "Northern India saw the emergence of sixteen major oligarchies and kingdoms (Mahajanapadas). Cities like Vaishali, Varanasi, and Rajgir flourished. This era of intense intellectual ferment saw the rise of Upanishadic thought and the births of Buddhism and Jainism.",
     note: "Approximate locations of major Mahajanapadas and regional republics.",
     labels: [
-      { text: "Magadha", x: 280, y: 190 },
-      { text: "Kosala", x: 230, y: 155 },
-      { text: "Avanti", x: 170, y: 230 },
-      { text: "Takshashila", x: 120, y: 80 }
+      { text: "Magadha", x: 331, y: 218 },
+      { text: "Kosala", x: 280, y: 180 },
+      { text: "Avanti", x: 208, y: 259 },
+      { text: "Takshashila", x: 168, y: 69 }
     ],
-    highlightD: "M 110,120 Q 200,95 320,170 T 360,225 Q 260,245 140,210 Z",
+    highlightD: "M 150,140 Q 250,110 390,200 T 430,265 Q 320,285 180,250 Z",
+    highlightCountries: ["Nepal", "Bhutan"],
     color: "#E8752A"
   },
   {
@@ -56,12 +61,13 @@ const historicalPeriods = [
     description: "Founded by Chandragupta Maurya and expanded by Ashoka, this empire marked the first political consolidation of the majority of the subcontinent. Ashoka's rock and pillar edicts advocating Dhamma (ethics and tolerance) were erected across South Asia.",
     note: "Approximate maximum extent under Ashoka. Excludes deep southern kingdoms (Cholas, Cheras, Pandyas).",
     labels: [
-      { text: "Pataliputra", x: 290, y: 180 },
-      { text: "Takshashila", x: 120, y: 80 },
-      { text: "Ujjain", x: 170, y: 240 },
-      { text: "Kalinga", x: 280, y: 290 }
+      { text: "Pataliputra", x: 331, y: 218 },
+      { text: "Takshashila", x: 168, y: 69 },
+      { text: "Ujjain", x: 208, y: 259 },
+      { text: "Kalinga", x: 340, y: 309 }
     ],
-    highlightD: "M 60,210 C 80,130 110,100 170,60 C 200,45 250,55 320,95 C 360,110 380,125 410,150 C 415,200 405,250 365,280 C 330,320 280,390 260,420 C 240,410 220,380 205,350 C 185,325 155,290 120,290 C 105,280 80,270 60,210 Z",
+    highlightD: "",
+    highlightCountries: ["India", "Pakistan", "Bangladesh", "Nepal", "Bhutan"],
     color: "#16734A"
   },
   {
@@ -72,10 +78,11 @@ const historicalPeriods = [
     description: "Based in Magadha, the Guptas established an empire that fostered a classical golden age of Sanskrit literature, mathematics, astronomy, and stone architecture. Scholars like Aryabhata and Kalidasa made landmark discoveries and creations in this era.",
     note: "Indicative core empire territory. Surrounding regions were linked through tributary or alliances.",
     labels: [
-      { text: "Pataliputra", x: 290, y: 180 },
-      { text: "Ujjain", x: 170, y: 240 }
+      { text: "Pataliputra", x: 331, y: 218 },
+      { text: "Ujjain", x: 208, y: 259 }
     ],
-    highlightD: "M 115,190 C 145,150 190,120 240,130 C 290,130 330,150 350,170 C 360,200 350,230 335,250 C 295,280 220,285 180,265 C 140,250 120,225 115,190 Z",
+    highlightD: "M 150,210 C 185,160 240,130 300,140 C 360,140 410,165 430,190 C 440,230 430,265 410,290 C 360,325 270,330 220,310 C 170,290 150,260 150,210 Z",
+    highlightCountries: ["Nepal", "Bhutan"],
     color: "#E8752A"
   },
   {
@@ -86,11 +93,11 @@ const historicalPeriods = [
     description: "The subcontinent featured dynamic regional powers. In the North, successive dynasties of the Delhi Sultanate introduced new architectural styles, languages, and administrative systems, while the Vijayanagara Empire flourished in the Deccan.",
     note: "Indicative spheres of power showing Delhi Sultanate (North) and Vijayanagara Empire (South).",
     labels: [
-      { text: "Delhi Sultanate", x: 180, y: 140 },
-      { text: "Vijayanagara", x: 210, y: 390 },
-      { text: "Gajapatis", x: 280, y: 270 }
+      { text: "Delhi Sultanate", x: 226, y: 165 },
+      { text: "Vijayanagara", x: 217, y: 389 }
     ],
-    highlightD: "M 130,140 C 160,110 210,100 260,120 C 300,140 330,165 315,210 C 265,240 200,240 160,210 Z M 160,370 C 200,360 240,365 250,380 C 265,410 255,445 230,460 C 215,480 200,500 195,505 C 190,500 180,480 170,460 C 150,430 150,400 160,370 Z",
+    highlightD: "M 160,160 C 200,120 260,110 320,140 C 370,165 395,195 375,250 C 315,285 240,285 190,250 Z M 200,380 C 240,370 290,375 300,390 C 318,425 305,465 275,480 C 255,505 240,528 234,534 C 228,528 216,505 204,480 C 180,445 180,410 200,380 Z",
+    highlightCountries: [],
     color: "#16734A"
   },
   {
@@ -101,11 +108,11 @@ const historicalPeriods = [
     description: "Established by Babur and expanded by Akbar and his successors, the Mughals built a highly centralized empire famous for monumental architecture (like the Taj Mahal), administrative reforms, and synthesis of Persian and local Indian traditions.",
     note: "Approximate territorial extent at its peak under Aurangzeb (c. 1707).",
     labels: [
-      { text: "Delhi", x: 188, y: 150 },
-      { text: "Agra", x: 205, y: 165 },
-      { text: "Fatehpur Sikri", x: 195, y: 175 }
+      { text: "Delhi", x: 226, y: 165 },
+      { text: "Agra", x: 237, y: 190 }
     ],
-    highlightD: "M 50,240 C 80,160 110,120 170,60 C 210,50 250,55 330,95 C 370,110 395,120 415,145 C 415,200 390,245 365,280 C 320,335 285,395 260,420 C 240,410 210,385 190,325 C 160,290 115,290 100,285 C 80,270 70,260 50,240 Z",
+    highlightD: "",
+    highlightCountries: ["India", "Pakistan", "Bangladesh", "Nepal", "Bhutan"],
     color: "#E8752A"
   },
   {
@@ -116,11 +123,12 @@ const historicalPeriods = [
     description: "Following the decline of Mughal central authority, powerful regional states like the Maratha Confederacy, Mysore, and the Sikh Empire arose. In parallel, the British East India Company gradually expanded territory through strategic alliances and military conquest.",
     note: "Indicative geography showing Maratha territories (Central), Sikh Kingdom (Northwest), and early East India Company Presidencies.",
     labels: [
-      { text: "Maratha Confederacy", x: 160, y: 280 },
-      { text: "Sikh Kingdom", x: 140, y: 100 },
-      { text: "Bengal Presidency", x: 340, y: 200 }
+      { text: "Bombay", x: 169, y: 329 },
+      { text: "Calcutta", x: 373, y: 270 },
+      { text: "Madras", x: 267, y: 425 }
     ],
-    highlightD: "M 135,320 C 140,290 180,270 210,270 C 235,280 250,310 255,335 C 240,365 210,390 195,385 C 170,380 150,350 135,320 Z M 130,100 C 145,85 170,70 175,80 C 180,100 170,120 160,130 C 150,135 140,125 130,100 Z M 310,230 C 330,210 360,210 375,230 C 375,260 360,280 340,280 C 325,280 310,260 310,230 Z",
+    highlightD: "M 160,250 C 200,230 240,230 250,250 C 265,280 255,315 230,330 C 215,350 200,370 195,375 C 190,370 180,350 170,330 C 150,300 150,270 160,250 Z",
+    highlightCountries: ["Bangladesh"],
     color: "#16734A"
   },
   {
@@ -131,11 +139,12 @@ const historicalPeriods = [
     description: "Direct British Crown rule was established after the 1857 Uprising. The map was politically split between 'British India' (provinces administered directly) and hundreds of semi-autonomous 'Princely States' under British suzerainty.",
     note: "Boundaries of British India (provinces) and Princely States (indirect rule). Reconstructed from historical colonial surveys.",
     labels: [
-      { text: "Bombay", x: 145, y: 310 },
-      { text: "Calcutta", x: 335, y: 205 },
-      { text: "Madras", x: 235, y: 410 }
+      { text: "Bombay", x: 169, y: 329 },
+      { text: "Calcutta", x: 373, y: 270 },
+      { text: "Madras", x: 267, y: 425 }
     ],
-    highlightD: "M 50,240 C 80,160 110,120 170,60 C 210,50 250,55 330,95 C 370,110 395,120 415,145 C 415,200 390,245 365,280 C 320,335 285,395 260,420 C 240,410 210,385 190,325 C 160,290 115,290 100,285 C 80,270 70,260 50,240 Z",
+    highlightD: "",
+    highlightCountries: ["India", "Pakistan", "Bangladesh", "Sri Lanka"],
     color: "#E8752A"
   },
   {
@@ -146,11 +155,12 @@ const historicalPeriods = [
     description: "August 1947 marked the end of British rule and the partition of the subcontinent into the independent dominions of India and Pakistan. The partition led to massive migrations and border changes in Punjab and Bengal.",
     note: "Approximations of new national boundaries showing India and East/West Pakistan in 1947.",
     labels: [
-      { text: "West Pakistan", x: 90, y: 160 },
-      { text: "East Pakistan", x: 350, y: 210 },
-      { text: "New Delhi", x: 188, y: 150 }
+      { text: "West Pakistan", x: 120, y: 140 },
+      { text: "East Pakistan", x: 385, y: 240 },
+      { text: "New Delhi", x: 226, y: 165 }
     ],
-    highlightD: "M 148,110 L 250,55 L 410,120 L 370,220 L 290,480 L 230,410 L 160,290 Z",
+    highlightD: "",
+    highlightCountries: ["India", "Pakistan", "Bangladesh"],
     color: "#16734A"
   },
   {
@@ -161,9 +171,10 @@ const historicalPeriods = [
     description: "The constitution of 1950 established India as a sovereign, democratic republic. Princely states were integrated, and state borders were later reorganized along linguistic lines to form the union of states that exists today.",
     note: "Modern international boundaries of the Republic of India.",
     labels: [
-      { text: "Republic of India", x: 220, y: 260 }
+      { text: "New Delhi", x: 226, y: 165 }
     ],
-    highlightD: "M 148,110 L 250,55 L 410,120 L 370,170 L 320,180 L 320,220 L 370,220 L 330,230 L 290,480 L 230,410 L 160,290 Z",
+    highlightD: "",
+    highlightCountries: ["India"],
     color: "#16734A"
   }
 ];
@@ -242,83 +253,59 @@ export default function IndiaThroughTime() {
               className="w-full h-full select-none"
               aria-label={`Subcontinent map for ${period.title}`}
             >
-              {/* Base Subcontinent Landmass */}
-              <path
-                d="M 50,240 C 60,250 70,250 80,255 C 95,260 110,270 110,280 C 105,290 95,295 95,300 C 95,305 115,315 125,310 C 130,325 135,340 135,350 C 135,370 140,390 140,410 C 140,430 150,450 160,460 C 170,480 185,500 200,520 C 205,520 210,500 215,480 C 220,460 225,445 230,440 C 240,410 255,395 265,380 C 280,360 300,340 320,320 C 330,305 335,295 340,290 C 350,290 365,295 375,290 C 385,285 400,280 410,270 C 415,250 420,200 420,150 C 410,140 380,145 340,160 C 320,165 290,150 240,130 C 210,120 200,90 190,40 C 180,40 170,50 170,60 C 150,70 130,80 130,100 C 110,125 90,135 90,150 C 70,180 50,210 50,240 Z"
-                fill="#EAE5DA"
-                stroke="#171717"
-                strokeWidth="1.2"
-                strokeOpacity="0.1"
-              />
-
-              {/* Sri Lanka Landmass */}
-              <path
-                d="M 235,510 C 240,500 255,500 260,515 C 265,530 255,550 245,550 C 235,550 230,530 235,510 Z"
-                fill="#EAE5DA"
-                stroke="#171717"
-                strokeWidth="1"
-                strokeOpacity="0.1"
-              />
-
-              {/* Rivers (Soft Natural Slate Green/Blue) */}
-              {/* Indus River */}
-              <path
-                d="M 190,40 Q 150,80 140,110 T 110,200 T 80,255"
-                fill="none"
-                stroke="#A9BCA6"
-                strokeWidth="1.2"
-                strokeOpacity="0.7"
-              />
-              {/* Ganga River */}
-              <path
-                d="M 205,105 Q 240,140 280,160 T 340,290"
-                fill="none"
-                stroke="#A9BCA6"
-                strokeWidth="1.2"
-                strokeOpacity="0.7"
-              />
-              {/* Brahmaputra River */}
-              <path
-                d="M 380,140 Q 400,165 375,185 T 340,290"
-                fill="none"
-                stroke="#A9BCA6"
-                strokeWidth="1"
-                strokeOpacity="0.7"
-              />
-              {/* Narmada River */}
-              <path
-                d="M 240,265 Q 180,265 125,310"
-                fill="none"
-                stroke="#A9BCA6"
-                strokeWidth="1"
-                strokeOpacity="0.5"
-              />
-              {/* Krishna River */}
-              <path
-                d="M 152,410 Q 200,410 240,430"
-                fill="none"
-                stroke="#A9BCA6"
-                strokeWidth="1"
-                strokeOpacity="0.5"
-              />
-
-              {/* Dynamic Territorial Extent Highlights */}
-              <AnimatePresence mode="wait">
-                <motion.path
-                  key={period.id}
-                  d={period.highlightD}
-                  fill={period.color}
-                  fillOpacity="0.25"
-                  stroke={period.color}
-                  strokeWidth="1.8"
-                  initial={{ opacity: 0, scale: 0.98 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.98 }}
-                  transition={{ duration: 0.3 }}
+              {/* Base Geographic Layer (Always Geographically Accurate Natural Earth Outlines) */}
+              {Object.entries(southAsiaOutline).map(([country, path]) => (
+                <path
+                  key={country}
+                  d={path}
+                  fill="#EAE5DA"
+                  stroke="#171717"
+                  strokeWidth="1.2"
+                  strokeOpacity="0.15"
                 />
+              ))}
+
+              {/* Dynamic Territorial Extent Highlights / Overlay */}
+              <AnimatePresence mode="wait">
+                <g key={period.id}>
+                  {/* Highlight Country Borders from GIS Dataset */}
+                  {period.highlightCountries.map((cName) => {
+                    const countryPath = southAsiaOutline[cName];
+                    if (!countryPath) return null;
+                    return (
+                      <motion.path
+                        key={`${period.id}-${cName}`}
+                        d={countryPath}
+                        fill={period.color}
+                        fillOpacity="0.25"
+                        stroke={period.color}
+                        strokeWidth="1.8"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    );
+                  })}
+
+                  {/* Render Custom Empire-specific Extent Boundaries Overlay */}
+                  {period.highlightD && (
+                    <motion.path
+                      d={period.highlightD}
+                      fill={period.color}
+                      fillOpacity="0.25"
+                      stroke={period.color}
+                      strokeWidth="1.8"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  )}
+                </g>
               </AnimatePresence>
 
-              {/* Dynamic Period Labels */}
+              {/* Dynamic Period Labels placed at actual geographical sites */}
               {period.labels.map((label, idx) => (
                 <g key={`${period.id}-label-${idx}`}>
                   <circle
@@ -348,7 +335,7 @@ export default function IndiaThroughTime() {
             {/* Small Legend Overlay */}
             <div className="absolute bottom-3 left-3 bg-white/85 backdrop-blur-[2px] border border-[#171717]/5 px-2 py-1 text-[9px] font-sans text-[#6B6B6B] uppercase tracking-wider scale-90 origin-bottom-left">
               <span className="inline-block w-2.5 h-1.5 align-middle mr-1.5 rounded-sm" style={{ backgroundColor: period.color + '40', border: `1px solid ${period.color}` }} />
-              Indicative extent / Approximate boundaries
+              Indicative historical extent / Approximate boundaries
             </div>
           </div>
 
