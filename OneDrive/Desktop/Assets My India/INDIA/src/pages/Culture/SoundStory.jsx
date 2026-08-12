@@ -58,7 +58,8 @@ const filmsList = [
     borderColor: "border-[#171717]/10",
     lineColor: "bg-[#171717]/20",
     subColor: "text-[#6B6B6B]",
-    labelText: "MONOCHROME REALISM — WEST BENGAL"
+    labelText: "MONOCHROME REALISM — WEST BENGAL",
+    category: "Historical"
   },
   {
     id: "mother_india",
@@ -72,7 +73,8 @@ const filmsList = [
     borderColor: "border-[#F7F4EE]/10",
     lineColor: "bg-[#F7F4EE]/20",
     subColor: "text-[#F7F4EE]/60",
-    labelText: "CLAY SOIL & NATIONHOOD"
+    labelText: "CLAY SOIL & NATIONHOOD",
+    category: "Historical"
   },
   {
     id: "mughal_e_azam",
@@ -86,7 +88,8 @@ const filmsList = [
     borderColor: "border-[#FAF6F0]/15",
     lineColor: "bg-[#FAF6F0]/25",
     subColor: "text-[#FAF6F0]/70",
-    labelText: "IMPERIAL GLASS PALACE SPECTACLE"
+    labelText: "IMPERIAL GLASS PALACE SPECTACLE",
+    category: "Historical"
   },
   {
     id: "sholay",
@@ -100,7 +103,8 @@ const filmsList = [
     borderColor: "border-[#F7F4EE]/15",
     lineColor: "bg-[#F7F4EE]/25",
     subColor: "text-[#F7F4EE]/75",
-    labelText: "ROCKY OUTPOSTS & OUTLAWS"
+    labelText: "ROCKY OUTPOSTS & OUTLAWS",
+    category: "Historical"
   },
   {
     id: "manthan",
@@ -114,7 +118,8 @@ const filmsList = [
     borderColor: "border-[#16734A]/15",
     lineColor: "bg-[#16734A]/25",
     subColor: "text-[#16734A]/70",
-    labelText: "WHITE REVOLUTION & DEMOCRACY"
+    labelText: "WHITE REVOLUTION & DEMOCRACY",
+    category: "Historical"
   },
   {
     id: "nayakan",
@@ -128,7 +133,8 @@ const filmsList = [
     borderColor: "border-[#EAEDED]/10",
     lineColor: "bg-[#EAEDED]/20",
     subColor: "text-[#EAEDED]/65",
-    labelText: "RAIN-SLICKED URBAN TRANSFORMATION"
+    labelText: "RAIN-SLICKED URBAN TRANSFORMATION",
+    category: "Historical"
   },
   {
     id: "swades",
@@ -142,7 +148,83 @@ const filmsList = [
     borderColor: "border-[#E8752A]/20",
     lineColor: "bg-[#E8752A]/30",
     subColor: "text-[#E0E1DD]/70",
-    labelText: "COSMIC ENERGY & RETURN TO ROOTS"
+    labelText: "COSMIC ENERGY & RETURN TO ROOTS",
+    category: "Historical"
+  },
+  {
+    id: "rang_de_basanti",
+    title: "RANG DE BASANTI",
+    year: "2006",
+    theme: "Youth, memory & civic responsibility",
+    description: "History enters the lives of a generation and forces it to ask what citizenship means.",
+    image: null,
+    bgStyle: "from-[#D35400] to-[#C0392B]",
+    textColor: "text-[#F7F4EE]",
+    borderColor: "border-[#F7F4EE]/20",
+    lineColor: "bg-[#F7F4EE]/30",
+    subColor: "text-[#F7F4EE]/75",
+    labelText: "YOUTH REBELLION & MEMORY",
+    category: "Modern"
+  },
+  {
+    id: "taare_zameen_par",
+    title: "TAARE ZAMEEN PAR",
+    year: "2007",
+    theme: "Education, childhood & individuality",
+    description: "A child's struggle becomes a question about how society understands difference.",
+    image: null,
+    bgStyle: "from-[#2980B9] to-[#2C3E50]",
+    textColor: "text-[#F7F4EE]",
+    borderColor: "border-[#F7F4EE]/15",
+    lineColor: "bg-[#F7F4EE]/25",
+    subColor: "text-[#F7F4EE]/70",
+    labelText: "CHILDHOOD IMAGINATION & DYSLEXIA",
+    category: "Modern"
+  },
+  {
+    id: "the_lunchbox",
+    title: "THE LUNCHBOX",
+    year: "2013",
+    theme: "Urban loneliness & human connection",
+    description: "In the middle of a crowded city, two ordinary lives unexpectedly find a connection.",
+    image: null,
+    bgStyle: "from-[#8E44AD] to-[#2C3E50]",
+    textColor: "text-[#F7F4EE]",
+    borderColor: "border-[#F7F4EE]/20",
+    lineColor: "bg-[#F7F4EE]/30",
+    subColor: "text-[#F7F4EE]/70",
+    labelText: "MUMBAI LUNCHBOX & QUIET DESIRE",
+    category: "Modern"
+  },
+  {
+    id: "court",
+    title: "COURT",
+    year: "2014",
+    theme: "Institutions, inequality & democracy",
+    description: "A courtroom becomes a window into law, society, power and the people caught between them.",
+    image: null,
+    bgStyle: "from-[#7F8C8D] to-[#34495E]",
+    textColor: "text-[#F7F4EE]",
+    borderColor: "border-[#F7F4EE]/10",
+    lineColor: "bg-[#F7F4EE]/20",
+    subColor: "text-[#F7F4EE]/60",
+    labelText: "JUDICIAL PROCESS & INEQUALITY",
+    category: "Modern"
+  },
+  {
+    id: "article_15",
+    title: "ARTICLE 15",
+    year: "2019",
+    theme: "Caste, equality & social justice",
+    description: "A contemporary investigation confronts one of India's deepest questions about equality and social hierarchy.",
+    image: null,
+    bgStyle: "from-[#16A085] to-[#2C3E50]",
+    textColor: "text-[#F7F4EE]",
+    borderColor: "border-[#F7F4EE]/15",
+    lineColor: "bg-[#F7F4EE]/25",
+    subColor: "text-[#F7F4EE]/70",
+    labelText: "CONSTITUTIONAL JUSTICE & EQUALITY",
+    category: "Modern"
   },
   {
     id: "kumbalangi_nights",
@@ -156,7 +238,23 @@ const filmsList = [
     borderColor: "border-[#F1C40F]/15",
     lineColor: "bg-[#F1C40F]/25",
     subColor: "text-[#F1C40F]/70",
-    labelText: "BACKWATER LAGOON & KERALA SHORES"
+    labelText: "BACKWATER LAGOON & KERALA SHORES",
+    category: "Modern"
+  },
+  {
+    id: "meiyazhagan",
+    title: "MEIYAZHAGAN",
+    year: "2024",
+    theme: "Memory, home & human connection",
+    description: "Sometimes understanding where we come from begins with remembering the people and places we left behind.",
+    image: null,
+    bgStyle: "from-[#27AE60] to-[#1E8449]",
+    textColor: "text-[#F7F4EE]",
+    borderColor: "border-[#F7F4EE]/20",
+    lineColor: "bg-[#F7F4EE]/30",
+    subColor: "text-[#F7F4EE]/75",
+    labelText: "HOMETOWN ROOTS & PURE KINDNESS",
+    category: "Modern"
   }
 ];
 
