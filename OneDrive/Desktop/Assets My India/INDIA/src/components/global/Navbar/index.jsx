@@ -17,8 +17,8 @@ export default function Navbar({ onReplayIntro }) {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const isDarkHeroPage = location.pathname === '/history';
-  const isTransparentDark = isDarkHeroPage && !isScrolled;
+  const isDarkHeroPage = location.pathname === '/history' || location.pathname === '/india-today';
+  const isTransparentDark = isDarkHeroPage && location.pathname !== '/india-today' && !isScrolled;
   
   const drawerRef = useRef(null);
   const closeButtonRef = useRef(null);
@@ -102,7 +102,9 @@ export default function Navbar({ onReplayIntro }) {
           isScrolled 
             ? 'bg-[#F7F4EE]/95 backdrop-blur-md shadow-sm border-b border-[#171717]/5 py-3' 
             : isDarkHeroPage
-              ? 'bg-black/35 backdrop-blur-sm border-b border-white/10 py-5'
+              ? location.pathname === '/india-today'
+                ? 'bg-[#F7F4EE]/94 backdrop-blur-md border-b border-[#171717]/5 py-5'
+                : 'bg-black/35 backdrop-blur-sm border-b border-white/10 py-5'
               : 'bg-transparent py-5'
         }`}
       >
