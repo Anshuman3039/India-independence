@@ -51,64 +51,56 @@ const filmsList = [
     title: "PATHER PANCHALI",
     year: "1955",
     theme: "Everyday life & realism",
-    description: "A village, a family, and an India rarely seen on the screen.",
-    image: "/images/stories/story6-child.jpg"
+    description: "A village, a family, and an India rarely seen on the screen."
   },
   {
     id: "mother_india",
     title: "MOTHER INDIA",
     year: "1957",
     theme: "Rural India, resilience & nationhood",
-    description: "A story of one woman became a larger portrait of a young nation.",
-    image: "/images/stories/story2-fields.jpg"
+    description: "A story of one woman became a larger portrait of a young nation."
   },
   {
     id: "mughal_e_azam",
     title: "MUGHAL-E-AZAM",
     year: "1960",
     theme: "History, spectacle & popular imagination",
-    description: "Cinema became spectacle — and history became imagination.",
-    image: "/images/stories/delhi-redfort.jpg"
+    description: "Cinema became spectacle — and history became imagination."
   },
   {
     id: "sholay",
     title: "SHOLAY",
     year: "1975",
     theme: "Popular culture & cultural memory",
-    description: "Some films become more than films. They become part of how a generation remembers itself.",
-    image: "/images/stories/story1-train.jpg"
+    description: "Some films become more than films. They become part of how a generation remembers itself."
   },
   {
     id: "manthan",
     title: "MANTHAN",
     year: "1976",
     theme: "Community, cooperation & development",
-    description: "A village becomes a place where development, cooperation and power meet.",
-    image: "/images/stories/story3-hands.jpg"
+    description: "A village becomes a place where development, cooperation and power meet."
   },
   {
     id: "nayakan",
     title: "NAYAKAN",
     year: "1987",
     theme: "Regional voice & urban transformation",
-    description: "A city changes. So does the person trying to survive within it.",
-    image: "/images/stories/maharashtra-citylife.jpg"
+    description: "A city changes. So does the person trying to survive within it."
   },
   {
     id: "swades",
     title: "SWADES",
     year: "2004",
     theme: "Belonging, development & civic responsibility",
-    description: "What does it mean to return, belong and contribute?",
-    image: "/images/stories/story6-launch.jpg"
+    description: "What does it mean to return, belong and contribute?"
   },
   {
     id: "kumbalangi_nights",
     title: "KUMBALANGI NIGHTS",
     year: "2019",
     theme: "Contemporary social change",
-    description: "Sometimes the story of a changing India is found in the smallest of places.",
-    image: "/images/stories/story5-sunset.jpg"
+    description: "Sometimes the story of a changing India is found in the smallest of places."
   }
 ];
 
@@ -362,24 +354,32 @@ export default function SoundStory() {
           {/* Cinematic Slider Reel */}
           <div ref={cinemaContainerRef} className="space-y-8 w-full">
             
-            {/* Film frame display */}
-            <div className="w-full aspect-[2.35/1] md:aspect-[2.35/1] overflow-hidden bg-charcoal/5 border border-charcoal/10 relative shadow-lg">
+            {/* Film frame display: Typographic slate instead of stock images */}
+            <div className="w-full aspect-[2.35/1] md:aspect-[2.35/1] overflow-hidden bg-[#171717] border border-[#171717] relative shadow-lg">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeFilm.id}
-                  initial={{ opacity: 0, scale: 1.01 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.4 }}
                   className="w-full h-full"
                 >
-                  <img
-                    src={activeFilm.image}
-                    alt={`${activeFilm.title} (${activeFilm.year}) film scene representation`}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                  <div className="w-full h-full bg-[#171717] flex items-center justify-center relative p-6 md:p-12 select-none">
+                    {/* Elegant classic film slate border */}
+                    <div className="absolute inset-4 border border-[#F7F4EE]/10 flex flex-col justify-center items-center text-center space-y-2 md:space-y-3">
+                      <span className="text-[8px] md:text-[9px] font-sans font-bold text-[#E8752A] uppercase tracking-[0.3em] opacity-85 block">
+                        LANDMARK CINEMA
+                      </span>
+                      <h4 className="font-serif text-xl md:text-4xl text-[#F7F4EE] font-normal tracking-[0.15em] uppercase px-4 leading-tight">
+                        {activeFilm.title}
+                      </h4>
+                      <div className="w-6 md:w-8 h-[1px] bg-[#F7F4EE]/25" />
+                      <span className="text-[9px] md:text-xs font-sans font-light text-[#F7F4EE]/60 tracking-wider">
+                        {activeFilm.year} • {activeFilm.theme}
+                      </span>
+                    </div>
+                  </div>
                 </motion.div>
               </AnimatePresence>
 
