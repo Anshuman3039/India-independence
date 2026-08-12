@@ -46,11 +46,11 @@ export default function NatureClosing() {
 
         <motion.div variants={fadeUp} className="pt-4">
           <Link 
-            to="/explore" 
+            to="/history" 
             className="font-sans text-xs md:text-sm tracking-widest uppercase font-semibold text-white bg-[#E8752A] hover:bg-[#16734A] py-3.5 px-8 transition-colors shadow-md outline-none focus-visible:outline-[#E8752A]"
-            aria-label="Explore the interactive regional geography map portal"
+            aria-label="Explore the interactive history section"
           >
-            EXPLORE INDIA →
+            EXPLORE HISTORY →
           </Link>
         </motion.div>
       </motion.div>
