@@ -217,6 +217,67 @@ const youngCountryStories = [
   }
 ];
 
+const voiceGenerationImages = {
+  questions: "/images/stories/stories-intro-3.jpg",
+  campus: "/images/stories/stories-intro-2.jpg",
+  street: "/images/stories/stories-intro-1.jpg",
+  voice: "/images/identity/republic-voices.jpg"
+};
+
+const voiceGenerationStories = [
+  {
+    id: "questions",
+    chapter: "01 — THE QUESTIONS",
+    title: "EXAMINING THE PRESENT",
+    subtitle: "Civic inquiry, awareness and public discourse",
+    desc: "A generation growing up with widespread digital connections, open information channels, and expanding education is examining systemic issues — from recruitment fairness and campus infrastructure to employment opportunities and governance transparency.",
+    image: voiceGenerationImages.questions,
+    imageCaption: "Youth Engaged in Civic Discussion & Discourse",
+    tag: "CIVIC DISCOURSE"
+  },
+  {
+    id: "campus",
+    chapter: "02 — THE CAMPUS",
+    title: "SPACES OF DEBATE",
+    subtitle: "University forums, student unions and academic freedom",
+    editorialNote: "Universities are not only places to prepare for careers. They are also places where citizens learn to question authority, debate ideas and participate in public life.",
+    desc: "Across central universities, state colleges, and polytechnics, campus gatherings serve as vital incubators for democratic discussion, student representation, and policy debate.",
+    image: voiceGenerationImages.campus,
+    imageCaption: "Student Campus Assemblies & Debate Forums",
+    tag: "CAMPUS DIALOGUE"
+  },
+  {
+    id: "street",
+    chapter: "03 — THE STREET",
+    title: "PUBLIC DEMONSTRATIONS",
+    subtitle: "Peaceful assemblies, petitions and civic visibility",
+    desc: "When formal administrative letters or petitions yield delayed responses, young people take their demands to public spaces like Jantar Mantar. Holding placards and assembling peacefully, candidates and students bring nationwide attention to structural grievances.",
+    image: voiceGenerationImages.street,
+    imageCaption: "Documentary View of Peaceful Public Assemblies",
+    tag: "PUBLIC ASSEMBLY"
+  },
+  {
+    id: "voice",
+    chapter: "04 — THE VOICE",
+    title: "DEMOCRATIC EXPRESSION",
+    subtitle: "Classrooms, petitions, media and the right to disagree",
+    desc: "Democracy is not only expressed at election time. It lives in classrooms, university campuses, street assemblies, digital petitions, investigative journalism, and the fundamental constitutional right to hold public authorities accountable.",
+    image: voiceGenerationImages.voice,
+    imageCaption: "Civic Participation & Public Expression",
+    tag: "DEMOCRATIC RIGHTS"
+  }
+];
+
+const youthConcerns = [
+  { label: "EMPLOYMENT", desc: "Opportunities for stable, dignified careers." },
+  { label: "FAIR RECRUITMENT", desc: "Transparent, merit-based hiring procedures." },
+  { label: "EXAM INTEGRITY", desc: "Systemic safeguards against paper leaks and cancellations." },
+  { label: "EQUAL OPPORTUNITY", desc: "Regional parity in funding and educational access." },
+  { label: "EDUCATION", desc: "Upgraded facilities across state colleges and universities." },
+  { label: "ACCOUNTABILITY", desc: "Responsive administrative communication with citizens." },
+  { label: "DEMOCRATIC PARTICIPATION", desc: "Safe channels for public expression and feedback." }
+];
+
 const youthProfiles = [
   {
     id: "tech-innovator",
@@ -321,12 +382,10 @@ const wordsWeaponsData = [
 
 export default function IndiaToday() {
   const [motionIndex, setMotionIndex] = useState(0);
-  const [youthIndex, setYouthIndex] = useState(0);
   const [timelineIndex, setTimelineIndex] = useState(0);
   const [hoveredWord, setHoveredWord] = useState(null);
 
   const activeSlide = motionSlides[motionIndex];
-  const activeYouth = youthProfiles[youthIndex];
   const activeTimelineObj = cjpCaseTimeline[timelineIndex];
 
   return (
@@ -834,65 +893,133 @@ export default function IndiaToday() {
           <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
         </section>
 
-        {/* 05 — VOICE OF A GENERATION (Three Profiles) */}
-        <section id="generation-voice" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto">
+        {/* 05 — VOICE OF A GENERATION (4 Visual Editorial Chapters + Concerns Grid) */}
+        <section id="generation-voice" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto space-y-20">
+          
+          {/* Section Opening Header */}
+          <div className="space-y-4 max-w-3xl">
+            <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
+              05 — CIVIC PARTICIPATION
+            </span>
+            <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+              VOICE OF A GENERATION
+            </h2>
+            <h3 className="font-serif text-lg md:text-2xl text-[#16734A] italic font-light">
+              "A generation growing up with more information, more connection and more expectations is also asking harder questions."
+            </h3>
+            <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
+              About work. About fairness. About institutions. About the future they are being promised.
+            </p>
+          </div>
+
+          {/* 4 Visual Editorial Chapters */}
           <div className="space-y-16">
-            <div className="space-y-3 text-center">
-              <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
-                05 — PARTICIPATION
+            {voiceGenerationStories.map((story) => (
+              <div 
+                key={story.id} 
+                className="bg-white border border-[#171717]/10 p-6 md:p-10 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+              >
+                {/* Left Column: Editorial Copy */}
+                <div className="lg:col-span-5 space-y-4">
+                  <div className="space-y-1">
+                    <span className="text-[9px] font-mono text-[#E8752A] tracking-widest uppercase block font-bold">
+                      {story.chapter}
+                    </span>
+                    <h3 className="font-serif text-2xl md:text-3xl text-[#171717] font-semibold uppercase">
+                      {story.title}
+                    </h3>
+                    <h4 className="font-serif text-sm md:text-base text-[#16734A] italic">
+                      "{story.subtitle}"
+                    </h4>
+                  </div>
+
+                  {story.editorialNote && (
+                    <div className="bg-[#F7F4EE] border-l-2 border-[#16734A] p-3 text-xs font-serif text-[#171717] italic leading-relaxed">
+                      "{story.editorialNote}"
+                    </div>
+                  )}
+
+                  <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                    {story.desc}
+                  </p>
+
+                  <div className="pt-2">
+                    <span className="text-[8px] font-mono text-[#171717] bg-[#F7F4EE] border border-[#171717]/15 px-3 py-1 rounded-sm uppercase tracking-widest font-semibold">
+                      {story.tag}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Right Column: Full-Color Photograph */}
+                <div className="lg:col-span-7 aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative shadow-sm bg-[#171717]/5">
+                  <img 
+                    src={story.image} 
+                    alt={story.title}
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-102"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
+                    {story.imageCaption}
+                  </div>
+                  <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Editorial Grid: WHAT ARE THEY ASKING FOR? */}
+          <div className="bg-white border border-[#171717]/10 p-8 md:p-10 rounded-sm space-y-8 shadow-sm">
+            <div className="space-y-1">
+              <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-[0.25em] block font-bold">
+                RECURRING CIVIC THEMES
               </span>
-              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
-                VOICE OF A GENERATION
-              </h2>
-              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light max-w-2xl mx-auto leading-relaxed">
-                Young Indians are not politically or ideologically uniform. We present multiple profiles reflecting varying perspectives and career choices.
+              <h3 className="font-serif text-xl md:text-3xl text-[#171717] font-semibold uppercase">
+                WHAT ARE THEY ASKING FOR?
+              </h3>
+              <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] max-w-2xl leading-relaxed">
+                Across different student movements, campus assemblies, and digital forums, several core priorities recur consistently.
               </p>
             </div>
 
-            {/* Profile cards grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
-              {youthProfiles.map((p, idx) => {
-                const isSelected = idx === youthIndex;
-                return (
-                  <div
-                    key={p.id}
-                    onClick={() => setYouthIndex(idx)}
-                    className={`bg-white border p-6 flex flex-col justify-between space-y-6 shadow-sm rounded-sm transition-all duration-300 cursor-pointer ${
-                      isSelected 
-                        ? "border-[#16734A] scale-102 ring-1 ring-[#16734A]" 
-                        : "border-[#171717]/10 hover:border-[#16734A]/50"
-                    }`}
-                  >
-                    <div className="space-y-4">
-                      <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/5 bg-[#171717]/5">
-                        <img 
-                          src={p.image} 
-                          alt={p.role} 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="space-y-1">
-                        <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
-                          {p.context}
-                        </span>
-                        <h4 className="font-serif text-lg font-bold text-[#171717]">
-                          {p.role}
-                        </h4>
-                      </div>
-                      <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                        {p.desc}
-                      </p>
-                    </div>
-
-                    <div className="bg-[#F7F4EE] border-l-2 border-[#16734A] p-3 text-[11px] font-serif text-[#171717] italic">
-                      "{p.quote}"
-                    </div>
-                  </div>
-                );
-              })}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
+              {youthConcerns.map((item) => (
+                <div key={item.label} className="bg-[#F7F4EE] p-5 rounded-sm border border-[#171717]/5 space-y-2">
+                  <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">
+                    {item.label}
+                  </span>
+                  <p className="text-xs font-sans font-light text-[#171717] leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
             </div>
-
           </div>
+
+          {/* Section Closing Idea */}
+          <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-12 rounded-sm text-center space-y-4 shadow-md max-w-4xl mx-auto">
+            <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-[0.3em] block">
+              DEMOCRATIC PRINCIPLE
+            </span>
+            <p className="font-serif text-xl md:text-3xl font-normal uppercase leading-relaxed text-[#FAF8F5]">
+              "Democracy is not only expressed at election time."
+            </p>
+            <p className="text-xs md:text-sm font-sans font-light text-[#FAF8F5]/80 max-w-2xl mx-auto leading-relaxed">
+              It also lives in classrooms, campuses, streets, petitions, public meetings, journalism, debate — and the right to disagree.
+            </p>
+          </div>
+
+        </section>
+
+        {/* Quiet Transition Section to Democratic Dissent */}
+        <section className="w-full py-20 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
+          <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
+            TRANSITION TO DEMOCRATIC DISSENT
+          </span>
+          <div className="max-w-3xl mx-auto space-y-2 text-base md:text-xl font-serif text-[#171717]">
+            <p className="italic font-light">"Some voices remain part of the everyday democratic conversation.</p>
+            <p className="italic font-semibold text-[#16734A]">Others become moments that demand closer examination."</p>
+          </div>
+          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
         </section>
 
         {/* Section Divider statement */}
