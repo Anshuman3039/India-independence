@@ -370,21 +370,21 @@ export default function Ideas() {
     <PageTransition>
       <div id="main-content" className="w-full bg-[#F7F4EE] pt-24 text-left">
         
-        {/* 1. Opening Section with History -> Ideas Transition */}
-        <section className="py-20 md:py-24 px-6 md:px-12 max-w-7xl mx-auto space-y-12">
-          
-          {/* HISTORY → IDEAS TRANSITION HEADER */}
-          <div className="border-b border-[#171717]/10 pb-8 space-y-2.5">
-            <span className="text-[10px] font-mono font-bold text-[#16734A] tracking-[0.3em] uppercase block">
-              HISTORY → IDEAS
-            </span>
-            <h2 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold tracking-wide uppercase">
-              "THE PAST BECOMES AN IDEA."
-            </h2>
-            <p className="text-sm md:text-base font-serif italic text-[#E8752A] font-normal max-w-xl">
-              "What we inherit, we question, reshape and carry forward."
-            </p>
-          </div>
+        {/* FROM HISTORY TO IDEAS TRANSITION HEADER */}
+        <div className="w-full pt-16 pb-12 px-6 md:px-12 text-center max-w-4xl mx-auto space-y-3 border-b border-[#171717]/10">
+          <span className="text-[10px] font-mono font-bold text-[#16734A] tracking-[0.3em] uppercase block">
+            FROM HISTORY TO IDEAS
+          </span>
+          <h2 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase tracking-wide leading-tight">
+            WHAT DID WE MAKE OF THE PAST?
+          </h2>
+          <p className="font-serif text-sm md:text-base text-[#E8752A] italic font-normal max-w-2xl mx-auto leading-relaxed">
+            "Every generation inherits a past — then decides what to carry forward, what to question, and what kind of India to build."
+          </p>
+        </div>
+
+        {/* 1. Opening Section */}
+        <section className="py-16 md:py-20 px-6 md:px-12 max-w-7xl mx-auto">
 
           <div className="max-w-3xl space-y-6">
             <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.25em] block">
