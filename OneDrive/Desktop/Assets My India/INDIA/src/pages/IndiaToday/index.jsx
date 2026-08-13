@@ -156,6 +156,67 @@ const promiseGapStories = [
   }
 ];
 
+const youngCountryImages = {
+  aspiration: "/images/stories/story6-lab.jpg",
+  exam: "/images/stories/stories-intro-7.jpg",
+  work: "/images/stories/story4-prep.jpg",
+  migration: "/images/stories/story1-station.jpg",
+  future: "/images/stories/story6-child.jpg"
+};
+
+const youngCountryStories = [
+  {
+    id: "aspiration",
+    chapter: "01 — THE ASPIRATION",
+    title: "BUILDING THE FUTURE",
+    subtitle: "Innovation, research and new economic avenues",
+    desc: "India's expanding technology, education, and entrepreneurial ecosystem has opened new possibilities for young engineers, researchers, and founders. From cleanroom labs to software ventures, young Indians are designing products for global and domestic markets.",
+    image: youngCountryImages.aspiration,
+    imageCaption: "Microelectronics Cleanroom Lab & Research Facility",
+    tag: "AMBITION & DISCOVERY"
+  },
+  {
+    id: "exam",
+    chapter: "02 — THE EXAM",
+    title: "THE RECRUITMENT CYCLE",
+    subtitle: "Preparation, competition and the wait for opportunity",
+    desc: "For millions of candidates, securing a public service, railway, or university position represents family security and social status. Preparation involves long years in coaching districts and libraries, navigating intense competition and examination schedules.",
+    image: youngCountryImages.exam,
+    imageCaption: "Urban Coaching Hub & Study Center District",
+    tag: "PREPARATION & WAITING"
+  },
+  {
+    id: "work",
+    chapter: "03 — THE WORK",
+    title: "ENTERING THE LABOR MARKET",
+    subtitle: "Economic diversity across formal and gig sectors",
+    desc: "Young Indians enter the workforce across widely varying sectors — software development, retail counters, gig logistics, manufacturing, and traditional trades. The economic experience of the youth is diverse, balancing independence with wage stability.",
+    image: youngCountryImages.work,
+    imageCaption: "Urban Logistics & Retail Operations",
+    tag: "LABOR & DIGNITY"
+  },
+  {
+    id: "migration",
+    chapter: "04 — MIGRATION",
+    title: "LEAVING HOME FOR OPPORTUNITY",
+    subtitle: "Mobility between agrarian hinterlands and metropolitan hubs",
+    desc: "For millions, pursuing a career means leaving home. Young workers and students travel across state borders to major cities, seeking education and employment while maintaining deep ties to their families in origin towns.",
+    image: youngCountryImages.migration,
+    imageCaption: "Interstate Rail Transit & Youth Mobility",
+    tag: "MOBILITY & INDEPENDENCE"
+  },
+  {
+    id: "future",
+    chapter: "05 — THE FUTURE",
+    title: "THE HORIZON AHEAD",
+    subtitle: "Expectations, aspirations and the years to come",
+    desc: "India's median age is 28, making it one of the world's youngest major nations. The aspirations of this generation will shape the country's social fabric, economic policies, and democratic institutions over the coming decades.",
+    image: youngCountryImages.future,
+    imageCaption: "Young Citizens in Contemporary India",
+    tag: "DEMOGRAPHIC HORIZON"
+  }
+];
+
 const youthProfiles = [
   {
     id: "tech-innovator",
@@ -678,67 +739,99 @@ export default function IndiaToday() {
           </p>
         </section>
 
-        {/* 04 — A YOUNG COUNTRY (3 Narrative moments) */}
+        {/* 04 — A YOUNG COUNTRY (5 Story Editorial Sequence) */}
         <section id="young-country" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5">
-          <div className="max-w-7xl mx-auto space-y-16">
+          <div className="max-w-7xl mx-auto space-y-20">
             
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              
-              <div className="lg:col-span-5 space-y-6">
-                <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.25em] uppercase block">
-                  04 — DEMOGRAPHY
-                </span>
-                <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
-                  A YOUNG COUNTRY
-                </h2>
-                <h3 className="font-serif text-lg md:text-xl text-[#E8752A] italic leading-relaxed">
-                  "India's future is being lived by a generation that is still waiting for its opportunity."
-                </h3>
-                <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                  India is young not merely because of demographics. It is young because millions of people are negotiating an uncertain future.
-                </p>
+            {/* Section Header */}
+            <div className="space-y-4 max-w-3xl">
+              <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.3em] uppercase block">
+                04 — DEMOGRAPHY & ASPIRATION
+              </span>
+              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+                A YOUNG COUNTRY
+              </h2>
+              <h3 className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-light">
+                "Millions are entering adulthood in a country changing faster than the world they grew up in."
+              </h3>
+              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
+                For some, the future is being built in laboratories, startups and new industries. For others, it is shaped by exams, migration, unstable work and the search for a first real opportunity.
+              </p>
+            </div>
 
-                {/* Progress links */}
-                <div className="space-y-2 pt-4">
-                  <span className="text-[9px] font-sans font-bold text-[#171717]/70 uppercase block">
-                    ASPIRATIONAL STAGES
-                  </span>
-                  <div className="flex flex-wrap items-center gap-2 text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest">
-                    <span>EDUCATION</span>
-                    <span>→</span>
-                    <span>SKILLS</span>
-                    <span>→</span>
-                    <span>EMPLOYMENT</span>
-                    <span>→</span>
-                    <span>MOBILITY</span>
-                    <span>→</span>
-                    <span>FUTURE</span>
+            {/* 5 Visual Story Sequence */}
+            <div className="space-y-16">
+              {youngCountryStories.map((story) => (
+                <div 
+                  key={story.id} 
+                  className="bg-[#F7F4EE] border border-[#171717]/10 p-6 md:p-10 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+                >
+                  {/* Left Column: Editorial Copy */}
+                  <div className="lg:col-span-5 space-y-4">
+                    <div className="space-y-1">
+                      <span className="text-[9px] font-mono text-[#16734A] tracking-widest uppercase block font-bold">
+                        {story.chapter}
+                      </span>
+                      <h3 className="font-serif text-2xl md:text-3xl text-[#171717] font-semibold uppercase">
+                        {story.title}
+                      </h3>
+                      <h4 className="font-serif text-sm md:text-base text-[#E8752A] italic">
+                        "{story.subtitle}"
+                      </h4>
+                    </div>
+                    <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                      {story.desc}
+                    </p>
+                    <div className="pt-2">
+                      <span className="text-[8px] font-mono text-[#171717] bg-white border border-[#171717]/15 px-3 py-1 rounded-sm uppercase tracking-widest font-semibold">
+                        {story.tag}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Right Column: Full-Color Photograph */}
+                  <div className="lg:col-span-7 aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative shadow-sm bg-[#171717]/5">
+                    <img 
+                      src={story.image} 
+                      alt={story.title}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-102"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
+                      {story.imageCaption}
+                    </div>
+                    <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
                   </div>
                 </div>
-              </div>
+              ))}
+            </div>
 
-              {/* Large Portrait Moment */}
-              <div className="lg:col-span-7 bg-[#F7F4EE] border border-[#171717]/10 p-4 shadow-md rounded-sm relative overflow-hidden group">
-                <div className="aspect-[16/9] relative border border-[#171717]/5 overflow-hidden">
-                  <img 
-                    src={activeYouth.image} 
-                    alt={activeYouth.role} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
-                    YOUTH ARCHIVE FOCUS · {activeYouth.role}
-                  </div>
-                  <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
-                </div>
-                <div className="flex justify-between items-center mt-3 text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest">
-                  <span>Location: {activeYouth.context}</span>
-                  <span>Documentary Grid</span>
-                </div>
-              </div>
-
+            {/* Final Reflection Block */}
+            <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-12 rounded-sm text-center space-y-4 shadow-md max-w-4xl mx-auto">
+              <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-[0.3em] block">
+                GENERATIONAL REFLECTION
+              </span>
+              <p className="font-serif text-xl md:text-3xl font-normal uppercase leading-relaxed text-[#FAF8F5]">
+                "What happens when a generation expects more from the future than the present can offer?"
+              </p>
             </div>
 
           </div>
+        </section>
+
+        {/* Quiet Transition Section to Voice of a Generation */}
+        <section className="w-full py-20 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
+          <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
+            TRANSITION TO EXPRESSION
+          </span>
+          <div className="max-w-3xl mx-auto space-y-2 text-base md:text-xl font-serif text-[#171717]">
+            <p className="italic font-light">"Ambition can be patient.</p>
+            <p className="italic font-semibold text-[#E8752A]">But uncertainty has a limit."</p>
+          </div>
+          <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed pt-2">
+            When opportunities feel delayed, decisions feel unfair, or institutions stop listening, young people begin to make their voices heard.
+          </p>
+          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
         </section>
 
         {/* 05 — VOICE OF A GENERATION (Three Profiles) */}
