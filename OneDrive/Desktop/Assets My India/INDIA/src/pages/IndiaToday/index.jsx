@@ -1497,7 +1497,7 @@ export default function IndiaToday() {
               </div>
             </div>
 
-            {/* LARGE LIQUID-GLASS STORY PANEL (75–85% Viewport Width, Frosted Glass Blur) */}
+            {/* LARGE LIQUID-GLASS STORY PANEL (75–85% Viewport Width, Real Frosted Glass Blur) */}
             <div className="relative z-10 my-auto py-8 md:py-12 w-full flex justify-center">
               <AnimatePresence mode="wait">
                 <motion.div 
@@ -1506,7 +1506,16 @@ export default function IndiaToday() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="w-full max-w-[1200px] lg:max-w-[1350px] min-h-[420px] md:min-h-[480px] rounded-2xl border border-white/20 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] p-8 md:p-14 lg:p-16 space-y-6 backdrop-blur-xl bg-[rgba(18,18,18,0.48)] flex flex-col justify-between"
+                  style={{
+                    backgroundColor: "rgba(18, 18, 18, 0.22)",
+                    backgroundImage: "linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.015) 45%, rgba(255, 255, 255, 0.035))",
+                    backdropFilter: "blur(18px)",
+                    WebkitBackdropFilter: "blur(18px)",
+                    border: "1px solid rgba(255, 255, 255, 0.22)",
+                    boxShadow: "0 20px 50px -20px rgba(0, 0, 0, 0.45)",
+                    borderRadius: "16px"
+                  }}
+                  className="w-full max-w-[1200px] lg:max-w-[1350px] min-h-[420px] md:min-h-[480px] p-8 md:p-14 lg:p-16 space-y-6 flex flex-col justify-between"
                 >
                   <div className="space-y-4">
                     <span className="text-xs md:text-sm font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
