@@ -1142,145 +1142,126 @@ export default function IndiaToday() {
           <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
         </section>
 
-        {/* 05 — VOICE OF A GENERATION (4 Visual Editorial Chapters + Concerns Grid) */}
-        <section id="generation-voice" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto space-y-20">
-          
-          {/* Section Opening Header */}
-          <div className="space-y-4 max-w-3xl">
-            <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-              05 — VOICE OF A GENERATION
-            </span>
-            <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
-              VOICE OF A GENERATION
-            </h2>
-            <h3 className="font-serif text-lg md:text-2xl text-[#16734A] italic font-light">
-              "A generation growing up with more information, more connection and more expectations is also asking harder questions."
-            </h3>
-            <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-              About work. About fairness. About institutions. About the future they are being promised.
-            </p>
-          </div>
-
-          {/* 4 Visual Editorial Chapters */}
-          <div className="space-y-16">
-            {voiceGenerationStories.map((story) => (
-              <div 
-                key={story.id} 
-                className="bg-white border border-[#171717]/10 p-6 md:p-10 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
-              >
-                {/* Left Column: Editorial Copy */}
-                <div className="lg:col-span-5 space-y-4">
-                  <div className="space-y-1">
-                    <span className="text-[9px] font-mono text-[#E8752A] tracking-widest uppercase block font-bold">
-                      {story.chapter}
-                    </span>
-                    <h3 className="font-serif text-2xl md:text-3xl text-[#171717] font-semibold uppercase">
-                      {story.title}
-                    </h3>
-                    <h4 className="font-serif text-sm md:text-base text-[#16734A] italic">
-                      "{story.subtitle}"
-                    </h4>
-                  </div>
-
-                  {story.editorialNote && (
-                    <div className="bg-[#F7F4EE] border-l-2 border-[#16734A] p-3 text-xs font-serif text-[#171717] italic leading-relaxed">
-                      "{story.editorialNote}"
-                    </div>
-                  )}
-
-                  <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    {story.desc}
-                  </p>
-
-                  <div className="pt-2">
-                    <span className="text-[8px] font-mono text-[#171717] bg-[#F7F4EE] border border-[#171717]/15 px-3 py-1 rounded-sm uppercase tracking-widest font-semibold">
-                      {story.tag}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Right Column: Full-Color Photograph */}
-                <div className="lg:col-span-7 aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative shadow-sm bg-[#171717]/5">
-                  <img 
-                    src={story.image} 
-                    alt={story.title}
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-102"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
-                    {story.imageCaption}
-                  </div>
-                  <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Editorial Grid: WHAT ARE THEY ASKING FOR? */}
-          <div className="bg-white border border-[#171717]/10 p-8 md:p-10 rounded-sm space-y-8 shadow-sm">
-            <div className="space-y-1">
-              <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-[0.25em] block font-bold">
-                RECURRING CIVIC THEMES
+        {/* 05 — VOICE OF A GENERATION */}
+        <section id="generation-voice" className="w-full py-24 md:py-32 px-6 md:px-12 bg-[#FAF8F5] border-t border-b border-[#171717]/10">
+          <div className="max-w-6xl mx-auto space-y-16">
+            
+            {/* 01 — OPENING */}
+            <div className="max-w-3xl mx-auto text-center space-y-4">
+              <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.35em] uppercase block">
+                05 — VOICE OF A GENERATION
               </span>
-              <h3 className="font-serif text-xl md:text-3xl text-[#171717] font-semibold uppercase">
-                WHAT ARE THEY ASKING FOR?
-              </h3>
-              <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] max-w-2xl leading-relaxed">
-                Across different student movements, campus assemblies, and digital forums, several core priorities recur consistently.
+              <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717] font-semibold">
+                VOICE OF A GENERATION
+              </h2>
+              <p className="font-serif text-lg md:text-2xl text-[#16734A] italic font-normal leading-relaxed">
+                "A generation growing up with more information, more connection, and more expectations."
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
-              {youthConcerns.map((item) => (
-                <div key={item.label} className="bg-[#F7F4EE] p-5 rounded-sm border border-[#171717]/5 space-y-2">
-                  <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">
-                    {item.label}
-                  </span>
-                  <p className="text-xs font-sans font-light text-[#171717] leading-relaxed">
-                    {item.desc}
-                  </p>
+            {/* 02 — VISUAL SEQUENCE (2x2 Editorial Photo Grid) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+              
+              {/* 01 — STUDY / PREPARATION */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+                className="space-y-4 group"
+              >
+                <div className="aspect-[16/10] overflow-hidden rounded-sm bg-[#171717]/5 shadow-[0_15px_40px_rgba(0,0,0,0.1)] relative">
+                  <img 
+                    src="/images/documentary/doc-exam.jpg" 
+                    alt="Young Indian students preparing for examinations" 
+                    className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" 
+                    loading="lazy"
+                  />
+                  <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase font-bold">
+                    01 · PREPARATION & STUDY
+                  </div>
                 </div>
-              ))}
+                <p className="text-xs md:text-sm font-mono text-[#171717] tracking-widest uppercase font-bold text-center">
+                  "Preparing for what comes next."
+                </p>
+              </motion.div>
+
+              {/* 02 — AMBITION / POSSIBILITY */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
+                className="space-y-4 group"
+              >
+                <div className="aspect-[16/10] overflow-hidden rounded-sm bg-[#171717]/5 shadow-[0_15px_40px_rgba(0,0,0,0.1)] relative">
+                  <img 
+                    src="/images/documentary/doc-lab.jpg" 
+                    alt="Young researchers in a laboratory environment" 
+                    className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" 
+                    loading="lazy"
+                  />
+                  <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase font-bold">
+                    02 · AMBITION & INQUIRY
+                  </div>
+                </div>
+                <p className="text-xs md:text-sm font-mono text-[#171717] tracking-widest uppercase font-bold text-center">
+                  "Wanting a future that feels possible."
+                </p>
+              </motion.div>
+
+              {/* 03 — EVERYDAY LIFE / CONNECTION */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
+                className="space-y-4 group"
+              >
+                <div className="aspect-[16/10] overflow-hidden rounded-sm bg-[#171717]/5 shadow-[0_15px_40px_rgba(0,0,0,0.1)] relative">
+                  <img 
+                    src="/images/documentary/doc-smartphone.jpg" 
+                    alt="Young people utilizing digital mobile devices" 
+                    className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" 
+                    loading="lazy"
+                  />
+                  <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase font-bold">
+                    03 · DIGITAL CONNECTION
+                  </div>
+                </div>
+                <p className="text-xs md:text-sm font-mono text-[#171717] tracking-widest uppercase font-bold text-center">
+                  "Growing up connected."
+                </p>
+              </motion.div>
+
+              {/* 04 — VOICE */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
+                className="space-y-4 group"
+              >
+                <div className="aspect-[16/10] overflow-hidden rounded-sm bg-[#171717]/5 shadow-[0_15px_40px_rgba(0,0,0,0.1)] relative">
+                  <img 
+                    src="/images/stories/stories-intro-4.jpg" 
+                    alt="Young people engaging in digital discourse and expressing opinions" 
+                    className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" 
+                    loading="lazy"
+                  />
+                  <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase font-bold">
+                    04 · EXPRESSION
+                  </div>
+                </div>
+                <p className="text-xs md:text-sm font-mono text-[#171717] tracking-widest uppercase font-bold text-center">
+                  "Finding a voice."
+                </p>
+              </motion.div>
+
             </div>
-          </div>
 
-          {/* Section Closing Idea */}
-          <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-12 rounded-sm text-center space-y-4 shadow-md max-w-4xl mx-auto">
-            <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-[0.3em] block">
-              DEMOCRATIC PRINCIPLE
-            </span>
-            <p className="font-serif text-xl md:text-3xl font-normal uppercase leading-relaxed text-[#FAF8F5]">
-              "Democracy is not only expressed at election time."
-            </p>
-            <p className="text-xs md:text-sm font-sans font-light text-[#FAF8F5]/80 max-w-2xl mx-auto leading-relaxed">
-              It also lives in classrooms, campuses, streets, petitions, public meetings, journalism, debate — and the right to disagree.
-            </p>
           </div>
-
         </section>
-
-        {/* Quiet Transition Section to Democratic Dissent */}
-        <section className="w-full py-20 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
-          <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-            TRANSITION TO DEMOCRATIC DISSENT
-          </span>
-          <div className="max-w-3xl mx-auto space-y-2 text-base md:text-xl font-serif text-[#171717]">
-            <p className="italic font-light">"Some voices remain part of the everyday democratic conversation.</p>
-            <p className="italic font-semibold text-[#16734A]">Others become moments that demand closer examination."</p>
-          </div>
-          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
-        </section>
-
-        {/* Section Divider statement */}
-        <div className="w-full py-16 flex flex-col items-center justify-center text-center select-none pointer-events-none">
-          <div className="w-[1px] h-12 bg-[#171717]/10 mb-4"></div>
-          <span className="text-[9px] font-sans font-bold text-[#E8752A] tracking-[0.2em] uppercase">
-            Story Continuity
-          </span>
-          <p className="font-serif text-lg text-[#6B6B6B] italic max-w-md pt-2">
-            "And sometimes, that demand becomes a public voice."
-          </p>
-        </div>
 
         {/* 06 — DEMOCRATIC DISSENT */}
         <section id="democracy-pressure" className="w-full py-24 md:py-32 px-6 md:px-12 bg-[#FAF8F5] border-t border-b border-[#171717]/10">
