@@ -2544,20 +2544,20 @@ export default function IndiaToday() {
         {/* Quiet Opening Transition Section to 13 — THE INDIA WE ARE BUILDING */}
         <section className="w-full py-24 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
           <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-            TRANSFORMATION & REALITY
+            EDITORIAL SYNTHESIS
           </span>
           <div className="max-w-3xl mx-auto space-y-3 text-lg md:text-2xl font-serif text-[#171717]">
             <p className="italic font-semibold text-[#171717]">"THE INDIA WE ARE BUILDING"</p>
-            <p className="italic font-light text-[#6B6B6B] text-base md:text-xl">"Every generation inherits a country. Every generation changes it."</p>
+            <p className="italic font-light text-[#6B6B6B] text-base md:text-xl">"Every generation inherits a country. But it also inherits choices."</p>
             <p className="italic font-light text-[#171717]/90 text-sm md:text-lg max-w-2xl mx-auto">
-              Some changes arrive as technology. Some as infrastructure. Some begin with an ordinary person asking whether something can be done differently.
+              The question is not simply how fast India changes. The question is what kind of country that change creates.
             </p>
           </div>
           <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
         </section>
 
         {/* 13 — THE INDIA WE ARE BUILDING */}
-        <section id="building" className="w-full py-28 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+        <section id="building" className="w-full py-28 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-28">
           
           {/* Section Framing Header */}
           <div className="text-center space-y-4 max-w-4xl mx-auto">
@@ -2568,17 +2568,17 @@ export default function IndiaToday() {
               THE INDIA WE ARE BUILDING
             </h2>
             <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-semibold">
-              "WHAT ARE INDIANS BUILDING RIGHT NOW?"
+              "WHAT KIND OF INDIA ARE WE BECOMING?"
             </p>
             <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] leading-relaxed max-w-3xl mx-auto">
-              India Today is about what is changing, what is being built, what is being invented, and what remains unfinished. A country experiencing extraordinary technological transformation and persistent social inequality simultaneously.
+              Having explored India's motion, promises, youth, pressures, media, dissent, history, voices, and coexistence—we now bring these threads together. The question is not how developed India is, but what choices and values shape its future.
             </p>
           </div>
 
-          {/* SIX CONNECTED EDITORIAL CHAPTERS */}
+          {/* FIVE EDITORIAL SYNTHESIS QUESTIONS */}
           <div className="space-y-24">
 
-            {/* CHAPTER 01 — SPACE */}
+            {/* 01 — GROWTH & OPPORTUNITY */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -2588,269 +2588,21 @@ export default function IndiaToday() {
             >
               <div className="lg:col-span-6 space-y-6">
                 <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 01 · SPACE & SCIENCE
+                  SYNTHESIS 01 · GROWTH & OPPORTUNITY
                 </span>
                 <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  REACHING BEYOND EARTH
+                  CAN GROWTH BECOME OPPORTUNITY?
                 </h3>
                 <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "A country that once launched satellites with modest resources now sends sophisticated missions into space."
+                  "India's transformation has changed what is possible. But possibility alone does not determine who benefits."
                 </p>
                 <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  From early sounding rockets to lunar landings (Chandrayaan-3), solar observatories (Aditya-L1), and commercial satellite launch vehicles (LVM3/PSLV), India's space program demonstrates how long-term public scientific ambition can yield world-class achievements.
+                  Connecting economic momentum with persistent inequality, employment concerns, and youth aspirations. A growing national GDP expands horizons, but can economic growth become meaningful if opportunity remains unevenly distributed?
                 </p>
                 <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">EDITORIAL QUESTION</span>
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">SYNTHESIS QUESTION</span>
                   <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "What becomes possible when scientific ambition is sustained across generations?"
-                  </p>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-6 space-y-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/story6-launch.jpg" 
-                    alt="ISRO rocket launching into space during a scientific mission" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: ISRO LVM3 SATELLITE LAUNCH
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: Indian Space Research Organisation (ISRO)
-                </span>
-              </div>
-            </motion.div>
-
-            {/* CHAPTER 02 — DIGITAL INDIA */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/story4-prep.jpg" 
-                    alt="Everyday vendor and citizens conducting digital transactions using UPI QR codes on smartphones" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: DIGITAL PUBLIC INFRASTRUCTURE & UPI
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
-                  Source: National Payments Corporation of India (NPCI)
-                </span>
-              </div>
-
-              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
-                <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 02 · DIGITAL INFRASTRUCTURE
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  A COUNTRY LEARNING TO MOVE DIGITALLY
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "Millions of financial transactions, identities, and public services now run on open digital highways."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Unified Payments Interface (UPI) handles billions of transactions monthly, transforming street markets and small enterprises. Yet, as digital access expands, a counterpoint remains clear: access to a smartphone is not the same as economic security.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#E8752A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">PROMISE & GAP COUNTERPOINT</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "Access is expanding. But access is not the same as equality."
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* CHAPTER 03 — MOVING INDIA (4-PART INFRASTRUCTURE SEQUENCE) */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm space-y-10"
-            >
-              <div className="max-w-3xl space-y-4">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 03 · MOBILITY & TRANSIT
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  THE DISTANCE BETWEEN US IS CHANGING
-                </h3>
-                <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  High-speed Vande Bharat trains, urban metro networks in over 20 cities, expanding expressways, and regional airports are reshaping how goods, labor, and citizens move across the country.
-                </p>
-              </div>
-
-              {/* 4-PART VISUAL INFRASTRUCTURE MATRIX */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  {
-                    type: "RAIL",
-                    title: "INDIAN RAILWAYS",
-                    desc: "Connecting cities, towns and millions of daily journeys.",
-                    img: "/images/stories/story1-train.jpg"
-                  },
-                  {
-                    type: "METRO",
-                    title: "URBAN METRO GRIDS",
-                    desc: "Changing how India's cities move.",
-                    img: "/images/stories/story1-station.jpg"
-                  },
-                  {
-                    type: "EXPRESSWAYS",
-                    title: "CORRIDOR NETWORKS",
-                    desc: "Compressing distance between economic centres.",
-                    img: "/images/stories/story1-track.jpg"
-                  },
-                  {
-                    type: "AIRPORT",
-                    title: "REGIONAL AIR GRIDS",
-                    desc: "Expanding Tier-2 and Tier-3 air connectivity.",
-                    img: "/images/metro/metro_india.jpg"
-                  }
-                ].map((item, idx) => (
-                  <div key={idx} className="bg-[#FAF8F5] border border-[#171717]/10 p-4 rounded-sm space-y-3 shadow-2xs flex flex-col justify-between">
-                    <div className="aspect-[4/3] overflow-hidden rounded-sm relative border border-[#171717]/10 group">
-                      <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                      <div className="absolute top-2 left-2 bg-[#171717] text-white px-2 py-0.5 text-[8px] font-mono uppercase tracking-widest font-bold">
-                        {item.type}
-                      </div>
-                    </div>
-                    <div className="space-y-1 pt-1">
-                      <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">{item.title}</span>
-                      <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* CHAPTER 04 — INDUSTRIAL & HIGH-TECH MANUFACTURING */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 04 · INDUSTRY & TECH
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  MAKING MORE AT HOME
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "Semiconductors, electronics, electric vehicles, and biotechnology hubs are expanding domestic manufacturing."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Engineers and industrial workers are building domestic supply chains for smartphones, solar cells, EV batteries, and pharmaceutical components, aiming to shift India from a consumer of global technology to a primary producer.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">EDITORIAL QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "Can industrial growth create opportunity at the scale India needs?"
-                  </p>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-6 space-y-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/story6-lab.jpg" 
-                    alt="Engineers and researchers working inside a high-tech manufacturing and biotechnology laboratory" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: ADVANCED RESEARCH & INDUSTRIAL LABS
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: Ministry of Electronics & IT (MeitY) Archives
-                </span>
-              </div>
-            </motion.div>
-
-            {/* CHAPTER 05 — GREEN TRANSITION */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/story3-forest.jpg" 
-                    alt="Large-scale renewable energy and ecological landscape transition" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: RENEWABLE ENERGY & RE-FORESTATION GRIDS
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
-                  Source: Ministry of New & Renewable Energy (MNRE)
-                </span>
-              </div>
-
-              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 05 · GREEN TRANSITION
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  BUILDING THE NEXT ENERGY SYSTEM
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "India is expanding clean-energy capacity while continuing to depend heavily on fossil fuels."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Solar parks in Rajasthan and Gujarat, offshore wind projects, and green hydrogen initiatives reflect massive clean-energy expansion. Yet, powering a growing economy of 1.4 billion people requires managing an ongoing transition alongside existing grid dependencies.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">EDITORIAL QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "How does a developing nation balance urgent energy needs with planetary sustainability?"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* CHAPTER 06 — THE PEOPLE BUILDING IT */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 06 · CITIZEN WORKFORCE
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  THE COUNTRY IS NOT BEING BUILT BY SYSTEMS ALONE
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "It is being built by people."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Scientists in mission control, construction workers laying metro lines, technicians maintaining telecom towers, healthcare staff in rural clinics, and young professionals in startup incubators—ordinary citizens drive the republic's daily physical and digital construction.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#E8752A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">HUMAN FACTOR</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "Infrastructure only reflects the skill and persistence of the hands that shape it."
+                    "A growing economy creates new horizons. But who gets access to them?"
                   </p>
                 </div>
               </div>
@@ -2859,129 +2611,261 @@ export default function IndiaToday() {
                 <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
                   <img 
                     src="/images/people/rural-farmers.jpg" 
-                    alt="Workers, engineers, and citizens who physically build and sustain India's daily infrastructure" 
+                    alt="Young working Indians, students, and citizens striving for opportunities" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
                   />
                   <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: THE WORKFORCE OF THE REPUBLIC
+                    DOCUMENTARY LOG: ASPIRATION & WORKFORCE
                   </div>
                 </div>
                 <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: Labour & Development Archives
+                  Source: Labour & Development Survey Records
+                </span>
+              </div>
+            </motion.div>
+
+            {/* 02 — KNOWLEDGE & BELIEF */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/stories/story6-lab.jpg" 
+                    alt="Student researchers and learners working in a modern laboratory" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: SCIENTIFIC CURIOSITY & LEARNING
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
+                  Source: Academic & Research Archives
+                </span>
+              </div>
+
+              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
+                <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
+                  SYNTHESIS 02 · KNOWLEDGE & BELIEF
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  WHAT KIND OF KNOWLEDGE DO WE CHOOSE?
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "Faith is personal identity. Dogmatism is the refusal to question."
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Connecting scientific temper, constitutional education, and technological inquiry with personal belief. Religious faith is distinct from superstition, and identity is distinct from dogmatism. Can evidence, curiosity, and critical thinking flourish alongside personal faith?
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#E8752A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">SYNTHESIS QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "Can a society become technologically advanced while losing the habit of questioning?"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 03 — TECHNOLOGY & HUMAN LIFE */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-6">
+                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
+                  SYNTHESIS 03 · DIGITAL DISCOURSE
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  WHEN TECHNOLOGY MOVES FASTER THAN SOCIETY
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "Technology can connect millions. It can also amplify division."
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Connecting media polarization, algorithmic feeds, public discourse, and digital access. Networks accelerate information exchange, but when algorithms reward outrage over verification, civic trust requires conscious reflection.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">SYNTHESIS QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "What happens when the systems connecting us also shape what we see, believe, and argue about?"
+                  </p>
+                </div>
+              </div>
+              
+              <div className="lg:col-span-6 space-y-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/stories/story4-prep.jpg" 
+                    alt="Citizens using digital interfaces and smartphones in shared public spaces" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: DIGITAL COMMUNICATION & PUBLIC SPHERES
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+                  Source: Public Media & Information Research Log
+                </span>
+              </div>
+            </motion.div>
+
+            {/* 04 — FREEDOM & RESPONSIBILITY */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/stories/stories-intro-2.jpg" 
+                    alt="Public forum assembly discussing civic rights and legal bounds" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: CIVIC ASSEMBLY & DISSENT TENSION
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
+                  Source: Constitutional Law & Assembly Records
+                </span>
+              </div>
+
+              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
+                <span className="text-xs font-mono text-[#171717] uppercase tracking-[0.25em] font-bold block">
+                  SYNTHESIS 04 · DEMOCRATIC BOUNDS
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  HOW MUCH DISAGREEMENT CAN A REPUBLIC HOLD?
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "A democracy must protect disagreement. But where does disagreement become intimidation?"
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Connecting democratic dissent, legal protest, media polarization, and social tension. Where does constructive criticism cross into hostility? How does a constitutional republic protect citizen protest while safeguarding safety and civil dignity?
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#171717] space-y-1">
+                  <span className="text-[10px] font-mono text-[#171717] uppercase font-bold block">SYNTHESIS QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "How should a democratic society protect both dissent and the dignity of others?"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 05 — THE ENVIRONMENT WE CHOOSE */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-6">
+                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
+                  SYNTHESIS 05 · ECOLOGICAL BALANCE
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  WHAT KIND OF COUNTRY DO WE WANT TO LIVE IN?
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "Development must answer to the air we breathe and the land we inhabit."
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Connecting industrial growth, urban expansion, public health, and environmental responsibility. Urban air quality, river health, and soil fertility are not secondary concerns—they define the physical reality of human life in the republic.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">SYNTHESIS QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "Can a country improve the lives of millions without making the air, water, and land harder to live with?"
+                  </p>
+                </div>
+              </div>
+              
+              <div className="lg:col-span-6 space-y-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/stories/story3-forest.jpg" 
+                    alt="Environmental landscape showing human habitat alongside natural ecosystems" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: ECOLOGY & HABITAT OBSERVATION
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+                  Source: Environmental Protection & Public Health Log
                 </span>
               </div>
             </motion.div>
 
           </div>
 
-          {/* THE CENTRAL QUESTION & TWO-SPEED INDIA COMPARISON */}
-          <div className="space-y-12 pt-12 border-t border-[#171717]/10">
-            <div className="text-center max-w-3xl mx-auto space-y-4">
-              <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.3em] font-bold block">
-                THE CENTRAL QUESTION
-              </span>
-              <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase">
-                "BUT WHO GETS TO BUILD THIS FUTURE?"
-              </h3>
-              <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed max-w-2xl mx-auto">
-                Who gets a good education? Who gets secure work? Who gets reliable healthcare? Who gets clean air? Who gets access to opportunity? And who gets left behind?
-              </p>
-            </div>
-
-            {/* SPLIT-SCREEN CONTRAST: TWO-SPEED TRANSFORMATION */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              
-              {/* LEFT: INDIA MOVING FORWARD */}
-              <div className="bg-[#FAF8F5] border border-[#16734A]/30 p-8 rounded-sm space-y-4 shadow-sm">
-                <div className="flex items-center justify-between border-b border-[#16734A]/20 pb-3">
-                  <span className="text-xs font-mono text-[#16734A] uppercase tracking-widest font-bold">
-                    INDIA MOVING FORWARD
-                  </span>
-                  <span className="text-[10px] font-mono text-[#16734A] bg-[#16734A]/10 px-2 py-0.5 rounded-xs font-bold">
-                    RAPID ADVANCEMENT
-                  </span>
-                </div>
-                <ul className="space-y-3 text-xs md:text-sm font-sans font-light text-[#171717] leading-relaxed">
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-[#16734A] font-bold">✓</span>
-                    <span>Lunar landings, solar space observatories, & commercial satellite launches</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-[#16734A] font-bold">✓</span>
-                    <span>Unified UPI digital payments handling billions of monthly transactions</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-[#16734A] font-bold">✓</span>
-                    <span>High-speed Vande Bharat trains & 20+ metropolitan metro grids</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-[#16734A] font-bold">✓</span>
-                    <span>High-tech semiconductor, electronics, & renewable energy manufacturing</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* RIGHT: INDIA STILL CATCHING UP */}
-              <div className="bg-[#FAF8F5] border border-[#E8752A]/30 p-8 rounded-sm space-y-4 shadow-sm">
-                <div className="flex items-center justify-between border-b border-[#E8752A]/20 pb-3">
-                  <span className="text-xs font-mono text-[#E8752A] uppercase tracking-widest font-bold">
-                    INDIA STILL CATCHING UP
-                  </span>
-                  <span className="text-[10px] font-mono text-[#E8752A] bg-[#E8752A]/10 px-2 py-0.5 rounded-xs font-bold">
-                    UNRESOLVED GAPS
-                  </span>
-                </div>
-                <ul className="space-y-3 text-xs md:text-sm font-sans font-light text-[#171717] leading-relaxed">
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-[#E8752A] font-bold">!</span>
-                    <span>Persistent rural-urban digital divide & informal work insecurity</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-[#E8752A] font-bold">!</span>
-                    <span>Uneven public healthcare quality & primary education gaps</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-[#E8752A] font-bold">!</span>
-                    <span>Severe urban air pollution & groundwater stress in agricultural belts</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-[#E8752A] font-bold">!</span>
-                    <span>High youth unemployment & exam recruitment vulnerabilities</span>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-          {/* QUIET CLOSING STATEMENT & NARRATIVE TRANSITION TO SECTION 14 (#unfinished-republic) */}
-          <div className="bg-[#171717] text-[#FAF8F5] p-10 md:p-16 rounded-sm text-center space-y-6 shadow-md max-w-5xl mx-auto my-16">
-            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
-              THE SHAPING OF THE REPUBLIC
+          {/* THE CENTRAL SYNTHESIS: TYPOGRAPHIC COMPOSITION */}
+          <div className="bg-[#171717] text-[#FAF8F5] p-10 md:p-20 rounded-sm text-center space-y-10 shadow-md max-w-5xl mx-auto my-16">
+            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.35em] block font-bold">
+              THE HEART OF THE MATTER
             </span>
-            <div className="space-y-3">
-              <h3 className="font-serif text-2xl md:text-4xl font-normal uppercase text-[#FAF8F5]">
-                "THE FUTURE IS BEING BUILT."
+            <div className="space-y-4">
+              <h3 className="font-serif text-3xl md:text-5xl font-normal uppercase text-[#FAF8F5]">
+                "INDIA IS CHANGING."
               </h3>
-              <p className="font-serif text-lg md:text-2xl text-[#FAF8F5]/90 italic max-w-3xl mx-auto">
-                "But it is not being built equally."
-              </p>
-              <p className="font-sans text-xs md:text-sm font-light text-white/70 tracking-wide max-w-2xl mx-auto leading-relaxed pt-2">
-                "The question is not whether India will change. It already is. The question is who gets to shape that change — and who gets to share in it."
+              <p className="font-serif text-lg md:text-2xl text-[#FAF8F5]/80 italic max-w-3xl mx-auto">
+                "But change does not choose its own direction."
               </p>
             </div>
             
-            <div className="h-[1px] w-16 bg-white/20 mx-auto"></div>
+            <div className="h-[1px] w-24 bg-white/20 mx-auto"></div>
 
-            <div className="space-y-4 pt-2">
-              <span className="text-xs font-mono text-[#16734A] uppercase tracking-widest block font-bold">
-                THE UNFINISHED REPUBLIC
+            {/* FIVE CORE VALUES REVEALED */}
+            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm md:text-xl font-mono uppercase tracking-[0.25em]">
+              <span className="text-[#16734A] font-bold">GROWTH</span>
+              <span className="text-white/30">•</span>
+              <span className="text-[#E8752A] font-bold">KNOWLEDGE</span>
+              <span className="text-white/30">•</span>
+              <span className="text-white font-bold">FREEDOM</span>
+              <span className="text-white/30">•</span>
+              <span className="text-[#16734A] font-bold">DIGNITY</span>
+              <span className="text-white/30">•</span>
+              <span className="text-[#E8752A] font-bold">RESPONSIBILITY</span>
+            </div>
+
+            <p className="font-sans text-xs md:text-sm font-light text-white/80 max-w-2xl mx-auto leading-relaxed pt-2">
+              "The direction is shaped by what a society chooses to value."
+            </p>
+          </div>
+
+          {/* QUIET CLOSING STATEMENT & NARRATIVE TRANSITION TO SECTION 14 (#unfinished-republic) */}
+          <div className="text-center space-y-8 max-w-4xl mx-auto my-16">
+            <div className="space-y-3">
+              <h3 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase">
+                "THE COUNTRY WE BUILD IS ALSO THE SOCIETY WE CHOOSE."
+              </h3>
+              <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed">
+                Some choices are already being made. Others remain contested. And some promises remain unfinished.
+              </p>
+            </div>
+
+            <div className="h-[1px] w-16 bg-[#171717]/15 mx-auto"></div>
+
+            <div className="space-y-4 pt-4">
+              <span className="text-xs font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
+                14 — THE UNFINISHED REPUBLIC
               </span>
-              <p className="text-xs md:text-sm font-sans font-light text-white/80 max-w-2xl mx-auto leading-relaxed">
-                "Building a country is not the same as finishing one. Some promises remain unfinished."
+              <p className="font-serif text-lg md:text-2xl text-[#16734A] italic font-semibold">
+                "BUT A REPUBLIC IS NEVER FINISHED."
               </p>
               <div className="pt-2">
-                <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] px-4 py-2 rounded-sm uppercase tracking-widest font-bold">
+                <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] border border-[#16734A]/30 px-5 py-2.5 rounded-sm uppercase tracking-widest font-bold inline-block shadow-xs">
                   CONTINUE → 14 — THE UNFINISHED REPUBLIC
                 </span>
               </div>
