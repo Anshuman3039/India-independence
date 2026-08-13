@@ -1,26 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import PageTransition from '../../components/global/PageTransition';
 
-// 1. Chapter Definitions
-const chapters = [
-  { id: "hero", label: "01 OPENING" },
-  { id: "motion", label: "02 MOTION" },
-  { id: "promise-gap", label: "03 PROMISE & GAP" },
-  { id: "young-country", label: "04 YOUTH" },
-  { id: "generation-voice", label: "05 VOICES" },
-  { id: "democracy-pressure", label: "06 PRESSURE" },
-  { id: "media-polarisation", label: "07 MEDIA" },
-  { id: "words-weapons", label: "08 HOSTILITY" },
-  { id: "cjp-case-study", label: "09 CASE STUDY" },
-  { id: "historical-continuity", label: "10 CONTINUITY" },
-  { id: "living-together", label: "11 LIVING TOGETHER" },
-  { id: "building", label: "12 COLLAGE" },
-  { id: "unfinished-republic", label: "13 REPUBLIC" },
-  { id: "final-statement", label: "14 FUTURE" }
-];
-
-// 2. Data Structures
+// 1. Data Structures
 const motionSlides = [
   {
     category: "SPACE",
@@ -237,61 +219,11 @@ const wordsWeaponsData = [
 ];
 
 export default function IndiaToday() {
-  const [activeChapter, setActiveChapter] = useState("hero");
   const [motionIndex, setMotionIndex] = useState(0);
   const [promiseId, setPromiseId] = useState("economy");
   const [youthIndex, setYouthIndex] = useState(0);
   const [timelineIndex, setTimelineIndex] = useState(0);
   const [hoveredWord, setHoveredWord] = useState(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  // Dynamic Scroll Progress Line
-  useEffect(() => {
-    const handleScroll = () => {
-      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
-      if (totalScroll > 0) {
-        setScrollProgress(window.scrollY / totalScroll);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: "-35% 0px -45% 0px",
-      threshold: 0
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveChapter(entry.target.id);
-        }
-      });
-    }, observerOptions);
-
-    chapters.forEach((ch) => {
-      const el = document.getElementById(ch.id);
-      if (el) observer.observe(el);
-    });
-
-    return () => {
-      chapters.forEach((ch) => {
-        const el = document.getElementById(ch.id);
-        if (el) observer.unobserve(el);
-      });
-    };
-  }, []);
-
-  const handleScrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
 
   const activePromiseObj = promiseGapCards.find(c => c.id === promiseId) || promiseGapCards[0];
   const activeSlide = motionSlides[motionIndex];
@@ -302,26 +234,6 @@ export default function IndiaToday() {
     <PageTransition>
       <div className="w-full bg-[#F7F4EE] text-[#171717] min-h-screen relative font-sans">
         
-        {/* Minimal Floating Chapter Navigation Pill */}
-        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-[#171717]/95 text-[#FAF8F5] px-6 py-2.5 rounded-full shadow-xl flex items-center gap-6 z-40 text-[9px] font-sans tracking-widest uppercase backdrop-blur-sm max-w-[90vw] overflow-x-auto scrollbar-none">
-          {chapters.map((ch) => {
-            const isActive = activeChapter === ch.id;
-            return (
-              <button
-                key={ch.id}
-                onClick={() => handleScrollTo(ch.id)}
-                className={`transition-all duration-300 outline-none cursor-pointer focus-visible:text-[#E8752A] ${
-                  isActive 
-                    ? "text-[#E8752A] font-semibold scale-105" 
-                    : "text-[#FAF8F5]/60 hover:text-[#FAF8F5]"
-                }`}
-              >
-                {ch.label}
-              </button>
-            );
-          })}
-        </div>
-
         {/* 01 — HERO / OPENING */}
         <section id="hero" className="w-full min-h-screen flex flex-col justify-between relative overflow-hidden bg-[#171717] px-6 md:px-12 py-16">
           <div className="absolute inset-0 z-0">
@@ -344,11 +256,11 @@ export default function IndiaToday() {
           </div>
 
           {/* Middle/Bottom Main Title Block */}
-          <div className="relative z-10 max-w-3xl space-y-6 my-auto pt-20">
+          <div className="relative z-10 max-w-3xl space-y-6 my-auto pt-16 pb-12">
             <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl text-[#FAF8F5] leading-none font-normal tracking-tight">
               THE INDIA<br/>WE LIVE IN
             </h1>
-            <h2 className="font-serif text-lg md:text-2xl lg:text-3xl text-[#16734A] font-medium leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] bg-[#171717]/50 backdrop-blur-sm px-3.5 py-1.5 rounded-sm border border-white/10 border-l-2 border-l-[#16734A] inline-block shadow-xs">
+            <h2 className="font-serif text-lg md:text-2xl lg:text-3xl text-[#16734A] font-medium leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] bg-[#0a0a0a]/60 backdrop-blur-md px-4 py-2 rounded-sm border border-white/10 border-l-2 border-l-[#16734A] inline-block shadow-xs">
               A country moving forward, carrying its contradictions with it.
             </h2>
             <div className="h-[1px] w-24 bg-[#E8752A]"></div>
@@ -358,7 +270,7 @@ export default function IndiaToday() {
           </div>
 
           {/* Bottom details */}
-          <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center border-t border-white/15 pt-4 text-[9px] font-mono text-[#FAF8F5]/60 tracking-widest uppercase gap-2">
+          <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center border-t border-white/15 pt-4 text-[9px] font-mono text-[#FAF8F5]/60 tracking-widest uppercase gap-2 pb-2">
             <span>INDIA TODAY · 2026</span>
             <span>A PRESENT-DAY PORTRAIT</span>
           </div>
