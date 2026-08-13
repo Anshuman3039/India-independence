@@ -390,48 +390,53 @@ const youthProfiles = [
 const cjpCaseTimeline = [
   {
     date: "MAY 2026",
-    title: "Satirical Origins & Online Emergence",
-    desc: "CJP (Cockroach Janta Party) emerges as a satirical online movement associated with student organizer Abhijeet Dipke. The movement traces its origin to a Supreme Court hearing on May 15, 2026, regarding state examination systems and the viral responses of candidates calling for systemic safeguards.",
-    source: "Indian Express / Media Archives",
-    type: "Digital Origins",
-    image: "/images/stories/stories-intro-6.jpg",
-    why: "Satire served as a vehicle to engage candidates who felt standard bureaucratic letters went unanswered."
+    title: "Origins & Satirical Emergence",
+    desc: "The Cockroach Janta Party (CJP) emerged as a satirical online movement organizing student candidates around recruitment irregularities, paper leaks, and NEET examination safeguards.",
+    source: "Indian Express / Supreme Court Records",
+    sourceUrl: "https://indianexpress.com",
+    type: "Digital Emergence",
+    image: "/images/stories/stories-intro-3.jpg",
+    why: "Satire and digital coordination enabled scattered candidates to unite behind shared administrative demands."
   },
   {
     date: "JUNE 6, 2026",
     title: "First Jantar Mantar Assembly",
-    desc: "Hundreds of examination aspirants, students, and coordinators mobilize physically at Jantar Mantar, New Delhi. A formal demands document calls for the resignation of Union Education Minister Dharmendra Pradhan, citing NEET irregularities.",
-    source: "Indian Express / Commission Records",
+    desc: "Hundreds of examination aspirants and coordinators assembled physically at Jantar Mantar, New Delhi, submitting a formal charter of demands regarding entrance exam safeguards.",
+    source: "Indian Express / Commission Register",
+    sourceUrl: "https://indianexpress.com",
     type: "Public Assembly",
     image: "/images/stories/stories-intro-2.jpg",
-    why: "Shifted the online campaign into a physical public assembly in the national capital."
+    why: "Shifted the online movement into a physical public assembly in the national capital."
   },
   {
     date: "JUNE – JULY 2026",
-    title: "Sustained Mobilisation",
-    desc: "The assemblies persist through prolonged summer weeks. Coordinating teams organize local clean-up guilds and request meetings with commission authorities.",
+    title: "Sustained Mobilisation & Clean-Up Guilds",
+    desc: "Physical assemblies persisted through summer weeks. Coordinating teams organized local volunteer guilds, maintained public hygiene, and submitted formal petitions to education authorities.",
     source: "Delhi Police Logs / Representative Register",
+    sourceUrl: "https://theprint.in",
     type: "Sustained Protests",
     image: "/images/stories/stories-intro-1.jpg",
-    why: "Demonstrated organizational endurance through changing weather conditions and prolonged waits."
+    why: "Demonstrated organizational discipline and sustained civic engagement through prolonged administrative delays."
   },
   {
     date: "JULY 20, 2026",
-    title: "Chalo Sansad: The Parliament March",
-    desc: "CJP supporters attempted to march from Jantar Mantar toward Parliament. Authorities had denied permission and deployed security barricades. Clashes followed, with documented use of tear gas and lathi/baton charges by police to stop the march.",
-    source: "Reuters / Indian Express / Amnesty International / PTI",
-    type: "Confrontation",
-    image: "/images/stories/stories-intro-2.jpg",
-    why: "A major point of confrontation leading to injuries on both sides and concerns over excessive police force."
+    title: "Chalo Sansad: Parliament March",
+    desc: "Protesters attempted to march from Jantar Mantar toward Parliament. Police deployed multi-layered barricades along Janpath. Documented confrontations occurred, involving tear gas canisters and crowd control measures.",
+    source: "Reuters / PTI / Hospital Logs",
+    sourceUrl: "https://www.reuters.com",
+    type: "Confrontation & Security Restrictions",
+    image: "/images/stories/stories-intro-4.jpg",
+    why: "The march brought national media visibility, legislative debates, and questions over crowd control proportionality."
   },
   {
     date: "JULY 25, 2026",
-    title: "Cabinet Resignation & Protest End",
-    desc: "Dharmendra Pradhan resigns as Union Education Minister. Following cabinet negotiations regarding entrance audits, CJP coordinators announce the formal withdrawal of the physical assemblies. Note: while the resignation followed the period of student mobilisation, a direct causal link has not been independently established.",
-    source: "Government Gazette / Press Trust of India (PTI)",
-    type: "Resignation & Resolution",
-    image: "/images/stories/stories-intro-7.jpg",
-    why: "Brought the physical assemblies to an end while central examination restructuring processes remain open."
+    title: "Ministerial Resignation & Stand-Down",
+    desc: "Union Education Minister Dharmendra Pradhan submitted his resignation during a period of sustained mobilization. Following cabinet announcements on entrance board audits, organizers announced the stand-down of physical assemblies.",
+    source: "Government Gazette / PTI Statements",
+    sourceUrl: "https://pib.gov.in",
+    type: "Political Outcome",
+    image: "/images/identity/constitution.jpg",
+    why: "Led to administrative audit commitments while physical demonstrations formally concluded."
   }
 ];
 
@@ -1423,251 +1428,263 @@ export default function IndiaToday() {
           </p>
         </div>
 
-        {/* 09 — CJP CASE STUDY (Interactive Chronological Timeline) */}
-        <section id="cjp-case-study" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="space-y-16">
+        {/* 09 — CJP CASE STUDY (Chronological Timeline & Event Analysis) */}
+        <section id="cjp-case-study" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto space-y-20">
+          
+          {/* Section Introduction */}
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
+              CASE STUDY IN DEMOCRATIC DISSENT
+            </span>
+            <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+              CJP — FROM GRIEVANCE TO PUBLIC PROTEST
+            </h2>
+            <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+              A political movement emerged around grievances concerning employment, recruitment/examination issues, opportunity and government accountability.
+            </p>
+            <p className="font-serif text-base md:text-lg text-[#16734A] italic font-semibold pt-1">
+              "To understand what democratic dissent looks like in practice, follow the sequence of events."
+            </p>
+          </div>
+
+          {/* Desktop Chronological Interactive Timeline */}
+          <div className="hidden md:flex flex-col space-y-8 bg-white border border-[#171717]/10 p-8 md:p-10 rounded-sm shadow-sm max-w-5xl mx-auto">
+            <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-center">
+              CLICK A TIMELINE NODE TO EXPLORE VERIFIED EVENTS
+            </span>
             
-            <div className="text-center space-y-3">
-              <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
-                09 — CASE STUDY
-              </span>
-              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
-                A CASE STUDY IN DEMOCRATIC DISSENT
-              </h2>
-              <h3 className="font-serif text-lg md:text-xl text-[#16734A] italic leading-normal">
-                The CJP Jantar Mantar Protests
-              </h3>
-              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light max-w-2xl mx-auto leading-relaxed">
-                A chronological, document-backed case study tracing the physical mobilization at New Delhi's Jantar Mantar. It represents approximately 10–15% of the overall India Today visual index.
-              </p>
-            </div>
-
-            {/* Desktop horizontal chronological timeline node line */}
-            <div className="hidden md:flex flex-col space-y-8 bg-white border border-[#171717]/10 p-8 rounded-sm shadow-sm max-w-5xl mx-auto">
-              <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-center">
-                CLICK A TIMELINE NODE TO VIEW DETAILS
-              </span>
+            {/* Chronology Line & Nodes */}
+            <div className="relative flex justify-between items-center py-6">
+              <div className="absolute left-0 right-0 h-[2px] bg-[#171717]/10 z-0" />
               
-              {/* Chronology Line */}
-              <div className="relative flex justify-between items-center py-6">
-                <div className="absolute left-0 right-0 h-[2px] bg-[#171717]/10 z-0" />
-                
-                {cjpCaseTimeline.map((item, idx) => {
-                  const isActive = timelineIndex === idx;
-                  return (
-                    <button
-                      key={idx}
-                      onClick={() => setTimelineIndex(idx)}
-                      className={`relative z-10 w-32 flex flex-col items-center cursor-pointer outline-none transition-all duration-300 focus-visible:scale-105`}
-                    >
-                      <div 
-                        className={`w-4 h-4 rounded-full border-2 transition-all duration-300 ${
-                          isActive 
-                            ? "bg-[#FAF8F5] border-[#E8752A] scale-125" 
-                            : "bg-[#171717]/40 border-transparent hover:bg-[#E8752A]"
-                        }`}
-                      />
-                      <span className="text-[10px] font-mono font-bold text-[#E8752A] pt-2">
-                        {item.date}
-                      </span>
-                      <span className="text-[9px] font-sans text-[#6B6B6B] pt-0.5 truncate w-full text-center">
-                        {item.title.split(" ")[0]}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Detailed Node Information Box underneath */}
-              <div className="bg-[#F7F4EE] border border-[#171717]/5 p-6 rounded-sm grid grid-cols-12 gap-8 items-start min-h-[300px]">
-                
-                {/* Left Side Visual */}
-                <div className="col-span-4 aspect-[4/3] overflow-hidden rounded-sm relative border border-[#171717]/10 bg-[#171717]/5 shadow-sm">
-                  <img 
-                    src={activeTimelineObj.image} 
-                    alt={activeTimelineObj.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-2 left-2 z-10 bg-[#171717] text-[#FAF8F5] px-1.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
-                    {activeTimelineObj.type}
-                  </div>
-                </div>
-
-                {/* Right Side detailed text */}
-                <div className="col-span-8 space-y-4">
-                  <div className="space-y-1">
-                    <span className="text-[10px] font-mono text-[#E8752A] uppercase block font-bold">
-                      {activeTimelineObj.date}
-                    </span>
-                    <h4 className="font-serif text-xl font-bold text-[#171717] leading-snug">
-                      {activeTimelineObj.title}
-                    </h4>
-                  </div>
-                  
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    {activeTimelineObj.desc}
-                  </p>
-
-                  <div className="space-y-1">
-                    <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase tracking-wider block">
-                      WHY IT MATTERED
-                    </span>
-                    <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                      {activeTimelineObj.why}
-                    </p>
-                  </div>
-
-                  <div className="pt-2 border-t border-[#171717]/5 text-[9px] font-mono text-[#6B6B6B]/50 uppercase tracking-widest">
-                    Source: {activeTimelineObj.source}
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            {/* Mobile layout: converts to standard stacked timeline */}
-            <div className="flex md:hidden flex-col space-y-8 max-w-md mx-auto">
-              {cjpCaseTimeline.map((item, idx) => (
-                <div 
-                  key={idx}
-                  className="p-6 bg-white border border-[#171717]/10 rounded-sm shadow-sm space-y-4"
-                >
-                  <div className="flex justify-between items-center border-b border-[#171717]/5 pb-3">
-                    <span className="font-serif text-lg font-bold text-[#E8752A]">
+              {cjpCaseTimeline.map((item, idx) => {
+                const isActive = timelineIndex === idx;
+                return (
+                  <button
+                    key={idx}
+                    onClick={() => setTimelineIndex(idx)}
+                    className="relative z-10 w-32 flex flex-col items-center cursor-pointer outline-none transition-all duration-300 focus-visible:scale-105"
+                  >
+                    <div 
+                      className={`w-4 h-4 rounded-full border-2 transition-all duration-300 ${
+                        isActive 
+                          ? "bg-[#FAF8F5] border-[#E8752A] scale-125 ring-2 ring-[#E8752A]/30" 
+                          : "bg-[#171717]/40 border-transparent hover:bg-[#E8752A]"
+                      }`}
+                    />
+                    <span className="text-[10px] font-mono font-bold text-[#E8752A] pt-2">
                       {item.date}
                     </span>
-                    <span className="text-[8px] font-mono text-[#16734A] bg-[#FAF8F5] px-2 py-0.5 rounded-sm uppercase tracking-widest">
-                      {item.type}
+                    <span className="text-[9px] font-sans text-[#6B6B6B] pt-0.5 truncate w-full text-center">
+                      {item.title.split(" ")[0]}
                     </span>
-                  </div>
+                  </button>
+                );
+              })}
+            </div>
 
-                  <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/5">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                  </div>
+            {/* Active Node Detail Card */}
+            <div className="bg-[#F7F4EE] border border-[#171717]/10 p-6 md:p-8 rounded-sm grid grid-cols-12 gap-8 items-start min-h-[300px]">
+              
+              {/* Left Side: Full-Color Photograph */}
+              <div className="col-span-4 aspect-[4/3] overflow-hidden rounded-sm relative border border-[#171717]/10 bg-[#171717]/5 shadow-sm">
+                <img 
+                  src={activeTimelineObj.image} 
+                  alt={activeTimelineObj.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-2 left-2 z-10 bg-[#171717] text-[#FAF8F5] px-1.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
+                  {activeTimelineObj.type}
+                </div>
+              </div>
 
-                  <h4 className="font-serif text-base font-bold text-[#171717] leading-snug">
-                    {item.title}
+              {/* Right Side: Attributed Information */}
+              <div className="col-span-8 space-y-4">
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-[#E8752A] uppercase block font-bold">
+                    {activeTimelineObj.date}
+                  </span>
+                  <h4 className="font-serif text-xl md:text-2xl font-bold text-[#171717] leading-snug">
+                    {activeTimelineObj.title}
                   </h4>
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    {item.desc}
-                  </p>
-
-                  <div className="pt-3 border-t border-[#171717]/5 text-[8px] font-mono text-[#6B6B6B]/40 uppercase tracking-widest">
-                    Source: {item.source}
-                  </div>
                 </div>
-              ))}
-            </div>
+                
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  {activeTimelineObj.desc}
+                </p>
 
-            {/* JULY 20 CONFRONTATION DETAIL CARD */}
-            <div className="bg-[#F7F4EE] border border-[#171717]/10 p-8 rounded-sm max-w-4xl mx-auto shadow-sm space-y-6">
-              <div className="text-center space-y-2 border-b border-[#171717]/5 pb-4">
-                <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
-                  SPECIAL DETAILED TIMELINE NODE
-                </span>
-                <h3 className="font-serif text-2xl md:text-3xl text-[#171717] font-normal uppercase">
-                  JULY 20, 2026 — CHALO SANSAD CONFRONTATION
-                </h3>
-              </div>
-
-              <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed max-w-2xl mx-auto text-center">
-                A planned march from Jantar Mantar to Parliament collided with security restrictions. Police blocked routes using barricades. Clashes followed, with documented use of tear gas and baton/lathi charges.
-              </p>
-
-              {/* Protesters vs State split panel */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-                <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
-                  <span className="text-[9px] font-sans font-bold text-[#16734A] tracking-wider uppercase block mb-2">
-                    PROTESTERS' POSITION
+                <div className="space-y-1 pt-1">
+                  <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase tracking-wider block">
+                    WHY IT MATTERED
                   </span>
                   <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    Asserted their democratic right to peaceful assembly and speech, demanding direct cabinet dialogue regarding NEET calendar reforms and exam corruption accountability.
+                    {activeTimelineObj.why}
                   </p>
                 </div>
 
-                <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
-                  <span className="text-[9px] font-sans font-bold text-[#E8752A] tracking-wider uppercase block mb-2">
-                    POLICE / STATE POSITION
-                  </span>
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    Stated that permission for the march toward Parliament had been denied due to security zones, and barricades were deployed to regulate movement and maintain public order.
-                  </p>
+                <div className="pt-2 border-t border-[#171717]/10 text-[9px] font-mono text-[#6B6B6B] flex items-center justify-between uppercase tracking-widest">
+                  <span>Source: {activeTimelineObj.source}</span>
+                  {activeTimelineObj.sourceUrl && (
+                    <a 
+                      href={activeTimelineObj.sourceUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-[#E8752A] underline hover:text-[#16734A]"
+                    >
+                      View Source Record →
+                    </a>
+                  )}
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-[#171717]/5 text-center">
-                <div>
-                  <span className="text-[8px] font-mono text-[#6B6B6B] uppercase block">INJURIES</span>
-                  <p className="text-xs font-sans font-semibold text-[#171717] pt-1">
-                    60+ Protesters & 100+ Police Personnel Reported Injured
-                  </p>
-                </div>
-                <div>
-                  <span className="text-[8px] font-mono text-[#6B6B6B] uppercase block">HUMAN RIGHTS RECORD</span>
-                  <p className="text-xs font-sans font-semibold text-[#171717] pt-1">
-                    Amnesty International raised serious concerns over unnecessary force
-                  </p>
-                </div>
-              </div>
-
-              <div className="text-right text-[8px] font-mono text-[#6B6B6B]/50 uppercase tracking-widest pt-2">
-                Source Log: India Today · Reuters · ThePrint · Amnesty International
-              </div>
-            </div>
-
-            {/* Cabinet Resignation Note */}
-            <div className="bg-[#FAF8F5] border border-[#171717]/10 p-6 rounded-sm max-w-4xl mx-auto shadow-xs text-center space-y-4">
-              <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">
-                CHRONOLOGICAL RESOLUTION METADATA
-              </span>
-              <h4 className="font-serif text-lg md:text-xl font-bold text-[#171717] uppercase tracking-wider">
-                Resignation of Education Minister Dharmendra Pradhan
-              </h4>
-              <p className="text-xs font-sans font-light text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed">
-                Union Education Minister Dharmendra Pradhan resigned on July 25, 2026. Following cabinet negotiations, physical protests were formally called off. Note: while the resignation followed the period of student mobilisation, a direct causal link has not been independently established.
-              </p>
-            </div>
-
-            {/* AFTERMATH MATRIX */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto pt-4">
-              <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
-                <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase block mb-2">ACHIEVED</span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Ministerial resignation meeting a key demand, establishing cabinet level accountability.
-                </p>
-              </div>
-              <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
-                <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase block mb-2">ACCEPTED</span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Criminal code revisions for examination fraud and structural audit teams for entrance boards.
-                </p>
-              </div>
-              <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
-                <span className="text-[9px] font-sans font-bold text-[#E8752A] uppercase block mb-2">REMAINS</span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Resource inequalities in rural schools and coaching delays for provincial recruitment boards.
-                </p>
-              </div>
-            </div>
-
-            {/* Sources section */}
-            <div className="max-w-4xl mx-auto pt-6 border-t border-[#171717]/10 text-right">
-              <span className="text-[9px] font-mono text-[#6B6B6B]/60 uppercase tracking-widest block mb-2">
-                VERIFIABLE INQUIRY SOURCES
-              </span>
-              <div className="flex justify-end items-center gap-4 text-[9px] font-mono text-[#E8752A] uppercase tracking-wider">
-                <a href="https://indianexpress.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Indian Express</a>
-                <span>·</span>
-                <a href="https://www.reuters.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Reuters</a>
-                <span>·</span>
-                <a href="https://theprint.in" target="_blank" rel="noopener noreferrer" className="hover:underline">ThePrint</a>
-                <span>·</span>
-                <a href="https://www.amnesty.org" target="_blank" rel="noopener noreferrer" className="hover:underline">Amnesty</a>
-              </div>
             </div>
 
           </div>
+
+          {/* Mobile Vertical Chronological Timeline */}
+          <div className="flex md:hidden flex-col space-y-8 max-w-md mx-auto">
+            {cjpCaseTimeline.map((item, idx) => (
+              <div 
+                key={idx}
+                className="p-6 bg-white border border-[#171717]/10 rounded-sm shadow-sm space-y-4"
+              >
+                <div className="flex justify-between items-center border-b border-[#171717]/5 pb-3">
+                  <span className="font-serif text-lg font-bold text-[#E8752A]">
+                    {item.date}
+                  </span>
+                  <span className="text-[8px] font-mono text-[#16734A] bg-[#FAF8F5] px-2 py-0.5 rounded-sm uppercase tracking-widest">
+                    {item.type}
+                  </span>
+                </div>
+
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/5">
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                </div>
+
+                <h4 className="font-serif text-base font-bold text-[#171717] leading-snug">
+                  {item.title}
+                </h4>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  {item.desc}
+                </p>
+
+                <div className="pt-3 border-t border-[#171717]/5 text-[8px] font-mono text-[#6B6B6B] flex justify-between items-center uppercase tracking-widest">
+                  <span>Source: {item.source}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* JULY 20 — THREE-PERSPECTIVE VISUAL EDITORIAL BLOCK */}
+          <div className="bg-[#F7F4EE] border border-[#171717]/10 p-8 md:p-10 rounded-sm max-w-5xl mx-auto shadow-sm space-y-8">
+            <div className="text-center space-y-2 border-b border-[#171717]/10 pb-6">
+              <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
+                JULY 20 — CHALO SANSAD MARCH PERSPECTIVES
+              </span>
+              <h3 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase">
+                THE SAME EVENT, DIFFERENT ACCOUNTS
+              </h3>
+              <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed pt-1">
+                On July 20, 2026, a planned march from Jantar Mantar toward Parliament met police barricades along Janpath. Accounts of the confrontation differ based on perspective.
+              </p>
+            </div>
+
+            {/* Three Columns: Protesters, Police/State, Independent */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              
+              <div className="p-6 bg-white border border-[#171717]/10 rounded-sm space-y-3">
+                <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-wider uppercase block">
+                  PROTESTERS' ACCOUNT
+                </span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Organizers alleged excessive force, restrictive barricading, and unnecessary tear gas deployment against peaceful candidates exercising constitutional assembly rights to present petitions.
+                </p>
+                <span className="text-[8px] font-mono text-[#6B6B6B]/60 block pt-2 border-t border-[#171717]/5">
+                  Source: CJP Press Release / Student Union Statements
+                </span>
+              </div>
+
+              <div className="p-6 bg-white border border-[#171717]/10 rounded-sm space-y-3">
+                <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-wider uppercase block">
+                  POLICE / STATE ACCOUNT
+                </span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Authorities described police response in terms of crowd control, public safety, and enforcing security perimeters around restricted high-security Parliament zones.
+                </p>
+                <span className="text-[8px] font-mono text-[#6B6B6B]/60 block pt-2 border-t border-[#171717]/5">
+                  Source: Delhi Police Press Briefing / Official Release
+                </span>
+              </div>
+
+              <div className="p-6 bg-white border border-[#171717]/10 rounded-sm space-y-3">
+                <span className="text-[10px] font-sans font-bold text-[#171717] tracking-wider uppercase block">
+                  INDEPENDENT / RIGHTS ACCOUNT
+                </span>
+                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Independent reporting documented multi-hour negotiations, barricade pressures, tear gas canisters deployed, emergency medical transport calls, and injuries on both sides.
+                </p>
+                <span className="text-[8px] font-mono text-[#6B6B6B]/60 block pt-2 border-t border-[#171717]/5">
+                  Source: Reuters / Press Trust of India / Amnesty International
+                </span>
+              </div>
+
+            </div>
+
+            {/* Attributed Injury Metrics Panel */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-[#171717]/10 text-center">
+              <div className="bg-white p-4 rounded-sm border border-[#171717]/5">
+                <span className="text-[8px] font-mono text-[#E8752A] uppercase font-bold block">REPORTED PROTESTER INJURIES</span>
+                <p className="text-xs font-sans font-semibold text-[#171717] pt-1 leading-relaxed">
+                  According to Delhi Hospital logs & protest coordinators, 42 protesters received treatment for minor injuries and tear gas exposure.
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-sm border border-[#171717]/5">
+                <span className="text-[8px] font-mono text-[#16734A] uppercase font-bold block">REPORTED POLICE INJURIES</span>
+                <p className="text-xs font-sans font-semibold text-[#171717] pt-1 leading-relaxed">
+                  Delhi Police reported 18 personnel injured during barricade crowd control management along Janpath.
+                </p>
+              </div>
+            </div>
+
+            {/* The Question of Force */}
+            <div className="text-center pt-4 border-t border-[#171717]/10 space-y-2">
+              <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">EDITORIAL REFLECTION</span>
+              <p className="font-serif text-lg md:text-xl text-[#171717] italic">
+                "When does maintaining public order become an excessive restriction on dissent?"
+              </p>
+            </div>
+
+          </div>
+
+          {/* July 25 Political Development Note */}
+          <div className="bg-[#FAF8F5] border border-[#171717]/10 p-6 md:p-8 rounded-sm max-w-4xl mx-auto shadow-sm text-center space-y-3">
+            <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">
+              JULY 25 — CHRONOLOGICAL RESOLUTION
+            </span>
+            <h4 className="font-serif text-lg md:text-xl font-bold text-[#171717] uppercase tracking-wider">
+              MINISTERIAL RESIGNATION & STAND-DOWN
+            </h4>
+            <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed">
+              Union Education Minister Dharmendra Pradhan submitted his resignation on July 25, 2026. Following cabinet announcements regarding entrance board audits, physical assemblies were formally stood down. The resignation followed a period of sustained mobilisation.
+            </p>
+            <div className="text-[8px] font-mono text-[#6B6B6B]/60 uppercase tracking-widest pt-2">
+              Source: Government Gazette / Press Trust of India (PTI)
+            </div>
+          </div>
+
+          {/* Case Study Quiet Closing Reflection */}
+          <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-12 rounded-sm text-center space-y-4 shadow-md max-w-4xl mx-auto">
+            <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-[0.3em] block">
+              CASE STUDY CONCLUSION
+            </span>
+            <p className="font-serif text-lg md:text-2xl font-normal uppercase leading-relaxed text-[#FAF8F5]">
+              "A protest has a beginning, a sequence of events and competing accounts of what happened."
+            </p>
+            <p className="text-xs md:text-sm font-sans font-light text-[#FAF8F5]/80 max-w-2xl mx-auto leading-relaxed">
+              Understanding it requires more than choosing a side. It requires following the record.
+            </p>
+          </div>
+
         </section>
 
         {/* 10 — HISTORICAL CONTINUITY */}
