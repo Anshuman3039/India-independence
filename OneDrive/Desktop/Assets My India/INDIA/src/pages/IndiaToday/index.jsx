@@ -1440,136 +1440,135 @@ export default function IndiaToday() {
         </div>
 
         {/* 09 — CJP CASE STUDY (Documentary Visual Timeline & Event Analysis) */}
-        <section id="cjp-case-study" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto space-y-20">
+        <section id="cjp-case-study" className="w-full py-32 md:py-36 px-4 sm:px-6 md:px-12 max-w-[94vw] mx-auto space-y-24">
           
           {/* Section Introduction */}
-          <div className="text-center space-y-4 max-w-3xl mx-auto">
-            <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
+          <div className="text-center space-y-4 max-w-4xl mx-auto">
+            <span className="text-[11px] font-mono text-[#E8752A] uppercase tracking-[0.35em] block font-bold">
               09 — CJP: A CASE STUDY
             </span>
-            <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+            <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717]">
               CJP — FROM GRIEVANCE TO PUBLIC PROTEST
             </h2>
-            <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+            <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] leading-relaxed max-w-3xl mx-auto">
               A political movement emerged around grievances concerning employment, recruitment/examination issues, opportunity and government accountability.
             </p>
-            <p className="font-serif text-base md:text-lg text-[#16734A] italic font-semibold pt-1">
+            <p className="font-serif text-lg md:text-xl text-[#16734A] italic font-semibold pt-1">
               "To understand what democratic dissent looks like in practice, follow the sequence of events."
             </p>
           </div>
 
-          {/* IMMERSIVE DOCUMENTARY VISUAL TIMELINE CONTAINER */}
-          <div className="bg-[#171717] text-[#FAF8F5] border border-[#171717]/20 rounded-sm shadow-xl relative overflow-hidden transition-all duration-700">
+          {/* ENLARGED IMMERSIVE DOCUMENTARY VISUAL TIMELINE CONTAINER (90–94vw width, 700–760px desktop height) */}
+          <div className="bg-[#171717] text-[#FAF8F5] border border-[#171717]/30 rounded-sm shadow-2xl relative overflow-hidden transition-all duration-700 w-full min-h-[680px] md:min-h-[760px] flex flex-col justify-between">
             
             {/* Background Image with Smooth Fade & Dark Gradient */}
-            <div className="relative min-h-[550px] md:min-h-[620px] w-full overflow-hidden flex flex-col justify-between p-6 md:p-12">
+            <div className="absolute inset-0 w-full h-full overflow-hidden">
               <img 
                 key={activeTimelineObj.date}
                 src={activeTimelineObj.image} 
                 alt={activeTimelineObj.title}
-                className="absolute inset-0 w-full h-full object-cover opacity-50 transition-opacity duration-700 ease-in-out scale-102"
+                className="w-full h-full object-cover opacity-45 transition-opacity duration-700 ease-in-out scale-102"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#171717] via-[#171717]/60 to-[#171717]/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#171717]/95 via-[#171717]/70 to-[#171717]/40" />
+            </div>
 
-              {/* Top Meta Bar */}
-              <div className="relative z-10 flex flex-wrap justify-between items-center gap-4 text-[9px] font-mono tracking-widest uppercase border-b border-white/10 pb-4">
-                <span className="bg-[#E8752A] text-white px-2.5 py-1 rounded-sm font-bold">
-                  STAGE 0{timelineIndex + 1} OF 05 · {activeTimelineObj.type}
-                </span>
-                
-                {/* Secondary Autoplay Play/Pause Toggle */}
-                <div className="flex items-center gap-3">
-                  <button 
-                    onClick={() => setIsPlayingTimeline(!isPlayingTimeline)}
-                    className="flex items-center gap-1.5 bg-white/10 border border-white/20 hover:bg-white/20 px-3 py-1 rounded-sm text-[#FAF8F5] transition-colors cursor-pointer outline-none"
-                    aria-label={isPlayingTimeline ? "Pause timeline story playback" : "Play timeline story playback"}
-                  >
-                    <span>{isPlayingTimeline ? "⏸ PAUSE STORY" : "▶ PLAY STORY"}</span>
-                  </button>
-                  <span className="text-white/40 hidden sm:inline">8s AUTOPLAY</span>
-                </div>
+            {/* Top Meta Bar */}
+            <div className="relative z-10 flex flex-wrap justify-between items-center gap-4 text-[10px] md:text-xs font-mono tracking-widest uppercase border-b border-white/15 p-6 md:px-12 md:py-6">
+              <span className="bg-[#E8752A] text-white px-3.5 py-1.5 rounded-sm font-bold shadow-sm">
+                STAGE 0{timelineIndex + 1} OF 05 · {activeTimelineObj.type}
+              </span>
+              
+              {/* Secondary Autoplay Play/Pause Toggle */}
+              <div className="flex items-center gap-4">
+                <button 
+                  onClick={() => setIsPlayingTimeline(!isPlayingTimeline)}
+                  className="flex items-center gap-2 bg-white/10 border border-white/20 hover:bg-white/20 px-4 py-1.5 rounded-sm text-[#FAF8F5] transition-colors cursor-pointer outline-none font-semibold"
+                  aria-label={isPlayingTimeline ? "Pause timeline story playback" : "Play timeline story playback"}
+                >
+                  <span>{isPlayingTimeline ? "⏸ PAUSE STORY" : "▶ PLAY STORY"}</span>
+                </button>
+                <span className="text-white/50 hidden sm:inline">8s AUTOPLAY</span>
               </div>
+            </div>
 
-              {/* Translucent Editorial Text Panel (Sitting over the photograph) */}
-              <div className="relative z-10 my-auto py-8 max-w-3xl">
-                <div className="bg-[#0a0a0a]/75 backdrop-blur-md border border-white/15 p-6 md:p-8 rounded-sm space-y-4 shadow-2xl">
-                  <div className="space-y-1">
-                    <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
-                      {activeTimelineObj.date}
-                    </span>
-                    <h3 className="font-serif text-2xl md:text-4xl text-white font-semibold uppercase leading-tight">
-                      {activeTimelineObj.title}
-                    </h3>
-                  </div>
+            {/* ENLARGED Translucent Editorial Text Panel (Sitting over the background photograph) */}
+            <div className="relative z-10 my-auto py-8 md:py-12 px-6 md:px-12 w-full flex justify-center">
+              <div className="bg-[#0a0a0a]/80 backdrop-blur-md border border-white/15 p-8 md:p-14 rounded-sm space-y-6 shadow-2xl max-w-4xl md:max-w-5xl w-full">
+                <div className="space-y-2">
+                  <span className="text-xs md:text-sm font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
+                    {activeTimelineObj.date}
+                  </span>
+                  <h3 className="font-serif text-2xl md:text-4xl lg:text-5xl text-white font-semibold uppercase leading-tight tracking-wide">
+                    {activeTimelineObj.title}
+                  </h3>
+                </div>
 
-                  <p className="text-xs md:text-sm font-sans font-light text-white/90 leading-relaxed">
-                    {activeTimelineObj.desc}
+                <p className="text-sm md:text-base lg:text-lg font-sans font-light text-white/95 leading-relaxed">
+                  {activeTimelineObj.desc}
+                </p>
+
+                <div className="space-y-1.5 pt-4 border-t border-white/15">
+                  <span className="text-xs font-mono text-[#16734A] uppercase tracking-wider block font-bold">
+                    WHY IT MATTERED
+                  </span>
+                  <p className="text-xs md:text-sm font-sans font-light text-white/85 leading-relaxed">
+                    {activeTimelineObj.why}
                   </p>
+                </div>
 
-                  <div className="space-y-1 pt-2 border-t border-white/10">
-                    <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-wider block font-bold">
-                      WHY IT MATTERED
-                    </span>
-                    <p className="text-xs font-sans font-light text-white/80 leading-relaxed">
-                      {activeTimelineObj.why}
-                    </p>
-                  </div>
-
-                  <div className="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between text-[9px] font-mono text-white/60 uppercase tracking-widest gap-2">
-                    <span>Source: {activeTimelineObj.source}</span>
-                    {activeTimelineObj.sourceUrl && (
-                      <a 
-                        href={activeTimelineObj.sourceUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-[#E8752A] underline hover:text-[#16734A] transition-colors"
-                      >
-                        VIEW SOURCE RECORD →
-                      </a>
-                    )}
-                  </div>
+                <div className="pt-4 border-t border-white/15 flex flex-wrap items-center justify-between text-xs font-mono text-white/60 uppercase tracking-widest gap-3">
+                  <span>Source: {activeTimelineObj.source}</span>
+                  {activeTimelineObj.sourceUrl && (
+                    <a 
+                      href={activeTimelineObj.sourceUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-[#E8752A] underline hover:text-[#16734A] transition-colors font-bold"
+                    >
+                      VIEW SOURCE RECORD →
+                    </a>
+                  )}
                 </div>
               </div>
+            </div>
 
-              {/* Lower Horizontal Interactive Timeline Nodes Navigation */}
-              <div className="relative z-10 pt-4 border-t border-white/15">
-                <div className="flex items-center justify-between overflow-x-auto gap-2 py-2 no-scrollbar">
-                  {cjpCaseTimeline.map((item, idx) => {
-                    const isActive = timelineIndex === idx;
-                    return (
-                      <button
-                        key={idx}
-                        onClick={() => {
-                          setTimelineIndex(idx);
-                          setIsPlayingTimeline(false);
-                        }}
-                        className={`flex-1 min-w-[130px] p-3 rounded-sm border text-left transition-all duration-300 cursor-pointer outline-none ${
-                          isActive 
-                            ? "bg-[#FAF8F5] text-[#171717] border-[#E8752A] shadow-md scale-102" 
-                            : "bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white"
-                        }`}
-                        aria-label={`${item.date} — ${item.title}`}
-                      >
-                        <span className={`text-[9px] font-mono font-bold block ${isActive ? "text-[#E8752A]" : "text-[#E8752A]/80"}`}>
-                          0{idx + 1} · {item.date}
-                        </span>
-                        <span className="text-[10px] font-serif font-semibold truncate block pt-0.5">
-                          {item.title}
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
+            {/* ENLARGED Lower Horizontal Interactive Timeline Nodes Navigation */}
+            <div className="relative z-10 p-6 md:px-12 md:py-6 border-t border-white/15 bg-[#171717]/80 backdrop-blur-sm">
+              <div className="flex items-center justify-between overflow-x-auto gap-3 py-2 no-scrollbar">
+                {cjpCaseTimeline.map((item, idx) => {
+                  const isActive = timelineIndex === idx;
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => {
+                        setTimelineIndex(idx);
+                        setIsPlayingTimeline(false);
+                      }}
+                      className={`flex-1 min-w-[160px] md:min-w-[200px] p-4 rounded-sm border text-left transition-all duration-300 cursor-pointer outline-none ${
+                        isActive 
+                          ? "bg-[#FAF8F5] text-[#171717] border-[#E8752A] shadow-lg scale-102 ring-2 ring-[#E8752A]/40" 
+                          : "bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white"
+                      }`}
+                      aria-label={`${item.date} — ${item.title}`}
+                    >
+                      <span className={`text-xs font-mono font-bold block ${isActive ? "text-[#E8752A]" : "text-[#E8752A]/80"}`}>
+                        0{idx + 1} · {item.date}
+                      </span>
+                      <span className="text-xs md:text-sm font-serif font-semibold truncate block pt-1">
+                        {item.title}
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
-
             </div>
 
           </div>
 
           {/* JULY 20 — THREE-PERSPECTIVE VISUAL EDITORIAL BLOCK */}
-          <div className="bg-[#F7F4EE] border border-[#171717]/10 p-8 md:p-10 rounded-sm max-w-5xl mx-auto shadow-sm space-y-8">
+          <div className="bg-[#F7F4EE] border border-[#171717]/10 p-8 md:p-12 rounded-sm max-w-6xl mx-auto shadow-sm space-y-8">
             <div className="text-center space-y-2 border-b border-[#171717]/10 pb-6">
-              <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
+              <span className="text-xs font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
                 JULY 20 — CHALO SANSAD MARCH PERSPECTIVES
               </span>
               <h3 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase">
@@ -1584,37 +1583,37 @@ export default function IndiaToday() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               
               <div className="p-6 bg-white border border-[#171717]/10 rounded-sm space-y-3">
-                <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-wider uppercase block">
+                <span className="text-xs font-sans font-bold text-[#16734A] tracking-wider uppercase block">
                   PROTESTERS' ACCOUNT
                 </span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
                   Organizers alleged excessive force, restrictive barricading, and unnecessary tear gas deployment against peaceful candidates exercising constitutional assembly rights to present petitions.
                 </p>
-                <span className="text-[8px] font-mono text-[#6B6B6B]/60 block pt-2 border-t border-[#171717]/5">
+                <span className="text-[9px] font-mono text-[#6B6B6B]/60 block pt-2 border-t border-[#171717]/5">
                   Source: CJP Press Release / Student Union Statements
                 </span>
               </div>
 
               <div className="p-6 bg-white border border-[#171717]/10 rounded-sm space-y-3">
-                <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-wider uppercase block">
+                <span className="text-xs font-sans font-bold text-[#E8752A] tracking-wider uppercase block">
                   POLICE / STATE ACCOUNT
                 </span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
                   Authorities described police response in terms of crowd control, public safety, and enforcing security perimeters around restricted high-security Parliament zones.
                 </p>
-                <span className="text-[8px] font-mono text-[#6B6B6B]/60 block pt-2 border-t border-[#171717]/5">
+                <span className="text-[9px] font-mono text-[#6B6B6B]/60 block pt-2 border-t border-[#171717]/5">
                   Source: Delhi Police Press Briefing / Official Release
                 </span>
               </div>
 
               <div className="p-6 bg-white border border-[#171717]/10 rounded-sm space-y-3">
-                <span className="text-[10px] font-sans font-bold text-[#171717] tracking-wider uppercase block">
+                <span className="text-xs font-sans font-bold text-[#171717] tracking-wider uppercase block">
                   INDEPENDENT / RIGHTS ACCOUNT
                 </span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
                   Independent reporting documented multi-hour negotiations, barricade pressures, tear gas canisters deployed, emergency medical transport calls, and injuries on both sides.
                 </p>
-                <span className="text-[8px] font-mono text-[#6B6B6B]/60 block pt-2 border-t border-[#171717]/5">
+                <span className="text-[9px] font-mono text-[#6B6B6B]/60 block pt-2 border-t border-[#171717]/5">
                   Source: Reuters / Press Trust of India / Amnesty International
                 </span>
               </div>
@@ -1623,15 +1622,15 @@ export default function IndiaToday() {
 
             {/* Attributed Injury Metrics Panel */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-[#171717]/10 text-center">
-              <div className="bg-white p-4 rounded-sm border border-[#171717]/5">
-                <span className="text-[8px] font-mono text-[#E8752A] uppercase font-bold block">REPORTED PROTESTER INJURIES</span>
-                <p className="text-xs font-sans font-semibold text-[#171717] pt-1 leading-relaxed">
+              <div className="bg-white p-5 rounded-sm border border-[#171717]/5 space-y-1">
+                <span className="text-xs font-mono text-[#E8752A] uppercase font-bold block">REPORTED PROTESTER INJURIES</span>
+                <p className="text-xs md:text-sm font-sans font-semibold text-[#171717] leading-relaxed">
                   According to Delhi Hospital logs & protest coordinators, 42 protesters received treatment for minor injuries and tear gas exposure.
                 </p>
               </div>
-              <div className="bg-white p-4 rounded-sm border border-[#171717]/5">
-                <span className="text-[8px] font-mono text-[#16734A] uppercase font-bold block">REPORTED POLICE INJURIES</span>
-                <p className="text-xs font-sans font-semibold text-[#171717] pt-1 leading-relaxed">
+              <div className="bg-white p-5 rounded-sm border border-[#171717]/5 space-y-1">
+                <span className="text-xs font-mono text-[#16734A] uppercase font-bold block">REPORTED POLICE INJURIES</span>
+                <p className="text-xs md:text-sm font-sans font-semibold text-[#171717] leading-relaxed">
                   Delhi Police reported 18 personnel injured during barricade crowd control management along Janpath.
                 </p>
               </div>
@@ -1639,8 +1638,8 @@ export default function IndiaToday() {
 
             {/* The Question of Force */}
             <div className="text-center pt-4 border-t border-[#171717]/10 space-y-2">
-              <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">EDITORIAL REFLECTION</span>
-              <p className="font-serif text-lg md:text-xl text-[#171717] italic">
+              <span className="text-xs font-mono text-[#6B6B6B] uppercase tracking-widest block">EDITORIAL REFLECTION</span>
+              <p className="font-serif text-lg md:text-2xl text-[#171717] italic">
                 "When does maintaining public order become an excessive restriction on dissent?"
               </p>
             </div>
@@ -1648,32 +1647,32 @@ export default function IndiaToday() {
           </div>
 
           {/* July 25 Political Development Note */}
-          <div className="bg-[#FAF8F5] border border-[#171717]/10 p-6 md:p-8 rounded-sm max-w-4xl mx-auto shadow-sm text-center space-y-3">
-            <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">
+          <div className="bg-[#FAF8F5] border border-[#171717]/10 p-6 md:p-10 rounded-sm max-w-5xl mx-auto shadow-sm text-center space-y-3">
+            <span className="text-xs font-mono text-[#16734A] uppercase tracking-widest block font-bold">
               JULY 25 — CHRONOLOGICAL RESOLUTION
             </span>
-            <h4 className="font-serif text-lg md:text-xl font-bold text-[#171717] uppercase tracking-wider">
+            <h4 className="font-serif text-xl md:text-2xl font-bold text-[#171717] uppercase tracking-wider">
               MINISTERIAL RESIGNATION & STAND-DOWN
             </h4>
-            <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] max-w-3xl mx-auto leading-relaxed">
               Union Education Minister Dharmendra Pradhan submitted his resignation on July 25, 2026. Following cabinet announcements regarding entrance board audits, physical assemblies were formally stood down. The resignation followed a period of sustained mobilisation.
             </p>
-            <div className="text-[8px] font-mono text-[#6B6B6B]/60 uppercase tracking-widest pt-2">
+            <div className="text-[9px] font-mono text-[#6B6B6B]/60 uppercase tracking-widest pt-2">
               Source: Government Gazette / Press Trust of India (PTI)
             </div>
           </div>
 
           {/* TRANSITION OUT OF THE CASE STUDY */}
-          <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-12 rounded-sm text-center space-y-6 shadow-md max-w-4xl mx-auto">
-            <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
+          <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-14 rounded-sm text-center space-y-6 shadow-md max-w-5xl mx-auto">
+            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
               CASE STUDY REFLECTION
             </span>
-            <p className="font-serif text-lg md:text-2xl font-normal leading-relaxed text-[#FAF8F5] max-w-2xl mx-auto">
+            <p className="font-serif text-xl md:text-3xl font-normal leading-relaxed text-[#FAF8F5] max-w-3xl mx-auto">
               "One story cannot explain a democracy.<br/>But it can show us where its questions become real."
             </p>
-            <div className="h-[1px] w-12 bg-white/20 mx-auto"></div>
+            <div className="h-[1px] w-16 bg-white/20 mx-auto"></div>
             <div className="pt-2 flex items-center justify-center">
-              <span className="text-[9px] font-mono text-[#16734A] bg-[#FAF8F5] px-3.5 py-1.5 rounded-sm uppercase tracking-widest font-bold">
+              <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] px-4 py-2 rounded-sm uppercase tracking-widest font-bold">
                 STEP BACK → 10 — HISTORICAL CONTEXT
               </span>
             </div>
