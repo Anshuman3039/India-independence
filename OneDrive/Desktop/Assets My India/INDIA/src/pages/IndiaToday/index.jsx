@@ -763,6 +763,33 @@ export default function IndiaToday() {
     <PageTransition>
       <div className="w-full bg-[#F7F4EE] text-[#171717] min-h-screen relative font-sans">
         
+        {/* SUBTLE INDIAN TRICOLOR BACKGROUND ATMOSPHERE (3-5% Opacity Soft Glows & Faint Ashoka Chakra Watermark) */}
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+          {/* Saffron Top-Right Soft Atmospheric Glow */}
+          <div className="absolute -top-32 right-[-10%] w-[600px] md:w-[900px] h-[600px] md:h-[900px] rounded-full bg-radial from-[#FF9933]/15 via-[#FF9933]/4 to-transparent blur-3xl opacity-30" />
+          
+          {/* India Green Mid-Left Soft Atmospheric Glow */}
+          <div className="absolute top-[35%] -left-[10%] w-[600px] md:w-[850px] h-[600px] md:h-[850px] rounded-full bg-radial from-[#138808]/12 via-[#138808]/3 to-transparent blur-3xl opacity-30" />
+
+          {/* Saffron Mid-Right Atmospheric Aura */}
+          <div className="absolute top-[65%] -right-[10%] w-[550px] md:w-[800px] h-[550px] md:h-[800px] rounded-full bg-radial from-[#FF9933]/12 via-[#FF9933]/3 to-transparent blur-3xl opacity-30" />
+
+          {/* Faint Ashoka Chakra Watermark (2-3% Opacity, Partially Off-Screen) */}
+          <div className="absolute top-[45%] right-[-12%] w-[450px] md:w-[700px] h-[450px] md:h-[700px] opacity-[0.025]">
+            <svg viewBox="0 0 100 100" className="w-full h-full text-[#000080] fill-none stroke-current stroke-[0.5]">
+              <circle cx="50" cy="50" r="45" />
+              <circle cx="50" cy="50" r="8" />
+              {Array.from({ length: 24 }).map((_, i) => {
+                const angle = (i * 360) / 24;
+                const rad = (angle * Math.PI) / 180;
+                const x2 = 50 + 45 * Math.cos(rad);
+                const y2 = 50 + 45 * Math.sin(rad);
+                return <line key={i} x1="50" y1="50" x2={x2} y2={y2} />;
+              })}
+            </svg>
+          </div>
+        </div>
+        
         {/* 01 — HERO / OPENING */}
         <section id="hero" className="w-full min-h-screen flex flex-col justify-between relative overflow-hidden bg-[#171717] px-6 md:px-12 py-16">
           <div className="absolute inset-0 z-0">
