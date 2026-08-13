@@ -467,9 +467,63 @@ const wordsWeaponsData = [
   }
 ];
 
+const historicalThreads = [
+  {
+    era: "1946–1950",
+    category: "CONSTITUTIONAL FOUNDATIONS",
+    title: "Constituent Assembly & Fundamental Rights",
+    desc: "Debates on universal adult franchise, fundamental rights, and executive limits created India's constitutional framework, guaranteeing democratic assembly to all citizens.",
+    question: "What kind of republic did India choose to become?",
+    why: "Established rights to free expression, equality, and peaceful assembly as foundational citizen guarantees.",
+    source: "Constituent Assembly Debates (1946–1949)",
+    image: "/images/identity/constitution.jpg"
+  },
+  {
+    era: "1950s–1960s",
+    category: "DISSENT & PARTICIPATION",
+    title: "Parliamentary Assembly & Opposition Space",
+    desc: "Early parliamentary debates and regional public assemblies established opposition rights, free speech, and public petitioning as integral to democratic governance.",
+    question: "When citizens disagree with power, what space does democracy give them?",
+    why: "Normalized public criticism, parliamentary opposition, and executive accountability during early nation-building.",
+    source: "Lok Sabha Debates / National Archives of India",
+    image: "/images/history/nehru-speech.jpg"
+  },
+  {
+    era: "1975–1977",
+    category: "THE EMERGENCY",
+    title: "Institutional Pressure & Democratic Restoration",
+    desc: "The 21-month Emergency suspended fundamental rights and curtailed press freedoms, leading to nationwide civil resistance and democratic restoration in 1977.",
+    question: "What happens when democratic institutions are placed under extraordinary pressure?",
+    why: "Proved the resilience of public electorate voting and citizen defence of fundamental liberties.",
+    source: "Shah Commission Report / General Election Records (1977)",
+    image: "/images/history/gandhi-march.jpg"
+  },
+  {
+    era: "1980s–2000s",
+    category: "MOVEMENTS FROM BELOW",
+    title: "Grassroots Mobilisation & Civil Society",
+    desc: "Farmers' alliances, environmental movements (Chipko), workers' unions, and women's collectives organized outside formal party politics to demand policy reform.",
+    question: "Who gets to participate in shaping the republic?",
+    why: "Expanded democratic participation beyond election days into everyday civic advocacy and legal rights.",
+    source: "Planning Commission Reports / Civil Society Archives",
+    image: "/images/stories/story3-forest.jpg"
+  },
+  {
+    era: "2010s–PRESENT",
+    category: "ONGOING EXPERIMENT",
+    title: "Contemporary Assemblies & Digital Dissent",
+    desc: "Modern anti-corruption movements, student assemblies, and digital petitioning demonstrate how new generations re-interpret constitutional rights in a digital age.",
+    question: "What has India learned — and what remains unresolved?",
+    why: "Connects historical precedents directly to contemporary youth mobilization and governance questions.",
+    source: "Supreme Court Rulings / Ministry of Law Records",
+    image: "/images/stories/stories-intro-2.jpg"
+  }
+];
+
 export default function IndiaToday() {
   const [motionIndex, setMotionIndex] = useState(0);
   const [timelineIndex, setTimelineIndex] = useState(0);
+  const [historyIndex, setHistoryIndex] = useState(0);
   const [hoveredWord, setHoveredWord] = useState(null);
   const [isPlayingTimeline, setIsPlayingTimeline] = useState(false);
 
@@ -485,6 +539,7 @@ export default function IndiaToday() {
 
   const activeSlide = motionSlides[motionIndex];
   const activeTimelineObj = cjpCaseTimeline[timelineIndex];
+  const activeHistoryObj = historicalThreads[historyIndex];
 
   return (
     <PageTransition>
@@ -1733,51 +1788,198 @@ export default function IndiaToday() {
 
         </section>
 
-        {/* 10 — HISTORICAL CONTINUITY */}
-        <section id="historical-continuity" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5">
-          <div className="max-w-7xl mx-auto space-y-12">
+        {/* Quiet Opening Transition to Section 11 — HISTORICAL CONTEXT */}
+        <section className="w-full py-20 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
+          <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
+            HISTORICAL REFLECTION
+          </span>
+          <div className="max-w-3xl mx-auto space-y-3 text-lg md:text-2xl font-serif text-[#171717]">
+            <p className="italic font-semibold text-[#171717]">"ONE STORY IS NEVER THE WHOLE STORY."</p>
+            <p className="italic font-light text-[#6B6B6B] text-base md:text-xl">"India's arguments about power, fairness, representation and dissent did not begin today."</p>
+            <p className="italic font-semibold text-[#16734A] text-base md:text-xl">"To understand the present, we have to look at the democratic traditions that came before it."</p>
+          </div>
+          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
+        </section>
+
+        {/* 11 — HISTORICAL CONTEXT */}
+        <section id="historical-continuity" className="w-full py-28 px-4 sm:px-6 md:px-12 max-w-[94vw] mx-auto space-y-16">
+          
+          {/* Section Introduction */}
+          <div className="text-center space-y-3 max-w-4xl mx-auto">
+            <span className="text-[11px] font-mono text-[#16734A] uppercase tracking-[0.35em] block font-bold">
+              11 — HISTORICAL CONTEXT
+            </span>
+            <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717]">
+              HISTORICAL CONTEXT
+            </h2>
+            <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-semibold">
+              "India's democracy was not built in a single moment."
+            </p>
+            <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed max-w-3xl mx-auto">
+              Disagreement, participation, protest, representation, and constitutional democracy developed across different eras of India's history. These historical moments illuminate the democratic questions raised by contemporary dissent.
+            </p>
+          </div>
+
+          {/* HORIZONTAL FLOWING HISTORICAL TIMELINE STAGE WITH LIQUID GLASS */}
+          <div className="bg-[#0a0a0a] text-[#FAF8F5] border border-white/15 rounded-2xl shadow-[0_30px_70px_-15px_rgba(0,0,0,0.8)] relative overflow-hidden transition-all duration-700 w-full min-h-[660px] md:min-h-[720px] flex flex-col justify-between p-4 md:p-8 lg:p-10">
             
-            <div className="max-w-3xl space-y-4">
-              <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.25em] uppercase block">
-                10 — HISTORICAL CONTEXT
-              </span>
-              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
-                HISTORICAL CONTEXT
-              </h2>
-              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                What larger democratic tradition does this story belong to? Move from the specific event back toward the longer history of Indian democracy — tracing how present-day democratic conventions connect to older civic traditions, public meetings, and constitutional developments.
-              </p>
+            {/* Background Image of Selected Historical Moment */}
+            <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+              <AnimatePresence mode="wait">
+                <motion.img 
+                  key={activeHistoryObj.era}
+                  src={activeHistoryObj.image} 
+                  alt={activeHistoryObj.title}
+                  initial={{ opacity: 0, scale: 1.05 }}
+                  animate={{ opacity: 0.50, scale: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="w-full h-full object-cover"
+                />
+              </AnimatePresence>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-[#0a0a0a]/30" />
             </div>
 
-            {/* Symmetrical Components */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
-              <div className="p-6 bg-[#FAF8F5] border border-[#171717]/10 rounded-sm">
-                <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase block mb-1">Democratic Spaces</span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Designated spaces like Jantar Mantar have served for generations as central platforms where civic complaints are formally registered.
-                </p>
+            {/* Top Historical Era Tag */}
+            <div className="relative z-10 flex flex-wrap justify-between items-center gap-4 text-xs font-mono tracking-widest uppercase border-b border-white/15 pb-3 md:pb-4">
+              <span className="bg-[#16734A] text-white px-3.5 py-1 rounded-sm font-bold shadow-md">
+                ERA: {activeHistoryObj.era} · {activeHistoryObj.category}
+              </span>
+              <span className="text-white/50 text-[10px]">HISTORICAL THREAD 0{historyIndex + 1} OF 05</span>
+            </div>
+
+            {/* LIQUID-GLASS HISTORICAL STORY PANEL */}
+            <div className="relative z-10 my-auto py-4 w-full flex justify-center">
+              <AnimatePresence mode="wait">
+                <motion.div 
+                  key={activeHistoryObj.era}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -15 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  style={{
+                    backgroundColor: "rgba(18, 18, 18, 0.25)",
+                    backgroundImage: "linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.015) 45%, rgba(255, 255, 255, 0.035))",
+                    backdropFilter: "blur(18px)",
+                    WebkitBackdropFilter: "blur(18px)",
+                    border: "1px solid rgba(255, 255, 255, 0.22)",
+                    boxShadow: "0 20px 50px -20px rgba(0, 0, 0, 0.45)",
+                    borderRadius: "16px"
+                  }}
+                  className="w-full max-w-[1200px] lg:max-w-[1300px] min-h-[320px] p-5 md:p-8 lg:p-10 space-y-4 flex flex-col justify-between"
+                >
+                  <div className="space-y-2">
+                    <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
+                      {activeHistoryObj.era} · {activeHistoryObj.category}
+                    </span>
+                    <h3 className="font-serif text-2xl md:text-4xl lg:text-5xl text-white font-semibold uppercase leading-tight tracking-wide">
+                      {activeHistoryObj.title}
+                    </h3>
+                    <p className="text-sm md:text-base lg:text-xl font-sans font-light text-white/95 leading-relaxed pt-1">
+                      {activeHistoryObj.desc}
+                    </p>
+                  </div>
+
+                  <div className="space-y-3 pt-3 border-t border-white/15">
+                    <div className="space-y-0.5">
+                      <span className="text-xs font-mono text-[#E8752A] uppercase tracking-wider block font-bold">
+                        HISTORICAL QUESTION
+                      </span>
+                      <p className="text-base md:text-xl font-serif text-white italic">
+                        "{activeHistoryObj.question}"
+                      </p>
+                    </div>
+
+                    <div className="space-y-0.5">
+                      <span className="text-xs font-mono text-[#16734A] uppercase tracking-wider block font-bold">
+                        WHY IT MATTERED
+                      </span>
+                      <p className="text-xs md:text-sm font-sans font-light text-white/85 leading-relaxed">
+                        {activeHistoryObj.why}
+                      </p>
+                    </div>
+
+                    <div className="pt-2 border-t border-white/10 text-xs font-mono text-white/60 uppercase tracking-widest">
+                      <span>Source: {activeHistoryObj.source}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* HORIZONTAL HISTORICAL MOMENTS NAVIGATION */}
+            <div className="relative z-10 pt-3 md:pt-4 border-t border-white/15 space-y-2.5">
+              <div className="flex items-center justify-between overflow-x-auto gap-3 py-1 no-scrollbar">
+                {historicalThreads.map((item, idx) => {
+                  const isActive = historyIndex === idx;
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => setHistoryIndex(idx)}
+                      className={`flex-1 min-w-[150px] md:min-w-[180px] p-2.5 md:p-3.5 rounded-xl border text-left transition-all duration-300 backdrop-blur-md cursor-pointer outline-none ${
+                        isActive 
+                          ? "bg-[#FAF8F5] text-[#171717] border-[#16734A] shadow-2xl scale-102 ring-2 ring-[#16734A]/50" 
+                          : "bg-white/5 border-white/15 text-white/70 hover:bg-white/10 hover:border-white/30"
+                      }`}
+                      aria-label={`${item.era} — ${item.title}`}
+                    >
+                      <span className={`text-xs font-mono font-bold block ${isActive ? "text-[#16734A]" : "text-[#E8752A]"}`}>
+                        {item.era}
+                      </span>
+                      <span className="text-xs md:text-sm font-serif font-semibold truncate block pt-0.5">
+                        {item.title}
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
-              <div className="p-6 bg-[#FAF8F5] border border-[#171717]/10 rounded-sm">
-                <span className="text-[9px] font-sans font-bold text-[#E8752A] uppercase block mb-1">Mobilisation Traditions</span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Student assemblies, labor movements, and civil rights mobilisations continue to shape political discourse, inheriting constitutional procedures.
-                </p>
+
+              {/* Progress Line */}
+              <div className="relative w-full flex items-center justify-between px-4 pt-1">
+                <div className="absolute left-6 right-6 h-[2px] bg-white/20 z-0" />
+                <div 
+                  className="absolute left-6 h-[2px] bg-[#16734A] z-0 transition-all duration-700 ease-out" 
+                  style={{ width: `calc(${(historyIndex / (historicalThreads.length - 1)) * 100}% - 12px)` }}
+                />
+                {historicalThreads.map((_, idx) => {
+                  const isActive = historyIndex === idx;
+                  const isPassed = historyIndex >= idx;
+                  return (
+                    <div 
+                      key={idx}
+                      className={`relative z-10 w-3.5 h-3.5 rounded-full transition-all duration-500 ${
+                        isActive 
+                          ? "bg-[#16734A] ring-4 ring-[#16734A]/40 scale-125" 
+                          : isPassed 
+                          ? "bg-[#16734A]" 
+                          : "bg-white/30"
+                      }`}
+                    />
+                  );
+                })}
               </div>
+
             </div>
 
           </div>
-        </section>
 
-        {/* Section Divider statement */}
-        <div className="w-full py-16 flex flex-col items-center justify-center text-center select-none pointer-events-none">
-          <div className="w-[1px] h-12 bg-[#171717]/10 mb-4"></div>
-          <span className="text-[9px] font-sans font-bold text-[#E8752A] tracking-[0.2em] uppercase">
-            Story Continuity
-          </span>
-          <p className="font-serif text-lg text-[#6B6B6B] italic max-w-md pt-2">
-            "It is also what happens when citizens disagree."
-          </p>
-        </div>
+          {/* CLOSING NARRATIVE TRANSITION LEADING TO DEMOCRACY SPEAKS */}
+          <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-14 rounded-sm text-center space-y-6 shadow-md max-w-5xl mx-auto my-12">
+            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
+              DEMOCRATIC REFLECTION
+            </span>
+            <p className="font-serif text-xl md:text-3xl font-normal leading-relaxed text-[#FAF8F5] max-w-3xl mx-auto">
+              "Democracy is not only what institutions do.<br/>It is also what citizens ask of them."
+            </p>
+            <div className="h-[1px] w-16 bg-white/20 mx-auto"></div>
+            <div className="pt-2 flex items-center justify-center">
+              <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] px-4 py-2 rounded-sm uppercase tracking-widest font-bold">
+                CONTINUE → 12 — DEMOCRACY SPEAKS
+              </span>
+            </div>
+          </div>
+
+        </section>
 
         {/* 10 — DEMOCRACY SPEAKS */}
         <section id="democracy-speaks" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5">
