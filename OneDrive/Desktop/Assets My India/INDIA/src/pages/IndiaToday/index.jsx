@@ -1458,82 +1458,100 @@ export default function IndiaToday() {
             </p>
           </div>
 
-          {/* ENLARGED IMMERSIVE DOCUMENTARY VISUAL TIMELINE CONTAINER (90–94vw width, 700–760px desktop height) */}
-          <div className="bg-[#171717] text-[#FAF8F5] border border-[#171717]/30 rounded-sm shadow-2xl relative overflow-hidden transition-all duration-700 w-full min-h-[680px] md:min-h-[760px] flex flex-col justify-between">
+          {/* LARGE CINEMATIC DOCUMENTARY VIEWPORT STAGE */}
+          <div className="bg-[#0a0a0a] text-[#FAF8F5] border border-white/15 rounded-2xl shadow-[0_30px_70px_-15px_rgba(0,0,0,0.8)] relative overflow-hidden transition-all duration-700 w-full min-h-[800px] md:min-h-[880px] flex flex-col justify-between p-6 md:p-12 lg:p-14">
             
-            {/* Background Image with Smooth Fade & Dark Gradient */}
-            <div className="absolute inset-0 w-full h-full overflow-hidden">
-              <img 
-                key={activeTimelineObj.date}
-                src={activeTimelineObj.image} 
-                alt={activeTimelineObj.title}
-                className="w-full h-full object-cover opacity-45 transition-opacity duration-700 ease-in-out scale-102"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#171717]/95 via-[#171717]/70 to-[#171717]/40" />
+            {/* Full-Bleed Background Image with Smooth Fade & Atmospheric Overlay */}
+            <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+              <AnimatePresence mode="wait">
+                <motion.img 
+                  key={activeTimelineObj.date}
+                  src={activeTimelineObj.image} 
+                  alt={activeTimelineObj.title}
+                  initial={{ opacity: 0, scale: 1.05 }}
+                  animate={{ opacity: 0.55, scale: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="w-full h-full object-cover"
+                />
+              </AnimatePresence>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-[#0a0a0a]/30" />
             </div>
 
-            {/* Top Meta Bar */}
-            <div className="relative z-10 flex flex-wrap justify-between items-center gap-4 text-[10px] md:text-xs font-mono tracking-widest uppercase border-b border-white/15 p-6 md:px-12 md:py-6">
-              <span className="bg-[#E8752A] text-white px-3.5 py-1.5 rounded-sm font-bold shadow-sm">
+            {/* Top Meta Bar & Autoplay Story Controls */}
+            <div className="relative z-10 flex flex-wrap justify-between items-center gap-4 text-xs font-mono tracking-widest uppercase border-b border-white/15 pb-6">
+              <span className="bg-[#E8752A] text-white px-4 py-1.5 rounded-sm font-bold shadow-md">
                 STAGE 0{timelineIndex + 1} OF 05 · {activeTimelineObj.type}
               </span>
               
-              {/* Secondary Autoplay Play/Pause Toggle */}
+              {/* Autoplay Play/Pause Toggle */}
               <div className="flex items-center gap-4">
                 <button 
                   onClick={() => setIsPlayingTimeline(!isPlayingTimeline)}
-                  className="flex items-center gap-2 bg-white/10 border border-white/20 hover:bg-white/20 px-4 py-1.5 rounded-sm text-[#FAF8F5] transition-colors cursor-pointer outline-none font-semibold"
+                  className="flex items-center gap-2 bg-white/10 border border-white/20 hover:bg-white/20 px-4 py-1.5 rounded-sm text-white font-mono text-xs font-semibold uppercase tracking-widest backdrop-blur-md transition-colors cursor-pointer outline-none"
                   aria-label={isPlayingTimeline ? "Pause timeline story playback" : "Play timeline story playback"}
                 >
-                  <span>{isPlayingTimeline ? "⏸ PAUSE STORY" : "▶ PLAY STORY"}</span>
+                  <span>{isPlayingTimeline ? "PAUSE STORY" : "PLAY STORY"}</span>
                 </button>
-                <span className="text-white/50 hidden sm:inline">8s AUTOPLAY</span>
+                <span className="text-white/50 hidden sm:inline">8S AUTOPLAY</span>
               </div>
             </div>
 
-            {/* ENLARGED Translucent Editorial Text Panel (Sitting over the background photograph) */}
-            <div className="relative z-10 my-auto py-8 md:py-12 px-6 md:px-12 w-full flex justify-center">
-              <div className="bg-[#0a0a0a]/80 backdrop-blur-md border border-white/15 p-8 md:p-14 rounded-sm space-y-6 shadow-2xl max-w-4xl md:max-w-5xl w-full">
-                <div className="space-y-2">
-                  <span className="text-xs md:text-sm font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
-                    {activeTimelineObj.date}
-                  </span>
-                  <h3 className="font-serif text-2xl md:text-4xl lg:text-5xl text-white font-semibold uppercase leading-tight tracking-wide">
-                    {activeTimelineObj.title}
-                  </h3>
-                </div>
+            {/* LARGE LIQUID-GLASS STORY PANEL (75–85% Viewport Width, Frosted Glass Blur) */}
+            <div className="relative z-10 my-auto py-8 md:py-12 w-full flex justify-center">
+              <AnimatePresence mode="wait">
+                <motion.div 
+                  key={activeTimelineObj.date}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -15 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  className="w-full max-w-[1200px] lg:max-w-[1350px] min-h-[420px] md:min-h-[480px] rounded-2xl border border-white/20 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] p-8 md:p-14 lg:p-16 space-y-6 backdrop-blur-xl bg-[rgba(18,18,18,0.48)] flex flex-col justify-between"
+                >
+                  <div className="space-y-4">
+                    <span className="text-xs md:text-sm font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
+                      {activeTimelineObj.date}
+                    </span>
+                    <h3 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white font-semibold uppercase leading-tight tracking-wide">
+                      {activeTimelineObj.title}
+                    </h3>
+                    <p className="text-base md:text-xl lg:text-2xl font-sans font-light text-white/95 leading-relaxed pt-2">
+                      {activeTimelineObj.desc}
+                    </p>
+                  </div>
 
-                <p className="text-sm md:text-base lg:text-lg font-sans font-light text-white/95 leading-relaxed">
-                  {activeTimelineObj.desc}
-                </p>
+                  <div className="space-y-4 pt-4 border-t border-white/15">
+                    <div className="space-y-1">
+                      <span className="text-xs font-mono text-[#16734A] uppercase tracking-wider block font-bold">
+                        WHY IT MATTERED
+                      </span>
+                      <p className="text-sm md:text-base font-sans font-light text-white/85 leading-relaxed">
+                        {activeTimelineObj.why}
+                      </p>
+                    </div>
 
-                <div className="space-y-1.5 pt-4 border-t border-white/15">
-                  <span className="text-xs font-mono text-[#16734A] uppercase tracking-wider block font-bold">
-                    WHY IT MATTERED
-                  </span>
-                  <p className="text-xs md:text-sm font-sans font-light text-white/85 leading-relaxed">
-                    {activeTimelineObj.why}
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-white/15 flex flex-wrap items-center justify-between text-xs font-mono text-white/60 uppercase tracking-widest gap-3">
-                  <span>Source: {activeTimelineObj.source}</span>
-                  {activeTimelineObj.sourceUrl && (
-                    <a 
-                      href={activeTimelineObj.sourceUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-[#E8752A] underline hover:text-[#16734A] transition-colors font-bold"
-                    >
-                      VIEW SOURCE RECORD →
-                    </a>
-                  )}
-                </div>
-              </div>
+                    <div className="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between text-xs font-mono text-white/60 uppercase tracking-widest gap-3">
+                      <span>Source: {activeTimelineObj.source}</span>
+                      {activeTimelineObj.sourceUrl && (
+                        <a 
+                          href={activeTimelineObj.sourceUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-[#E8752A] underline hover:text-[#16734A] transition-colors font-bold"
+                        >
+                          VIEW SOURCE RECORD →
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
             </div>
 
-            {/* ENLARGED Lower Horizontal Interactive Timeline Nodes Navigation */}
-            <div className="relative z-10 p-6 md:px-12 md:py-6 border-t border-white/15 bg-[#171717]/80 backdrop-blur-sm">
+            {/* FIVE-STAGE GLASS TIMELINE & PROGRESS LINE */}
+            <div className="relative z-10 pt-6 border-t border-white/15 space-y-4">
+              
+              {/* Cards Navigation */}
               <div className="flex items-center justify-between overflow-x-auto gap-3 py-2 no-scrollbar">
                 {cjpCaseTimeline.map((item, idx) => {
                   const isActive = timelineIndex === idx;
@@ -1544,10 +1562,10 @@ export default function IndiaToday() {
                         setTimelineIndex(idx);
                         setIsPlayingTimeline(false);
                       }}
-                      className={`flex-1 min-w-[160px] md:min-w-[200px] p-4 rounded-sm border text-left transition-all duration-300 cursor-pointer outline-none ${
+                      className={`flex-1 min-w-[170px] md:min-w-[210px] p-4 rounded-xl border text-left transition-all duration-300 backdrop-blur-md cursor-pointer outline-none ${
                         isActive 
-                          ? "bg-[#FAF8F5] text-[#171717] border-[#E8752A] shadow-lg scale-102 ring-2 ring-[#E8752A]/40" 
-                          : "bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white"
+                          ? "bg-[#FAF8F5] text-[#171717] border-[#E8752A] shadow-2xl scale-102 ring-2 ring-[#E8752A]/50" 
+                          : "bg-white/5 border-white/15 text-white/70 hover:bg-white/10 hover:border-white/30"
                       }`}
                       aria-label={`${item.date} — ${item.title}`}
                     >
@@ -1561,6 +1579,32 @@ export default function IndiaToday() {
                   );
                 })}
               </div>
+
+              {/* Timeline Progress Line (Dot-Line Matrix) */}
+              <div className="relative w-full flex items-center justify-between px-4 pt-2">
+                <div className="absolute left-6 right-6 h-[2px] bg-white/20 z-0" />
+                <div 
+                  className="absolute left-6 h-[2px] bg-[#E8752A] z-0 transition-all duration-700 ease-out" 
+                  style={{ width: `calc(${(timelineIndex / (cjpCaseTimeline.length - 1)) * 100}% - 12px)` }}
+                />
+                {cjpCaseTimeline.map((_, idx) => {
+                  const isActive = timelineIndex === idx;
+                  const isPassed = timelineIndex >= idx;
+                  return (
+                    <div 
+                      key={idx}
+                      className={`relative z-10 w-3.5 h-3.5 rounded-full transition-all duration-500 ${
+                        isActive 
+                          ? "bg-[#E8752A] ring-4 ring-[#E8752A]/40 scale-125" 
+                          : isPassed 
+                          ? "bg-[#E8752A]" 
+                          : "bg-white/30"
+                      }`}
+                    />
+                  );
+                })}
+              </div>
+
             </div>
 
           </div>
