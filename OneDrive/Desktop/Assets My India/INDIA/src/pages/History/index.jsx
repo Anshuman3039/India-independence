@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import HistoryIntro from './HistoryIntro';
 import Timeline from './Timeline';
 import IndiaThroughTime from './IndiaThroughTime';
@@ -37,18 +38,31 @@ export default function History() {
         {/* 7. Republican Transformative Comparisons */}
         <Republic />
 
-        {/* 8. Closing Editorial Transition to Ideas */}
+        {/* 8. Clickable History -> Ideas Gateway */}
         <section className="w-full py-20 px-6 md:px-12 bg-[#F7F4EE] border-t border-[#171717]/10 text-center">
-          <div className="max-w-3xl mx-auto space-y-3">
-            <span className="text-[10px] font-mono font-bold text-[#16734A] tracking-[0.3em] uppercase block">
-              FROM HISTORY TO IDEAS
-            </span>
-            <h2 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase tracking-wide leading-tight">
-              WHAT DID WE MAKE OF THE PAST?
-            </h2>
-            <p className="font-serif text-sm md:text-base text-[#E8752A] italic font-normal max-w-2xl mx-auto leading-relaxed">
-              "Every generation inherits a past — then decides what to carry forward, what to question, and what kind of India to build."
-            </p>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div className="space-y-3">
+              <span className="text-[10px] font-mono font-bold text-[#16734A] tracking-[0.3em] uppercase block">
+                FROM HISTORY TO IDEAS
+              </span>
+              <h2 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase tracking-wide leading-tight">
+                WHAT DID WE MAKE OF THE PAST?
+              </h2>
+              <p className="font-serif text-sm md:text-base text-[#171717] italic font-normal max-w-2xl mx-auto leading-relaxed">
+                "Every generation inherits a past — then decides what to carry forward, what to question, and what kind of India to build."
+              </p>
+            </div>
+
+            <div className="pt-2">
+              <Link 
+                to="/ideas"
+                className="group inline-flex items-center gap-2.5 font-mono text-xs md:text-sm tracking-widest uppercase font-bold text-[#E8752A] hover:text-[#16734A] transition-all duration-300 py-3.5 px-7 border border-[#E8752A]/30 hover:border-[#16734A]/50 bg-white/80 hover:bg-white rounded-sm shadow-xs outline-none focus-visible:outline-2 focus-visible:outline-[#E8752A] cursor-pointer"
+                aria-label="Explore the Ideas of India"
+              >
+                <span>EXPLORE THE IDEAS OF INDIA</span>
+                <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
+              </Link>
+            </div>
           </div>
         </section>
       </div>
