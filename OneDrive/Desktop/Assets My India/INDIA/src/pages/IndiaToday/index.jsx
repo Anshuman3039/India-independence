@@ -1286,21 +1286,6 @@ export default function IndiaToday() {
           </div>
         </section>
 
-        {/* Quiet Transition Section to CJP — A CASE STUDY */}
-        <section className="w-full py-20 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
-          <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-            TRANSITION TO SPECIFIC EVENT ANALYSIS
-          </span>
-          <div className="max-w-3xl mx-auto space-y-2 text-base md:text-xl font-serif text-[#171717]">
-            <p className="italic font-light">"These questions become more difficult — and more important — when democracy moves from principle to the street."</p>
-            <p className="italic font-semibold text-[#16734A]">"To understand dissent, sometimes we need to slow down and examine one story closely."</p>
-          </div>
-          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
-          <p className="font-serif text-base md:text-xl text-[#E8752A] italic font-semibold pt-2">
-            "CJP — A CASE STUDY"
-          </p>
-        </section>
-
         {/* 07 — MEDIA POLARISATION (Floating News Headline Ecosystem) */}
         <section id="media-polarisation" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto">
           <div className="space-y-16">
@@ -1415,6 +1400,21 @@ export default function IndiaToday() {
             </div>
 
           </div>
+        </section>
+
+        {/* Quiet Transition Section to CJP — A CASE STUDY */}
+        <section className="w-full py-20 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
+          <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
+            TRANSITION TO SPECIFIC EVENT ANALYSIS
+          </span>
+          <div className="max-w-3xl mx-auto space-y-2 text-base md:text-xl font-serif text-[#171717]">
+            <p className="italic font-light">"These questions become more difficult — and more important — when democracy moves from principle to the street."</p>
+            <p className="italic font-semibold text-[#16734A]">"To understand dissent, sometimes we need to slow down and examine one story closely."</p>
+          </div>
+          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
+          <p className="font-serif text-base md:text-xl text-[#E8752A] italic font-semibold pt-2">
+            "CJP — A CASE STUDY"
+          </p>
         </section>
 
         {/* Section Divider statement */}
