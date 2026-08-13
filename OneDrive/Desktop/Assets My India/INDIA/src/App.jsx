@@ -13,6 +13,7 @@ import Nature from './pages/Nature';
 import History from './pages/History';
 import Ideas from './pages/Ideas';
 import IndiaToday from './pages/IndiaToday';
+import About from './pages/About';
 import Footer from './components/global/Footer';
 
 // Simple, elegant editorial placeholder for under-development pages
@@ -92,6 +93,7 @@ export default function App() {
                 <Route path="/stories" element={<Navigate to="/" replace />} />
                 <Route path="/ideas" element={<Ideas />} />
                 <Route path="/india-today" element={<IndiaToday />} />
+                <Route path="/about" element={<About />} />
                 <Route path="*" element={<ComingSoonPage title="Archive Not Found" />} />
               </Routes>
             </div>

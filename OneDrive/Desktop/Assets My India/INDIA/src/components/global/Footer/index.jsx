@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer({ onReplayIntro }) {
   const currentYear = new Date().getFullYear();
@@ -48,6 +49,14 @@ export default function Footer({ onReplayIntro }) {
               Connect
             </span>
             <ul className="flex flex-col space-y-3">
+              <li>
+                <Link 
+                  to="/about" 
+                  className="text-xs md:text-sm font-sans font-light text-[#F7F4EE] hover:text-[#E8752A] border-b border-transparent hover:border-[#E8752A] pb-0.5 transition-all duration-200"
+                >
+                  About
+                </Link>
+              </li>
               <li>
                 <a 
                   href="https://github.com/Anshuman3039" 
