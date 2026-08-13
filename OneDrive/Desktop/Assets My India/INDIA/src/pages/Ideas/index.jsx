@@ -370,8 +370,22 @@ export default function Ideas() {
     <PageTransition>
       <div id="main-content" className="w-full bg-[#F7F4EE] pt-24 text-left">
         
-        {/* 1. Opening Section */}
-        <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        {/* 1. Opening Section with History -> Ideas Transition */}
+        <section className="py-20 md:py-24 px-6 md:px-12 max-w-7xl mx-auto space-y-12">
+          
+          {/* HISTORY → IDEAS TRANSITION HEADER */}
+          <div className="border-b border-[#171717]/10 pb-8 space-y-2.5">
+            <span className="text-[10px] font-mono font-bold text-[#16734A] tracking-[0.3em] uppercase block">
+              HISTORY → IDEAS
+            </span>
+            <h2 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold tracking-wide uppercase">
+              "THE PAST BECOMES AN IDEA."
+            </h2>
+            <p className="text-sm md:text-base font-serif italic text-[#E8752A] font-normal max-w-xl">
+              "What we inherit, we question, reshape and carry forward."
+            </p>
+          </div>
+
           <div className="max-w-3xl space-y-6">
             <span className="text-xs font-sans font-bold text-[#E8752A] uppercase tracking-[0.25em] block">
               IDEAS

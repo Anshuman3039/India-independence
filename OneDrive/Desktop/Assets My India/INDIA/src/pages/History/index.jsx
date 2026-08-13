@@ -7,7 +7,6 @@ import IdeasThatTraveled from './IdeasThatTraveled';
 import PeopleAndPower from './PeopleAndPower';
 import FreedomMovement from './FreedomMovement';
 import Republic from './Republic';
-import HistoryClosing from './HistoryClosing';
 import PageTransition from '../../components/global/PageTransition';
 
 export default function History() {
@@ -37,9 +36,6 @@ export default function History() {
 
         {/* 7. Republican Transformative Comparisons */}
         <Republic />
-
-        {/* 8. Closing Statement Banner */}
-        <HistoryClosing />
       </div>
     </PageTransition>
   );
