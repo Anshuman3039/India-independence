@@ -1981,45 +1981,258 @@ export default function IndiaToday() {
 
         </section>
 
-        {/* 10 — DEMOCRACY SPEAKS */}
-        <section id="democracy-speaks" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5">
-          <div className="max-w-7xl mx-auto space-y-12">
-            
-            <div className="max-w-3xl space-y-4">
-              <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.25em] uppercase block">
-                11 — DEMOCRACY SPEAKS
-              </span>
-              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
-                DEMOCRACY SPEAKS
-              </h2>
-              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                Democracy is not only what happens on election day. It also lives in daily disagreement, public debate, judicial reviews, local assemblies, and peaceful demonstrations.
-              </p>
-            </div>
+        {/* Quiet Opening Transition Section to 11 — DEMOCRACY SPEAKS */}
+        <section className="w-full py-20 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
+          <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
+            DEMOCRATIC VOICES
+          </span>
+          <div className="max-w-3xl mx-auto space-y-3 text-lg md:text-2xl font-serif text-[#171717]">
+            <p className="italic font-semibold text-[#171717]">"DEMOCRACY SPEAKS."</p>
+            <p className="italic font-light text-[#6B6B6B] text-base md:text-xl">"Not only through ballots."</p>
+            <p className="italic font-semibold text-[#16734A] text-base md:text-xl">"Through questions. Through disagreement. Through protest. Through participation."</p>
+          </div>
+          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
+        </section>
 
-            {/* Symmetrical components Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
-              <div className="p-5 bg-[#FAF8F5] border border-[#171717]/10 rounded-sm">
-                <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase block mb-1">Elections & Courts</span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Constitutional check and balance through active high courts and voting schedules that cycle power.
+        {/* 11 — DEMOCRACY SPEAKS */}
+        <section id="democracy-speaks" className="w-full py-28 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+          
+          {/* Section Framing Header */}
+          <div className="text-center space-y-4 max-w-4xl mx-auto">
+            <span className="text-[11px] font-mono text-[#16734A] uppercase tracking-[0.35em] block font-bold">
+              11 — DEMOCRACY SPEAKS
+            </span>
+            <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717]">
+              DEMOCRACY SPEAKS
+            </h2>
+            <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-semibold">
+              "Democracy is not silent. It speaks whenever ordinary citizens enter public life."
+            </p>
+            <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] leading-relaxed max-w-3xl mx-auto">
+              Democracy is an ongoing relationship between citizens and power. It expresses itself through votes, uncomfortable questions, peaceful assembly, and everyday civic responsibility.
+            </p>
+          </div>
+
+          {/* FOUR CONNECTED EDITORIAL CHAPTERS */}
+          <div className="space-y-24">
+
+            {/* CHAPTER 01 — THE VOTE */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-6">
+                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
+                  CHAPTER 01 · THE VOTE
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  THE VOTE
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "Every election turns millions of individual choices into a collective decision."
                 </p>
-              </div>
-              <div className="p-5 bg-[#FAF8F5] border border-[#171717]/10 rounded-sm">
-                <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase block mb-1">Public Debate</span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Academic platforms and public seminars discussing central codes, agrarian support, and labor rules.
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Voting is the fundamental mechanism through which authority is granted and revoked. Across general and local elections, citizens exercise sovereignty to demand accountability from those who seek to govern.
                 </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">FRAMING QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "What does a vote ask of the people who receive it?"
+                  </p>
+                </div>
               </div>
-              <div className="p-5 bg-[#FAF8F5] border border-[#171717]/10 rounded-sm">
-                <span className="text-[9px] font-sans font-bold text-[#E8752A] uppercase block mb-1">Local Assemblies</span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Panchayat groups and student unions articulating local resources directly to state authorities.
+              
+              <div className="lg:col-span-6 space-y-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/people/voters-queue.jpg" 
+                    alt="Citizens standing patiently in line outside a polling station during an election in India" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY RECORD: GENERAL ELECTION POLLING STATION
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+                  Source: Election Commission of India Records
+                </span>
+              </div>
+            </motion.div>
+
+            {/* CHAPTER 02 — THE QUESTION */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/stories/story6-lab.jpg" 
+                    alt="Journalists and researchers analyzing public records and asking questions at a press briefing" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY RECORD: JOURNALISM & PUBLIC SCRUTINY
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
+                  Source: Press Trust of India / Independent Audit Archives
+                </span>
+              </div>
+
+              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
+                <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
+                  CHAPTER 02 · THE QUESTION
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  THE QUESTION
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "Democracy depends on the ability to ask whether power is doing what it promised."
                 </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Without scrutiny, elections risk becoming empty rituals. Independent journalism, Right to Information (RTI) petitions, legislative inquiries, and public auditing ensure that official actions are continuously examined.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#E8752A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">FRAMING QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "Can a democracy remain healthy without uncomfortable questions?"
+                  </p>
+                </div>
               </div>
-            </div>
+            </motion.div>
+
+            {/* CHAPTER 03 — THE PROTEST */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-6">
+                <span className="text-xs font-mono text-[#171717] uppercase tracking-[0.25em] font-bold block">
+                  CHAPTER 03 · THE PROTEST
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  THE PROTEST
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "When people believe institutions have stopped hearing them, they often take their disagreement into public space."
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Student unions, agricultural alliances, labor federations, and civil rights groups have historically gathered in public squares to voice grievances. Peaceful assembly remains a constitutionally protected instrument when channels feel unresponsive.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#171717] space-y-1">
+                  <span className="text-[10px] font-mono text-[#171717] uppercase font-bold block">FRAMING QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "What does a democracy do with people who refuse to remain silent?"
+                  </p>
+                </div>
+              </div>
+              
+              <div className="lg:col-span-6 space-y-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/stories/stories-intro-1.jpg" 
+                    alt="Citizens and students gathering peacefully at a public square with banners and petitions" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY RECORD: PUBLIC ASSEMBLY & CIVIC PROTEST
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+                  Source: Reuters / National Representative Register
+                </span>
+              </div>
+            </motion.div>
+
+            {/* CHAPTER 04 — THE EVERYDAY REPUBLIC */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/stories/story1-station.jpg" 
+                    alt="Ordinary citizens interacting, walking, and sharing public municipal spaces in a city" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY RECORD: SHARED MUNICIPAL & CIVIC SPACES
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
+                  Source: Urban Civic Log / Municipal Archives
+                </span>
+              </div>
+
+              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
+                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
+                  CHAPTER 04 · THE EVERYDAY REPUBLIC
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  THE EVERYDAY REPUBLIC
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "A republic is not experienced only in Parliament. It is experienced wherever people share public life."
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Beyond major political moments, democracy lives in local panchayats, resident welfare associations, university halls, municipal town halls, and everyday community cooperation where citizens solve local problems together.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">FRAMING QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "How is democratic responsibility practiced in daily life?"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
 
           </div>
+
+          {/* CLOSING STATEMENT & TRANSITION TO LIVING TOGETHER */}
+          <div className="bg-[#171717] text-[#FAF8F5] p-10 md:p-16 rounded-sm text-center space-y-6 shadow-md max-w-5xl mx-auto my-16">
+            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
+              DEMOCRATIC CONVERSATION
+            </span>
+            <div className="space-y-3">
+              <h3 className="font-serif text-2xl md:text-4xl font-normal uppercase text-[#FAF8F5]">
+                "DEMOCRACY IS A CONVERSATION."
+              </h3>
+              <p className="font-serif text-lg md:text-2xl text-[#FAF8F5]/90 italic max-w-3xl mx-auto">
+                "It survives not because everyone agrees. It survives because disagreement can still have a place."
+              </p>
+            </div>
+            
+            <div className="h-[1px] w-16 bg-white/20 mx-auto"></div>
+
+            <div className="space-y-4 pt-2">
+              <span className="text-xs font-mono text-[#16734A] uppercase tracking-widest block font-bold">
+                LIVING TOGETHER
+              </span>
+              <p className="text-xs md:text-sm font-sans font-light text-white/80 max-w-2xl mx-auto leading-relaxed">
+                "Because democracy ultimately asks a larger question: How do people who disagree learn to share the same country?"
+              </p>
+              <div className="pt-2">
+                <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] px-4 py-2 rounded-sm uppercase tracking-widest font-bold">
+                  CONTINUE → 12 — LIVING TOGETHER
+                </span>
+              </div>
+            </div>
+          </div>
+
         </section>
 
         {/* 11 — LIVING TOGETHER ( Plural India ) */}
