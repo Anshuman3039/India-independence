@@ -96,33 +96,63 @@ const motionSlides = [
   }
 ];
 
-const promiseGapCards = [
+const promiseGapImages = {
+  digitalPromise: "/images/stories/digital-upi-payment.jpg",
+  digitalGap: "/images/stories/story4-prep.jpg",
+  educationPromise: "/images/stories/story6-lab.jpg",
+  educationGap: "/images/people/everyday-school.jpg",
+  employmentPromise: "/images/stories/airport-terminal.jpg",
+  employmentGap: "/images/stories/story3-hands.jpg",
+  urbanPromise: "/images/stories/mumbai-cityscape.jpg",
+  urbanGap: "/images/stories/story1-inside.jpg",
+  migrationStation: "/images/stories/story1-station.jpg",
+  migrationTraveler: "/images/stories/story1-window.jpg"
+};
+
+const promiseGapStories = [
   {
-    id: "economy",
-    title: "ECONOMIC GROWTH & WEALTH DISTRIBUTION",
-    promise: "Fastest-growing major economy expanding at 7%–8% annually, scaling middle-class consumer demand.",
-    gap: "Wealth concentration persists; informal sector workers navigate daily wage fluctuations without social nets.",
-    promiseImg: "/images/stories/maharashtra-citylife.jpg",
-    gapImg: "/images/stories/story1-window.jpg",
-    metric: "GDP Growth: 7.2% | Source: MoSPI"
+    id: "digital",
+    title: "DIGITAL CONNECTIONS & LIVED ACCESS",
+    promise: "Aadhaar public identity registries and e-UPI smartphone payments enable instant micro-transfers across urban commercial centers.",
+    gap: "Access varies across network reliability, smartphone affordability, and digital literacy in remote districts.",
+    promiseImg: promiseGapImages.digitalPromise,
+    gapImg: promiseGapImages.digitalGap,
+    promiseLabel: "UPI & Open Payment Rails",
+    gapLabel: "Informal Cash & Digital Literacy Disparities",
+    metric: "820M+ Mobile Users | 34% Rural Internet Household Access (Source: TRAI & NFHS-5)"
   },
   {
     id: "education",
-    title: "EDUCATIONAL ACCESS & UNIVERSITY RESOURCES",
-    promise: "Massive scale-up in secondary school enrollment and polytechnics to support rural vocational training.",
-    gap: "Imbalances in resources between state universities and private colleges create early skill disparities.",
-    promiseImg: "/images/stories/stories-intro-7.jpg",
-    gapImg: "/images/stories/story4-prep.jpg",
-    metric: "Secondary GER: 79.6% | Source: UDISE"
+    title: "INSTITUTIONAL RESOURCES & LEARNING ENVIRONMENT",
+    promise: "Expansion of premier polytechnics, microelectronics laboratories, and technical universities scaling skilled graduates.",
+    gap: "Resource disparities between elite institutions and primary/secondary schools across regional districts.",
+    promiseImg: promiseGapImages.educationPromise,
+    gapImg: promiseGapImages.educationGap,
+    promiseLabel: "Technical Labs & Applied Research",
+    gapLabel: "Regional Classroom & Resource Disparities",
+    metric: "79.6% Secondary GER | 1:35 Pupil-Teacher Ratio (Source: UDISE+ / MoE)"
   },
   {
-    id: "digital",
-    title: "DIGITAL SERVICES & INTERNET PENETRATION",
-    promise: "Unified registry networks, cheap data plans, and open finance pipelines reaching distant villages.",
-    gap: "Significant differences in stable household broadband access and rural female smartphone ownership.",
-    promiseImg: "/images/stories/story4-stall.jpg",
-    gapImg: "/images/stories/story1-train.jpg",
-    metric: "Active Mobile Users: 820M+ | Source: TRAI"
+    id: "employment",
+    title: "FORMAL GROWTH & PRECARIOUS LABOR",
+    promise: "Expanding startup hubs, commercial aviation networks, and infrastructure projects driving national GDP growth.",
+    gap: "Over 88% of workers operate in informal employment without formal contracts or social safety nets.",
+    promiseImg: promiseGapImages.employmentPromise,
+    gapImg: promiseGapImages.employmentGap,
+    promiseLabel: "Modern Tech & Logistics Hubs",
+    gapLabel: "Informal Crafts & Manual Wage Labor",
+    metric: "88.8% Informal Workforce Proportion (Source: MoSPI PLFS 2023–24)"
+  },
+  {
+    id: "urban",
+    title: "METROPOLITAN SKYLINES & URBAN FABRIC",
+    promise: "Rapid skyline growth, high-rise commercial corridors, and elevated bypass flyovers transforming major cities.",
+    gap: "Rapid urban growth strains housing affordability, municipal water systems, and daily labor commutes.",
+    promiseImg: promiseGapImages.urbanPromise,
+    gapImg: promiseGapImages.urbanGap,
+    promiseLabel: "Metropolitan High-Rise Skylines",
+    gapLabel: "Dense Commutes & Urban Infrastructure Strain",
+    metric: "450M+ Urban Citizens (Source: MoHUA / Census)"
   }
 ];
 
@@ -230,12 +260,10 @@ const wordsWeaponsData = [
 
 export default function IndiaToday() {
   const [motionIndex, setMotionIndex] = useState(0);
-  const [promiseId, setPromiseId] = useState("economy");
   const [youthIndex, setYouthIndex] = useState(0);
   const [timelineIndex, setTimelineIndex] = useState(0);
   const [hoveredWord, setHoveredWord] = useState(null);
 
-  const activePromiseObj = promiseGapCards.find(c => c.id === promiseId) || promiseGapCards[0];
   const activeSlide = motionSlides[motionIndex];
   const activeYouth = youthProfiles[youthIndex];
   const activeTimelineObj = cjpCaseTimeline[timelineIndex];
@@ -433,105 +461,222 @@ export default function IndiaToday() {
           </p>
         </section>
 
-        {/* 03 — THE PROMISE & THE GAP (Split Screen Contrast) */}
-        <section id="promise-gap" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="space-y-16">
-            <div className="space-y-3">
-              <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
-                03 — THE CONTRADICTION
+        {/* 03 — THE PROMISE & THE GAP (Visual Paired Composition) */}
+        <section id="promise-gap" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto space-y-20">
+          
+          {/* Section Header */}
+          <div className="space-y-4 max-w-3xl">
+            <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
+              03 — LIVED EXPERIENCES
+            </span>
+            <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+              THE PROMISE & THE GAP
+            </h2>
+            <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
+              Progress can be measured in new roads, faster trains and digital networks. But a country's transformation is also measured by who can access the opportunities they create.
+            </p>
+          </div>
+
+          {/* 4 Large Paired Editorial Contrasts */}
+          <div className="space-y-20">
+            {promiseGapStories.map((story, index) => (
+              <div key={story.id} className="bg-white border border-[#171717]/10 p-6 md:p-10 rounded-sm shadow-sm space-y-8">
+                
+                {/* Header & Metric */}
+                <div className="flex flex-col md:flex-row md:items-center justify-between border-b border-[#171717]/10 pb-4 gap-2">
+                  <div className="space-y-1">
+                    <span className="text-[9px] font-mono text-[#E8752A] tracking-widest uppercase block font-bold">
+                      CONTRAST STORY 0{index + 1}
+                    </span>
+                    <h3 className="font-serif text-xl md:text-3xl text-[#171717] font-semibold uppercase">
+                      {story.title}
+                    </h3>
+                  </div>
+                  <span className="text-[9px] font-mono text-[#16734A] bg-[#F7F4EE] border border-[#16734A]/20 px-3 py-1.5 rounded-sm font-semibold self-start md:self-auto">
+                    {story.metric}
+                  </span>
+                </div>
+
+                {/* Paired Columns */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                  
+                  {/* Left Column: PROMISE */}
+                  <div className="space-y-4 flex flex-col justify-between bg-[#F7F4EE]/40 p-5 rounded-sm border border-[#171717]/5">
+                    <div className="space-y-2">
+                      <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-widest uppercase block">
+                        THE PROMISE
+                      </span>
+                      <p className="text-xs md:text-sm font-sans font-light text-[#171717] leading-relaxed">
+                        {story.promise}
+                      </p>
+                    </div>
+                    <div className="space-y-2 pt-2">
+                      <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative shadow-xs">
+                        <img 
+                          src={story.promiseImg} 
+                          alt={story.promiseLabel}
+                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-102"
+                          loading="lazy"
+                        />
+                      </div>
+                      <span className="text-[8px] font-mono text-[#6B6B6B] uppercase tracking-widest block pt-1">
+                        {story.promiseLabel}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Right Column: LIVED REALITY / GAP */}
+                  <div className="space-y-4 flex flex-col justify-between bg-[#F7F4EE]/40 p-5 rounded-sm border border-[#171717]/5">
+                    <div className="space-y-2">
+                      <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-widest uppercase block">
+                        LIVED REALITY / THE GAP
+                      </span>
+                      <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                        {story.gap}
+                      </p>
+                    </div>
+                    <div className="space-y-2 pt-2">
+                      <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative shadow-xs">
+                        <img 
+                          src={story.gapImg} 
+                          alt={story.gapLabel}
+                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-102"
+                          loading="lazy"
+                        />
+                      </div>
+                      <span className="text-[8px] font-mono text-[#6B6B6B] uppercase tracking-widest block pt-1">
+                        {story.gapLabel}
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            ))}
+          </div>
+
+          {/* Internal Migration Visual Feature */}
+          <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-12 rounded-sm space-y-8 shadow-md">
+            <div className="space-y-2">
+              <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-[0.25em] block">
+                INTERNAL MIGRATION & REBUILDING THE NATION
               </span>
-              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
-                THE PROMISE & THE GAP
-              </h2>
-              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light max-w-2xl leading-relaxed">
-                Growth does not automatically distribute opportunity equally. We examine structural contrasts across economic variables.
+              <h3 className="font-serif text-2xl md:text-4xl font-normal uppercase">
+                "WORKERS IN MOTION: BUILDING THE NEW CITIES"
+              </h3>
+              <p className="text-xs md:text-sm font-sans font-light text-[#FAF8F5]/80 max-w-3xl leading-relaxed">
+                Millions of workers migrate annually from agrarian hinterlands to metropolitan construction sites, factories, and transit hubs. Their labor builds the expressways, elevated metro lines, and towers — maintaining crucial financial support for families in home villages.
               </p>
             </div>
 
-            {/* Switcher Tabs */}
-            <div className="flex flex-wrap items-center gap-3 border-b border-[#171717]/5 pb-6">
-              {promiseGapCards.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => setPromiseId(item.id)}
-                  className={`px-4 py-2 border rounded-sm text-[9px] font-sans font-semibold tracking-wider transition-all duration-300 cursor-pointer outline-none ${
-                    item.id === promiseId
-                      ? "bg-[#171717] border-[#171717] text-white scale-102"
-                      : "bg-white border-[#171717]/10 text-[#6B6B6B] hover:text-[#171717] hover:border-[#171717]/30"
-                  }`}
-                >
-                  {item.title.split(" & ")[0]}
-                </button>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+              <div className="aspect-[16/10] overflow-hidden rounded-sm border border-white/10 relative">
+                <img 
+                  src={promiseGapImages.migrationStation} 
+                  alt="Transit hub connecting interstate labor networks" 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute top-3 left-3 bg-[#171717]/90 text-[#FAF8F5] text-[8px] font-mono px-2 py-0.5 uppercase tracking-widest">
+                  Regional Transit Network Hub
+                </div>
+              </div>
+              <div className="aspect-[16/10] overflow-hidden rounded-sm border border-white/10 relative">
+                <img 
+                  src={promiseGapImages.migrationTraveler} 
+                  alt="Passenger looking out train window during migration journey" 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute top-3 left-3 bg-[#171717]/90 text-[#FAF8F5] text-[8px] font-mono px-2 py-0.5 uppercase tracking-widest">
+                  Interstate Labor Journey Perspective
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Restrained Data-Driven Indicator Panel */}
+          <div className="bg-white border border-[#171717]/10 p-8 md:p-10 rounded-sm space-y-8 shadow-sm">
+            <div className="space-y-1">
+              <span className="text-[10px] font-mono text-[#16734A] uppercase tracking-[0.25em] block font-bold">
+                EVIDENCE & VERIFIED INDICATORS
+              </span>
+              <h3 className="font-serif text-xl md:text-3xl text-[#171717] font-semibold uppercase">
+                THE ECONOMIC LANDSCAPE IN NUMBERS
+              </h3>
             </div>
 
-            {/* Symmetrical split layout with full color images */}
-            <div className="bg-white border border-[#171717]/10 p-6 md:p-8 rounded-sm shadow-sm space-y-6">
-              <div className="flex justify-between items-center pb-4 border-b border-[#171717]/5">
-                <h3 className="font-serif text-xl md:text-2xl font-bold uppercase tracking-wider text-[#171717]">
-                  {activePromiseObj.title}
-                </h3>
-                <span className="text-[9px] font-mono text-[#6B6B6B] bg-[#F7F4EE] px-2 py-0.5 rounded-sm">
-                  {activePromiseObj.metric}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
+              <div className="bg-[#F7F4EE] p-5 rounded-sm border border-[#171717]/5 space-y-2">
+                <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
+                  INFORMAL WORKFORCE
+                </span>
+                <span className="font-serif text-3xl font-bold text-[#171717] block">88.8%</span>
+                <p className="text-[11px] font-sans font-light text-[#6B6B6B] leading-normal">
+                  Proportion of workers operating in informal employment without formal contracts.
+                </p>
+                <span className="text-[8px] font-mono text-[#6B6B6B] block pt-1">
+                  Source: MoSPI PLFS 2023–24
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-2">
-                
-                {/* Left Split: The Promise */}
-                <div className="space-y-4 flex flex-col justify-between">
-                  <div className="space-y-2">
-                    <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-wider uppercase block">
-                      THE PROMISE
-                    </span>
-                    <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                      {activePromiseObj.promise}
-                    </p>
-                  </div>
-                  <div className="aspect-[16/10] border border-[#171717]/10 overflow-hidden relative rounded-sm shadow-sm">
-                    <img 
-                      src={activePromiseObj.promiseImg} 
-                      alt="The Promise context visual" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
+              <div className="bg-[#F7F4EE] p-5 rounded-sm border border-[#171717]/5 space-y-2">
+                <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">
+                  AGRICULTURE SHARE
+                </span>
+                <span className="font-serif text-3xl font-bold text-[#171717] block">45.8%</span>
+                <p className="text-[11px] font-sans font-light text-[#6B6B6B] leading-normal">
+                  National workforce engaged in rural agricultural labor and farming.
+                </p>
+                <span className="text-[8px] font-mono text-[#6B6B6B] block pt-1">
+                  Source: MoSPI PLFS 2023–24
+                </span>
+              </div>
 
-                {/* Right Split: The Gap */}
-                <div className="space-y-4 border-t md:border-t-0 md:border-l border-[#171717]/5 pt-6 md:pt-0 pl-0 md:pl-8 flex flex-col justify-between">
-                  <div className="space-y-2">
-                    <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-wider uppercase block">
-                      THE GAP
-                    </span>
-                    <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                      {activePromiseObj.gap}
-                    </p>
-                  </div>
-                  <div className="aspect-[16/10] border border-[#171717]/10 overflow-hidden relative rounded-sm shadow-sm">
-                    <img 
-                      src={activePromiseObj.gapImg} 
-                      alt="The Gap context visual" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
+              <div className="bg-[#F7F4EE] p-5 rounded-sm border border-[#171717]/5 space-y-2">
+                <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
+                  RURAL INTERNET ACCESS
+                </span>
+                <span className="font-serif text-3xl font-bold text-[#171717] block">34.0%</span>
+                <p className="text-[11px] font-sans font-light text-[#6B6B6B] leading-normal">
+                  Rural households with stable internet access compared to 68% in urban hubs.
+                </p>
+                <span className="text-[8px] font-mono text-[#6B6B6B] block pt-1">
+                  Source: TRAI / NFHS-5
+                </span>
+              </div>
 
+              <div className="bg-[#F7F4EE] p-5 rounded-sm border border-[#171717]/5 space-y-2">
+                <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">
+                  NATIONAL INCOME SHARE
+                </span>
+                <span className="font-serif text-3xl font-bold text-[#171717] block">57.7%</span>
+                <p className="text-[11px] font-sans font-light text-[#6B6B6B] leading-normal">
+                  Share of national income held by the top 10% income bracket.
+                </p>
+                <span className="text-[8px] font-mono text-[#6B6B6B] block pt-1">
+                  Source: World Inequality Lab 2024
+                </span>
               </div>
             </div>
-
           </div>
+
         </section>
 
-        {/* Section Divider statement */}
-        <div className="w-full py-16 flex flex-col items-center justify-center text-center select-none pointer-events-none">
-          <div className="w-[1px] h-12 bg-[#171717]/10 mb-4"></div>
-          <span className="text-[9px] font-sans font-bold text-[#E8752A] tracking-[0.2em] uppercase">
-            Story Continuity
+        {/* Transition Section to A Young Country */}
+        <section className="w-full py-20 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
+          <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
+            TRANSITION TO DEMOGRAPHY
           </span>
-          <p className="font-serif text-lg text-[#6B6B6B] italic max-w-md pt-2">
-            "But progress does not reach everyone equally."
+          <h3 className="font-serif text-2xl md:text-4xl text-[#171717] font-normal uppercase max-w-3xl mx-auto leading-snug">
+            "INDIA'S FUTURE IS EXPANDING. BUT OPPORTUNITY IS NOT EXPERIENCED FROM THE SAME STARTING LINE."
+          </h3>
+          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
+          <p className="font-serif text-base md:text-xl text-[#16734A] italic font-semibold pt-2">
+            "Who is the young generation entering this future?"
           </p>
-        </div>
+        </section>
 
         {/* 04 — A YOUNG COUNTRY (3 Narrative moments) */}
         <section id="young-country" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5">
