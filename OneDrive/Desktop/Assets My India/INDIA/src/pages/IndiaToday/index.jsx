@@ -1781,1112 +1781,506 @@ export default function IndiaToday() {
             <div className="h-[1px] w-16 bg-white/20 mx-auto"></div>
             <div className="pt-2 flex items-center justify-center">
               <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] px-4 py-2 rounded-sm uppercase tracking-widest font-bold">
-                STEP BACK → 10 — HISTORICAL CONTEXT
+                LOOK CLOSER → 10 — BEYOND ONE STORY
               </span>
             </div>
           </div>
 
         </section>
 
-        {/* Quiet Opening Transition to Section 11 — HISTORICAL CONTEXT */}
-        <section className="w-full py-20 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
-          <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-            HISTORICAL REFLECTION
-          </span>
-          <div className="max-w-3xl mx-auto space-y-3 text-lg md:text-2xl font-serif text-[#171717]">
-            <p className="italic font-semibold text-[#171717]">"ONE STORY IS NEVER THE WHOLE STORY."</p>
-            <p className="italic font-light text-[#6B6B6B] text-base md:text-xl">"India's arguments about power, fairness, representation and dissent did not begin today."</p>
-            <p className="italic font-semibold text-[#16734A] text-base md:text-xl">"To understand the present, we have to look at the democratic traditions that came before it."</p>
-          </div>
-          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
-        </section>
-
-        {/* 11 — HISTORICAL CONTEXT */}
-        <section id="historical-continuity" className="w-full py-28 px-4 sm:px-6 md:px-12 max-w-[94vw] mx-auto space-y-16">
-          
-          {/* Section Introduction */}
-          <div className="text-center space-y-3 max-w-4xl mx-auto">
-            <span className="text-[11px] font-mono text-[#16734A] uppercase tracking-[0.35em] block font-bold">
-              11 — HISTORICAL CONTEXT
+        {/* 10 — BEYOND ONE STORY */}
+        <section id="historical-continuity" className="w-full py-28 bg-[#171717] text-[#FAF8F5] px-6 md:px-12 text-center space-y-12">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.35em] uppercase block">
+              10 — BEYOND ONE STORY
             </span>
-            <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717]">
-              HISTORICAL CONTEXT
-            </h2>
-            <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-semibold">
-              "India's democracy was not built in a single moment."
-            </p>
-            <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed max-w-3xl mx-auto">
-              Disagreement, participation, protest, representation, and constitutional democracy developed across different eras of India's history. These historical moments illuminate the democratic questions raised by contemporary dissent.
+            <h3 className="font-serif text-3xl md:text-5xl text-[#FAF8F5] font-normal leading-tight">
+              "CJP IS ONE STORY."
+            </h3>
+            <p className="font-serif text-xl md:text-3xl text-white/70 italic max-w-2xl mx-auto">
+              "BUT IT IS NOT THE WHOLE STORY OF INDIA TODAY."
             </p>
           </div>
 
-          {/* HORIZONTAL FLOWING HISTORICAL TIMELINE STAGE WITH LIQUID GLASS */}
-          <div className="bg-[#0a0a0a] text-[#FAF8F5] border border-white/15 rounded-2xl shadow-[0_30px_70px_-15px_rgba(0,0,0,0.8)] relative overflow-hidden transition-all duration-700 w-full min-h-[660px] md:min-h-[720px] flex flex-col justify-between p-4 md:p-8 lg:p-10">
-            
-            {/* Background Image of Selected Historical Moment */}
-            <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-              <AnimatePresence mode="wait">
-                <motion.img 
-                  key={activeHistoryObj.era}
-                  src={activeHistoryObj.image} 
-                  alt={activeHistoryObj.title}
-                  initial={{ opacity: 0, scale: 1.05 }}
-                  animate={{ opacity: 0.50, scale: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="w-full h-full object-cover"
-                />
-              </AnimatePresence>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-[#0a0a0a]/30" />
-            </div>
+          <div className="h-[1px] w-20 bg-white/20 mx-auto"></div>
 
-            {/* Top Historical Era Tag */}
-            <div className="relative z-10 flex flex-wrap justify-between items-center gap-4 text-xs font-mono tracking-widest uppercase border-b border-white/15 pb-3 md:pb-4">
-              <span className="bg-[#16734A] text-white px-3.5 py-1 rounded-sm font-bold shadow-md">
-                ERA: {activeHistoryObj.era} · {activeHistoryObj.category}
-              </span>
-              <span className="text-white/50 text-[10px]">HISTORICAL THREAD 0{historyIndex + 1} OF 05</span>
-            </div>
-
-            {/* LIQUID-GLASS HISTORICAL STORY PANEL */}
-            <div className="relative z-10 my-auto py-4 w-full flex justify-center">
-              <AnimatePresence mode="wait">
-                <motion.div 
-                  key={activeHistoryObj.era}
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -15 }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
-                  style={{
-                    backgroundColor: "rgba(18, 18, 18, 0.25)",
-                    backgroundImage: "linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.015) 45%, rgba(255, 255, 255, 0.035))",
-                    backdropFilter: "blur(18px)",
-                    WebkitBackdropFilter: "blur(18px)",
-                    border: "1px solid rgba(255, 255, 255, 0.22)",
-                    boxShadow: "0 20px 50px -20px rgba(0, 0, 0, 0.45)",
-                    borderRadius: "16px"
-                  }}
-                  className="w-full max-w-[1200px] lg:max-w-[1300px] min-h-[320px] p-5 md:p-8 lg:p-10 space-y-4 flex flex-col justify-between"
-                >
-                  <div className="space-y-2">
-                    <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
-                      {activeHistoryObj.era} · {activeHistoryObj.category}
-                    </span>
-                    <h3 className="font-serif text-2xl md:text-4xl lg:text-5xl text-white font-semibold uppercase leading-tight tracking-wide">
-                      {activeHistoryObj.title}
-                    </h3>
-                    <p className="text-sm md:text-base lg:text-xl font-sans font-light text-white/95 leading-relaxed pt-1">
-                      {activeHistoryObj.desc}
-                    </p>
-                  </div>
-
-                  <div className="space-y-3 pt-3 border-t border-white/15">
-                    <div className="space-y-0.5">
-                      <span className="text-xs font-mono text-[#E8752A] uppercase tracking-wider block font-bold">
-                        HISTORICAL QUESTION
-                      </span>
-                      <p className="text-base md:text-xl font-serif text-white italic">
-                        "{activeHistoryObj.question}"
-                      </p>
-                    </div>
-
-                    <div className="space-y-0.5">
-                      <span className="text-xs font-mono text-[#16734A] uppercase tracking-wider block font-bold">
-                        WHY IT MATTERED
-                      </span>
-                      <p className="text-xs md:text-sm font-sans font-light text-white/85 leading-relaxed">
-                        {activeHistoryObj.why}
-                      </p>
-                    </div>
-
-                    <div className="pt-2 border-t border-white/10 text-xs font-mono text-white/60 uppercase tracking-widest">
-                      <span>Source: {activeHistoryObj.source}</span>
-                    </div>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            {/* HORIZONTAL HISTORICAL MOMENTS NAVIGATION */}
-            <div className="relative z-10 pt-3 md:pt-4 border-t border-white/15 space-y-2.5">
-              <div className="flex items-center justify-between overflow-x-auto gap-3 py-1 no-scrollbar">
-                {historicalThreads.map((item, idx) => {
-                  const isActive = historyIndex === idx;
-                  return (
-                    <button
-                      key={idx}
-                      onClick={() => setHistoryIndex(idx)}
-                      className={`flex-1 min-w-[150px] md:min-w-[180px] p-2.5 md:p-3.5 rounded-xl border text-left transition-all duration-300 backdrop-blur-md cursor-pointer outline-none ${
-                        isActive 
-                          ? "bg-[#FAF8F5] text-[#171717] border-[#16734A] shadow-2xl scale-102 ring-2 ring-[#16734A]/50" 
-                          : "bg-white/5 border-white/15 text-white/70 hover:bg-white/10 hover:border-white/30"
-                      }`}
-                      aria-label={`${item.era} — ${item.title}`}
-                    >
-                      <span className={`text-xs font-mono font-bold block ${isActive ? "text-[#16734A]" : "text-[#E8752A]"}`}>
-                        {item.era}
-                      </span>
-                      <span className="text-xs md:text-sm font-serif font-semibold truncate block pt-0.5">
-                        {item.title}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Progress Line */}
-              <div className="relative w-full flex items-center justify-between px-4 pt-1">
-                <div className="absolute left-6 right-6 h-[2px] bg-white/20 z-0" />
-                <div 
-                  className="absolute left-6 h-[2px] bg-[#16734A] z-0 transition-all duration-700 ease-out" 
-                  style={{ width: `calc(${(historyIndex / (historicalThreads.length - 1)) * 100}% - 12px)` }}
-                />
-                {historicalThreads.map((_, idx) => {
-                  const isActive = historyIndex === idx;
-                  const isPassed = historyIndex >= idx;
-                  return (
-                    <div 
-                      key={idx}
-                      className={`relative z-10 w-3.5 h-3.5 rounded-full transition-all duration-500 ${
-                        isActive 
-                          ? "bg-[#16734A] ring-4 ring-[#16734A]/40 scale-125" 
-                          : isPassed 
-                          ? "bg-[#16734A]" 
-                          : "bg-white/30"
-                      }`}
-                    />
-                  );
-                })}
-              </div>
-
-            </div>
-
+          {/* REVEAL WORDS SEQUENCE */}
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-xs md:text-sm font-mono tracking-[0.25em] text-white/80 uppercase max-w-4xl mx-auto">
+            <span className="text-[#E8752A] font-bold">MANIPUR</span>
+            <span>•</span>
+            <span className="text-white font-bold">UNEMPLOYMENT</span>
+            <span>•</span>
+            <span className="text-[#16734A] font-bold">INEQUALITY</span>
+            <span>•</span>
+            <span className="text-white font-bold">POLLUTION</span>
+            <span>•</span>
+            <span className="text-[#E8752A] font-bold">POLARISATION</span>
+            <span>•</span>
+            <span className="text-white font-bold">HATE SPEECH</span>
+            <span>•</span>
+            <span className="text-[#16734A] font-bold">SCIENTIFIC TEMPER</span>
+            <span>•</span>
+            <span className="text-[#E8752A] font-bold">OPPORTUNITY</span>
           </div>
 
-          {/* CLOSING NARRATIVE TRANSITION LEADING TO DEMOCRACY SPEAKS */}
-          <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-14 rounded-sm text-center space-y-6 shadow-md max-w-5xl mx-auto my-12">
-            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
-              DEMOCRATIC REFLECTION
+          {/* HORIZONTAL DRIFT STRIP OF CONTEMPORARY FRAGMENTS */}
+          <div className="py-8 overflow-hidden">
+            <div className="flex gap-4 min-w-max animate-pulse opacity-90 justify-center">
+              {[
+                { title: "MANIPUR & BELONGING", img: "/images/nature/manipur_nature.jpg" },
+                { title: "EXAM RECRUITMENT", img: "/images/stories/story4-prep.jpg" },
+                { title: "LABORATORY INQUIRY", img: "/images/stories/story6-lab.jpg" },
+                { title: "ENVIRONMENTAL ATMOSPHERE", img: "/images/stories/story3-forest.jpg" },
+                { title: "CIVIC DISCOURSE", img: "/images/stories/stories-intro-2.jpg" },
+                { title: "EVERYDAY TRANSIT", img: "/images/stories/story1-train.jpg" }
+              ].map((item, idx) => (
+                <div key={idx} className="w-64 md:w-80 aspect-[16/10] overflow-hidden rounded-sm border border-white/10 relative group">
+                  <img src={item.img} alt={item.title} className="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-500" />
+                  <div className="absolute bottom-2 left-2 bg-[#171717]/80 text-[#FAF8F5] px-2 py-0.5 text-[8px] font-mono tracking-widest uppercase">
+                    {item.title}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="pt-4">
+            <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] px-6 py-3 rounded-sm uppercase tracking-widest font-bold text-[#171717]">
+              LOOK CLOSER ↓
             </span>
-            <p className="font-serif text-xl md:text-3xl font-normal leading-relaxed text-[#FAF8F5] max-w-3xl mx-auto">
-              "Democracy is not only what institutions do.<br/>It is also what citizens ask of them."
-            </p>
-            <div className="h-[1px] w-16 bg-white/20 mx-auto"></div>
-            <div className="pt-2 flex items-center justify-center">
-              <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] px-4 py-2 rounded-sm uppercase tracking-widest font-bold">
-                CONTINUE → 12 — DEMOCRACY SPEAKS
-              </span>
-            </div>
           </div>
-
         </section>
 
-        {/* Quiet Opening Transition Section to 11 — DEMOCRACY SPEAKS */}
-        <section className="w-full py-20 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
-          <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-            DEMOCRATIC VOICES
-          </span>
-          <div className="max-w-3xl mx-auto space-y-3 text-lg md:text-2xl font-serif text-[#171717]">
-            <p className="italic font-semibold text-[#171717]">"DEMOCRACY SPEAKS."</p>
-            <p className="italic font-light text-[#6B6B6B] text-base md:text-xl">"Not only through ballots."</p>
-            <p className="italic font-semibold text-[#16734A] text-base md:text-xl">"Through questions. Through disagreement. Through protest. Through participation."</p>
-          </div>
-          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
-        </section>
-
-        {/* 11 — DEMOCRACY SPEAKS */}
-        <section id="democracy-speaks" className="w-full py-28 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+        {/* 11 — INDIA, RIGHT NOW */}
+        <section id="india-right-now" className="w-full py-28 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-32">
           
-          {/* Section Framing Header */}
+          {/* Section Header */}
           <div className="text-center space-y-4 max-w-4xl mx-auto">
             <span className="text-[11px] font-mono text-[#16734A] uppercase tracking-[0.35em] block font-bold">
-              11 — DEMOCRACY SPEAKS
+              11 — INDIA, RIGHT NOW
             </span>
-            <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717]">
-              DEMOCRACY SPEAKS
+            <h2 className="font-serif text-4xl md:text-7xl uppercase tracking-wider text-[#171717] font-normal">
+              INDIA, RIGHT NOW
             </h2>
             <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-semibold">
-              "Democracy is not silent. It speaks whenever ordinary citizens enter public life."
+              "THE REALITIES PEOPLE ARE LIVING THROUGH RIGHT NOW."
             </p>
-            <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] leading-relaxed max-w-3xl mx-auto">
-              Democracy is an ongoing relationship between citizens and power. It expresses itself through votes, uncomfortable questions, peaceful assembly, and everyday civic responsibility.
+            <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed max-w-2xl mx-auto">
+              Not separate problems, but different facets of the same country. Observed directly as they exist.
             </p>
           </div>
 
-          {/* FOUR CONNECTED EDITORIAL CHAPTERS */}
-          <div className="space-y-24">
-
-            {/* CHAPTER 01 — THE VOTE */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 01 · THE VOTE
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  THE VOTE
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "Every election turns millions of individual choices into a collective decision."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Voting is the fundamental mechanism through which authority is granted and revoked. Across general and local elections, citizens exercise sovereignty to demand accountability from those who seek to govern.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">FRAMING QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "What does a vote ask of the people who receive it?"
-                  </p>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-6 space-y-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/people/voters-queue.jpg" 
-                    alt="Citizens standing patiently in line outside a polling station during an election in India" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY RECORD: GENERAL ELECTION POLLING STATION
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: Election Commission of India Records
-                </span>
-              </div>
-            </motion.div>
-
-            {/* CHAPTER 02 — THE QUESTION */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/story6-lab.jpg" 
-                    alt="Journalists and researchers analyzing public records and asking questions at a press briefing" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY RECORD: JOURNALISM & PUBLIC SCRUTINY
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
-                  Source: Press Trust of India / Independent Audit Archives
-                </span>
-              </div>
-
-              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
-                <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 02 · THE QUESTION
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  THE QUESTION
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "Democracy depends on the ability to ask whether power is doing what it promised."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Without scrutiny, elections risk becoming empty rituals. Independent journalism, Right to Information (RTI) petitions, legislative inquiries, and public auditing ensure that official actions are continuously examined.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#E8752A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">FRAMING QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "Can a democracy remain healthy without uncomfortable questions?"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* CHAPTER 03 — THE PROTEST */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-mono text-[#171717] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 03 · THE PROTEST
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  THE PROTEST
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "When people believe institutions have stopped hearing them, they often take their disagreement into public space."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Student unions, agricultural alliances, labor federations, and civil rights groups have historically gathered in public squares to voice grievances. Peaceful assembly remains a constitutionally protected instrument when channels feel unresponsive.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#171717] space-y-1">
-                  <span className="text-[10px] font-mono text-[#171717] uppercase font-bold block">FRAMING QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "What does a democracy do with people who refuse to remain silent?"
-                  </p>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-6 space-y-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/stories-intro-1.jpg" 
-                    alt="Citizens and students gathering peacefully at a public square with banners and petitions" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY RECORD: PUBLIC ASSEMBLY & CIVIC PROTEST
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: Reuters / National Representative Register
-                </span>
-              </div>
-            </motion.div>
-
-            {/* CHAPTER 04 — THE EVERYDAY REPUBLIC */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/story1-station.jpg" 
-                    alt="Ordinary citizens interacting, walking, and sharing public municipal spaces in a city" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY RECORD: SHARED MUNICIPAL & CIVIC SPACES
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
-                  Source: Urban Civic Log / Municipal Archives
-                </span>
-              </div>
-
-              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 04 · THE EVERYDAY REPUBLIC
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  THE EVERYDAY REPUBLIC
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "A republic is not experienced only in Parliament. It is experienced wherever people share public life."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Beyond major political moments, democracy lives in local panchayats, resident welfare associations, university halls, municipal town halls, and everyday community cooperation where citizens solve local problems together.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">FRAMING QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "How is democratic responsibility practiced in daily life?"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-          </div>
-
-          {/* CLOSING STATEMENT & TRANSITION TO LIVING TOGETHER */}
-          <div className="bg-[#171717] text-[#FAF8F5] p-10 md:p-16 rounded-sm text-center space-y-6 shadow-md max-w-5xl mx-auto my-16">
-            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
-              DEMOCRATIC CONVERSATION
-            </span>
-            <div className="space-y-3">
-              <h3 className="font-serif text-2xl md:text-4xl font-normal uppercase text-[#FAF8F5]">
-                "DEMOCRACY IS A CONVERSATION."
+          {/* CHAPTER A — MANIPUR */}
+          <div className="space-y-8 bg-white border border-[#171717]/10 p-8 md:p-16 rounded-sm shadow-sm">
+            <div className="max-w-3xl space-y-3">
+              <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
+                CHAPTER A · MANIPUR
+              </span>
+              <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase">
+                MANIPUR
               </h3>
-              <p className="font-serif text-lg md:text-2xl text-[#FAF8F5]/90 italic max-w-3xl mx-auto">
-                "It survives not because everyone agrees. It survives because disagreement can still have a place."
+              <p className="font-serif text-lg md:text-2xl text-[#171717] italic">
+                "A conflict that has reshaped lives, communities and the meaning of belonging."
               </p>
             </div>
-            
-            <div className="h-[1px] w-16 bg-white/20 mx-auto"></div>
 
-            <div className="space-y-4 pt-2">
-              <span className="text-xs font-mono text-[#16734A] uppercase tracking-widest block font-bold">
-                LIVING TOGETHER
-              </span>
-              <p className="text-xs md:text-sm font-sans font-light text-white/80 max-w-2xl mx-auto leading-relaxed">
-                "Because democracy ultimately asks a larger question: How do people who disagree learn to share the same country?"
-              </p>
-              <div className="pt-2">
-                <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] px-4 py-2 rounded-sm uppercase tracking-widest font-bold">
-                  CONTINUE → 12 — LIVING TOGETHER
-                </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
+                <img 
+                  src="/images/nature/manipur_nature.jpg" 
+                  alt="Affected communities and landscape in Manipur" 
+                  className="w-full h-full object-cover" 
+                />
+                <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                  DOCUMENTARY LOG: LANDSCAPE & COMMUNITIES
+                </div>
+              </div>
+              <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
+                <img 
+                  src="/images/stories/stories-intro-1.jpg" 
+                  alt="Displaced families seeking stability and everyday life" 
+                  className="w-full h-full object-cover" 
+                />
+                <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                  DOCUMENTARY LOG: HUMAN REALITY & RELIEF
+                </div>
               </div>
             </div>
-          </div>
 
-        </section>
-
-        {/* Quiet Opening Transition Section to 12 — LIVING TOGETHER */}
-        <section className="w-full py-24 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
-          <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-            PLURAL REPUBLIC
-          </span>
-          <div className="max-w-3xl mx-auto space-y-3 text-lg md:text-2xl font-serif text-[#171717]">
-            <p className="italic font-semibold text-[#171717]">"LIVING TOGETHER"</p>
-            <p className="italic font-light text-[#6B6B6B] text-base md:text-xl">"India is not one story."</p>
-            <p className="italic font-light text-[#171717]/90 text-sm md:text-lg max-w-2xl mx-auto">
-              Different languages. Different faiths. Different regions. Different memories. Different ways of imagining the future.
-            </p>
-            <p className="italic font-semibold text-[#16734A] text-base md:text-xl">"And yet, somehow, a shared public life continues."</p>
-          </div>
-          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
-        </section>
-
-        {/* 12 — LIVING TOGETHER */}
-        <section id="living-together" className="w-full py-28 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
-          
-          {/* Section Framing Header */}
-          <div className="text-center space-y-4 max-w-4xl mx-auto">
-            <span className="text-[11px] font-mono text-[#16734A] uppercase tracking-[0.35em] block font-bold">
-              12 — LIVING TOGETHER
+            <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+              Source: Observational Field Documentation Archives
             </span>
-            <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717]">
-              LIVING TOGETHER
-            </h2>
-            <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-semibold">
-              "How do people who are different from one another continue to belong to the same country?"
-            </p>
-            <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] leading-relaxed max-w-3xl mx-auto">
-              Coexistence in a vast republic is not the absence of difference, nor a superficial claim of seamless harmony. It is the active, daily negotiation of living alongside one another across lines of faith, region, language, and memory.
-            </p>
           </div>
 
-          {/* FIVE CONNECTED EDITORIAL CHAPTERS */}
-          <div className="space-y-24">
+          {/* CHAPTER B — YOUTH AND OPPORTUNITY */}
+          <div className="space-y-8 bg-white border border-[#171717]/10 p-8 md:p-16 rounded-sm shadow-sm">
+            <div className="max-w-3xl space-y-3">
+              <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
+                CHAPTER B · YOUTH AND OPPORTUNITY
+              </span>
+              <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase">
+                A YOUNG COUNTRY
+              </h3>
+              <p className="font-serif text-lg md:text-2xl text-[#171717] italic">
+                "For millions, the future begins with one question: Will there be an opportunity?"
+              </p>
+            </div>
 
-            {/* CHAPTER 01 — MANY IN ONE */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 01 · PLURALITY
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  MANY IN ONE
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "Unity in India has rarely meant becoming the same."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Dozens of major languages, thousands of dialects, diverse culinary traditions, regional identities, and distinct faiths exist side-by-side. Indian citizenship has historically functioned not by enforcing cultural uniformity, but by creating constitutional space for plural identity.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">EDITORIAL QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "Can belonging exist without sameness?"
-                  </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
+                <img 
+                  src="/images/stories/story4-prep.jpg" 
+                  alt="Students and aspirants preparing for competitive examinations" 
+                  className="w-full h-full object-cover" 
+                />
+                <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                  DOCUMENTARY LOG: EXAM CENTRES & ASPIRANTS
                 </div>
               </div>
-              
-              <div className="lg:col-span-6 space-y-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+              <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
+                <img 
+                  src="/images/stories/story6-lab.jpg" 
+                  alt="Young researchers and workers seeking employment security" 
+                  className="w-full h-full object-cover" 
+                />
+                <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                  DOCUMENTARY LOG: WORKFORCE & RESEARCH
+                </div>
+              </div>
+            </div>
+
+            <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+              Source: Education & Employment Records
+            </span>
+          </div>
+
+          {/* CHAPTER C — INEQUALITY (SPLIT-SCREEN CONTRAST) */}
+          <div className="space-y-8 bg-white border border-[#171717]/10 p-8 md:p-16 rounded-sm shadow-sm">
+            <div className="max-w-3xl space-y-3">
+              <span className="text-xs font-mono text-[#171717] uppercase tracking-[0.25em] font-bold block">
+                CHAPTER C · ECONOMIC REALITIES
+              </span>
+              <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase">
+                ECONOMIC REALITIES
+              </h3>
+              <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic">
+                "Growth does not arrive everywhere at the same speed."
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="space-y-3">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#16734A]/30 relative">
                   <img 
-                    src="/images/stories/story1-train.jpg" 
-                    alt="Multilingual passengers sharing space inside a general compartment of Indian Railways" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                    src="/images/metro/metro_india.jpg" 
+                    alt="Modern urban infrastructure and commercial centres" 
+                    className="w-full h-full object-cover" 
                   />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: PLURALITY IN PUBLIC SPACE
+                  <div className="absolute top-3 left-3 bg-[#16734A] text-white px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase font-bold">
+                    MODERN URBAN INFRASTRUCTURE
                   </div>
                 </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: National Transport Archives & Census Records
-                </span>
               </div>
-            </motion.div>
-
-            {/* CHAPTER 02 — THE FRICTION OF LIVING TOGETHER */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/stories-intro-2.jpg" 
-                    alt="Citizens and student groups participating in animated debate at a public forum" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: PUBLIC DISAGREEMENT & DEBATE
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
-                  Source: Parliamentary & Public Seminar Registers
-                </span>
-              </div>
-
-              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
-                <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 02 · REALITY
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  DIFFERENCE CAN HURT
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "Pluralism is not the absence of conflict. It is the possibility of living through conflict without allowing difference to become dehumanization."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Deep diversity inevitably brings friction: social tensions, regional competition, language debates, caste prejudice, and political polarization. A mature democracy does not pretend these frictions do not exist, but relies on legal institutions and constitutional norms to keep conflict non-violent.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#E8752A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">EDITORIAL QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "How does a society navigate deep disagreement without breaking democratic bounds?"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* CHAPTER 03 — THE SHARED SPACE */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 03 · COEXISTENCE SPACES
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  THE PLACES WE SHARE
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "The republic is experienced in shared spaces."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Every day, millions of people interact in trains, buses, vegetable markets, university libraries, hospital corridors, courtrooms, and municipal parks. In these shared spaces, economic necessity and daily routine force people of opposing backgrounds to cooperate.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">EDITORIAL QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "Where do different lives intersect to build practical coexistence?"
-                  </p>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-6 space-y-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/story1-station.jpg" 
-                    alt="Commuters walking through a bustling shared railway platform" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: SHARED CIVIC INFRASTRUCTURE
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: Urban Transit & Municipal Log
-                </span>
-              </div>
-            </motion.div>
-
-            {/* CHAPTER 04 — WHEN THE FABRIC IS TESTED */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/story3-forest.jpg" 
-                    alt="Quiet observer view of forest and community boundary lands" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: FRAGILITY & TRUST OBSERVATION
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
-                  Source: Civil Society & Human Rights Archives
-                </span>
-              </div>
-
-              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
-                <span className="text-xs font-mono text-[#171717] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 04 · STRAIN
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  THE FABRIC IS NOT UNBREAKABLE
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "What happens when fellow citizens stop seeing one another as fellow citizens?"
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Moments of communal tension, hate speech, discrimination, and targeted social exclusion expose the fragility of civic trust. When rhetoric turns divisive, the social fabric requires institutional courage and civic intervention to prevent lasting fractures.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#171717] space-y-1">
-                  <span className="text-[10px] font-mono text-[#171717] uppercase font-bold block">EDITORIAL QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "What protects democratic trust when social cohesion comes under strain?"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* CHAPTER 05 — THE ORDINARY WORK OF COEXISTENCE */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  CHAPTER 05 · SOLIDARITY
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  COEXISTENCE IS BUILT EVERY DAY
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "The social fabric is not maintained only by laws. It is also maintained by everyday choices."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Neighbours helping during crises, volunteers running community kitchens, teachers bringing children from varied backgrounds together, and workers organizing across lines of caste and creed—these quiet, unheralded daily actions sustain the republic.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">EDITORIAL QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "How do ordinary citizens rebuild trust in daily life?"
-                  </p>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-6 space-y-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+              <div className="space-y-3">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#E8752A]/30 relative">
                   <img 
                     src="/images/people/rural-farmers.jpg" 
-                    alt="Ordinary citizens and workers standing together in a community gathering" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                    alt="Everyday working environment and informal economy" 
+                    className="w-full h-full object-cover" 
                   />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: EVERYDAY CIVIC SOLIDARITY
+                  <div className="absolute top-3 left-3 bg-[#E8752A] text-white px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase font-bold">
+                    EVERYDAY INFORMAL WORKFORCE
                   </div>
                 </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: Rural Development & Community Archives
-                </span>
               </div>
-            </motion.div>
+            </div>
 
+            <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+              Source: Income & Labour Market Observational Log
+            </span>
           </div>
 
-          {/* QUIET CLOSING STATEMENT & NARRATIVE TRANSITION TO SECTION 13 (#building) */}
-          <div className="bg-[#171717] text-[#FAF8F5] p-10 md:p-16 rounded-sm text-center space-y-6 shadow-md max-w-5xl mx-auto my-16">
-            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
-              THE DAILY TASK
-            </span>
-            <div className="space-y-3">
-              <h3 className="font-serif text-2xl md:text-4xl font-normal uppercase text-[#FAF8F5]">
-                "WE DO NOT HAVE TO AGREE ON EVERYTHING."
-              </h3>
-              <p className="font-serif text-lg md:text-2xl text-[#FAF8F5]/90 italic max-w-3xl mx-auto">
-                "BUT WE HAVE TO FIND A WAY TO LIVE TOGETHER."
-              </p>
-              <p className="font-sans text-xs md:text-sm font-light text-white/70 tracking-wide uppercase pt-2">
-                That is not a finished achievement. It is a daily task.
-              </p>
-            </div>
-            
-            <div className="h-[1px] w-16 bg-white/20 mx-auto"></div>
-
-            <div className="space-y-4 pt-2">
-              <span className="text-xs font-mono text-[#16734A] uppercase tracking-widest block font-bold">
-                THE INDIA WE ARE BUILDING
+          {/* CHAPTER D — POLLUTION */}
+          <div className="space-y-8 bg-white border border-[#171717]/10 p-8 md:p-16 rounded-sm shadow-sm">
+            <div className="max-w-3xl space-y-3">
+              <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
+                CHAPTER D · ECOLOGICAL ATMOSPHERE
               </span>
-              <p className="text-xs md:text-sm font-sans font-light text-white/80 max-w-2xl mx-auto leading-relaxed">
-                "The question is no longer only what India has inherited. It is what we choose to build from here."
+              <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase">
+                THE AIR WE SHARE
+              </h3>
+              <p className="font-serif text-lg md:text-2xl text-[#171717] italic">
+                "Development has a physical cost."
               </p>
-              <div className="pt-2">
-                <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] px-4 py-2 rounded-sm uppercase tracking-widest font-bold">
-                  CONTINUE → 13 — THE INDIA WE ARE BUILDING
-                </span>
+            </div>
+
+            <div className="aspect-[21/9] overflow-hidden rounded-sm border border-[#171717]/10 relative">
+              <img 
+                src="/images/stories/story3-forest.jpg" 
+                alt="Environmental landscape showing human habitation alongside atmospheric conditions" 
+                className="w-full h-full object-cover" 
+              />
+              <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                DOCUMENTARY LOG: ECOLOGICAL ATMOSPHERE & ENVIRONMENT
               </div>
             </div>
-          </div>
 
-        </section>
-
-        {/* Quiet Opening Transition Section to 13 — THE INDIA WE ARE BUILDING */}
-        <section className="w-full py-24 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
-          <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-            EDITORIAL SYNTHESIS
-          </span>
-          <div className="max-w-3xl mx-auto space-y-3 text-lg md:text-2xl font-serif text-[#171717]">
-            <p className="italic font-semibold text-[#171717]">"THE INDIA WE ARE BUILDING"</p>
-            <p className="italic font-light text-[#6B6B6B] text-base md:text-xl">"Every generation inherits a country. But it also inherits choices."</p>
-            <p className="italic font-light text-[#171717]/90 text-sm md:text-lg max-w-2xl mx-auto">
-              The question is not simply how fast India changes. The question is what kind of country that change creates.
-            </p>
-          </div>
-          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
-        </section>
-
-        {/* 13 — THE INDIA WE ARE BUILDING */}
-        <section id="building" className="w-full py-28 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-28">
-          
-          {/* Section Framing Header */}
-          <div className="text-center space-y-4 max-w-4xl mx-auto">
-            <span className="text-[11px] font-mono text-[#16734A] uppercase tracking-[0.35em] block font-bold">
-              13 — THE INDIA WE ARE BUILDING
+            <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+              Source: Environmental Monitoring Records
             </span>
-            <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717]">
-              THE INDIA WE ARE BUILDING
-            </h2>
-            <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-semibold">
-              "WHAT KIND OF INDIA ARE WE BECOMING?"
-            </p>
-            <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] leading-relaxed max-w-3xl mx-auto">
-              Having explored India's motion, promises, youth, pressures, media, dissent, history, voices, and coexistence—we now bring these threads together. The question is not how developed India is, but what choices and values shape its future.
-            </p>
           </div>
 
-          {/* FIVE EDITORIAL SYNTHESIS QUESTIONS */}
-          <div className="space-y-24">
-
-            {/* 01 — GROWTH & OPPORTUNITY */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  SYNTHESIS 01 · GROWTH & OPPORTUNITY
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  CAN GROWTH BECOME OPPORTUNITY?
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "India's transformation has changed what is possible. But possibility alone does not determine who benefits."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Connecting economic momentum with persistent inequality, employment concerns, and youth aspirations. A growing national GDP expands horizons, but can economic growth become meaningful if opportunity remains unevenly distributed?
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">SYNTHESIS QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "A growing economy creates new horizons. But who gets access to them?"
-                  </p>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-6 space-y-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/people/rural-farmers.jpg" 
-                    alt="Young working Indians, students, and citizens striving for opportunities" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: ASPIRATION & WORKFORCE
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: Labour & Development Survey Records
-                </span>
-              </div>
-            </motion.div>
-
-            {/* 02 — KNOWLEDGE & BELIEF */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/story6-lab.jpg" 
-                    alt="Student researchers and learners working in a modern laboratory" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: SCIENTIFIC CURIOSITY & LEARNING
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
-                  Source: Academic & Research Archives
-                </span>
-              </div>
-
-              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
-                <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
-                  SYNTHESIS 02 · KNOWLEDGE & BELIEF
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  WHAT KIND OF KNOWLEDGE DO WE CHOOSE?
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "Faith is personal identity. Dogmatism is the refusal to question."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Connecting scientific temper, constitutional education, and technological inquiry with personal belief. Religious faith is distinct from superstition, and identity is distinct from dogmatism. Can evidence, curiosity, and critical thinking flourish alongside personal faith?
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#E8752A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">SYNTHESIS QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "Can a society become technologically advanced while losing the habit of questioning?"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* 03 — TECHNOLOGY & HUMAN LIFE */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  SYNTHESIS 03 · DIGITAL DISCOURSE
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  WHEN TECHNOLOGY MOVES FASTER THAN SOCIETY
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "Technology can connect millions. It can also amplify division."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Connecting media polarization, algorithmic feeds, public discourse, and digital access. Networks accelerate information exchange, but when algorithms reward outrage over verification, civic trust requires conscious reflection.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">SYNTHESIS QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "What happens when the systems connecting us also shape what we see, believe, and argue about?"
-                  </p>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-6 space-y-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/story4-prep.jpg" 
-                    alt="Citizens using digital interfaces and smartphones in shared public spaces" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: DIGITAL COMMUNICATION & PUBLIC SPHERES
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: Public Media & Information Research Log
-                </span>
-              </div>
-            </motion.div>
-
-            {/* 04 — FREEDOM & RESPONSIBILITY */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/stories-intro-2.jpg" 
-                    alt="Public forum assembly discussing civic rights and legal bounds" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: CIVIC ASSEMBLY & DISSENT TENSION
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
-                  Source: Constitutional Law & Assembly Records
-                </span>
-              </div>
-
-              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
-                <span className="text-xs font-mono text-[#171717] uppercase tracking-[0.25em] font-bold block">
-                  SYNTHESIS 04 · DEMOCRATIC BOUNDS
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  HOW MUCH DISAGREEMENT CAN A REPUBLIC HOLD?
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "A democracy must protect disagreement. But where does disagreement become intimidation?"
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Connecting democratic dissent, legal protest, media polarization, and social tension. Where does constructive criticism cross into hostility? How does a constitutional republic protect citizen protest while safeguarding safety and civil dignity?
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#171717] space-y-1">
-                  <span className="text-[10px] font-mono text-[#171717] uppercase font-bold block">SYNTHESIS QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "How should a democratic society protect both dissent and the dignity of others?"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* 05 — THE ENVIRONMENT WE CHOOSE */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  SYNTHESIS 05 · ECOLOGICAL BALANCE
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  WHAT KIND OF COUNTRY DO WE WANT TO LIVE IN?
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "Development must answer to the air we breathe and the land we inhabit."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Connecting industrial growth, urban expansion, public health, and environmental responsibility. Urban air quality, river health, and soil fertility are not secondary concerns—they define the physical reality of human life in the republic.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">SYNTHESIS QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "Can a country improve the lives of millions without making the air, water, and land harder to live with?"
-                  </p>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-6 space-y-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/story3-forest.jpg" 
-                    alt="Environmental landscape showing human habitat alongside natural ecosystems" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: ECOLOGY & HABITAT OBSERVATION
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: Environmental Protection & Public Health Log
-                </span>
-              </div>
-            </motion.div>
-
-          </div>
-
-          {/* THE CENTRAL SYNTHESIS: TYPOGRAPHIC COMPOSITION */}
-          <div className="bg-[#171717] text-[#FAF8F5] p-10 md:p-20 rounded-sm text-center space-y-10 shadow-md max-w-5xl mx-auto my-16">
+          {/* CHAPTER E — MEDIA / PUBLIC DISCOURSE */}
+          <div className="bg-[#171717] text-[#FAF8F5] p-10 md:p-20 rounded-sm text-center space-y-8 shadow-xl max-w-5xl mx-auto">
             <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.35em] block font-bold">
-              THE HEART OF THE MATTER
+              MEDIA POLARISATION & DISCOURSE
             </span>
-            <div className="space-y-4">
-              <h3 className="font-serif text-3xl md:text-5xl font-normal uppercase text-[#FAF8F5]">
-                "INDIA IS CHANGING."
+            <div className="space-y-4 max-w-3xl mx-auto">
+              <h3 className="font-serif text-2xl md:text-4xl font-normal text-white">
+                "We can live in the same country"
               </h3>
-              <p className="font-serif text-lg md:text-2xl text-[#FAF8F5]/80 italic max-w-3xl mx-auto">
-                "But change does not choose its own direction."
-              </p>
+              <h3 className="font-serif text-2xl md:text-4xl text-[#16734A] font-semibold">
+                "and see it through very different stories."
+              </h3>
             </div>
-            
-            <div className="h-[1px] w-24 bg-white/20 mx-auto"></div>
-
-            {/* FIVE CORE VALUES REVEALED */}
-            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm md:text-xl font-mono uppercase tracking-[0.25em]">
-              <span className="text-[#16734A] font-bold">GROWTH</span>
-              <span className="text-white/30">•</span>
-              <span className="text-[#E8752A] font-bold">KNOWLEDGE</span>
-              <span className="text-white/30">•</span>
-              <span className="text-white font-bold">FREEDOM</span>
-              <span className="text-white/30">•</span>
-              <span className="text-[#16734A] font-bold">DIGNITY</span>
-              <span className="text-white/30">•</span>
-              <span className="text-[#E8752A] font-bold">RESPONSIBILITY</span>
-            </div>
-
-            <p className="font-sans text-xs md:text-sm font-light text-white/80 max-w-2xl mx-auto leading-relaxed pt-2">
-              "The direction is shaped by what a society chooses to value."
+            <div className="h-[1px] w-20 bg-white/20 mx-auto"></div>
+            <p className="font-sans text-xs md:text-sm font-light text-white/70 max-w-xl mx-auto leading-relaxed">
+              When competing media ecosystems describe the same events through contradictory frames, public trust requires conscious verification.
             </p>
           </div>
 
-          {/* QUIET CLOSING STATEMENT & NARRATIVE TRANSITION TO SECTION 14 (#unfinished-republic) */}
-          <div className="text-center space-y-8 max-w-4xl mx-auto my-16">
-            <div className="space-y-3">
-              <h3 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase">
-                "THE COUNTRY WE BUILD IS ALSO THE SOCIETY WE CHOOSE."
+          {/* CHAPTER F — SCIENTIFIC TEMPER */}
+          <div className="space-y-8 bg-white border border-[#171717]/10 p-8 md:p-16 rounded-sm shadow-sm">
+            <div className="max-w-3xl space-y-3">
+              <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
+                CHAPTER F · SCIENTIFIC TEMPER
+              </span>
+              <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase">
+                EVIDENCE, CURIOSITY & FAITH
               </h3>
-              <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed">
-                Some choices are already being made. Others remain contested. And some promises remain unfinished.
+              <p className="font-serif text-lg md:text-2xl text-[#171717] italic">
+                "FAITH ≠ SUPERSTITION · RELIGION ≠ DOGMATISM"
+              </p>
+              <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                A modern country preserves open curiosity, empirical reasoning, and evidence-based inquiry while respecting plural traditions.
               </p>
             </div>
 
-            <div className="h-[1px] w-16 bg-[#171717]/15 mx-auto"></div>
-
-            <div className="space-y-4 pt-4">
-              <span className="text-xs font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
-                14 — THE UNFINISHED REPUBLIC
-              </span>
-              <p className="font-serif text-lg md:text-2xl text-[#16734A] italic font-semibold">
-                "BUT A REPUBLIC IS NEVER FINISHED."
-              </p>
-              <div className="pt-2">
-                <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] border border-[#16734A]/30 px-5 py-2.5 rounded-sm uppercase tracking-widest font-bold inline-block shadow-xs">
-                  CONTINUE → 14 — THE UNFINISHED REPUBLIC
-                </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
+                <img 
+                  src="/images/stories/story6-launch.jpg" 
+                  alt="Scientific inquiry, satellite launch and research" 
+                  className="w-full h-full object-cover" 
+                />
+                <div className="absolute top-3 left-3 bg-[#16734A] text-white px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase font-bold">
+                  SCIENTIFIC RESEARCH & INQUIRY
+                </div>
+              </div>
+              <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
+                <img 
+                  src="/images/stories/story1-train.jpg" 
+                  alt="Respectful daily practice and inquiry" 
+                  className="w-full h-full object-cover" 
+                />
+                <div className="absolute top-3 left-3 bg-[#171717] text-white px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                  FAITH, TRADITION & PUBLIC LIFE
+                </div>
               </div>
             </div>
           </div>
 
         </section>
 
-        {/* Quiet Opening Transition Section to 14 — THE UNFINISHED REPUBLIC */}
-        <section className="w-full py-24 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
-          <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-            REPUBLIC & PROMISE
-          </span>
-          <div className="max-w-3xl mx-auto space-y-3 text-lg md:text-2xl font-serif text-[#171717]">
-            <p className="italic font-semibold text-[#171717]">"BUILDING A COUNTRY IS NOT THE SAME AS FINISHING ONE."</p>
-            <p className="italic font-light text-[#6B6B6B] text-base md:text-xl">"India is a republic. But a republic is not a finished object."</p>
-            <p className="italic font-light text-[#171717]/90 text-sm md:text-lg max-w-2xl mx-auto">
-              It is a promise that has to be renewed in every generation.
+        {/* 12 — THE DISTANCE BETWEEN US */}
+        <section id="distance-between-us" className="w-full py-28 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-32">
+          
+          {/* Section Header */}
+          <div className="text-center space-y-4 max-w-4xl mx-auto">
+            <span className="text-[11px] font-mono text-[#E8752A] uppercase tracking-[0.35em] block font-bold">
+              12 — THE DISTANCE BETWEEN US
+            </span>
+            <h2 className="font-serif text-4xl md:text-7xl uppercase tracking-wider text-[#171717] font-normal">
+              THE DISTANCE BETWEEN US
+            </h2>
+            <p className="font-serif text-lg md:text-2xl text-[#16734A] italic font-semibold">
+              "CONTRASTS EXISTING SIDE BY SIDE."
             </p>
           </div>
-          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
+
+          {/* FIVE STICKY VISUAL CONTRAST PAIRS */}
+          <div className="space-y-24">
+
+            {/* PAIR 01 */}
+            <div className="bg-[#FAF8F5] border border-[#171717]/10 p-8 md:p-12 rounded-sm space-y-6 shadow-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-2">
+                  <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
+                    <img src="/images/stories/digital-upi-payment.jpg" alt="Digital India payment rails" className="w-full h-full object-cover" />
+                  </div>
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">DIGITAL INDIA</span>
+                </div>
+                <div className="space-y-2">
+                  <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
+                    <img src="/images/people/rural-farmers.jpg" alt="Digital access disparity" className="w-full h-full object-cover" />
+                  </div>
+                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">DIGITAL ACCESS GAP</span>
+                </div>
+              </div>
+              <div className="text-center pt-4 border-t border-[#171717]/10">
+                <h4 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase">
+                  "CONNECTED — BUT NOT ALWAYS EQUALLY."
+                </h4>
+              </div>
+            </div>
+
+            {/* PAIR 02 */}
+            <div className="bg-[#FAF8F5] border border-[#171717]/10 p-8 md:p-12 rounded-sm space-y-6 shadow-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-2">
+                  <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
+                    <img src="/images/stories/delhi-metro-train.jpg" alt="Modern metro transit" className="w-full h-full object-cover" />
+                  </div>
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">MODERN CITY</span>
+                </div>
+                <div className="space-y-2">
+                  <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
+                    <img src="/images/stories/story1-station.jpg" alt="Everyday street work" className="w-full h-full object-cover" />
+                  </div>
+                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">EVERYDAY WORK</span>
+                </div>
+              </div>
+              <div className="text-center pt-4 border-t border-[#171717]/10">
+                <h4 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase">
+                  "THE SAME CITY CAN FEEL VERY DIFFERENT."
+                </h4>
+              </div>
+            </div>
+
+            {/* PAIR 03 */}
+            <div className="bg-[#FAF8F5] border border-[#171717]/10 p-8 md:p-12 rounded-sm space-y-6 shadow-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-2">
+                  <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
+                    <img src="/images/stories/story6-lab.jpg" alt="High tech scientific laboratory" className="w-full h-full object-cover" />
+                  </div>
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">ECONOMIC ASPIRATION</span>
+                </div>
+                <div className="space-y-2">
+                  <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
+                    <img src="/images/stories/stories-intro-7.jpg" alt="Job seekers and exam aspirants" className="w-full h-full object-cover" />
+                  </div>
+                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">ECONOMIC INSECURITY</span>
+                </div>
+              </div>
+              <div className="text-center pt-4 border-t border-[#171717]/10">
+                <h4 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase">
+                  "AMBITION IS EVERYWHERE. SECURITY IS NOT."
+                </h4>
+              </div>
+            </div>
+
+            {/* PAIR 04 */}
+            <div className="bg-[#FAF8F5] border border-[#171717]/10 p-8 md:p-12 rounded-sm space-y-6 shadow-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-2">
+                  <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
+                    <img src="/images/stories/story6-launch.jpg" alt="Scientific research and inquiry" className="w-full h-full object-cover" />
+                  </div>
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">SCIENTIFIC ACHIEVEMENT</span>
+                </div>
+                <div className="space-y-2">
+                  <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
+                    <img src="/images/stories/story1-train.jpg" alt="Faith vs superstition inquiry" className="w-full h-full object-cover" />
+                  </div>
+                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">MISINFORMATION & SUPERSTITION</span>
+                </div>
+              </div>
+              <div className="text-center pt-4 border-t border-[#171717]/10">
+                <h4 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase">
+                  "A MODERN COUNTRY STILL HAS TO LEARN HOW TO QUESTION."
+                </h4>
+              </div>
+            </div>
+
+            {/* PAIR 05 */}
+            <div className="bg-[#FAF8F5] border border-[#171717]/10 p-8 md:p-12 rounded-sm space-y-6 shadow-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-2">
+                  <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
+                    <img src="/images/stories/stories-intro-2.jpg" alt="Peaceful democratic dissent assembly" className="w-full h-full object-cover" />
+                  </div>
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">DEMOCRATIC DISSENT</span>
+                </div>
+                <div className="space-y-2">
+                  <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
+                    <img src="/images/stories/stories-intro-4.jpg" alt="Algorithmic feeds and hostile discourse" className="w-full h-full object-cover" />
+                  </div>
+                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">HOSTILE PUBLIC DISCOURSE</span>
+                </div>
+              </div>
+              <div className="text-center pt-4 border-t border-[#171717]/10">
+                <h4 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase">
+                  "DISAGREEMENT CAN SPEAK. HOSTILITY CAN SHOUT."
+                </h4>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+        {/* 13 — THE REPUBLIC IN EVERYDAY LIFE */}
+        <section id="democracy-speaks" className="w-full py-28 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-28">
+          
+          {/* Section Framing Header */}
+          <div className="text-center space-y-4 max-w-4xl mx-auto">
+            <span className="text-[11px] font-mono text-[#16734A] uppercase tracking-[0.35em] block font-bold">
+              13 — THE REPUBLIC IN EVERYDAY LIFE
+            </span>
+            <h2 className="font-serif text-4xl md:text-7xl uppercase tracking-wider text-[#171717] font-normal">
+              THE REPUBLIC IN EVERYDAY LIFE
+            </h2>
+            <p className="font-serif text-lg md:text-2xl text-[#171717] italic font-semibold">
+              "THE REPUBLIC IS NOT EXPERIENCED ONLY IN PARLIAMENT. IT IS EXPERIENCED HERE."
+            </p>
+          </div>
+
+          {/* 6 OBSERVATIONAL DOCUMENTARY IMAGES OF EVERYDAY SHARED SPACES */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "TRAIN & COMMUTE", img: "/images/stories/story1-train.jpg" },
+              { title: "CLASSROOM & LEARNING", img: "/images/stories/story6-lab.jpg" },
+              { title: "MARKET & COMMERCE", img: "/images/stories/story4-prep.jpg" },
+              { title: "STREET & TRANSIT", img: "/images/stories/story1-station.jpg" },
+              { title: "WORKPLACE & WORKFORCE", img: "/images/people/rural-farmers.jpg" },
+              { title: "CIVIC PARTICIPATION", img: "/images/people/voters-queue.jpg" }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white border border-[#171717]/10 p-3 rounded-sm space-y-2 shadow-2xs">
+                <div className="aspect-[4/3] overflow-hidden rounded-sm relative border border-[#171717]/10">
+                  <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-center font-bold">
+                  {item.title}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* COEXISTENCE STATEMENT */}
+          <div className="bg-[#FAF8F5] border border-[#171717]/10 p-10 md:p-16 rounded-sm text-center space-y-6 max-w-4xl mx-auto shadow-sm">
+            <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.3em] font-bold block">
+              COEXISTENCE IN SHARED SPACES
+            </span>
+            <div className="space-y-2 font-serif text-lg md:text-2xl text-[#171717] italic">
+              <p>"We disagree."</p>
+              <p>"We argue."</p>
+              <p>"We belong to different communities."</p>
+              <p>"We imagine different futures."</p>
+              <p className="font-semibold text-[#16734A] pt-2">"But we continue to share the same spaces."</p>
+            </div>
+          </div>
+
         </section>
 
         {/* 14 — THE UNFINISHED REPUBLIC */}
@@ -2901,325 +2295,46 @@ export default function IndiaToday() {
               THE UNFINISHED REPUBLIC
             </h2>
             <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-semibold">
-              "THE DISTANCE BETWEEN THE IDEAL AND THE REALITY"
-            </p>
-            <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] leading-relaxed max-w-3xl mx-auto">
-              The republic exists. The Constitution exists. Democratic institutions exist. But a republic is not a finished monument. Its promises are continuously tested in everyday life.
+              "PROMISES THAT EVERY GENERATION HAS TO MAKE REAL"
             </p>
           </div>
 
-          {/* FIVE UNRESOLVED DEMOCRATIC DIMENSIONS */}
-          <div className="space-y-24">
-
-            {/* 01 — EQUALITY */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  DIMENSION 01 · EQUALITY
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  EQUAL IN LAW. EQUAL IN LIFE?
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "Equality before the law is guaranteed. But equality in life remains an ongoing struggle."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Beyond formal legal status, real equality is measured by access—to education, healthcare, dignified employment, and social mobility across caste, gender, and regional divides.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">UNFINISHED QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "What does equality mean when people's starting points are so different?"
-                  </p>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-6 space-y-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/people/rural-farmers.jpg" 
-                    alt="Ordinary working citizens seeking equal economic and social opportunity" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: EVERYDAY SOCIAL EQUALITY
+          {/* SINGLE WORDS REVEALED ONE-BY-ONE OVER DOCUMENTARY PHOTOS */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { word: "EQUALITY", desc: "Beyond formal legal status, real equality is measured by everyday social access.", img: "/images/people/rural-farmers.jpg" },
+              { word: "DIGNITY", desc: "Protecting every citizen from humiliation, exclusion, and institutional apathy.", img: "/images/stories/story1-station.jpg" },
+              { word: "OPPORTUNITY", desc: "Ensuring that talent and effort can find secure pathways to flourishing.", img: "/images/stories/story4-prep.jpg" },
+              { word: "FREEDOM", desc: "Protecting dissent and the liberty to question without fear.", img: "/images/stories/stories-intro-2.jpg" },
+              { word: "SCIENTIFIC TEMPER", desc: "Preserving evidence-based inquiry, critical reasoning, and open education.", img: "/images/stories/story6-lab.jpg" },
+              { word: "PLURALISM", desc: "Maintaining equal citizenship across diverse languages, faiths, and cultures.", img: "/images/stories/story1-train.jpg" }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white border border-[#171717]/10 p-6 rounded-sm space-y-4 shadow-sm">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10">
+                  <img src={item.img} alt={item.word} className="w-full h-full object-cover" />
+                  <div className="absolute top-2 left-2 bg-[#171717] text-[#FAF8F5] px-2 py-0.5 text-[9px] font-mono tracking-widest uppercase font-bold">
+                    {item.word}
                   </div>
                 </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: Social & Development Equality Log
-                </span>
-              </div>
-            </motion.div>
-
-            {/* 02 — FREEDOM */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/stories-intro-2.jpg" 
-                    alt="Citizens engaging in public forum debate and civic expression" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: CIVIC EXPRESSION & FREEDOM BOUNDS
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
-                  Source: Constitutional Rights & Civic Freedom Log
-                </span>
-              </div>
-
-              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
-                <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
-                  DIMENSION 02 · FREEDOM OF EXPRESSION
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  HOW FREE IS A CITIZEN WHO IS AFRAID TO SPEAK?
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "A republic must protect disagreement. Freedom is meaningless without the liberty to question."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  A constitutional democracy must continuously balance freedom of speech, public safety, individual dignity, and the protection of vulnerable communities against hostility and intimidation.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#E8752A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">UNFINISHED QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "How does a democracy protect disagreement without allowing disagreement to become violence or intimidation?"
-                  </p>
+                <div className="space-y-1">
+                  <h4 className="font-serif text-xl text-[#171717] font-bold uppercase">{item.word}</h4>
+                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">{item.desc}</p>
                 </div>
               </div>
-            </motion.div>
-
-            {/* 03 — SCIENTIFIC TEMPER */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  DIMENSION 03 · INTELLECTUAL CURIOSITY
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  CAN A MODERN COUNTRY REMAIN CURIOUS?
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "Personal faith can coexist with science. The danger is rejecting evidence and questioning."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Article 51A(h) of the Constitution frames scientific temper and humanism as a fundamental duty. True progress requires protecting evidence-based inquiry, critical reasoning, and open education.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">UNFINISHED QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "Can technological progress survive without intellectual curiosity?"
-                  </p>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-6 space-y-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/story6-lab.jpg" 
-                    alt="Students and scientists working in a research laboratory environment" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: RESEARCH & SCIENTIFIC TEMPER
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: National Education & Science Research Log
-                </span>
-              </div>
-            </motion.div>
-
-            {/* 04 — PLURALISM */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/stories/story1-train.jpg" 
-                    alt="Diverse Indian citizens sharing public transit spaces" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: PLURALISM IN SHARED PUBLIC LIFE
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
-                  Source: Public Life Observational Records
-                </span>
-              </div>
-
-              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
-                <span className="text-xs font-mono text-[#171717] uppercase tracking-[0.25em] font-bold block">
-                  DIMENSION 04 · EQUAL CITIZENSHIP
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  CAN DIFFERENCE REMAIN A STRENGTH?
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "Pluralism is not about erasing differences. It is about maintaining equal citizenship across difference."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  With hundreds of languages, multiple major religions, distinct regional cultures, and diverse social perspectives, India's democratic strength relies on ensuring that no citizen feels reduced to a second-class status.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#171717] space-y-1">
-                  <span className="text-[10px] font-mono text-[#171717] uppercase font-bold block">UNFINISHED QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "Can people remain deeply different while remaining equally Indian in the republic?"
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* 05 — ACCOUNTABILITY */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
-            >
-              <div className="lg:col-span-6 space-y-6">
-                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
-                  DIMENSION 05 · INSTITUTIONAL CHECKS
-                </span>
-                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
-                  WHO HOLDS POWER ACCOUNTABLE?
-                </h3>
-                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
-                  "Democracy survives because power is checked by independent institutions and alert citizens."
-                </p>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Elections, independent courts, investigative journalism, parliamentary debate, civil society organizations, and active voters form the framework of democratic accountability.
-                </p>
-                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
-                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">UNFINISHED QUESTION</span>
-                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
-                    "What happens when accountability becomes weaker than power?"
-                  </p>
-                </div>
-              </div>
-              
-              <div className="lg:col-span-6 space-y-2">
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
-                  <img 
-                    src="/images/people/voters-queue.jpg" 
-                    alt="Citizens queuing to exercise democratic accountability at polling stations" 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
-                  />
-                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                    DOCUMENTARY LOG: DEMOCRATIC ACCOUNTABILITY & VOTING
-                  </div>
-                </div>
-                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
-                  Source: Election Commission & Public Governance Log
-                </span>
-              </div>
-            </motion.div>
-
+            ))}
           </div>
 
-          {/* THE UNFINISHED LIST & ASPIRATION REVEAL */}
-          <div className="py-16 text-center space-y-8 max-w-5xl mx-auto border-t border-b border-[#171717]/10">
-            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.35em] block font-bold">
-              DEMOCRATIC ASPIRATIONS OF THE REPUBLIC
-            </span>
-            
-            <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase">
-              THE UNFINISHED LIST
+          {/* OFF-WHITE BACKGROUND STATEMENT */}
+          <div className="text-center space-y-6 max-w-4xl mx-auto py-12 border-t border-b border-[#171717]/10">
+            <h3 className="font-serif text-2xl md:text-4xl text-[#171717] font-normal uppercase">
+              "NONE OF THESE ARE FINISHED ACHIEVEMENTS."
             </h3>
-
-            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm md:text-xl font-mono uppercase tracking-[0.25em] text-[#171717]">
-              <span className="text-[#16734A] font-bold">EQUALITY</span>
-              <span className="text-[#171717]/20">•</span>
-              <span className="text-[#E8752A] font-bold">DIGNITY</span>
-              <span className="text-[#171717]/20">•</span>
-              <span className="text-[#171717] font-bold">OPPORTUNITY</span>
-              <span className="text-[#171717]/20">•</span>
-              <span className="text-[#16734A] font-bold">FREEDOM</span>
-              <span className="text-[#171717]/20">•</span>
-              <span className="text-[#E8752A] font-bold">SCIENTIFIC TEMPER</span>
-              <span className="text-[#171717]/20">•</span>
-              <span className="text-[#171717] font-bold">PLURALISM</span>
-              <span className="text-[#171717]/20">•</span>
-              <span className="text-[#16734A] font-bold">ACCOUNTABILITY</span>
-            </div>
-
-            <p className="font-serif text-base md:text-xl italic text-[#6B6B6B]">
-              "None of these promises belongs to one generation."
+            <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic">
+              "THEY ARE PROMISES THAT EVERY GENERATION HAS TO MAKE REAL."
             </p>
-          </div>
-
-          {/* THE EMOTIONAL CLIMAX */}
-          <div className="bg-[#171717] text-[#FAF8F5] p-12 md:p-24 rounded-sm text-center space-y-8 shadow-xl max-w-5xl mx-auto my-20">
-            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.4em] block font-bold">
-              CONSTITUTIONAL TRUTH
-            </span>
-
-            <div className="space-y-4 max-w-4xl mx-auto">
-              <h3 className="font-serif text-3xl md:text-5xl lg:text-6xl font-normal uppercase leading-tight text-[#FAF8F5]">
-                "THE REPUBLIC DOES NOT BELONG ONLY TO THE GOVERNMENT."
-              </h3>
-              <p className="font-serif text-lg md:text-2xl text-white/80 italic">
-                "It does not belong only to political parties."
-              </p>
-              <p className="font-serif text-lg md:text-2xl text-white/80 italic">
-                "It does not belong only to institutions."
-              </p>
-            </div>
-
-            <div className="h-[1px] w-24 bg-white/20 mx-auto"></div>
-
-            <h4 className="font-serif text-3xl md:text-5xl text-[#16734A] uppercase font-bold tracking-wider">
-              "IT BELONGS TO ITS PEOPLE."
-            </h4>
-          </div>
-
-          {/* FINAL NARRATIVE QUESTION & CONTINUATION TO SECTION 15 (#final-statement) */}
-          <div className="text-center space-y-8 max-w-4xl mx-auto my-16">
-            <div className="space-y-3">
-              <h3 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase">
-                "AND THAT MEANS THE STORY IS NOT OVER."
-              </h3>
-              <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed">
-                The future of a republic is never written completely in advance.
-              </p>
-            </div>
-
-            <div className="h-[1px] w-16 bg-[#171717]/15 mx-auto"></div>
-
-            <div className="space-y-4 pt-4">
-              <span className="text-xs font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
-                15 — THE FUTURE IS NOT WRITTEN YET
-              </span>
-              <p className="font-serif text-lg md:text-2xl text-[#16734A] italic font-semibold">
-                "THE FUTURE REMAINS OPEN."
-              </p>
-            </div>
+            <p className="font-serif text-xl md:text-3xl text-[#16734A] font-semibold uppercase">
+              "THE REPUBLIC IS STILL BEING BUILT."
+            </p>
           </div>
 
         </section>
@@ -3261,10 +2376,10 @@ export default function IndiaToday() {
           <div className="max-w-3xl mx-auto space-y-12 py-8">
             <div className="space-y-3 text-center">
               <h3 className="font-serif text-2xl md:text-4xl text-[#171717] font-normal italic">
-                "India is not finished."
+                "India is still becoming."
               </h3>
               <p className="font-serif text-xl md:text-3xl text-[#E8752A] italic">
-                "Neither are its questions."
+                "What it becomes depends on what we choose to protect."
               </p>
             </div>
 
@@ -3272,13 +2387,10 @@ export default function IndiaToday() {
 
             {/* UNANSWERED QUESTIONS SEQUENCE */}
             <div className="space-y-6 text-center font-serif text-lg md:text-2xl text-[#171717] italic">
-              <p className="hover:text-[#16734A] transition-colors">"Who gets opportunity?"</p>
-              <p className="hover:text-[#E8752A] transition-colors">"Who gets heard?"</p>
-              <p className="hover:text-[#16734A] transition-colors">"How do we live with difference?"</p>
-              <p className="hover:text-[#E8752A] transition-colors">"How do we protect disagreement?"</p>
-              <p className="hover:text-[#16734A] transition-colors">"How do we preserve curiosity?"</p>
-              <p className="hover:text-[#E8752A] transition-colors">"How do we build prosperity without leaving people behind?"</p>
-              <p className="hover:text-[#16734A] transition-colors">"How do we make a republic work not only in principle, but in everyday life?"</p>
+              <p className="hover:text-[#16734A] transition-colors">"What we choose to protect."</p>
+              <p className="hover:text-[#E8752A] transition-colors">"What we choose to question."</p>
+              <p className="hover:text-[#16734A] transition-colors">"What we choose to change."</p>
+              <p className="hover:text-[#E8752A] transition-colors">"What we choose to build."</p>
             </div>
           </div>
 
