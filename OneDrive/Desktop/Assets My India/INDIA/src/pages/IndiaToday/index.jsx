@@ -7,82 +7,67 @@ const motionSlides = [
   {
     category: "SPACE",
     title: "INDIA'S REACH BEYOND EARTH",
-    desc: "Indian space technology has moved from early capability foundations toward increasingly ambitious exploration programs. Landmark successes include the Chandrayaan-3 lunar landing and solar observations through Aditya-L1.",
-    stat: "ISRO Lunar soft-landing accomplished",
+    desc: "India's space programme has advanced from early experimental platforms toward Chandrayaan-3 lunar soft-landings, Aditya-L1 solar observation, and commercial satellite launch infrastructure.",
+    stat: "ISRO Lunar soft-landing & orbital network",
     image: "/images/stories/story6-launch.jpg",
-    context: "Sriharikota PSLV Launch Pad"
+    context: "Satish Dhawan Space Centre, Sriharikota"
   },
   {
     category: "DIGITAL INDIA",
-    title: "A BILLION-SCALE DIGITAL PUBLIC INFRASTRUCTURE",
-    desc: "India's digital public infrastructure integrates identity systems, open payment corridors, and data exchanges. This structural network allows seamless access to municipal services and banking.",
-    stat: "820 Million+ active internet users",
-    image: "/images/stories/story4-prep.jpg",
-    context: "Metropolitan Mobile Data Hub"
+    title: "BILLION-SCALE DIGITAL INFRASTRUCTURE",
+    desc: "Aadhaar digital identity networks and instant smartphone banking through UPI handle billions of micro-transactions at street vendor stalls, tea counters, and small merchants.",
+    stat: "10 Billion+ monthly UPI transactions",
+    image: "/images/stories/story4-stall.jpg",
+    context: "Metropolitan Merchant Payment Terminal",
+    disclaimer: "Access has expanded rapidly — but connectivity, digital literacy and reliable infrastructure remain uneven."
   },
   {
-    category: "UPI",
-    title: "INSTANT MOBILE PAYMENT SYSTEM",
-    desc: "The Unified Payments Interface (UPI) handles instant mobile banking transfers directly at street food vendors and small retail shops, bypassing standard merchant card transaction fees.",
-    stat: "10 Billion+ monthly payments processed",
-    image: "/images/stories/story4-stall.jpg",
-    context: "Local Market Vendor Terminal"
+    category: "RAILWAYS",
+    title: "A COUNTRY CONNECTED BY RAIL",
+    desc: "The Indian Railways network connects hundreds of cities, carrying over 20 million passengers daily while expanding full network electrification and high-speed Vande Bharat corridors.",
+    stat: "68,000+ Route Kilometers of Rail",
+    image: "/images/stories/story1-station.jpg",
+    context: "Regional Platform & Transit Network"
   },
   {
     category: "METRO",
-    title: "A COUNTRY CONNECTING ITSELF",
-    desc: "Metropolitan rapid transit systems are expanding across tier-1 and tier-2 hubs. This reduces municipal travel times and reshapes metropolitan labor transit lines.",
+    title: "CITIES ON THE MOVE",
+    desc: "Elevated rapid transit metro systems now operate across 20+ metropolitan areas, transforming daily urban commutes and connecting suburbs to city centers.",
     stat: "850+ Kilometers of active metro lines",
-    image: "/images/stories/story1-station.jpg",
-    context: "Delhi Central Transit Platform"
+    image: "/images/stories/story1-window.jpg",
+    context: "Metropolitan Transit Line Perspective"
   },
   {
     category: "EXPRESSWAYS",
-    title: "PHYSICAL TRANSIT EXPRESS NETWORKS",
-    desc: "Large concrete highway grids and elevated bypass flyovers are scaling rapidly, streamlining intercity cargo deliveries and heavy industry distribution lines.",
-    stat: "10,000+ Kilometers built annually",
+    title: "BUILDING AT SCALE",
+    desc: "Multi-lane concrete expressways, elevated bypass flyovers, and sea links streamline industrial freight distribution and intercity passenger travel across major economic corridors.",
+    stat: "10,000+ Km of express highways built annually",
     image: "/images/stories/maharashtra-citylife.jpg",
-    context: "Mumbai Elevated Flyover Corridor"
+    context: "Mumbai Flyover Infrastructure Corridor"
   },
   {
-    category: "AIRPORTS",
-    title: "DOMESTIC TERMINAL INFRASTRUCTURE",
-    desc: "Construction of regional terminals and cheap air connectivity plans facilitate rapid travel options for citizens in small and mid-sized cities.",
-    stat: "150+ Operational airports nationally",
-    image: "/images/stories/story1-window.jpg",
-    context: "Transit Window Seat Perspective"
-  },
-  {
-    category: "SEMICONDUCTORS",
-    title: "DOMESTIC MICRO-FABRICATION AMBITIONS",
-    desc: "Heavy state subsidies are aimed at setting up logic design silicon fabrications, assembly facilities, and industrial microchip testing blocks.",
-    stat: "$10 Billion national subsidy pool",
-    image: "/images/stories/story6-lab.jpg",
-    context: "Bengaluru Microelectronics Cleanroom"
-  },
-  {
-    category: "RENEWABLE ENERGY",
-    title: "SOLAR & WIND GRID INFRASTRUCTURE",
-    desc: "Vast solar field arrays in drylands and wind grids are connected to support agricultural irrigation and meet national zero-emission targets.",
-    stat: "180 GW+ total renewable power capacity",
+    category: "ENERGY",
+    title: "POWERING THE FUTURE",
+    desc: "Vast solar parks in Rajasthan and wind turbine installations across southern coastal belts drive India's energy transition, supporting agricultural irrigation and zero-emission goals.",
+    stat: "180 GW+ installed renewable energy capacity",
     image: "/images/stories/story2-fields.jpg",
-    context: "Rajasthan Dryland Solar Farm"
+    context: "Dryland Solar & Agricultural Grid"
   },
   {
     category: "CITIES",
-    title: "URBAN MIGRATION & TRANSFORMATIONS",
-    desc: "Unprecedented migration transforms regional metropolitan hubs into dense clusters, presenting complex challenges in housing and municipal logistics.",
+    title: "THE CITY CHANGES",
+    desc: "Metropolitan hubs evolve under rapid urbanization, balancing dense traditional street markets with modern infrastructure, transit terminals, and residential developments.",
     stat: "450 Million+ urban population",
     image: "/images/people/everyday-market.jpg",
-    context: "Vibrant Metropolitan Market District"
+    context: "Metropolitan Urban District"
   },
   {
     category: "STARTUPS",
-    title: "TECHNOLOGY WORKSPACE SECTORS",
-    desc: "Engineers and founders design products across fintech, climate logistics, and software-as-a-service blocks, scaling international trade.",
-    stat: "115,000+ certified startups scaling",
-    image: "/images/stories/stories-intro-7.jpg",
-    context: "Bengaluru Tech Startup Office"
+    title: "A NEW TECH ECONOMY",
+    desc: "Indian software engineers, researchers, and founders design platforms across fintech, biotechnology, logic design, and climate technology in Bengaluru and national innovation hubs.",
+    stat: "115,000+ recognized technology ventures",
+    image: "/images/stories/story6-lab.jpg",
+    context: "Biotech & Microelectronics Cleanroom Lab"
   }
 ];
 
@@ -276,7 +261,7 @@ export default function IndiaToday() {
           </div>
         </section>
 
-        {/* 02 — INDIA IN MOTION (Visual Slideshow Carousel) */}
+        {/* 02 — INDIA IN MOTION (Visual Showcase Carousel) */}
         <section id="motion" className="w-full py-28 px-6 md:px-12 bg-white border-b border-[#171717]/5">
           <div className="max-w-7xl mx-auto space-y-12">
             <div className="space-y-3">
@@ -286,8 +271,11 @@ export default function IndiaToday() {
               <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
                 INDIA IN MOTION
               </h2>
+              <h3 className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-light">
+                "An India being rebuilt at extraordinary speed."
+              </h3>
               <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light max-w-2xl leading-relaxed">
-                A visual showcase of contemporary infrastructure scaling across solar zones, digital identity networks, and transit nodes.
+                From space missions and digital payments to expanding railways, highways and renewable energy, the physical and technological landscape of India is changing rapidly.
               </p>
             </div>
 
@@ -322,6 +310,11 @@ export default function IndiaToday() {
                   <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
                     {activeSlide.desc}
                   </p>
+                  {activeSlide.disclaimer && (
+                    <div className="pt-2 text-[11px] font-sans font-light italic text-[#E8752A] border-t border-[#171717]/5">
+                      {activeSlide.disclaimer}
+                    </div>
+                  )}
                 </div>
 
                 <div className="space-y-6 pt-4 border-t border-[#171717]/5">
@@ -358,7 +351,7 @@ export default function IndiaToday() {
 
             </div>
 
-            {/* Micro thumbnail links */}
+            {/* Micro category selector links */}
             <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
               {motionSlides.map((s, idx) => (
                 <button
@@ -376,6 +369,29 @@ export default function IndiaToday() {
             </div>
 
           </div>
+        </section>
+
+        {/* Quiet Editorial Transition Section */}
+        <section className="w-full py-20 bg-[#FAF8F5] border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
+          <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
+            TRANSITION
+          </span>
+          <h3 className="font-serif text-2xl md:text-4xl text-[#171717] font-normal uppercase max-w-3xl mx-auto leading-snug">
+            "BUT THE EXPERIENCE OF THIS NEW INDIA IS NOT THE SAME FOR EVERYONE."
+          </h3>
+          <div className="max-w-2xl mx-auto space-y-2 text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+            <p>A new railway line can shorten a journey.</p>
+            <p>A digital payment can make a transaction effortless.</p>
+            <p>A new highway can connect a market.</p>
+            <p>A satellite can expand what a country can see.</p>
+            <p className="pt-2 font-medium text-[#171717]">
+              But access to opportunity, wealth, education, healthcare and security remains uneven.
+            </p>
+          </div>
+          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
+          <p className="font-serif text-base md:text-xl text-[#16734A] italic font-semibold pt-2">
+            "How evenly is the new India being shared?"
+          </p>
         </section>
 
         {/* 03 — THE PROMISE & THE GAP (Split Screen Contrast) */}
