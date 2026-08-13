@@ -5,69 +5,98 @@ import PageTransition from '../../components/global/PageTransition';
 // 1. Data Structures
 const motionSlides = [
   {
+    id: "space",
     category: "SPACE",
     title: "INDIA'S REACH BEYOND EARTH",
     desc: "India's space programme has advanced from early experimental platforms toward Chandrayaan-3 lunar soft-landings, Aditya-L1 solar observation, and commercial satellite launch infrastructure.",
-    stat: "ISRO Lunar soft-landing & orbital network",
+    stat: "ISRO Lunar soft-landing accomplished",
     image: "/images/stories/story6-launch.jpg",
-    context: "Satish Dhawan Space Centre, Sriharikota"
+    context: "Satish Dhawan Space Centre, Sriharikota",
+    assetStatus: "AVAILABLE"
   },
   {
+    id: "digital",
     category: "DIGITAL INDIA",
     title: "BILLION-SCALE DIGITAL INFRASTRUCTURE",
-    desc: "Aadhaar digital identity networks and instant smartphone banking through UPI handle billions of micro-transactions at street vendor stalls, tea counters, and small merchants.",
+    desc: "Aadhaar digital identity networks and instant smartphone banking through UPI handle billions of micro-transactions across small merchants and city centers.",
     stat: "10 Billion+ monthly UPI transactions",
-    image: "/images/stories/story4-stall.jpg",
-    context: "Metropolitan Merchant Payment Terminal",
-    disclaimer: "Access has expanded rapidly — but connectivity, digital literacy and reliable infrastructure remain uneven."
+    image: null,
+    context: "UPI / Smartphone Payment Corridor",
+    assetStatus: "MISSING_ASSET",
+    missingDescription: "Authentic photograph of an Indian citizen performing a smartphone UPI digital payment required."
   },
   {
+    id: "metro",
+    category: "METRO / URBAN TRANSPORT",
+    title: "CITIES ON THE MOVE",
+    desc: "Elevated rapid transit metro systems now operate across 20+ metropolitan areas, transforming daily urban commutes and connecting suburbs to city centers.",
+    stat: "850+ Kilometers of active metro lines",
+    image: null,
+    context: "Metropolitan Metro Platform & Transit Line",
+    assetStatus: "MISSING_ASSET",
+    missingDescription: "Authentic photograph of a contemporary Indian elevated metro train / station platform required."
+  },
+  {
+    id: "railways",
     category: "RAILWAYS",
     title: "A COUNTRY CONNECTED BY RAIL",
     desc: "The Indian Railways network connects hundreds of cities, carrying over 20 million passengers daily while expanding full network electrification and high-speed Vande Bharat corridors.",
     stat: "68,000+ Route Kilometers of Rail",
     image: "/images/stories/story1-station.jpg",
-    context: "Regional Platform & Transit Network"
+    context: "Regional Platform & Rail Transit Line",
+    assetStatus: "AVAILABLE"
   },
   {
-    category: "METRO",
-    title: "CITIES ON THE MOVE",
-    desc: "Elevated rapid transit metro systems now operate across 20+ metropolitan areas, transforming daily urban commutes and connecting suburbs to city centers.",
-    stat: "850+ Kilometers of active metro lines",
-    image: "/images/stories/story1-window.jpg",
-    context: "Metropolitan Transit Line Perspective"
-  },
-  {
+    id: "expressways",
     category: "EXPRESSWAYS",
     title: "BUILDING AT SCALE",
     desc: "Multi-lane concrete expressways, elevated bypass flyovers, and sea links streamline industrial freight distribution and intercity passenger travel across major economic corridors.",
     stat: "10,000+ Km of express highways built annually",
     image: "/images/stories/maharashtra-citylife.jpg",
-    context: "Mumbai Flyover Infrastructure Corridor"
+    context: "Mumbai Flyover Highway Corridor",
+    assetStatus: "AVAILABLE"
   },
   {
-    category: "ENERGY",
+    id: "airports",
+    category: "AIRPORTS",
+    title: "CONTEMPORARY AVIATION INFRASTRUCTURE",
+    desc: "Construction of regional terminals and cheap air connectivity plans facilitate rapid travel options for citizens across tier-2 and tier-3 aviation hubs.",
+    stat: "150+ Operational airports nationally",
+    image: null,
+    context: "Indian Airport Terminal Infrastructure",
+    assetStatus: "MISSING_ASSET",
+    missingDescription: "Authentic photograph of a modern Indian airport terminal interior / runway required."
+  },
+  {
+    id: "renewable",
+    category: "RENEWABLE ENERGY",
     title: "POWERING THE FUTURE",
     desc: "Vast solar parks in Rajasthan and wind turbine installations across southern coastal belts drive India's energy transition, supporting agricultural irrigation and zero-emission goals.",
     stat: "180 GW+ installed renewable energy capacity",
-    image: "/images/stories/story2-fields.jpg",
-    context: "Dryland Solar & Agricultural Grid"
+    image: null,
+    context: "Solar Farm & Wind Turbine Installation",
+    assetStatus: "MISSING_ASSET",
+    missingDescription: "Authentic photograph of an Indian solar park or wind turbine grid installation required."
   },
   {
+    id: "semiconductor",
+    category: "SEMICONDUCTOR / TECHNOLOGY",
+    title: "DOMESTIC MICRO-FABRICATION AMBITIONS",
+    desc: "Heavy state subsidies are aimed at setting up logic design silicon fabrications, assembly facilities, and industrial microchip testing cleanrooms.",
+    stat: "$10 Billion national subsidy pool",
+    image: "/images/stories/story6-lab.jpg",
+    context: "Microelectronics Cleanroom Lab",
+    assetStatus: "AVAILABLE"
+  },
+  {
+    id: "cities",
     category: "CITIES",
     title: "THE CITY CHANGES",
-    desc: "Metropolitan hubs evolve under rapid urbanization, balancing dense traditional street markets with modern infrastructure, transit terminals, and residential developments.",
+    desc: "Metropolitan hubs evolve under rapid urbanization, balancing dense traditional commercial zones with modern transit infrastructure and residential corridors.",
     stat: "450 Million+ urban population",
-    image: "/images/people/everyday-market.jpg",
-    context: "Metropolitan Urban District"
-  },
-  {
-    category: "STARTUPS",
-    title: "A NEW TECH ECONOMY",
-    desc: "Indian software engineers, researchers, and founders design platforms across fintech, biotechnology, logic design, and climate technology in Bengaluru and national innovation hubs.",
-    stat: "115,000+ recognized technology ventures",
-    image: "/images/stories/story6-lab.jpg",
-    context: "Biotech & Microelectronics Cleanroom Lab"
+    image: "/images/stories/stories-intro-7.jpg",
+    context: "New Delhi Connaught Place Urban Transit",
+    assetStatus: "AVAILABLE"
   }
 ];
 
@@ -283,13 +312,27 @@ export default function IndiaToday() {
             <div className="bg-[#F7F4EE] border border-[#171717]/10 p-6 md:p-8 flex flex-col md:grid md:grid-cols-12 gap-8 items-stretch shadow-md rounded-sm">
               
               {/* Photo Area */}
-              <div className="md:col-span-8 relative aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 shadow-sm bg-[#171717]/10">
-                <img 
-                  src={activeSlide.image} 
-                  alt={activeSlide.title}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-102"
-                  loading="lazy"
-                />
+              <div className="md:col-span-8 relative aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 shadow-sm bg-[#171717]/10 flex items-center justify-center">
+                {activeSlide.image ? (
+                  <img 
+                    src={activeSlide.image} 
+                    alt={activeSlide.title}
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-102"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-full h-full flex flex-col items-center justify-center bg-[#171717]/95 text-[#FAF8F5] p-8 text-center space-y-3">
+                    <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-[0.25em] bg-[#E8752A]/10 border border-[#E8752A]/30 px-3 py-1.5 rounded-sm font-semibold">
+                      ASSET REQUIRED · {activeSlide.category}
+                    </span>
+                    <p className="text-xs md:text-sm font-sans font-light text-[#FAF8F5]/85 max-w-md leading-relaxed">
+                      {activeSlide.missingDescription}
+                    </p>
+                    <span className="text-[9px] font-mono text-[#FAF8F5]/40 tracking-widest uppercase pt-2">
+                      No unrelated placeholder substituted
+                    </span>
+                  </div>
+                )}
                 <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
                   {activeSlide.context}
                 </div>
