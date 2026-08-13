@@ -20,21 +20,19 @@ const motionSlides = [
     title: "BILLION-SCALE DIGITAL INFRASTRUCTURE",
     desc: "Aadhaar digital identity networks and instant smartphone banking through UPI handle billions of micro-transactions across small merchants and city centers.",
     stat: "10 Billion+ monthly UPI transactions",
-    image: null,
-    context: "UPI / Smartphone Payment Corridor",
-    assetStatus: "MISSING_ASSET",
-    missingDescription: "Authentic photograph of an Indian citizen performing a smartphone UPI digital payment required."
+    image: "/images/stories/digital-upi-payment.jpg",
+    context: "Smartphone e-UPI Payment Confirmation",
+    assetStatus: "AVAILABLE"
   },
   {
     id: "metro",
     category: "METRO / URBAN TRANSPORT",
     title: "CITIES ON THE MOVE",
-    desc: "Elevated rapid transit metro systems now operate across 20+ metropolitan areas, transforming daily urban commutes and connecting suburbs to city centers.",
+    desc: "Elevated and underground rapid transit metro systems now operate across 20+ metropolitan areas, transforming daily urban commutes and connecting suburbs to city centers.",
     stat: "850+ Kilometers of active metro lines",
-    image: null,
-    context: "Metropolitan Metro Platform & Transit Line",
-    assetStatus: "MISSING_ASSET",
-    missingDescription: "Authentic photograph of a contemporary Indian elevated metro train / station platform required."
+    image: "/images/stories/delhi-metro-train.jpg",
+    context: "Delhi Metro Kashmere Gate Station Platform",
+    assetStatus: "AVAILABLE"
   },
   {
     id: "railways",
@@ -42,8 +40,8 @@ const motionSlides = [
     title: "A COUNTRY CONNECTED BY RAIL",
     desc: "The Indian Railways network connects hundreds of cities, carrying over 20 million passengers daily while expanding full network electrification and high-speed Vande Bharat corridors.",
     stat: "68,000+ Route Kilometers of Rail",
-    image: "/images/stories/story1-station.jpg",
-    context: "Regional Platform & Rail Transit Line",
+    image: "/images/stories/vande-bharat-express.jpg",
+    context: "Vande Bharat Express Semi-High-Speed Rail Corridor",
     assetStatus: "AVAILABLE"
   },
   {
