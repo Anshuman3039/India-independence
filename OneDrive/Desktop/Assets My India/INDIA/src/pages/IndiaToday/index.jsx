@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import PageTransition from '../../components/global/PageTransition';
 
 // 1. Data Structures
@@ -526,6 +526,74 @@ export default function IndiaToday() {
   const [historyIndex, setHistoryIndex] = useState(0);
   const [hoveredWord, setHoveredWord] = useState(null);
   const [isPlayingTimeline, setIsPlayingTimeline] = useState(false);
+
+  // Section 10 Cinematic Scroll-Driven Horizontal Drift Hook
+  const section10Ref = useRef(null);
+  const { scrollYProgress: section10Progress } = useScroll({
+    target: section10Ref,
+    offset: ["start end", "end start"]
+  });
+
+  const stripX = useTransform(section10Progress, [0, 1], ["15%", "-55%"]);
+
+  const beyondOneStoryItems = [
+    { 
+      category: "MANIPUR",
+      title: "MANIPUR & BELONGING", 
+      img: "/images/documentary/doc-manipur.jpg",
+      aspect: "aspect-[16/10]",
+      width: "w-72 md:w-96"
+    },
+    { 
+      category: "UNEMPLOYMENT",
+      title: "EXAM ASPIRANTS & RECRUITMENT", 
+      img: "/images/documentary/doc-exam.jpg",
+      aspect: "aspect-[4/3]",
+      width: "w-64 md:w-80"
+    },
+    { 
+      category: "INEQUALITY",
+      title: "INFORMAL WORKFORCE & INEQUALITY", 
+      img: "/images/people/community-weaving.jpg",
+      aspect: "aspect-[16/10]",
+      width: "w-80 md:w-[28rem]"
+    },
+    { 
+      category: "POLLUTION",
+      title: "ATMOSPHERIC SMOG & ENVIRONMENT", 
+      img: "/images/documentary/doc-smog.jpg",
+      aspect: "aspect-[16/9]",
+      width: "w-72 md:w-[26rem]"
+    },
+    { 
+      category: "POLARISATION",
+      title: "COMPETING MEDIA HEADLINES", 
+      img: "/images/documentary/doc-headline.png",
+      aspect: "aspect-[4/3]",
+      width: "w-64 md:w-80"
+    },
+    { 
+      category: "HATE SPEECH",
+      title: "HOSTILE DIGITAL DISCOURSE", 
+      img: "/images/stories/stories-intro-4.jpg",
+      aspect: "aspect-[16/10]",
+      width: "w-80 md:w-96"
+    },
+    { 
+      category: "SCIENTIFIC TEMPER",
+      title: "SCIENTIFIC RESEARCH & INQUIRY", 
+      img: "/images/documentary/doc-lab.jpg",
+      aspect: "aspect-[16/10]",
+      width: "w-80 md:w-[28rem]"
+    },
+    { 
+      category: "OPPORTUNITY",
+      title: "YOUTH & DIGITAL OPPORTUNITY", 
+      img: "/images/documentary/doc-smartphone.jpg",
+      aspect: "aspect-[4/3]",
+      width: "w-64 md:w-80"
+    }
+  ];
 
   useEffect(() => {
     let timer;
@@ -1789,8 +1857,8 @@ export default function IndiaToday() {
         </section>
 
         {/* 10 — BEYOND ONE STORY */}
-        <section id="historical-continuity" className="w-full py-28 bg-[#171717] text-[#FAF8F5] px-6 md:px-12 text-center space-y-12">
-          <div className="max-w-4xl mx-auto space-y-6">
+        <section ref={section10Ref} id="historical-continuity" className="w-full py-32 bg-[#171717] text-[#FAF8F5] overflow-hidden relative space-y-16">
+          <div className="max-w-4xl mx-auto space-y-6 text-center px-6">
             <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.35em] uppercase block">
               10 — BEYOND ONE STORY
             </span>
@@ -1805,7 +1873,7 @@ export default function IndiaToday() {
           <div className="h-[1px] w-20 bg-white/20 mx-auto"></div>
 
           {/* REVEAL WORDS SEQUENCE */}
-          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-xs md:text-sm font-mono tracking-[0.25em] text-white/80 uppercase max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-xs md:text-sm font-mono tracking-[0.25em] text-white/80 uppercase max-w-4xl mx-auto px-6 text-center">
             <span className="text-[#E8752A] font-bold">MANIPUR</span>
             <span>•</span>
             <span className="text-white font-bold">UNEMPLOYMENT</span>
@@ -1823,29 +1891,34 @@ export default function IndiaToday() {
             <span className="text-[#E8752A] font-bold">OPPORTUNITY</span>
           </div>
 
-          {/* HORIZONTAL DRIFT STRIP OF CONTEMPORARY FRAGMENTS */}
-          <div className="py-8 overflow-hidden">
-            <div className="flex gap-4 min-w-max animate-pulse opacity-90 justify-center">
-              {[
-                { title: "MANIPUR & BELONGING", img: "/images/nature/manipur_nature.jpg" },
-                { title: "EXAM RECRUITMENT", img: "/images/stories/story4-prep.jpg" },
-                { title: "LABORATORY INQUIRY", img: "/images/stories/story6-lab.jpg" },
-                { title: "ENVIRONMENTAL ATMOSPHERE", img: "/images/nature/eco-forest.jpg" },
-                { title: "CIVIC DISCOURSE", img: "/images/stories/stories-intro-2.jpg" },
-                { title: "EVERYDAY TRANSIT", img: "/images/stories/story1-train.jpg" }
-              ].map((item, idx) => (
-                <div key={idx} className="w-64 md:w-80 aspect-[16/10] overflow-hidden rounded-sm border border-white/10 relative group">
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-500" />
-                  <div className="absolute bottom-2 left-2 bg-[#171717]/80 text-[#FAF8F5] px-2 py-0.5 text-[8px] font-mono tracking-widest uppercase">
-                    {item.title}
+          {/* CINEMATIC SCROLL-CONTROLLED HORIZONTAL PHOTO DRIFT STRIP */}
+          <div className="py-8 overflow-hidden w-full relative">
+            <motion.div 
+              style={{ x: stripX }}
+              className="flex gap-6 md:gap-10 min-w-max px-8 md:px-16 items-center"
+            >
+              {beyondOneStoryItems.map((item, idx) => (
+                <div key={idx} className={`relative overflow-hidden rounded-sm border border-white/20 group shadow-2xl ${item.aspect} ${item.width}`}>
+                  <img 
+                    src={item.img} 
+                    alt={item.title} 
+                    className="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-103" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5">
+                    <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold mb-1">
+                      {item.category}
+                    </span>
+                    <h4 className="font-serif text-base md:text-xl text-[#FAF8F5] font-semibold leading-tight">
+                      {item.title}
+                    </h4>
                   </div>
                 </div>
               ))}
-            </div>
+            </motion.div>
           </div>
 
-          <div className="pt-4">
-            <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] px-6 py-3 rounded-sm uppercase tracking-widest font-bold text-[#171717]">
+          <div className="pt-4 text-center">
+            <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] px-6 py-3 rounded-sm uppercase tracking-widest font-bold text-[#171717] inline-block shadow-md">
               LOOK CLOSER ↓
             </span>
           </div>
