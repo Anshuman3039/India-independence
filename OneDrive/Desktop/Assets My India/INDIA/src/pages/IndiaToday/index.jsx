@@ -3224,34 +3224,147 @@ export default function IndiaToday() {
 
         </section>
 
-        {/* 15 — FINAL STATEMENT */}
-        <section id="final-statement" className="w-full py-32 px-6 md:px-12 max-w-4xl mx-auto text-center space-y-12">
-          <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-            15 — THE FUTURE IS NOT WRITTEN YET
-          </span>
+        {/* 15 — THE FUTURE IS NOT WRITTEN YET */}
+        <section id="final-statement" className="w-full py-32 px-4 sm:px-6 md:px-12 max-w-6xl mx-auto text-center space-y-28">
           
-          <h2 className="font-serif text-4xl md:text-6xl text-[#171717] font-normal leading-tight">
-            "India is not a finished idea."
-          </h2>
-          
-          <div className="space-y-2 max-w-lg mx-auto">
-            <p className="text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-              Every generation inherits it.
-            </p>
-            <p className="text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-              Every generation changes it.
+          {/* Section Framing Header */}
+          <div className="text-center space-y-6 max-w-4xl mx-auto">
+            <span className="text-[11px] font-mono text-[#E8752A] uppercase tracking-[0.35em] block font-bold">
+              15 — THE FUTURE IS NOT WRITTEN YET
+            </span>
+            <h2 className="font-serif text-4xl md:text-7xl uppercase tracking-wider text-[#171717] font-normal leading-tight">
+              THE FUTURE IS NOT WRITTEN YET.
+            </h2>
+            <p className="font-serif text-lg md:text-2xl text-[#16734A] italic font-semibold max-w-2xl mx-auto">
+              "The direction of India is still being shaped."
             </p>
           </div>
 
-          <div className="h-[1px] w-12 bg-[#171717]/15 mx-auto"></div>
-
-          <h3 className="font-serif text-3xl md:text-5xl lg:text-6xl text-[#16734A] tracking-wider uppercase font-semibold leading-tight">
-            ITS FUTURE<br/>IS NOT WRITTEN YET.
-          </h3>
-
-          <div className="pb-12 text-[9px] font-mono text-[#6B6B6B]/40 uppercase tracking-widest">
-            THE STORY CONTINUES
+          {/* SINGLE POWERFUL DOCUMENTARY PHOTOGRAPH OF ORDINARY PEOPLE */}
+          <div className="max-w-5xl mx-auto space-y-3">
+            <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-md group">
+              <img 
+                src="/images/people/rural-farmers.jpg" 
+                alt="Ordinary citizens and young Indians looking toward the changing horizon of the republic" 
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-103"
+              />
+              <div className="absolute top-4 left-4 bg-[#171717] text-[#FAF8F5] px-3 py-1 text-[9px] font-mono tracking-widest uppercase">
+                DOCUMENTARY LOG: CITIZENS OF THE REPUBLIC
+              </div>
+            </div>
+            <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+              Observational Photography Log · India Today Narrative
+            </span>
           </div>
+
+          {/* THE FINAL REFLECTION: UNANSWERED QUESTIONS REVEALED WITH WHITESPACE */}
+          <div className="max-w-3xl mx-auto space-y-12 py-8">
+            <div className="space-y-3 text-center">
+              <h3 className="font-serif text-2xl md:text-4xl text-[#171717] font-normal italic">
+                "India is not finished."
+              </h3>
+              <p className="font-serif text-xl md:text-3xl text-[#E8752A] italic">
+                "Neither are its questions."
+              </p>
+            </div>
+
+            <div className="h-[1px] w-16 bg-[#171717]/15 mx-auto"></div>
+
+            {/* UNANSWERED QUESTIONS SEQUENCE */}
+            <div className="space-y-6 text-center font-serif text-lg md:text-2xl text-[#171717] italic">
+              <p className="hover:text-[#16734A] transition-colors">"Who gets opportunity?"</p>
+              <p className="hover:text-[#E8752A] transition-colors">"Who gets heard?"</p>
+              <p className="hover:text-[#16734A] transition-colors">"How do we live with difference?"</p>
+              <p className="hover:text-[#E8752A] transition-colors">"How do we protect disagreement?"</p>
+              <p className="hover:text-[#16734A] transition-colors">"How do we preserve curiosity?"</p>
+              <p className="hover:text-[#E8752A] transition-colors">"How do we build prosperity without leaving people behind?"</p>
+              <p className="hover:text-[#16734A] transition-colors">"How do we make a republic work not only in principle, but in everyday life?"</p>
+            </div>
+          </div>
+
+          {/* A QUIET HUMAN MOMENT: 4 OBSERVATIONAL DOCUMENTARY IMAGES */}
+          <div className="space-y-6 py-8 border-t border-b border-[#171717]/10">
+            <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.3em] block font-bold">
+              OBSERVATIONS OF EVERYDAY LIFE
+            </span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { title: "STUDENT & LEARNER", img: "/images/stories/story6-lab.jpg" },
+                { title: "WORKFORCE & CITIZEN", img: "/images/stories/story4-prep.jpg" },
+                { title: "SHARED PUBLIC SPACE", img: "/images/stories/story1-train.jpg" },
+                { title: "EVERYDAY DIVERSITY", img: "/images/people/rural-farmers.jpg" }
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white border border-[#171717]/10 p-3 rounded-sm space-y-2 shadow-2xs">
+                  <div className="aspect-[4/3] overflow-hidden rounded-sm relative border border-[#171717]/10">
+                    <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                  </div>
+                  <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-center font-bold">
+                    {item.title}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* THE PEOPLE WHO COME NEXT */}
+          <div className="max-w-3xl mx-auto space-y-6 text-center">
+            <p className="font-serif text-xl md:text-3xl text-[#171717] font-normal leading-relaxed">
+              "Every generation receives a country it did not create."
+            </p>
+            <p className="font-serif text-xl md:text-3xl text-[#6B6B6B] italic leading-relaxed">
+              "And every generation leaves behind a country it has changed."
+            </p>
+            <p className="font-serif text-2xl md:text-4xl text-[#16734A] uppercase font-semibold tracking-wide pt-4">
+              "INDIA WILL BE SHAPED BY THE PEOPLE WHO COME NEXT."
+            </p>
+          </div>
+
+          {/* THE FINAL IDEA */}
+          <div className="bg-[#171717] text-[#FAF8F5] p-12 md:p-24 rounded-sm text-center space-y-8 shadow-xl max-w-5xl mx-auto my-12">
+            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.4em] block font-bold">
+              DEMOCRATIC AGENCY
+            </span>
+
+            <div className="space-y-4 max-w-4xl mx-auto font-serif uppercase tracking-wider">
+              <h3 className="text-2xl md:text-4xl text-white/90">"THE FUTURE WILL NOT BE BUILT BY ONE PERSON."</h3>
+              <h3 className="text-2xl md:text-4xl text-[#16734A] font-bold">"ONE PARTY."</h3>
+              <h3 className="text-2xl md:text-4xl text-[#E8752A] font-bold">"ONE IDEOLOGY."</h3>
+              <h3 className="text-2xl md:text-4xl text-white/90">"ONE GENERATION."</h3>
+            </div>
+
+            <div className="h-[1px] w-24 bg-white/20 mx-auto"></div>
+
+            <p className="font-serif text-xl md:text-3xl text-white/90 italic max-w-3xl mx-auto">
+              "It will be shaped by millions of ordinary choices."
+            </p>
+          </div>
+
+          {/* FINAL STATEMENT & THE LAST SENTENCE OF THE WEBSITE */}
+          <div className="py-24 space-y-12 max-w-3xl mx-auto">
+            <div className="space-y-4">
+              <h3 className="font-serif text-3xl md:text-6xl text-[#171717] font-semibold uppercase tracking-wider">
+                "THE REPUBLIC IS STILL BEING WRITTEN."
+              </h3>
+              
+              <div className="space-y-2 font-sans font-light text-[#6B6B6B] text-sm md:text-base leading-relaxed pt-2">
+                <p>By what we question.</p>
+                <p>By what we defend.</p>
+                <p>By what we change.</p>
+                <p>By how we treat one another.</p>
+                <p>By what we choose to build together.</p>
+              </div>
+            </div>
+
+            <div className="h-[1px] w-20 bg-[#171717]/20 mx-auto"></div>
+
+            {/* THE LAST SENTENCE OF THE WEBSITE */}
+            <div className="pt-8">
+              <h4 className="font-serif text-3xl md:text-5xl lg:text-6xl text-[#16734A] font-bold uppercase tracking-widest leading-tight">
+                "THE STORY IS STILL OURS TO WRITE."
+              </h4>
+            </div>
+          </div>
+
         </section>
 
       </div>
