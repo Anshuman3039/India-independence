@@ -2874,58 +2874,357 @@ export default function IndiaToday() {
 
         </section>
 
-        {/* 13 — THE UNFINISHED REPUBLIC */}
-        <section id="unfinished-republic" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="space-y-16">
+        {/* Quiet Opening Transition Section to 14 — THE UNFINISHED REPUBLIC */}
+        <section className="w-full py-24 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
+          <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
+            REPUBLIC & PROMISE
+          </span>
+          <div className="max-w-3xl mx-auto space-y-3 text-lg md:text-2xl font-serif text-[#171717]">
+            <p className="italic font-semibold text-[#171717]">"BUILDING A COUNTRY IS NOT THE SAME AS FINISHING ONE."</p>
+            <p className="italic font-light text-[#6B6B6B] text-base md:text-xl">"India is a republic. But a republic is not a finished object."</p>
+            <p className="italic font-light text-[#171717]/90 text-sm md:text-lg max-w-2xl mx-auto">
+              It is a promise that has to be renewed in every generation.
+            </p>
+          </div>
+          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
+        </section>
+
+        {/* 14 — THE UNFINISHED REPUBLIC */}
+        <section id="unfinished-republic" className="w-full py-28 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-28">
+          
+          {/* Section Framing Header */}
+          <div className="text-center space-y-4 max-w-4xl mx-auto">
+            <span className="text-[11px] font-mono text-[#16734A] uppercase tracking-[0.35em] block font-bold">
+              14 — THE UNFINISHED REPUBLIC
+            </span>
+            <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717]">
+              THE UNFINISHED REPUBLIC
+            </h2>
+            <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-semibold">
+              "THE DISTANCE BETWEEN THE IDEAL AND THE REALITY"
+            </p>
+            <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] leading-relaxed max-w-3xl mx-auto">
+              The republic exists. The Constitution exists. Democratic institutions exist. But a republic is not a finished monument. Its promises are continuously tested in everyday life.
+            </p>
+          </div>
+
+          {/* FIVE UNRESOLVED DEMOCRATIC DIMENSIONS */}
+          <div className="space-y-24">
+
+            {/* 01 — EQUALITY */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-6">
+                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
+                  DIMENSION 01 · EQUALITY
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  EQUAL IN LAW. EQUAL IN LIFE?
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "Equality before the law is guaranteed. But equality in life remains an ongoing struggle."
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Beyond formal legal status, real equality is measured by access—to education, healthcare, dignified employment, and social mobility across caste, gender, and regional divides.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">UNFINISHED QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "What does equality mean when people's starting points are so different?"
+                  </p>
+                </div>
+              </div>
+              
+              <div className="lg:col-span-6 space-y-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/people/rural-farmers.jpg" 
+                    alt="Ordinary working citizens seeking equal economic and social opportunity" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: EVERYDAY SOCIAL EQUALITY
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+                  Source: Social & Development Equality Log
+                </span>
+              </div>
+            </motion.div>
+
+            {/* 02 — FREEDOM */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/stories/stories-intro-2.jpg" 
+                    alt="Citizens engaging in public forum debate and civic expression" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: CIVIC EXPRESSION & FREEDOM BOUNDS
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
+                  Source: Constitutional Rights & Civic Freedom Log
+                </span>
+              </div>
+
+              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
+                <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
+                  DIMENSION 02 · FREEDOM OF EXPRESSION
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  HOW FREE IS A CITIZEN WHO IS AFRAID TO SPEAK?
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "A republic must protect disagreement. Freedom is meaningless without the liberty to question."
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  A constitutional democracy must continuously balance freedom of speech, public safety, individual dignity, and the protection of vulnerable communities against hostility and intimidation.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#E8752A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">UNFINISHED QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "How does a democracy protect disagreement without allowing disagreement to become violence or intimidation?"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 03 — SCIENTIFIC TEMPER */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-6">
+                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
+                  DIMENSION 03 · INTELLECTUAL CURIOSITY
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  CAN A MODERN COUNTRY REMAIN CURIOUS?
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "Personal faith can coexist with science. The danger is rejecting evidence and questioning."
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Article 51A(h) of the Constitution frames scientific temper and humanism as a fundamental duty. True progress requires protecting evidence-based inquiry, critical reasoning, and open education.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">UNFINISHED QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "Can technological progress survive without intellectual curiosity?"
+                  </p>
+                </div>
+              </div>
+              
+              <div className="lg:col-span-6 space-y-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/stories/story6-lab.jpg" 
+                    alt="Students and scientists working in a research laboratory environment" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: RESEARCH & SCIENTIFIC TEMPER
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+                  Source: National Education & Science Research Log
+                </span>
+              </div>
+            </motion.div>
+
+            {/* 04 — PLURALISM */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/stories/story1-train.jpg" 
+                    alt="Diverse Indian citizens sharing public transit spaces" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: PLURALISM IN SHARED PUBLIC LIFE
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
+                  Source: Public Life Observational Records
+                </span>
+              </div>
+
+              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
+                <span className="text-xs font-mono text-[#171717] uppercase tracking-[0.25em] font-bold block">
+                  DIMENSION 04 · EQUAL CITIZENSHIP
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  CAN DIFFERENCE REMAIN A STRENGTH?
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "Pluralism is not about erasing differences. It is about maintaining equal citizenship across difference."
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  With hundreds of languages, multiple major religions, distinct regional cultures, and diverse social perspectives, India's democratic strength relies on ensuring that no citizen feels reduced to a second-class status.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#171717] space-y-1">
+                  <span className="text-[10px] font-mono text-[#171717] uppercase font-bold block">UNFINISHED QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "Can people remain deeply different while remaining equally Indian in the republic?"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* 05 — ACCOUNTABILITY */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-6">
+                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
+                  DIMENSION 05 · INSTITUTIONAL CHECKS
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  WHO HOLDS POWER ACCOUNTABLE?
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "Democracy survives because power is checked by independent institutions and alert citizens."
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Elections, independent courts, investigative journalism, parliamentary debate, civil society organizations, and active voters form the framework of democratic accountability.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">UNFINISHED QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "What happens when accountability becomes weaker than power?"
+                  </p>
+                </div>
+              </div>
+              
+              <div className="lg:col-span-6 space-y-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/people/voters-queue.jpg" 
+                    alt="Citizens queuing to exercise democratic accountability at polling stations" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: DEMOCRATIC ACCOUNTABILITY & VOTING
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+                  Source: Election Commission & Public Governance Log
+                </span>
+              </div>
+            </motion.div>
+
+          </div>
+
+          {/* THE UNFINISHED LIST & ASPIRATION REVEAL */}
+          <div className="py-16 text-center space-y-8 max-w-5xl mx-auto border-t border-b border-[#171717]/10">
+            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.35em] block font-bold">
+              DEMOCRATIC ASPIRATIONS OF THE REPUBLIC
+            </span>
             
-            <div className="max-w-2xl space-y-4">
-              <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
-                14 — THE UNFINISHED REPUBLIC
-              </span>
-              <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717]">
-                THE UNFINISHED REPUBLIC
-              </h2>
-              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                The constitutional promises of Freedom, Equality, Democracy, and Pluralism are not static benchmarks. They remain active points of contestation.
+            <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase">
+              THE UNFINISHED LIST
+            </h3>
+
+            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-sm md:text-xl font-mono uppercase tracking-[0.25em] text-[#171717]">
+              <span className="text-[#16734A] font-bold">EQUALITY</span>
+              <span className="text-[#171717]/20">•</span>
+              <span className="text-[#E8752A] font-bold">DIGNITY</span>
+              <span className="text-[#171717]/20">•</span>
+              <span className="text-[#171717] font-bold">OPPORTUNITY</span>
+              <span className="text-[#171717]/20">•</span>
+              <span className="text-[#16734A] font-bold">FREEDOM</span>
+              <span className="text-[#171717]/20">•</span>
+              <span className="text-[#E8752A] font-bold">SCIENTIFIC TEMPER</span>
+              <span className="text-[#171717]/20">•</span>
+              <span className="text-[#171717] font-bold">PLURALISM</span>
+              <span className="text-[#171717]/20">•</span>
+              <span className="text-[#16734A] font-bold">ACCOUNTABILITY</span>
+            </div>
+
+            <p className="font-serif text-base md:text-xl italic text-[#6B6B6B]">
+              "None of these promises belongs to one generation."
+            </p>
+          </div>
+
+          {/* THE EMOTIONAL CLIMAX */}
+          <div className="bg-[#171717] text-[#FAF8F5] p-12 md:p-24 rounded-sm text-center space-y-8 shadow-xl max-w-5xl mx-auto my-20">
+            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.4em] block font-bold">
+              CONSTITUTIONAL TRUTH
+            </span>
+
+            <div className="space-y-4 max-w-4xl mx-auto">
+              <h3 className="font-serif text-3xl md:text-5xl lg:text-6xl font-normal uppercase leading-tight text-[#FAF8F5]">
+                "THE REPUBLIC DOES NOT BELONG ONLY TO THE GOVERNMENT."
+              </h3>
+              <p className="font-serif text-lg md:text-2xl text-white/80 italic">
+                "It does not belong only to political parties."
+              </p>
+              <p className="font-serif text-lg md:text-2xl text-white/80 italic">
+                "It does not belong only to institutions."
               </p>
             </div>
 
-            {/* Tripartite Grid: Progress vs Pressure vs Possibility */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
-              
-              <div className="p-6 bg-white border border-[#171717]/10 rounded-sm shadow-sm space-y-3">
-                <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-wider uppercase block">
-                  PROGRESS
-                </span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Significant reductions in structural poverty, digital infrastructure connectivity, and world-class space technology programs.
-                </p>
-              </div>
+            <div className="h-[1px] w-24 bg-white/20 mx-auto"></div>
 
-              <div className="p-6 bg-white border border-[#171717]/10 rounded-sm shadow-sm space-y-3">
-                <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-wider uppercase block">
-                  PRESSURE
-                </span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Intensifying media polarization, youth recruitment irregularities, and constraints on peaceful assembly.
-                </p>
-              </div>
+            <h4 className="font-serif text-3xl md:text-5xl text-[#16734A] uppercase font-bold tracking-wider">
+              "IT BELONGS TO ITS PEOPLE."
+            </h4>
+          </div>
 
-              <div className="p-6 bg-white border border-[#171717]/10 rounded-sm shadow-sm space-y-3">
-                <span className="text-[10px] font-sans font-bold text-[#171717]/60 tracking-wider uppercase block">
-                  POSSIBILITY
-                </span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  A large young workforce pushing for administrative safeguards, educational reform, and structural opportunity.
-                </p>
-              </div>
-
+          {/* FINAL NARRATIVE QUESTION & CONTINUATION TO SECTION 15 (#final-statement) */}
+          <div className="text-center space-y-8 max-w-4xl mx-auto my-16">
+            <div className="space-y-3">
+              <h3 className="font-serif text-2xl md:text-4xl text-[#171717] font-semibold uppercase">
+                "AND THAT MEANS THE STORY IS NOT OVER."
+              </h3>
+              <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed">
+                The future of a republic is never written completely in advance.
+              </p>
             </div>
 
+            <div className="h-[1px] w-16 bg-[#171717]/15 mx-auto"></div>
+
+            <div className="space-y-4 pt-4">
+              <span className="text-xs font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
+                15 — THE FUTURE IS NOT WRITTEN YET
+              </span>
+              <p className="font-serif text-lg md:text-2xl text-[#16734A] italic font-semibold">
+                "THE FUTURE REMAINS OPEN."
+              </p>
+            </div>
           </div>
+
         </section>
 
-        {/* 14 — FINAL STATEMENT */}
+        {/* 15 — FINAL STATEMENT */}
         <section id="final-statement" className="w-full py-32 px-6 md:px-12 max-w-4xl mx-auto text-center space-y-12">
           <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
             15 — THE FUTURE IS NOT WRITTEN YET
