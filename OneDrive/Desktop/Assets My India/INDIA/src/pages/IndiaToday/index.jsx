@@ -526,7 +526,7 @@ export default function IndiaToday() {
           <div className="max-w-7xl mx-auto space-y-12">
             <div className="space-y-3">
               <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.25em] uppercase block">
-                02 — TRANSFORMATION
+                02 — INDIA IN MOTION
               </span>
               <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
                 INDIA IN MOTION
@@ -674,7 +674,7 @@ export default function IndiaToday() {
           {/* Section Header */}
           <div className="space-y-4 max-w-3xl">
             <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-              03 — LIVED EXPERIENCES
+              03 — THE PROMISE & THE GAP
             </span>
             <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
               THE PROMISE & THE GAP
@@ -892,7 +892,7 @@ export default function IndiaToday() {
             {/* Section Header */}
             <div className="space-y-4 max-w-3xl">
               <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.3em] uppercase block">
-                04 — DEMOGRAPHY & ASPIRATION
+                04 — A YOUNG COUNTRY
               </span>
               <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
                 A YOUNG COUNTRY
@@ -986,7 +986,7 @@ export default function IndiaToday() {
           {/* Section Opening Header */}
           <div className="space-y-4 max-w-3xl">
             <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-              05 — CIVIC PARTICIPATION
+              05 — VOICE OF A GENERATION
             </span>
             <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
               VOICE OF A GENERATION
@@ -1126,7 +1126,7 @@ export default function IndiaToday() {
           {/* Section Header */}
           <div className="max-w-7xl mx-auto space-y-4 max-w-3xl">
             <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.3em] uppercase block">
-              06 — DEMOCRATIC EXPRESSION
+              06 — INDIA UNDER PRESSURE
             </span>
             <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
               DEMOCRATIC DISSENT
@@ -1291,7 +1291,7 @@ export default function IndiaToday() {
           <div className="space-y-16">
             <div className="space-y-3 text-center">
               <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
-                07 — INFORMATION
+                07 — WHO TELLS THE STORY?
               </span>
               <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
                 WHO TELLS THE STORY?
@@ -1345,7 +1345,7 @@ export default function IndiaToday() {
             
             <div className="text-center space-y-3">
               <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
-                08 — PUBLIC SPEECH
+                08 — WHEN DISAGREEMENT BECOMES HOSTILITY
               </span>
               <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
                 WHEN DISAGREEMENT BECOMES HOSTILITY
@@ -1434,7 +1434,7 @@ export default function IndiaToday() {
           {/* Section Introduction */}
           <div className="text-center space-y-4 max-w-3xl mx-auto">
             <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
-              CASE STUDY IN DEMOCRATIC DISSENT
+              09 — CJP: A CASE STUDY
             </span>
             <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
               CJP — FROM GRIEVANCE TO PUBLIC PROTEST
@@ -1693,13 +1693,13 @@ export default function IndiaToday() {
             
             <div className="max-w-3xl space-y-4">
               <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.25em] uppercase block">
-                10 — DEMOCRATIC ROOTS
+                10 — HISTORICAL CONTEXT
               </span>
               <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
-                HISTORICAL CONTINUITY
+                HISTORICAL CONTEXT
               </h2>
               <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                Today's India did not appear from nowhere. We trace how present-day democratic conventions connect to older civic traditions, public meetings, and constitutional developments.
+                What larger democratic tradition does this story belong to? Move from the specific event back toward the longer history of Indian democracy — tracing how present-day democratic conventions connect to older civic traditions, public meetings, and constitutional developments.
               </p>
             </div>
 
@@ -1739,7 +1739,7 @@ export default function IndiaToday() {
             
             <div className="max-w-3xl space-y-4">
               <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.25em] uppercase block">
-                10 — CIVIC LIFE
+                11 — DEMOCRACY SPEAKS
               </span>
               <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
                 DEMOCRACY SPEAKS
@@ -1782,7 +1782,7 @@ export default function IndiaToday() {
               
               <div className="lg:col-span-5 space-y-6">
                 <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
-                  11 — COEXISTENCE
+                  12 — LIVING TOGETHER
                 </span>
                 <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
                   LIVING TOGETHER
@@ -1847,7 +1847,7 @@ export default function IndiaToday() {
           <div className="max-w-7xl mx-auto space-y-12">
             <div className="max-w-2xl space-y-2">
               <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.25em] uppercase block">
-                12 — THE WORKPLACE
+                13 — THE INDIA WE ARE BUILDING
               </span>
               <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
                 THE INDIA WE ARE BUILDING
@@ -1889,7 +1889,7 @@ export default function IndiaToday() {
             
             <div className="max-w-2xl space-y-4">
               <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
-                13 — THE INHERITANCE
+                14 — THE UNFINISHED REPUBLIC
               </span>
               <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717]">
                 THE UNFINISHED REPUBLIC
@@ -1937,7 +1937,7 @@ export default function IndiaToday() {
         {/* 14 — FINAL STATEMENT */}
         <section id="final-statement" className="w-full py-32 px-6 md:px-12 max-w-4xl mx-auto text-center space-y-12">
           <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-            THE CONCLUSION
+            15 — THE FUTURE IS NOT WRITTEN YET
           </span>
           
           <h2 className="font-serif text-4xl md:text-6xl text-[#171717] font-normal leading-tight">
