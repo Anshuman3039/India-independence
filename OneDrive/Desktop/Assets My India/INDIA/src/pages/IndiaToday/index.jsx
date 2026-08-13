@@ -332,11 +332,11 @@ export default function IndiaToday() {
         <section id="hero" className="w-full min-h-screen flex flex-col justify-between relative overflow-hidden bg-[#171717] px-6 md:px-12 py-16">
           <div className="absolute inset-0 z-0">
             <img 
-              src="/images/stories/maharashtra-citylife.jpg" 
-              alt="Grandiose architectural skyline and moving traffic in urban Mumbai during twilight sunset" 
-              className="w-full h-full object-cover opacity-60 scale-102 transition-transform duration-10000 ease-out"
+              src="/images/stories/story6-launch.jpg" 
+              alt="ISRO GSLV Mk III rocket launching into the sky carrying Chandrayaan-2 spacecraft from Sriharikota, India" 
+              className="w-full h-full object-cover opacity-75 scale-102 transition-transform duration-10000 ease-out"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#171717] via-[#171717]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#171717]/90 via-[#171717]/30 to-transparent" />
           </div>
 
           {/* Top Hero Info */}
@@ -344,13 +344,13 @@ export default function IndiaToday() {
             <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#FAF8F5] bg-[#E8752A] px-3 py-1 rounded-sm">
               INDIA TODAY
             </span>
-            <div className="text-right text-[9px] font-mono text-[#FAF8F5]/60 tracking-widest">
-              RECORD ARCHIVE: IT-2026-CH01
+            <div className="text-right text-[9px] font-mono text-[#FAF8F5]/70 tracking-widest uppercase">
+              A PRESENT-DAY PORTRAIT
             </div>
           </div>
 
           {/* Middle/Bottom Main Title Block */}
-          <div className="relative z-10 max-w-4xl space-y-6 my-auto pt-24">
+          <div className="relative z-10 max-w-3xl space-y-6 my-auto pt-20">
             <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl text-[#FAF8F5] leading-none font-normal tracking-tight">
               THE INDIA<br/>WE LIVE IN
             </h1>
@@ -358,15 +358,15 @@ export default function IndiaToday() {
               A country moving forward, carrying its contradictions with it.
             </h2>
             <div className="h-[1px] w-24 bg-[#E8752A]"></div>
-            <p className="font-sans font-light text-sm md:text-base text-[#FAF8F5]/80 max-w-xl leading-relaxed">
+            <p className="font-sans font-light text-sm md:text-base text-[#FAF8F5]/90 max-w-xl leading-relaxed">
               India today is a country of extraordinary change — ambitious, connected and increasingly confident, while still negotiating inequality, opportunity, identity and democracy.
             </p>
           </div>
 
           {/* Bottom details */}
-          <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center border-t border-white/10 pt-4 text-[9px] font-mono text-[#FAF8F5]/50 tracking-widest uppercase gap-2">
-            <span>Location: Mumbai Metro Zone, Maharashtra</span>
-            <span>Coordinates: 18.9220° N, 72.8347° E</span>
+          <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center border-t border-white/15 pt-4 text-[9px] font-mono text-[#FAF8F5]/60 tracking-widest uppercase gap-2">
+            <span>INDIA TODAY · 2026</span>
+            <span>A PRESENT-DAY PORTRAIT</span>
           </div>
         </section>
 
