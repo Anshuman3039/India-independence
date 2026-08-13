@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import PageTransition from '../../components/global/PageTransition';
 
@@ -471,6 +471,17 @@ export default function IndiaToday() {
   const [motionIndex, setMotionIndex] = useState(0);
   const [timelineIndex, setTimelineIndex] = useState(0);
   const [hoveredWord, setHoveredWord] = useState(null);
+  const [isPlayingTimeline, setIsPlayingTimeline] = useState(false);
+
+  useEffect(() => {
+    let timer;
+    if (isPlayingTimeline) {
+      timer = setInterval(() => {
+        setTimelineIndex((prev) => (prev + 1) % cjpCaseTimeline.length);
+      }, 8000);
+    }
+    return () => clearInterval(timer);
+  }, [isPlayingTimeline]);
 
   const activeSlide = motionSlides[motionIndex];
   const activeTimelineObj = cjpCaseTimeline[timelineIndex];
@@ -1428,7 +1439,7 @@ export default function IndiaToday() {
           </p>
         </div>
 
-        {/* 09 — CJP CASE STUDY (Chronological Timeline & Event Analysis) */}
+        {/* 09 — CJP CASE STUDY (Documentary Visual Timeline & Event Analysis) */}
         <section id="cjp-case-study" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto space-y-20">
           
           {/* Section Introduction */}
@@ -1447,132 +1458,112 @@ export default function IndiaToday() {
             </p>
           </div>
 
-          {/* Desktop Chronological Interactive Timeline */}
-          <div className="hidden md:flex flex-col space-y-8 bg-white border border-[#171717]/10 p-8 md:p-10 rounded-sm shadow-sm max-w-5xl mx-auto">
-            <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-center">
-              CLICK A TIMELINE NODE TO EXPLORE VERIFIED EVENTS
-            </span>
+          {/* IMMERSIVE DOCUMENTARY VISUAL TIMELINE CONTAINER */}
+          <div className="bg-[#171717] text-[#FAF8F5] border border-[#171717]/20 rounded-sm shadow-xl relative overflow-hidden transition-all duration-700">
             
-            {/* Chronology Line & Nodes */}
-            <div className="relative flex justify-between items-center py-6">
-              <div className="absolute left-0 right-0 h-[2px] bg-[#171717]/10 z-0" />
-              
-              {cjpCaseTimeline.map((item, idx) => {
-                const isActive = timelineIndex === idx;
-                return (
-                  <button
-                    key={idx}
-                    onClick={() => setTimelineIndex(idx)}
-                    className="relative z-10 w-32 flex flex-col items-center cursor-pointer outline-none transition-all duration-300 focus-visible:scale-105"
-                  >
-                    <div 
-                      className={`w-4 h-4 rounded-full border-2 transition-all duration-300 ${
-                        isActive 
-                          ? "bg-[#FAF8F5] border-[#E8752A] scale-125 ring-2 ring-[#E8752A]/30" 
-                          : "bg-[#171717]/40 border-transparent hover:bg-[#E8752A]"
-                      }`}
-                    />
-                    <span className="text-[10px] font-mono font-bold text-[#E8752A] pt-2">
-                      {item.date}
-                    </span>
-                    <span className="text-[9px] font-sans text-[#6B6B6B] pt-0.5 truncate w-full text-center">
-                      {item.title.split(" ")[0]}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
+            {/* Background Image with Smooth Fade & Dark Gradient */}
+            <div className="relative min-h-[550px] md:min-h-[620px] w-full overflow-hidden flex flex-col justify-between p-6 md:p-12">
+              <img 
+                key={activeTimelineObj.date}
+                src={activeTimelineObj.image} 
+                alt={activeTimelineObj.title}
+                className="absolute inset-0 w-full h-full object-cover opacity-50 transition-opacity duration-700 ease-in-out scale-102"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#171717] via-[#171717]/60 to-[#171717]/30" />
 
-            {/* Active Node Detail Card */}
-            <div className="bg-[#F7F4EE] border border-[#171717]/10 p-6 md:p-8 rounded-sm grid grid-cols-12 gap-8 items-start min-h-[300px]">
-              
-              {/* Left Side: Full-Color Photograph */}
-              <div className="col-span-4 aspect-[4/3] overflow-hidden rounded-sm relative border border-[#171717]/10 bg-[#171717]/5 shadow-sm">
-                <img 
-                  src={activeTimelineObj.image} 
-                  alt={activeTimelineObj.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-2 left-2 z-10 bg-[#171717] text-[#FAF8F5] px-1.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
-                  {activeTimelineObj.type}
-                </div>
-              </div>
-
-              {/* Right Side: Attributed Information */}
-              <div className="col-span-8 space-y-4">
-                <div className="space-y-1">
-                  <span className="text-[10px] font-mono text-[#E8752A] uppercase block font-bold">
-                    {activeTimelineObj.date}
-                  </span>
-                  <h4 className="font-serif text-xl md:text-2xl font-bold text-[#171717] leading-snug">
-                    {activeTimelineObj.title}
-                  </h4>
-                </div>
+              {/* Top Meta Bar */}
+              <div className="relative z-10 flex flex-wrap justify-between items-center gap-4 text-[9px] font-mono tracking-widest uppercase border-b border-white/10 pb-4">
+                <span className="bg-[#E8752A] text-white px-2.5 py-1 rounded-sm font-bold">
+                  STAGE 0{timelineIndex + 1} OF 05 · {activeTimelineObj.type}
+                </span>
                 
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  {activeTimelineObj.desc}
-                </p>
-
-                <div className="space-y-1 pt-1">
-                  <span className="text-[9px] font-sans font-bold text-[#16734A] uppercase tracking-wider block">
-                    WHY IT MATTERED
-                  </span>
-                  <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    {activeTimelineObj.why}
-                  </p>
+                {/* Secondary Autoplay Play/Pause Toggle */}
+                <div className="flex items-center gap-3">
+                  <button 
+                    onClick={() => setIsPlayingTimeline(!isPlayingTimeline)}
+                    className="flex items-center gap-1.5 bg-white/10 border border-white/20 hover:bg-white/20 px-3 py-1 rounded-sm text-[#FAF8F5] transition-colors cursor-pointer outline-none"
+                    aria-label={isPlayingTimeline ? "Pause timeline story playback" : "Play timeline story playback"}
+                  >
+                    <span>{isPlayingTimeline ? "⏸ PAUSE STORY" : "▶ PLAY STORY"}</span>
+                  </button>
+                  <span className="text-white/40 hidden sm:inline">8s AUTOPLAY</span>
                 </div>
+              </div>
 
-                <div className="pt-2 border-t border-[#171717]/10 text-[9px] font-mono text-[#6B6B6B] flex items-center justify-between uppercase tracking-widest">
-                  <span>Source: {activeTimelineObj.source}</span>
-                  {activeTimelineObj.sourceUrl && (
-                    <a 
-                      href={activeTimelineObj.sourceUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-[#E8752A] underline hover:text-[#16734A]"
-                    >
-                      View Source Record →
-                    </a>
-                  )}
+              {/* Translucent Editorial Text Panel (Sitting over the photograph) */}
+              <div className="relative z-10 my-auto py-8 max-w-3xl">
+                <div className="bg-[#0a0a0a]/75 backdrop-blur-md border border-white/15 p-6 md:p-8 rounded-sm space-y-4 shadow-2xl">
+                  <div className="space-y-1">
+                    <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
+                      {activeTimelineObj.date}
+                    </span>
+                    <h3 className="font-serif text-2xl md:text-4xl text-white font-semibold uppercase leading-tight">
+                      {activeTimelineObj.title}
+                    </h3>
+                  </div>
+
+                  <p className="text-xs md:text-sm font-sans font-light text-white/90 leading-relaxed">
+                    {activeTimelineObj.desc}
+                  </p>
+
+                  <div className="space-y-1 pt-2 border-t border-white/10">
+                    <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-wider block font-bold">
+                      WHY IT MATTERED
+                    </span>
+                    <p className="text-xs font-sans font-light text-white/80 leading-relaxed">
+                      {activeTimelineObj.why}
+                    </p>
+                  </div>
+
+                  <div className="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between text-[9px] font-mono text-white/60 uppercase tracking-widest gap-2">
+                    <span>Source: {activeTimelineObj.source}</span>
+                    {activeTimelineObj.sourceUrl && (
+                      <a 
+                        href={activeTimelineObj.sourceUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-[#E8752A] underline hover:text-[#16734A] transition-colors"
+                      >
+                        VIEW SOURCE RECORD →
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Lower Horizontal Interactive Timeline Nodes Navigation */}
+              <div className="relative z-10 pt-4 border-t border-white/15">
+                <div className="flex items-center justify-between overflow-x-auto gap-2 py-2 no-scrollbar">
+                  {cjpCaseTimeline.map((item, idx) => {
+                    const isActive = timelineIndex === idx;
+                    return (
+                      <button
+                        key={idx}
+                        onClick={() => {
+                          setTimelineIndex(idx);
+                          setIsPlayingTimeline(false);
+                        }}
+                        className={`flex-1 min-w-[130px] p-3 rounded-sm border text-left transition-all duration-300 cursor-pointer outline-none ${
+                          isActive 
+                            ? "bg-[#FAF8F5] text-[#171717] border-[#E8752A] shadow-md scale-102" 
+                            : "bg-white/5 border-white/10 text-white/70 hover:bg-white/10 hover:text-white"
+                        }`}
+                        aria-label={`${item.date} — ${item.title}`}
+                      >
+                        <span className={`text-[9px] font-mono font-bold block ${isActive ? "text-[#E8752A]" : "text-[#E8752A]/80"}`}>
+                          0{idx + 1} · {item.date}
+                        </span>
+                        <span className="text-[10px] font-serif font-semibold truncate block pt-0.5">
+                          {item.title}
+                        </span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
             </div>
 
-          </div>
-
-          {/* Mobile Vertical Chronological Timeline */}
-          <div className="flex md:hidden flex-col space-y-8 max-w-md mx-auto">
-            {cjpCaseTimeline.map((item, idx) => (
-              <div 
-                key={idx}
-                className="p-6 bg-white border border-[#171717]/10 rounded-sm shadow-sm space-y-4"
-              >
-                <div className="flex justify-between items-center border-b border-[#171717]/5 pb-3">
-                  <span className="font-serif text-lg font-bold text-[#E8752A]">
-                    {item.date}
-                  </span>
-                  <span className="text-[8px] font-mono text-[#16734A] bg-[#FAF8F5] px-2 py-0.5 rounded-sm uppercase tracking-widest">
-                    {item.type}
-                  </span>
-                </div>
-
-                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/5">
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                </div>
-
-                <h4 className="font-serif text-base font-bold text-[#171717] leading-snug">
-                  {item.title}
-                </h4>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  {item.desc}
-                </p>
-
-                <div className="pt-3 border-t border-[#171717]/5 text-[8px] font-mono text-[#6B6B6B] flex justify-between items-center uppercase tracking-widest">
-                  <span>Source: {item.source}</span>
-                </div>
-              </div>
-            ))}
           </div>
 
           {/* JULY 20 — THREE-PERSPECTIVE VISUAL EDITORIAL BLOCK */}
@@ -1672,17 +1663,20 @@ export default function IndiaToday() {
             </div>
           </div>
 
-          {/* Case Study Quiet Closing Reflection */}
-          <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-12 rounded-sm text-center space-y-4 shadow-md max-w-4xl mx-auto">
-            <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-[0.3em] block">
-              CASE STUDY CONCLUSION
+          {/* TRANSITION OUT OF THE CASE STUDY */}
+          <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-12 rounded-sm text-center space-y-6 shadow-md max-w-4xl mx-auto">
+            <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
+              CASE STUDY REFLECTION
             </span>
-            <p className="font-serif text-lg md:text-2xl font-normal uppercase leading-relaxed text-[#FAF8F5]">
-              "A protest has a beginning, a sequence of events and competing accounts of what happened."
+            <p className="font-serif text-lg md:text-2xl font-normal leading-relaxed text-[#FAF8F5] max-w-2xl mx-auto">
+              "One story cannot explain a democracy.<br/>But it can show us where its questions become real."
             </p>
-            <p className="text-xs md:text-sm font-sans font-light text-[#FAF8F5]/80 max-w-2xl mx-auto leading-relaxed">
-              Understanding it requires more than choosing a side. It requires following the record.
-            </p>
+            <div className="h-[1px] w-12 bg-white/20 mx-auto"></div>
+            <div className="pt-2 flex items-center justify-center">
+              <span className="text-[9px] font-mono text-[#16734A] bg-[#FAF8F5] px-3.5 py-1.5 rounded-sm uppercase tracking-widest font-bold">
+                STEP BACK → 10 — HISTORICAL CONTEXT
+              </span>
+            </div>
           </div>
 
         </section>
