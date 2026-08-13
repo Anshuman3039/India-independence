@@ -56,7 +56,7 @@ export default function History() {
             <div className="pt-2">
               <Link 
                 to="/ideas"
-                className="group inline-flex items-center gap-2.5 font-mono text-xs md:text-sm tracking-widest uppercase font-bold text-[#E8752A] hover:text-[#16734A] transition-all duration-300 py-3.5 px-7 border border-[#E8752A]/30 hover:border-[#16734A]/50 bg-white/80 hover:bg-white rounded-sm shadow-xs outline-none focus-visible:outline-2 focus-visible:outline-[#E8752A] cursor-pointer"
+                className="group inline-flex items-center gap-2.5 font-mono text-xs md:text-sm tracking-widest uppercase font-bold text-[#E8752A] hover:text-[#16734A] transition-all duration-300 border-b border-[#E8752A]/40 hover:border-[#16734A] pb-1 outline-none focus-visible:outline-2 focus-visible:outline-[#E8752A] cursor-pointer"
                 aria-label="Explore the Ideas of India"
               >
                 <span>EXPLORE THE IDEAS OF INDIA</span>
