@@ -1283,165 +1283,47 @@ export default function IndiaToday() {
         </div>
 
         {/* 06 — DEMOCRATIC DISSENT */}
-        <section id="democracy-pressure" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5 space-y-20">
-          
-          {/* Section Header */}
-          <div className="max-w-7xl mx-auto space-y-4 max-w-3xl">
-            <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.3em] uppercase block">
-              06 — INDIA UNDER PRESSURE
-            </span>
-            <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
-              DEMOCRATIC DISSENT
-            </h2>
-            <h3 className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-light">
-              "A democracy is tested not only by how it celebrates agreement, but by how it responds to disagreement."
-            </h3>
-            <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-              Across India, people have taken to campuses, streets, courts, workplaces and public spaces to question decisions, demand accountability and make themselves heard.
-            </p>
-          </div>
-
-          <div className="max-w-7xl mx-auto space-y-16">
+        <section id="democracy-pressure" className="w-full py-24 md:py-32 px-6 md:px-12 bg-[#FAF8F5] border-t border-b border-[#171717]/10">
+          <div className="max-w-5xl mx-auto space-y-12 text-center">
             
-            {/* Visual Opening Documentary Photograph */}
-            <div className="aspect-[21/9] overflow-hidden rounded-sm border border-[#171717]/10 relative shadow-sm bg-[#171717]/5">
-              <img 
-                src={dissentImages.opening} 
-                alt="Documentary photograph of a peaceful public gathering in India"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
-                PEOPLE GATHERING · PEOPLE SPEAKING · PEOPLE BEING HEARD
-              </div>
-              <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
+            {/* 01 — OPENING */}
+            <div className="space-y-4 max-w-3xl mx-auto">
+              <span className="text-[10px] font-mono font-bold text-[#16734A] tracking-[0.35em] uppercase block">
+                06 — INDIA UNDER PRESSURE
+              </span>
+              <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717] font-semibold">
+                DEMOCRATIC DISSENT
+              </h2>
+              <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-normal">
+                "Democracy is also the freedom to disagree."
+              </p>
             </div>
 
-            {/* Typographic Editorial: WHAT IS DISSENT? */}
-            <div className="bg-[#F7F4EE] border border-[#171717]/10 p-8 md:p-10 rounded-sm space-y-8 shadow-sm">
-              <div className="space-y-1">
-                <span className="text-[10px] font-mono text-[#16734A] uppercase tracking-[0.25em] block font-bold">
-                  MULTIPLE AVENUES OF PARTICIPATION
-                </span>
-                <h3 className="font-serif text-xl md:text-3xl text-[#171717] font-semibold uppercase">
-                  WHAT IS DISSENT?
-                </h3>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] max-w-2xl leading-relaxed">
-                  Democratic participation extends far beyond voting once every five years. It manifests through distinct civic forms.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
-                {formsOfDissent.map((item) => (
-                  <div key={item.label} className="bg-white p-5 rounded-sm border border-[#171717]/10 space-y-2">
-                    <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
-                      {item.label}
-                    </span>
-                    <p className="text-xs font-sans font-light text-[#171717] leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* 4 Visual Editorial Chapters */}
-            <div className="space-y-16">
-              {dissentStories.map((story) => (
-                <div 
-                  key={story.id} 
-                  className="bg-[#F7F4EE] border border-[#171717]/10 p-6 md:p-10 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
-                >
-                  {/* Left Column: Editorial Copy */}
-                  <div className="lg:col-span-5 space-y-4">
-                    <div className="space-y-1">
-                      <span className="text-[9px] font-mono text-[#16734A] tracking-widest uppercase block font-bold">
-                        {story.chapter}
-                      </span>
-                      <h3 className="font-serif text-2xl md:text-3xl text-[#171717] font-semibold uppercase">
-                        {story.title}
-                      </h3>
-                      <h4 className="font-serif text-sm md:text-base text-[#E8752A] italic">
-                        "{story.subtitle}"
-                      </h4>
-                    </div>
-                    <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                      {story.desc}
-                    </p>
-                    <div className="pt-2">
-                      <span className="text-[8px] font-mono text-[#171717] bg-white border border-[#171717]/15 px-3 py-1 rounded-sm uppercase tracking-widest font-semibold">
-                        {story.tag}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Right Column: Full-Color Photograph */}
-                  <div className="lg:col-span-7 aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative shadow-sm bg-[#171717]/5">
-                    <img 
-                      src={story.image} 
-                      alt={story.title}
-                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-102"
-                      loading="lazy"
-                    />
-                    <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
-                      {story.imageCaption}
-                    </div>
-                    <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
-                  </div>
+            {/* 02 — VISUAL: ONE LARGE AUTHENTIC DOCUMENTARY PHOTOGRAPH */}
+            <div className="max-w-4xl mx-auto">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+                className="aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-sm bg-[#171717]/5 shadow-[0_20px_50px_rgba(0,0,0,0.12)] relative"
+              >
+                <img 
+                  src="/images/stories/stories-intro-2.jpg" 
+                  alt="Peaceful public assembly and civic expression in India"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-3 py-1 text-[9px] font-mono tracking-widest uppercase font-bold">
+                  DOCUMENTARY LOG: CIVIC EXPRESSION & PUBLIC ASSEMBLY
                 </div>
-              ))}
-            </div>
+              </motion.div>
 
-            {/* Why People Protest Grid */}
-            <div className="bg-white border border-[#171717]/10 p-8 md:p-10 rounded-sm space-y-8 shadow-sm">
-              <div className="space-y-1">
-                <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-[0.25em] block font-bold">
-                  CATALYSTS FOR DEMONSTRATION
+              {/* 03 — MINIMAL CAPTION */}
+              <div className="pt-6 text-center">
+                <span className="text-xs md:text-sm font-mono text-[#171717] tracking-[0.2em] uppercase font-bold">
+                  "QUESTIONING POWER IS PART OF DEMOCRACY."
                 </span>
-                <h3 className="font-serif text-xl md:text-3xl text-[#171717] font-semibold uppercase">
-                  WHY PEOPLE PROTEST
-                </h3>
-                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] max-w-2xl leading-relaxed">
-                  Citizens gather in public spaces when they feel their core economic, social, or constitutional concerns require nationwide visibility.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
-                {grievanceExamples.map((item) => (
-                  <div key={item.label} className="bg-[#F7F4EE] p-5 rounded-sm border border-[#171717]/5 space-y-2">
-                    <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">
-                      {item.label}
-                    </span>
-                    <p className="text-xs font-sans font-light text-[#171717] leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Quiet Editorial Question: THE QUESTION OF PROPORTIONALITY */}
-            <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-12 rounded-sm text-center space-y-8 shadow-md max-w-5xl mx-auto">
-              <div className="space-y-3">
-                <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
-                  THE QUESTION OF PROPORTIONALITY
-                </span>
-                <p className="font-serif text-xl md:text-3xl font-normal uppercase leading-relaxed text-[#FAF8F5] max-w-3xl mx-auto">
-                  "When does maintaining public order become an excessive restriction on dissent?"
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left pt-4">
-                {proportionalityFactors.map((f) => (
-                  <div key={f.title} className="bg-white/5 border border-white/10 p-5 rounded-sm space-y-2">
-                    <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">
-                      {f.title}
-                    </span>
-                    <p className="text-xs font-sans font-light text-[#FAF8F5]/80 leading-relaxed">
-                      {f.desc}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
 
