@@ -595,6 +595,34 @@ export default function IndiaToday() {
     }
   ];
 
+  // Section 10 Slideshow State & Autoplay (7 seconds)
+  const [beyondSlideIndex, setBeyondSlideIndex] = useState(0);
+  const [isBeyondAutoplayPaused, setIsBeyondAutoplayPaused] = useState(false);
+
+  useEffect(() => {
+    let interval;
+    if (!isBeyondAutoplayPaused) {
+      interval = setInterval(() => {
+        setBeyondSlideIndex((prev) => (prev + 1) % beyondOneStoryItems.length);
+      }, 7000);
+    }
+    return () => clearInterval(interval);
+  }, [isBeyondAutoplayPaused, beyondOneStoryItems.length]);
+
+  const handleManualBeyondSlide = (newIndex) => {
+    setIsBeyondAutoplayPaused(true);
+    setBeyondSlideIndex(newIndex);
+    setTimeout(() => setIsBeyondAutoplayPaused(false), 10000);
+  };
+
+  const handleNextBeyondSlide = () => {
+    handleManualBeyondSlide((beyondSlideIndex + 1) % beyondOneStoryItems.length);
+  };
+
+  const handlePrevBeyondSlide = () => {
+    handleManualBeyondSlide((beyondSlideIndex - 1 + beyondOneStoryItems.length) % beyondOneStoryItems.length);
+  };
+
   useEffect(() => {
     let timer;
     if (isPlayingTimeline) {
@@ -1891,30 +1919,71 @@ export default function IndiaToday() {
             <span className="text-[#E8752A] font-bold">OPPORTUNITY</span>
           </div>
 
-          {/* CINEMATIC SCROLL-CONTROLLED HORIZONTAL PHOTO DRIFT STRIP */}
-          <div className="py-8 overflow-hidden w-full relative">
-            <motion.div 
-              style={{ x: stripX }}
-              className="flex gap-6 md:gap-10 min-w-max px-8 md:px-16 items-center"
-            >
-              {beyondOneStoryItems.map((item, idx) => (
-                <div key={idx} className={`relative overflow-hidden rounded-sm border border-white/20 group shadow-2xl ${item.aspect} ${item.width}`}>
+          {/* CINEMATIC IMAGE SLIDESHOW AREA */}
+          <div className="py-6 px-4 md:px-12 max-w-5xl mx-auto space-y-6">
+            <div className="relative overflow-hidden rounded-sm border border-white/20 shadow-2xl aspect-[16/9] md:aspect-[21/9] bg-[#111]">
+              <AnimatePresence mode="wait">
+                <motion.div 
+                  key={beyondSlideIndex}
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -40 }}
+                  transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+                  className="w-full h-full relative"
+                >
                   <img 
-                    src={item.img} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-103" 
+                    src={beyondOneStoryItems[beyondSlideIndex].img} 
+                    alt={beyondOneStoryItems[beyondSlideIndex].title} 
+                    className="w-full h-full object-cover" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5">
-                    <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold mb-1">
-                      {item.category}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6 md:p-10 text-left">
+                    <span className="text-[10px] md:text-xs font-mono text-[#E8752A] uppercase tracking-[0.3em] font-bold mb-1">
+                      DOCUMENTARY FRAGMENT {String(beyondSlideIndex + 1).padStart(2, '0')} · {beyondOneStoryItems[beyondSlideIndex].category}
                     </span>
-                    <h4 className="font-serif text-base md:text-xl text-[#FAF8F5] font-semibold leading-tight">
-                      {item.title}
+                    <h4 className="font-serif text-xl md:text-3xl text-[#FAF8F5] font-semibold leading-tight max-w-3xl">
+                      {beyondOneStoryItems[beyondSlideIndex].title}
                     </h4>
                   </div>
-                </div>
-              ))}
-            </motion.div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* MINIMAL ELEGANT SLIDER CONTROLS */}
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-2 px-2 max-w-5xl mx-auto">
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={handlePrevBeyondSlide}
+                  aria-label="Previous Slide"
+                  className="px-3.5 py-1.5 text-xs font-mono text-white/80 hover:text-white bg-white/10 hover:bg-white/20 border border-white/20 rounded-sm transition-all cursor-pointer font-bold"
+                >
+                  [ ← ]
+                </button>
+                <span className="text-xs font-mono tracking-widest text-[#E8752A] font-bold">
+                  {String(beyondSlideIndex + 1).padStart(2, '0')} / {String(beyondOneStoryItems.length).padStart(2, '0')}
+                </span>
+                <button
+                  onClick={handleNextBeyondSlide}
+                  aria-label="Next Slide"
+                  className="px-3.5 py-1.5 text-xs font-mono text-white/80 hover:text-white bg-white/10 hover:bg-white/20 border border-white/20 rounded-sm transition-all cursor-pointer font-bold"
+                >
+                  [ → ]
+                </button>
+              </div>
+
+              {/* INDICATOR DOTS */}
+              <div className="flex items-center gap-2">
+                {beyondOneStoryItems.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => handleManualBeyondSlide(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                    className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                      idx === beyondSlideIndex ? "w-6 bg-[#E8752A]" : "w-1.5 bg-white/30 hover:bg-white/60"
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="pt-4 text-center">
