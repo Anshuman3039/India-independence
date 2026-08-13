@@ -50,8 +50,8 @@ const motionSlides = [
     title: "BUILDING AT SCALE",
     desc: "Multi-lane concrete expressways, elevated bypass flyovers, and sea links streamline industrial freight distribution and intercity passenger travel across major economic corridors.",
     stat: "10,000+ Km of express highways built annually",
-    image: "/images/stories/maharashtra-citylife.jpg",
-    context: "Mumbai Flyover Highway Corridor",
+    image: "/images/stories/expressway-infrastructure.jpg",
+    context: "Access-Controlled Expressway Corridor",
     assetStatus: "AVAILABLE"
   },
   {
@@ -60,10 +60,9 @@ const motionSlides = [
     title: "CONTEMPORARY AVIATION INFRASTRUCTURE",
     desc: "Construction of regional terminals and cheap air connectivity plans facilitate rapid travel options for citizens across tier-2 and tier-3 aviation hubs.",
     stat: "150+ Operational airports nationally",
-    image: null,
-    context: "Indian Airport Terminal Infrastructure",
-    assetStatus: "MISSING_ASSET",
-    missingDescription: "Authentic photograph of a modern Indian airport terminal interior / runway required."
+    image: "/images/stories/airport-terminal.jpg",
+    context: "Bengaluru Kempegowda Airport Terminal 2",
+    assetStatus: "AVAILABLE"
   },
   {
     id: "renewable",
@@ -71,10 +70,9 @@ const motionSlides = [
     title: "POWERING THE FUTURE",
     desc: "Vast solar parks in Rajasthan and wind turbine installations across southern coastal belts drive India's energy transition, supporting agricultural irrigation and zero-emission goals.",
     stat: "180 GW+ installed renewable energy capacity",
-    image: null,
-    context: "Solar Farm & Wind Turbine Installation",
-    assetStatus: "MISSING_ASSET",
-    missingDescription: "Authentic photograph of an Indian solar park or wind turbine grid installation required."
+    image: "/images/stories/solar-renewable-energy.jpg",
+    context: "Solar-Powered Agricultural Irrigation Grid",
+    assetStatus: "AVAILABLE"
   },
   {
     id: "semiconductor",
@@ -82,8 +80,8 @@ const motionSlides = [
     title: "DOMESTIC MICRO-FABRICATION AMBITIONS",
     desc: "Heavy state subsidies are aimed at setting up logic design silicon fabrications, assembly facilities, and industrial microchip testing cleanrooms.",
     stat: "$10 Billion national subsidy pool",
-    image: "/images/stories/story6-lab.jpg",
-    context: "Microelectronics Cleanroom Lab",
+    image: "/images/stories/semiconductor-microchip.jpg",
+    context: "Silicon Microchip Wafer Fabricated Die",
     assetStatus: "AVAILABLE"
   },
   {
@@ -92,8 +90,8 @@ const motionSlides = [
     title: "THE CITY CHANGES",
     desc: "Metropolitan hubs evolve under rapid urbanization, balancing dense traditional commercial zones with modern transit infrastructure and residential corridors.",
     stat: "450 Million+ urban population",
-    image: "/images/stories/stories-intro-7.jpg",
-    context: "New Delhi Connaught Place Urban Transit",
+    image: "/images/stories/mumbai-cityscape.jpg",
+    context: "Mumbai Metropolitan Coastal Skyline",
     assetStatus: "AVAILABLE"
   }
 ];
