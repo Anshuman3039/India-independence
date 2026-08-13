@@ -486,7 +486,7 @@ const historicalThreads = [
     question: "When citizens disagree with power, what space does democracy give them?",
     why: "Normalized public criticism, parliamentary opposition, and executive accountability during early nation-building.",
     source: "Lok Sabha Debates / National Archives of India",
-    image: "/images/history/nehru-speech.jpg"
+    image: "/images/history/freedom-1947.jpg"
   },
   {
     era: "1975–1977",
@@ -496,7 +496,7 @@ const historicalThreads = [
     question: "What happens when democratic institutions are placed under extraordinary pressure?",
     why: "Proved the resilience of public electorate voting and citizen defence of fundamental liberties.",
     source: "Shah Commission Report / General Election Records (1977)",
-    image: "/images/history/gandhi-march.jpg"
+    image: "/images/history/people-power-1.jpg"
   },
   {
     era: "1980s–2000s",
@@ -506,7 +506,7 @@ const historicalThreads = [
     question: "Who gets to participate in shaping the republic?",
     why: "Expanded democratic participation beyond election days into everyday civic advocacy and legal rights.",
     source: "Planning Commission Reports / Civil Society Archives",
-    image: "/images/stories/story3-forest.jpg"
+    image: "/images/nature/people-forests.jpg"
   },
   {
     era: "2010s–PRESENT",
@@ -1830,7 +1830,7 @@ export default function IndiaToday() {
                 { title: "MANIPUR & BELONGING", img: "/images/nature/manipur_nature.jpg" },
                 { title: "EXAM RECRUITMENT", img: "/images/stories/story4-prep.jpg" },
                 { title: "LABORATORY INQUIRY", img: "/images/stories/story6-lab.jpg" },
-                { title: "ENVIRONMENTAL ATMOSPHERE", img: "/images/stories/story3-forest.jpg" },
+                { title: "ENVIRONMENTAL ATMOSPHERE", img: "/images/nature/eco-forest.jpg" },
                 { title: "CIVIC DISCOURSE", img: "/images/stories/stories-intro-2.jpg" },
                 { title: "EVERYDAY TRANSIT", img: "/images/stories/story1-train.jpg" }
               ].map((item, idx) => (
@@ -1888,21 +1888,21 @@ export default function IndiaToday() {
               <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
                 <img 
                   src="/images/nature/manipur_nature.jpg" 
-                  alt="Affected communities and landscape in Manipur" 
+                  alt="Affected communities and valley landscape in Manipur" 
                   className="w-full h-full object-cover" 
                 />
                 <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                  DOCUMENTARY LOG: LANDSCAPE & COMMUNITIES
+                  DOCUMENTARY LOG: MANIPUR LANDSCAPE & COMMUNITIES
                 </div>
               </div>
               <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
                 <img 
-                  src="/images/stories/stories-intro-1.jpg" 
-                  alt="Displaced families seeking stability and everyday life" 
+                  src="/images/nature/geo-northeast.jpg" 
+                  alt="Northeast regional landscape and settlement context" 
                   className="w-full h-full object-cover" 
                 />
                 <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                  DOCUMENTARY LOG: HUMAN REALITY & RELIEF
+                  DOCUMENTARY LOG: NORTHEAST HUMAN SETTLEMENT CONTEXT
                 </div>
               </div>
             </div>
@@ -1930,21 +1930,21 @@ export default function IndiaToday() {
               <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
                 <img 
                   src="/images/stories/story4-prep.jpg" 
-                  alt="Students and aspirants preparing for competitive examinations" 
+                  alt="Students and aspirants preparing for competitive examinations in coaching districts" 
                   className="w-full h-full object-cover" 
                 />
                 <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                  DOCUMENTARY LOG: EXAM CENTRES & ASPIRANTS
+                  DOCUMENTARY LOG: EXAM ASPIRANTS & STUDY CENTRES
                 </div>
               </div>
               <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
                 <img 
                   src="/images/stories/story6-lab.jpg" 
-                  alt="Young researchers and workers seeking employment security" 
+                  alt="Young technical researchers and scholars seeking employment security" 
                   className="w-full h-full object-cover" 
                 />
                 <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                  DOCUMENTARY LOG: WORKFORCE & RESEARCH
+                  DOCUMENTARY LOG: TECHNICAL WORKFORCE & RESEARCH
                 </div>
               </div>
             </div>
@@ -1972,20 +1972,20 @@ export default function IndiaToday() {
               <div className="space-y-3">
                 <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#16734A]/30 relative">
                   <img 
-                    src="/images/metro/metro_india.jpg" 
-                    alt="Modern urban infrastructure and commercial centres" 
+                    src="/images/stories/delhi-metro-train.jpg" 
+                    alt="Modern elevated metro transit infrastructure" 
                     className="w-full h-full object-cover" 
                   />
                   <div className="absolute top-3 left-3 bg-[#16734A] text-white px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase font-bold">
-                    MODERN URBAN INFRASTRUCTURE
+                    MODERN METROPOLITAN INFRASTRUCTURE
                   </div>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#E8752A]/30 relative">
                   <img 
-                    src="/images/people/rural-farmers.jpg" 
-                    alt="Everyday working environment and informal economy" 
+                    src="/images/people/community-weaving.jpg" 
+                    alt="Traditional artisan handloom workforce operating informal craft equipment" 
                     className="w-full h-full object-cover" 
                   />
                   <div className="absolute top-3 left-3 bg-[#E8752A] text-white px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase font-bold">
@@ -2016,8 +2016,8 @@ export default function IndiaToday() {
 
             <div className="aspect-[21/9] overflow-hidden rounded-sm border border-[#171717]/10 relative">
               <img 
-                src="/images/stories/story3-forest.jpg" 
-                alt="Environmental landscape showing human habitation alongside atmospheric conditions" 
+                src="/images/nature/eco-forest.jpg" 
+                alt="Environmental forest ecosystem showing atmospheric conditions" 
                 className="w-full h-full object-cover" 
               />
               <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
@@ -2070,7 +2070,7 @@ export default function IndiaToday() {
               <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
                 <img 
                   src="/images/stories/story6-launch.jpg" 
-                  alt="Scientific inquiry, satellite launch and research" 
+                  alt="Scientific inquiry, satellite launch and space research" 
                   className="w-full h-full object-cover" 
                 />
                 <div className="absolute top-3 left-3 bg-[#16734A] text-white px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase font-bold">
@@ -2079,12 +2079,12 @@ export default function IndiaToday() {
               </div>
               <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
                 <img 
-                  src="/images/stories/story1-train.jpg" 
-                  alt="Respectful daily practice and inquiry" 
+                  src="/images/people/everyday-school.jpg" 
+                  alt="Classroom learning and empirical education" 
                   className="w-full h-full object-cover" 
                 />
                 <div className="absolute top-3 left-3 bg-[#171717] text-white px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                  FAITH, TRADITION & PUBLIC LIFE
+                  EDUCATION & OPEN INQUIRY
                 </div>
               </div>
             </div>
@@ -2116,13 +2116,13 @@ export default function IndiaToday() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="space-y-2">
                   <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
-                    <img src="/images/stories/digital-upi-payment.jpg" alt="Digital India payment rails" className="w-full h-full object-cover" />
+                    <img src="/images/stories/digital-upi-payment.jpg" alt="Digital India e-UPI smartphone payment rails" className="w-full h-full object-cover" />
                   </div>
                   <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">DIGITAL INDIA</span>
                 </div>
                 <div className="space-y-2">
                   <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
-                    <img src="/images/people/rural-farmers.jpg" alt="Digital access disparity" className="w-full h-full object-cover" />
+                    <img src="/images/people/community-clay.jpg" alt="Traditional potter craftsman working without digital identity tools" className="w-full h-full object-cover" />
                   </div>
                   <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">DIGITAL ACCESS GAP</span>
                 </div>
@@ -2139,13 +2139,13 @@ export default function IndiaToday() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="space-y-2">
                   <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
-                    <img src="/images/stories/delhi-metro-train.jpg" alt="Modern metro transit" className="w-full h-full object-cover" />
+                    <img src="/images/stories/delhi-metro-train.jpg" alt="Modern elevated metro transit" className="w-full h-full object-cover" />
                   </div>
                   <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">MODERN CITY</span>
                 </div>
                 <div className="space-y-2">
                   <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
-                    <img src="/images/stories/story1-station.jpg" alt="Everyday street work" className="w-full h-full object-cover" />
+                    <img src="/images/stories/story1-station.jpg" alt="Everyday street work and commuters on railway platform" className="w-full h-full object-cover" />
                   </div>
                   <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">EVERYDAY WORK</span>
                 </div>
@@ -2162,13 +2162,13 @@ export default function IndiaToday() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="space-y-2">
                   <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
-                    <img src="/images/stories/story6-lab.jpg" alt="High tech scientific laboratory" className="w-full h-full object-cover" />
+                    <img src="/images/stories/story6-lab.jpg" alt="High tech cleanroom laboratory researcher" className="w-full h-full object-cover" />
                   </div>
                   <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">ECONOMIC ASPIRATION</span>
                 </div>
                 <div className="space-y-2">
                   <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
-                    <img src="/images/stories/stories-intro-7.jpg" alt="Job seekers and exam aspirants" className="w-full h-full object-cover" />
+                    <img src="/images/stories/story4-prep.jpg" alt="Job aspirants preparing in study centres" className="w-full h-full object-cover" />
                   </div>
                   <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">ECONOMIC INSECURITY</span>
                 </div>
@@ -2185,15 +2185,15 @@ export default function IndiaToday() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="space-y-2">
                   <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
-                    <img src="/images/stories/story6-launch.jpg" alt="Scientific research and inquiry" className="w-full h-full object-cover" />
+                    <img src="/images/stories/story6-launch.jpg" alt="ISRO rocket launching into space" className="w-full h-full object-cover" />
                   </div>
                   <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">SCIENTIFIC ACHIEVEMENT</span>
                 </div>
                 <div className="space-y-2">
                   <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
-                    <img src="/images/stories/story1-train.jpg" alt="Faith vs superstition inquiry" className="w-full h-full object-cover" />
+                    <img src="/images/people/everyday-school.jpg" alt="Classroom students learning critical inquiry" className="w-full h-full object-cover" />
                   </div>
-                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">MISINFORMATION & SUPERSTITION</span>
+                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">MISINFORMATION & QUESTIONING</span>
                 </div>
               </div>
               <div className="text-center pt-4 border-t border-[#171717]/10">
@@ -2208,13 +2208,13 @@ export default function IndiaToday() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="space-y-2">
                   <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
-                    <img src="/images/stories/stories-intro-2.jpg" alt="Peaceful democratic dissent assembly" className="w-full h-full object-cover" />
+                    <img src="/images/stories/stories-intro-2.jpg" alt="Peaceful student campus assembly and debate" className="w-full h-full object-cover" />
                   </div>
                   <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">DEMOCRATIC DISSENT</span>
                 </div>
                 <div className="space-y-2">
                   <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10">
-                    <img src="/images/stories/stories-intro-4.jpg" alt="Algorithmic feeds and hostile discourse" className="w-full h-full object-cover" />
+                    <img src="/images/stories/stories-intro-4.jpg" alt="Algorithmic feeds and hostile digital headlines" className="w-full h-full object-cover" />
                   </div>
                   <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">HOSTILE PUBLIC DISCOURSE</span>
                 </div>
@@ -2250,11 +2250,11 @@ export default function IndiaToday() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "TRAIN & COMMUTE", img: "/images/stories/story1-train.jpg" },
-              { title: "CLASSROOM & LEARNING", img: "/images/stories/story6-lab.jpg" },
-              { title: "MARKET & COMMERCE", img: "/images/stories/story4-prep.jpg" },
+              { title: "CLASSROOM & LEARNING", img: "/images/people/everyday-school.jpg" },
+              { title: "MARKET & COMMERCE", img: "/images/people/everyday-market.jpg" },
               { title: "STREET & TRANSIT", img: "/images/stories/story1-station.jpg" },
-              { title: "WORKPLACE & WORKFORCE", img: "/images/people/rural-farmers.jpg" },
-              { title: "CIVIC PARTICIPATION", img: "/images/people/voters-queue.jpg" }
+              { title: "WORKPLACE & WORKFORCE", img: "/images/people/community-weaving.jpg" },
+              { title: "CIVIC PARTICIPATION", img: "/images/identity/republic-voices.jpg" }
             ].map((item, idx) => (
               <div key={idx} className="bg-white border border-[#171717]/10 p-3 rounded-sm space-y-2 shadow-2xs">
                 <div className="aspect-[4/3] overflow-hidden rounded-sm relative border border-[#171717]/10">
@@ -2269,7 +2269,7 @@ export default function IndiaToday() {
 
           {/* COEXISTENCE STATEMENT */}
           <div className="bg-[#FAF8F5] border border-[#171717]/10 p-10 md:p-16 rounded-sm text-center space-y-6 max-w-4xl mx-auto shadow-sm">
-            <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.3em] font-bold block">
+            <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.3em] block font-bold">
               COEXISTENCE IN SHARED SPACES
             </span>
             <div className="space-y-2 font-serif text-lg md:text-2xl text-[#171717] italic">
@@ -2302,7 +2302,7 @@ export default function IndiaToday() {
           {/* SINGLE WORDS REVEALED ONE-BY-ONE OVER DOCUMENTARY PHOTOS */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { word: "EQUALITY", desc: "Beyond formal legal status, real equality is measured by everyday social access.", img: "/images/people/rural-farmers.jpg" },
+              { word: "EQUALITY", desc: "Beyond formal legal status, real equality is measured by everyday social access.", img: "/images/people/community-weaving.jpg" },
               { word: "DIGNITY", desc: "Protecting every citizen from humiliation, exclusion, and institutional apathy.", img: "/images/stories/story1-station.jpg" },
               { word: "OPPORTUNITY", desc: "Ensuring that talent and effort can find secure pathways to flourishing.", img: "/images/stories/story4-prep.jpg" },
               { word: "FREEDOM", desc: "Protecting dissent and the liberty to question without fear.", img: "/images/stories/stories-intro-2.jpg" },
@@ -2359,8 +2359,8 @@ export default function IndiaToday() {
           <div className="max-w-5xl mx-auto space-y-3">
             <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-md group">
               <img 
-                src="/images/people/rural-farmers.jpg" 
-                alt="Ordinary citizens and young Indians looking toward the changing horizon of the republic" 
+                src="/images/stories/story6-child.jpg" 
+                alt="Young Indian citizen looking toward the changing horizon of the republic" 
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-103"
               />
               <div className="absolute top-4 left-4 bg-[#171717] text-[#FAF8F5] px-3 py-1 text-[9px] font-mono tracking-widest uppercase">
@@ -2401,10 +2401,10 @@ export default function IndiaToday() {
             </span>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { title: "STUDENT & LEARNER", img: "/images/stories/story6-lab.jpg" },
+                { title: "STUDENT & LEARNER", img: "/images/people/everyday-school.jpg" },
                 { title: "WORKFORCE & CITIZEN", img: "/images/stories/story4-prep.jpg" },
                 { title: "SHARED PUBLIC SPACE", img: "/images/stories/story1-train.jpg" },
-                { title: "EVERYDAY DIVERSITY", img: "/images/people/rural-farmers.jpg" }
+                { title: "EVERYDAY DIVERSITY", img: "/images/people/everyday-market.jpg" }
               ].map((item, idx) => (
                 <div key={idx} className="bg-white border border-[#171717]/10 p-3 rounded-sm space-y-2 shadow-2xs">
                   <div className="aspect-[4/3] overflow-hidden rounded-sm relative border border-[#171717]/10">
