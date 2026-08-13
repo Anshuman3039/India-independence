@@ -1921,14 +1921,14 @@ export default function IndiaToday() {
 
           {/* CINEMATIC IMAGE SLIDESHOW AREA */}
           <div className="py-6 px-4 md:px-12 max-w-5xl mx-auto space-y-6">
-            <div className="relative overflow-hidden rounded-sm border border-white/20 shadow-2xl aspect-[16/9] md:aspect-[21/9] bg-[#111]">
+            <div className="relative overflow-hidden rounded-sm aspect-[16/9] md:aspect-[21/9] bg-[#111] shadow-[0_20px_60px_rgba(0,0,0,0.28),0_8px_30px_rgba(0,0,0,0.18)]">
               <AnimatePresence mode="wait">
                 <motion.div 
                   key={beyondSlideIndex}
-                  initial={{ opacity: 0, x: 40 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -40 }}
-                  transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+                  initial={{ opacity: 0, scale: 0.99 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.99 }}
+                  transition={{ duration: 0.9, ease: [0.25, 1, 0.5, 1] }}
                   className="w-full h-full relative"
                 >
                   <img 
@@ -1984,12 +1984,6 @@ export default function IndiaToday() {
                 ))}
               </div>
             </div>
-          </div>
-
-          <div className="pt-4 text-center">
-            <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] px-6 py-3 rounded-sm uppercase tracking-widest font-bold text-[#171717] inline-block shadow-md">
-              LOOK CLOSER ↓
-            </span>
           </div>
         </section>
 
