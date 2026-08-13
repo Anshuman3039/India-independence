@@ -733,6 +733,18 @@ export default function IndiaToday() {
     handleManualMediaSlide((mediaSlideIndex - 1 + mediaWallSlides.length) % mediaWallSlides.length);
   };
 
+  // Section 08 Language Terms Interaction State
+  const [activeHostilityIndex, setActiveHostilityIndex] = useState(0);
+
+  const hostilityTerms = [
+    { term: "SIMPLIFY", desc: "Complex realities are reduced to simple binaries." },
+    { term: "DIVIDE", desc: "People are framed as opposing camps rather than citizens with different views." },
+    { term: "PROVOKE", desc: "Language is sharpened to trigger anger, fear or outrage." },
+    { term: "POLARISE", desc: "Differences harden into opposing identities." },
+    { term: "DEHUMANISE", desc: "Opponents are described as less worthy of dignity or empathy." },
+    { term: "MOBILISE", desc: "Emotion is turned into collective action, sometimes against another group." }
+  ];
+
   useEffect(() => {
     let timer;
     if (isPlayingTimeline) {
@@ -1513,64 +1525,71 @@ export default function IndiaToday() {
           </div>
         </section>
 
-        {/* 08 — WORDS AS WEAPONS (Interactive Typographic Board) */}
-        <section id="words-weapons" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5">
-          <div className="max-w-5xl mx-auto space-y-12">
+        {/* 08 — WHEN DISAGREEMENT BECOMES HOSTILITY */}
+        <section id="words-weapons" className="w-full py-20 md:py-24 px-6 md:px-12 bg-[#FAF8F5] border-t border-b border-[#171717]/10">
+          <div className="max-w-5xl mx-auto space-y-10 text-center">
             
-            <div className="text-center space-y-3">
-              <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
+            {/* INTRO */}
+            <div className="max-w-3xl mx-auto space-y-3">
+              <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.35em] uppercase block">
                 08 — WHEN DISAGREEMENT BECOMES HOSTILITY
               </span>
-              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717] font-semibold">
                 WHEN DISAGREEMENT BECOMES HOSTILITY
               </h2>
-              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light max-w-2xl mx-auto leading-relaxed">
-                Hover over a typographic node to analyze how language can simplify, mobilize, and polarize public discourse within algorithmic grids.
+              <p className="font-serif text-base md:text-xl text-[#171717] italic font-normal leading-relaxed">
+                "Disagreement is part of democracy. The danger begins when language turns opponents into enemies."
+              </p>
+              <p className="text-xs font-mono text-[#6B6B6B] tracking-wider uppercase pt-1">
+                "Words can widen a debate — or close the space for one."
               </p>
             </div>
 
-            {/* Typographic Visual Treatment */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pt-8 border-t border-[#171717]/5">
-              
-              {/* Left word list */}
-              <div className="md:col-span-6 flex flex-wrap gap-3 justify-center md:justify-start">
-                {wordsWeaponsData.map((item, idx) => {
-                  const isHovered = hoveredWord === idx;
+            {/* HORIZONTAL INTERACTION SEQUENCE */}
+            <div className="space-y-6 max-w-4xl mx-auto pt-2">
+              {/* 6 Terms Row */}
+              <div className="flex flex-wrap items-center justify-center gap-2.5 md:gap-4">
+                {hostilityTerms.map((item, idx) => {
+                  const isActive = activeHostilityIndex === idx;
                   return (
                     <button
-                      key={idx}
-                      onMouseEnter={() => setHoveredWord(idx)}
-                      onMouseLeave={() => setHoveredWord(null)}
-                      className={`px-4 py-2 border rounded-sm text-xs font-mono tracking-widest uppercase transition-all duration-300 outline-none cursor-pointer ${
-                        isHovered 
-                          ? "bg-[#171717] border-[#171717] text-white scale-105" 
-                          : "bg-[#F7F4EE]/50 border-[#171717]/10 text-[#6B6B6B] hover:text-[#171717] hover:border-[#171717]/30"
+                      key={item.term}
+                      onClick={() => setActiveHostilityIndex(idx)}
+                      onMouseEnter={() => setActiveHostilityIndex(idx)}
+                      className={`px-4 py-2 text-xs font-mono tracking-widest uppercase transition-all duration-300 rounded-sm cursor-pointer border ${
+                        isActive 
+                          ? "bg-[#171717] text-[#FAF8F5] border-[#171717] font-bold shadow-sm" 
+                          : "bg-white text-[#171717] border-[#171717]/15 hover:border-[#171717]/40"
                       }`}
                     >
-                      {item.word}
+                      {item.term}
                     </button>
                   );
                 })}
               </div>
 
-              {/* Right description container */}
-              <div className="md:col-span-6 min-h-[140px] bg-[#FAF8F5] border border-[#171717]/10 p-6 rounded-sm flex items-center justify-center shadow-xs">
-                {hoveredWord !== null ? (
-                  <div className="text-left w-full space-y-2">
-                    <span className="text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-widest block">
-                      SPEECH PROFILE: {wordsWeaponsData[hoveredWord].word}
-                    </span>
-                    <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                      {wordsWeaponsData[hoveredWord].desc}
-                    </p>
-                  </div>
-                ) : (
-                  <span className="text-xs font-sans font-light text-[#6B6B6B]/60 italic text-center">
-                    Hover over a word to view its semantic sociological description.
-                  </span>
-                )}
+              {/* Dynamic Single Explanation Line */}
+              <div className="min-h-[50px] flex items-center justify-center px-4 py-3 bg-white border border-[#171717]/10 rounded-sm max-w-2xl mx-auto shadow-xs">
+                <AnimatePresence mode="wait">
+                  <motion.p
+                    key={activeHostilityIndex}
+                    initial={{ opacity: 0, y: 5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -5 }}
+                    transition={{ duration: 0.3 }}
+                    className="text-xs md:text-sm font-sans font-light text-[#171717] leading-relaxed"
+                  >
+                    "{hostilityTerms[activeHostilityIndex].desc}"
+                  </motion.p>
+                </AnimatePresence>
               </div>
+            </div>
 
+            {/* CLOSING EDITORIAL STATEMENT */}
+            <div className="pt-4 text-center">
+              <p className="font-serif text-base md:text-xl text-[#16734A] italic font-medium max-w-2xl mx-auto">
+                "Democracy needs disagreement. It cannot survive when disagreement becomes hatred."
+              </p>
             </div>
 
           </div>
