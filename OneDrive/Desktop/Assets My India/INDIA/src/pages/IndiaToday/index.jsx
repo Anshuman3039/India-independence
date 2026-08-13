@@ -1440,26 +1440,26 @@ export default function IndiaToday() {
         </div>
 
         {/* 09 — CJP CASE STUDY (Documentary Visual Timeline & Event Analysis) */}
-        <section id="cjp-case-study" className="w-full py-32 md:py-36 px-4 sm:px-6 md:px-12 max-w-[94vw] mx-auto space-y-24">
+        <section id="cjp-case-study" className="w-full py-10 md:py-14 px-4 sm:px-6 md:px-12 max-w-[94vw] mx-auto space-y-12">
           
           {/* Section Introduction */}
-          <div className="text-center space-y-4 max-w-4xl mx-auto">
+          <div className="text-center space-y-2 max-w-4xl mx-auto">
             <span className="text-[11px] font-mono text-[#E8752A] uppercase tracking-[0.35em] block font-bold">
               09 — CJP: A CASE STUDY
             </span>
-            <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717]">
+            <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl uppercase tracking-wider text-[#171717]">
               CJP — FROM GRIEVANCE TO PUBLIC PROTEST
             </h2>
-            <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed max-w-3xl mx-auto">
               A political movement emerged around grievances concerning employment, recruitment/examination issues, opportunity and government accountability.
             </p>
-            <p className="font-serif text-lg md:text-xl text-[#16734A] italic font-semibold pt-1">
+            <p className="font-serif text-base md:text-lg text-[#16734A] italic font-semibold pt-0.5">
               "To understand what democratic dissent looks like in practice, follow the sequence of events."
             </p>
           </div>
 
-          {/* LARGE CINEMATIC DOCUMENTARY VIEWPORT STAGE */}
-          <div className="bg-[#0a0a0a] text-[#FAF8F5] border border-white/15 rounded-2xl shadow-[0_30px_70px_-15px_rgba(0,0,0,0.8)] relative overflow-hidden transition-all duration-700 w-full min-h-[800px] md:min-h-[880px] flex flex-col justify-between p-6 md:p-12 lg:p-14">
+          {/* CINEMATIC DOCUMENTARY VIEWPORT STAGE (Responsive to browser height calc(100vh - 140px)) */}
+          <div className="bg-[#0a0a0a] text-[#FAF8F5] border border-white/15 rounded-2xl shadow-[0_30px_70px_-15px_rgba(0,0,0,0.8)] relative overflow-hidden transition-all duration-700 w-full h-[calc(100vh-140px)] min-h-[600px] max-h-[820px] flex flex-col justify-between p-4 md:p-8 lg:p-10">
             
             {/* Full-Bleed Background Image with Smooth Fade & Atmospheric Overlay */}
             <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
@@ -1479,8 +1479,8 @@ export default function IndiaToday() {
             </div>
 
             {/* Top Meta Bar & Autoplay Story Controls */}
-            <div className="relative z-10 flex flex-wrap justify-between items-center gap-4 text-xs font-mono tracking-widest uppercase border-b border-white/15 pb-6">
-              <span className="bg-[#E8752A] text-white px-4 py-1.5 rounded-sm font-bold shadow-md">
+            <div className="relative z-10 flex flex-wrap justify-between items-center gap-4 text-xs font-mono tracking-widest uppercase border-b border-white/15 pb-3 md:pb-4">
+              <span className="bg-[#E8752A] text-white px-3.5 py-1 rounded-sm font-bold shadow-md">
                 STAGE 0{timelineIndex + 1} OF 05 · {activeTimelineObj.type}
               </span>
               
@@ -1488,7 +1488,7 @@ export default function IndiaToday() {
               <div className="flex items-center gap-4">
                 <button 
                   onClick={() => setIsPlayingTimeline(!isPlayingTimeline)}
-                  className="flex items-center gap-2 bg-white/10 border border-white/20 hover:bg-white/20 px-4 py-1.5 rounded-sm text-white font-mono text-xs font-semibold uppercase tracking-widest backdrop-blur-md transition-colors cursor-pointer outline-none"
+                  className="flex items-center gap-2 bg-white/10 border border-white/20 hover:bg-white/20 px-3.5 py-1 rounded-sm text-white font-mono text-xs font-semibold uppercase tracking-widest backdrop-blur-md transition-colors cursor-pointer outline-none"
                   aria-label={isPlayingTimeline ? "Pause timeline story playback" : "Play timeline story playback"}
                 >
                   <span>{isPlayingTimeline ? "PAUSE STORY" : "PLAY STORY"}</span>
@@ -1497,8 +1497,8 @@ export default function IndiaToday() {
               </div>
             </div>
 
-            {/* LARGE LIQUID-GLASS STORY PANEL (75–85% Viewport Width, Real Frosted Glass Blur) */}
-            <div className="relative z-10 my-auto py-8 md:py-12 w-full flex justify-center">
+            {/* LARGE LIQUID-GLASS STORY PANEL (Vertically Compact & Responsive to Viewport) */}
+            <div className="relative z-10 my-auto py-2 md:py-4 w-full flex justify-center">
               <AnimatePresence mode="wait">
                 <motion.div 
                   key={activeTimelineObj.date}
@@ -1515,31 +1515,31 @@ export default function IndiaToday() {
                     boxShadow: "0 20px 50px -20px rgba(0, 0, 0, 0.45)",
                     borderRadius: "16px"
                   }}
-                  className="w-full max-w-[1200px] lg:max-w-[1350px] min-h-[420px] md:min-h-[480px] p-8 md:p-14 lg:p-16 space-y-6 flex flex-col justify-between"
+                  className="w-full max-w-[1200px] lg:max-w-[1300px] min-h-[300px] md:min-h-[380px] p-5 md:p-8 lg:p-10 space-y-3 md:space-y-4 flex flex-col justify-between"
                 >
-                  <div className="space-y-4">
+                  <div className="space-y-2">
                     <span className="text-xs md:text-sm font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
                       {activeTimelineObj.date}
                     </span>
-                    <h3 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white font-semibold uppercase leading-tight tracking-wide">
+                    <h3 className="font-serif text-2xl md:text-4xl lg:text-5xl text-white font-semibold uppercase leading-tight tracking-wide">
                       {activeTimelineObj.title}
                     </h3>
-                    <p className="text-base md:text-xl lg:text-2xl font-sans font-light text-white/95 leading-relaxed pt-2">
+                    <p className="text-sm md:text-base lg:text-xl font-sans font-light text-white/95 leading-relaxed pt-1">
                       {activeTimelineObj.desc}
                     </p>
                   </div>
 
-                  <div className="space-y-4 pt-4 border-t border-white/15">
-                    <div className="space-y-1">
+                  <div className="space-y-3 pt-3 border-t border-white/15">
+                    <div className="space-y-0.5">
                       <span className="text-xs font-mono text-[#16734A] uppercase tracking-wider block font-bold">
                         WHY IT MATTERED
                       </span>
-                      <p className="text-sm md:text-base font-sans font-light text-white/85 leading-relaxed">
+                      <p className="text-xs md:text-sm font-sans font-light text-white/85 leading-relaxed">
                         {activeTimelineObj.why}
                       </p>
                     </div>
 
-                    <div className="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between text-xs font-mono text-white/60 uppercase tracking-widest gap-3">
+                    <div className="pt-2 border-t border-white/10 flex flex-wrap items-center justify-between text-xs font-mono text-white/60 uppercase tracking-widest gap-3">
                       <span>Source: {activeTimelineObj.source}</span>
                       {activeTimelineObj.sourceUrl && (
                         <a 
@@ -1558,10 +1558,10 @@ export default function IndiaToday() {
             </div>
 
             {/* FIVE-STAGE GLASS TIMELINE & PROGRESS LINE */}
-            <div className="relative z-10 pt-6 border-t border-white/15 space-y-4">
+            <div className="relative z-10 pt-3 md:pt-4 border-t border-white/15 space-y-2.5">
               
               {/* Cards Navigation */}
-              <div className="flex items-center justify-between overflow-x-auto gap-3 py-2 no-scrollbar">
+              <div className="flex items-center justify-between overflow-x-auto gap-3 py-1 no-scrollbar">
                 {cjpCaseTimeline.map((item, idx) => {
                   const isActive = timelineIndex === idx;
                   return (
@@ -1571,7 +1571,7 @@ export default function IndiaToday() {
                         setTimelineIndex(idx);
                         setIsPlayingTimeline(false);
                       }}
-                      className={`flex-1 min-w-[170px] md:min-w-[210px] p-4 rounded-xl border text-left transition-all duration-300 backdrop-blur-md cursor-pointer outline-none ${
+                      className={`flex-1 min-w-[150px] md:min-w-[180px] p-2.5 md:p-3.5 rounded-xl border text-left transition-all duration-300 backdrop-blur-md cursor-pointer outline-none ${
                         isActive 
                           ? "bg-[#FAF8F5] text-[#171717] border-[#E8752A] shadow-2xl scale-102 ring-2 ring-[#E8752A]/50" 
                           : "bg-white/5 border-white/15 text-white/70 hover:bg-white/10 hover:border-white/30"
@@ -1581,7 +1581,7 @@ export default function IndiaToday() {
                       <span className={`text-xs font-mono font-bold block ${isActive ? "text-[#E8752A]" : "text-[#E8752A]/80"}`}>
                         0{idx + 1} · {item.date}
                       </span>
-                      <span className="text-xs md:text-sm font-serif font-semibold truncate block pt-1">
+                      <span className="text-xs md:text-sm font-serif font-semibold truncate block pt-0.5">
                         {item.title}
                       </span>
                     </button>
@@ -1590,7 +1590,7 @@ export default function IndiaToday() {
               </div>
 
               {/* Timeline Progress Line (Dot-Line Matrix) */}
-              <div className="relative w-full flex items-center justify-between px-4 pt-2">
+              <div className="relative w-full flex items-center justify-between px-4 pt-1">
                 <div className="absolute left-6 right-6 h-[2px] bg-white/20 z-0" />
                 <div 
                   className="absolute left-6 h-[2px] bg-[#E8752A] z-0 transition-all duration-700 ease-out" 
