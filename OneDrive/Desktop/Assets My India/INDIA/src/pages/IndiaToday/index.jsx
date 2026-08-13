@@ -674,6 +674,65 @@ export default function IndiaToday() {
     handleManualYoungSlide((youngSlideIndex - 1 + youngCountrySlides.length) % youngCountrySlides.length);
   };
 
+  // Section 07 Media Wall State & Autoplay (7 seconds)
+  const [mediaSlideIndex, setMediaSlideIndex] = useState(0);
+  const [isMediaAutoplayPaused, setIsMediaAutoplayPaused] = useState(false);
+
+  const mediaWallSlides = [
+    {
+      type: "NEWSPAPER",
+      caption: "ONE EVENT.",
+      tagline: "PRINT & EDITORIAL HEADLINES",
+      img: "/images/documentary/doc-headline.png",
+      alt: "Newspaper headlines and editorial printing frames"
+    },
+    {
+      type: "TELEVISION",
+      caption: "ANOTHER FRAME.",
+      tagline: "BROADCAST NEWS & TELEVISION TICKERS",
+      img: "/images/stories/stories-intro-2.jpg",
+      alt: "Broadcast television news coverage and ticker framing"
+    },
+    {
+      type: "PHONE",
+      caption: "ANOTHER FEED.",
+      tagline: "DIGITAL FEEDS & ALGORITHMIC NETWORKS",
+      img: "/images/documentary/doc-smartphone.jpg",
+      alt: "Smartphone mobile feeds and digital news streams"
+    },
+    {
+      type: "MANY STORIES",
+      caption: "MULTIPLE INFORMATION ENVIRONMENTS",
+      tagline: "OVERLAPPING MEDIA ECOSYSTEM",
+      img: "/images/stories/stories-intro-4.jpg",
+      alt: "Overlapping media fragments and competing perspectives"
+    }
+  ];
+
+  useEffect(() => {
+    let interval;
+    if (!isMediaAutoplayPaused) {
+      interval = setInterval(() => {
+        setMediaSlideIndex((prev) => (prev + 1) % mediaWallSlides.length);
+      }, 7000);
+    }
+    return () => clearInterval(interval);
+  }, [isMediaAutoplayPaused, mediaWallSlides.length]);
+
+  const handleManualMediaSlide = (newIndex) => {
+    setIsMediaAutoplayPaused(true);
+    setMediaSlideIndex(newIndex);
+    setTimeout(() => setIsMediaAutoplayPaused(false), 10000);
+  };
+
+  const handleNextMediaSlide = () => {
+    handleManualMediaSlide((mediaSlideIndex + 1) % mediaWallSlides.length);
+  };
+
+  const handlePrevMediaSlide = () => {
+    handleManualMediaSlide((mediaSlideIndex - 1 + mediaWallSlides.length) % mediaWallSlides.length);
+  };
+
   useEffect(() => {
     let timer;
     if (isPlayingTimeline) {
@@ -1357,54 +1416,98 @@ export default function IndiaToday() {
           </div>
         </section>
 
-        {/* 07 — MEDIA POLARISATION (Floating News Headline Ecosystem) */}
-        <section id="media-polarisation" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="space-y-16">
-            <div className="space-y-3 text-center">
-              <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
+        {/* 07 — WHO TELLS THE STORY? */}
+        <section id="media-polarisation" className="w-full py-24 md:py-32 px-6 md:px-12 bg-[#FAF8F5] border-t border-b border-[#171717]/10">
+          <div className="max-w-5xl mx-auto space-y-12">
+            
+            {/* OPENING */}
+            <div className="max-w-3xl mx-auto text-center space-y-4">
+              <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.35em] uppercase block">
                 07 — WHO TELLS THE STORY?
               </span>
-              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+              <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717] font-semibold">
                 WHO TELLS THE STORY?
               </h2>
-              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light max-w-2xl mx-auto leading-relaxed">
-                People increasingly encounter the same country through very different information environments. We map the fragmented news and television ecosystem.
+              <p className="font-serif text-lg md:text-2xl text-[#16734A] italic font-normal leading-relaxed">
+                "The same event can arrive at different people as very different stories."
               </p>
             </div>
 
-            {/* Overlapping box elements */}
-            <div className="bg-[#FAF8F5] border border-[#171717]/10 p-8 rounded-sm max-w-4xl mx-auto space-y-8 relative overflow-hidden">
-              <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-center">
-                CONFLATING PUBLIC NEWS HEADLINES · CASE EXAMPLE
-              </span>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-4 border-t border-[#171717]/5">
-                
-                <div className="p-5 bg-white border-l-2 border-[#16734A] space-y-2 shadow-xs">
-                  <span className="text-[8px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">OUTLET A BROADCAST</span>
-                  <h4 className="font-serif text-sm font-semibold text-[#171717] leading-snug">
-                    "EXAM SAFETY SECURED: REGULATORY BILL PENALIZES INTERFERENCE METICULOUSLY"
-                  </h4>
-                  <p className="text-[10px] font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    Emphasizes official updates regarding security bills, technological audits, and state safeguard measures.
-                  </p>
-                </div>
-
-                <div className="p-5 bg-white border-l-2 border-[#E8752A] space-y-2 shadow-xs">
-                  <span className="text-[8px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">OUTLET B BROADCAST</span>
-                  <h4 className="font-serif text-sm font-semibold text-[#171717] leading-snug">
-                    "ASPIRANTS REGISTER ALLEGATIONS: STRUCTURAL DELAYS REMAIN IN CENTRAL SCHEDULING"
-                  </h4>
-                  <p className="text-[10px] font-sans font-light text-[#6B6B6B] leading-relaxed">
-                    Focuses on candidate narratives, prolonged waiting queues, and civil calls for administrative decentralisation.
-                  </p>
-                </div>
-
+            {/* MEDIA WALL SLIDER */}
+            <div className="space-y-6 max-w-4xl mx-auto">
+              <div className="relative overflow-hidden rounded-sm aspect-[16/9] md:aspect-[21/9] bg-[#171717] shadow-[0_20px_50px_rgba(0,0,0,0.14)]">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={mediaSlideIndex}
+                    initial={{ opacity: 0, scale: 0.99 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.99 }}
+                    transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+                    className="w-full h-full relative"
+                  >
+                    <img 
+                      src={mediaWallSlides[mediaSlideIndex].img} 
+                      alt={mediaWallSlides[mediaSlideIndex].alt} 
+                      className="w-full h-full object-cover opacity-90" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6 md:p-8 text-left">
+                      <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold mb-1">
+                        MEDIA FRAME {String(mediaSlideIndex + 1).padStart(2, '0')} · {mediaWallSlides[mediaSlideIndex].tagline}
+                      </span>
+                      <h4 className="font-serif text-xl md:text-3xl text-[#FAF8F5] font-normal uppercase tracking-wide">
+                        {mediaWallSlides[mediaSlideIndex].caption}
+                      </h4>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
               </div>
 
-              <div className="text-center pt-6 border-t border-[#171717]/5 text-xs font-serif text-[#171717] italic">
-                "Partisan media echo chambers and digital feed filters amplify engagement over consensus, segmenting public debate."
+              {/* MINIMAL CONTROLS & INDICATOR DOTS */}
+              <div className="flex flex-wrap items-center justify-between gap-4 px-2">
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={handlePrevMediaSlide}
+                    aria-label="Previous Slide"
+                    className="px-3.5 py-1.5 text-xs font-mono text-[#171717] hover:text-[#E8752A] bg-white border border-[#171717]/15 rounded-sm transition-all cursor-pointer font-bold shadow-xs"
+                  >
+                    [ ← ]
+                  </button>
+                  <span className="text-xs font-mono tracking-widest text-[#E8752A] font-bold">
+                    {String(mediaSlideIndex + 1).padStart(2, '0')} / {String(mediaWallSlides.length).padStart(2, '0')}
+                  </span>
+                  <button
+                    onClick={handleNextMediaSlide}
+                    aria-label="Next Slide"
+                    className="px-3.5 py-1.5 text-xs font-mono text-[#171717] hover:text-[#E8752A] bg-white border border-[#171717]/15 rounded-sm transition-all cursor-pointer font-bold shadow-xs"
+                  >
+                    [ → ]
+                  </button>
+                </div>
+
+                {/* INDICATOR DOTS */}
+                <div className="flex items-center gap-2">
+                  {mediaWallSlides.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => handleManualMediaSlide(idx)}
+                      aria-label={`Go to slide ${idx + 1}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                        idx === mediaSlideIndex ? "w-6 bg-[#E8752A]" : "w-1.5 bg-[#171717]/20 hover:bg-[#171717]/40"
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
+            </div>
+
+            {/* FINAL CONCISE STATEMENT */}
+            <div className="pt-8 text-center max-w-3xl mx-auto space-y-2">
+              <h3 className="font-serif text-xl md:text-3xl text-[#171717] uppercase tracking-wider font-semibold leading-tight">
+                "WE CAN LIVE IN THE SAME COUNTRY
+              </h3>
+              <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-normal">
+                AND SEE IT THROUGH VERY DIFFERENT STORIES."
+              </p>
             </div>
 
           </div>
