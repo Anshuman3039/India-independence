@@ -2235,72 +2235,310 @@ export default function IndiaToday() {
 
         </section>
 
-        {/* 11 — LIVING TOGETHER ( Plural India ) */}
-        <section id="living-together" className="w-full py-28 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="space-y-16">
-            
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              
-              <div className="lg:col-span-5 space-y-6">
-                <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.25em] uppercase block">
-                  12 — LIVING TOGETHER
-                </span>
-                <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
-                  LIVING TOGETHER
-                </h2>
-                <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                  The republic is experienced in the trains, markets, workspaces, and neighborhoods shared by millions of people daily. We explore this ability to coexist despite regional and cultural differences.
-                </p>
-                <div className="h-[1px] w-12 bg-[#16734A]"></div>
-                <span className="text-xs font-serif text-[#16734A] italic block">
-                  "Everyday interactions in shared public spaces form the structural fabric of our democracy."
-                </span>
-              </div>
+        {/* Quiet Opening Transition Section to 12 — LIVING TOGETHER */}
+        <section className="w-full py-24 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
+          <span className="text-[10px] font-mono font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
+            PLURAL REPUBLIC
+          </span>
+          <div className="max-w-3xl mx-auto space-y-3 text-lg md:text-2xl font-serif text-[#171717]">
+            <p className="italic font-semibold text-[#171717]">"LIVING TOGETHER"</p>
+            <p className="italic font-light text-[#6B6B6B] text-base md:text-xl">"India is not one story."</p>
+            <p className="italic font-light text-[#171717]/90 text-sm md:text-lg max-w-2xl mx-auto">
+              Different languages. Different faiths. Different regions. Different memories. Different ways of imagining the future.
+            </p>
+            <p className="italic font-semibold text-[#16734A] text-base md:text-xl">"And yet, somehow, a shared public life continues."</p>
+          </div>
+          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
+        </section>
 
-              {/* Spliced Colour photo of General Train coach */}
-              <div className="lg:col-span-7 bg-white border border-[#171717]/10 p-4 shadow-md rounded-sm relative overflow-hidden group">
-                <div className="aspect-[16/10] relative border border-[#171717]/5 overflow-hidden">
+        {/* 12 — LIVING TOGETHER */}
+        <section id="living-together" className="w-full py-28 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+          
+          {/* Section Framing Header */}
+          <div className="text-center space-y-4 max-w-4xl mx-auto">
+            <span className="text-[11px] font-mono text-[#16734A] uppercase tracking-[0.35em] block font-bold">
+              12 — LIVING TOGETHER
+            </span>
+            <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717]">
+              LIVING TOGETHER
+            </h2>
+            <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-semibold">
+              "How do people who are different from one another continue to belong to the same country?"
+            </p>
+            <p className="text-sm md:text-base font-sans font-light text-[#6B6B6B] leading-relaxed max-w-3xl mx-auto">
+              Coexistence in a vast republic is not the absence of difference, nor a superficial claim of seamless harmony. It is the active, daily negotiation of living alongside one another across lines of faith, region, language, and memory.
+            </p>
+          </div>
+
+          {/* FIVE CONNECTED EDITORIAL CHAPTERS */}
+          <div className="space-y-24">
+
+            {/* CHAPTER 01 — MANY IN ONE */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-6">
+                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
+                  CHAPTER 01 · PLURALITY
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  MANY IN ONE
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "Unity in India has rarely meant becoming the same."
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Dozens of major languages, thousands of dialects, diverse culinary traditions, regional identities, and distinct faiths exist side-by-side. Indian citizenship has historically functioned not by enforcing cultural uniformity, but by creating constitutional space for plural identity.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">EDITORIAL QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "Can belonging exist without sameness?"
+                  </p>
+                </div>
+              </div>
+              
+              <div className="lg:col-span-6 space-y-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
                   <img 
                     src="/images/stories/story1-train.jpg" 
-                    alt="Full-colour view inside a general class compartment of the Indian Railways with passengers" 
+                    alt="Multilingual passengers sharing space inside a general compartment of Indian Railways" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
                   />
-                  <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
-                    COEXISTENCE GRID: GENERAL RAILWAY COACH
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: PLURALITY IN PUBLIC SPACE
                   </div>
-                  <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
                 </div>
-                <div className="flex justify-between items-center mt-3 text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest">
-                  <span>Subject: The Shared Railway Passenger Coach</span>
-                  <span>Documentary Log</span>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+                  Source: National Transport Archives & Census Records
+                </span>
+              </div>
+            </motion.div>
+
+            {/* CHAPTER 02 — THE FRICTION OF LIVING TOGETHER */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/stories/stories-intro-2.jpg" 
+                    alt="Citizens and student groups participating in animated debate at a public forum" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: PUBLIC DISAGREEMENT & DEBATE
+                  </div>
                 </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
+                  Source: Parliamentary & Public Seminar Registers
+                </span>
               </div>
 
-            </div>
+              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
+                <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold block">
+                  CHAPTER 02 · REALITY
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  DIFFERENCE CAN HURT
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "Pluralism is not the absence of conflict. It is the possibility of living through conflict without allowing difference to become dehumanization."
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Deep diversity inevitably brings friction: social tensions, regional competition, language debates, caste prejudice, and political polarization. A mature democracy does not pretend these frictions do not exist, but relies on legal institutions and constitutional norms to keep conflict non-violent.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#E8752A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#E8752A] uppercase font-bold block">EDITORIAL QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "How does a society navigate deep disagreement without breaking democratic bounds?"
+                  </p>
+                </div>
+              </div>
+            </motion.div>
 
-            {/* Grid of regional pluralistic slates */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-[#171717]/5">
-              <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
-                <span className="text-[9px] font-sans font-bold text-[#16734A] block mb-1">LANGUAGES</span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Dozens of regional tongues and dialects interacting within metropolitan logistics networks daily.
+            {/* CHAPTER 03 — THE SHARED SPACE */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-6">
+                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
+                  CHAPTER 03 · COEXISTENCE SPACES
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  THE PLACES WE SHARE
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "The republic is experienced in shared spaces."
                 </p>
-              </div>
-              <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
-                <span className="text-[9px] font-sans font-bold text-[#16734A] block mb-1">NEIGHBORHOODS</span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Mixed quarters balancing shared local grids, water pipes, and public lanes.
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Every day, millions of people interact in trains, buses, vegetable markets, university libraries, hospital corridors, courtrooms, and municipal parks. In these shared spaces, economic necessity and daily routine force people of opposing backgrounds to cooperate.
                 </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">EDITORIAL QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "Where do different lives intersect to build practical coexistence?"
+                  </p>
+                </div>
               </div>
-              <div className="p-5 bg-white border border-[#171717]/10 rounded-sm">
-                <span className="text-[9px] font-sans font-bold text-[#E8752A] block mb-1">SHARED SPACES</span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Markets, platforms, and workspace blocks where commercial logic overrides socio-ideological polarization.
+              
+              <div className="lg:col-span-6 space-y-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/stories/story1-station.jpg" 
+                    alt="Commuters walking through a bustling shared railway platform" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: SHARED CIVIC INFRASTRUCTURE
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+                  Source: Urban Transit & Municipal Log
+                </span>
+              </div>
+            </motion.div>
+
+            {/* CHAPTER 04 — WHEN THE FABRIC IS TESTED */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-2 lg:order-1 order-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/stories/story3-forest.jpg" 
+                    alt="Quiet observer view of forest and community boundary lands" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: FRAGILITY & TRUST OBSERVATION
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block">
+                  Source: Civil Society & Human Rights Archives
+                </span>
+              </div>
+
+              <div className="lg:col-span-6 space-y-6 lg:order-2 order-1">
+                <span className="text-xs font-mono text-[#171717] uppercase tracking-[0.25em] font-bold block">
+                  CHAPTER 04 · STRAIN
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  THE FABRIC IS NOT UNBREAKABLE
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "What happens when fellow citizens stop seeing one another as fellow citizens?"
                 </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Moments of communal tension, hate speech, discrimination, and targeted social exclusion expose the fragility of civic trust. When rhetoric turns divisive, the social fabric requires institutional courage and civic intervention to prevent lasting fractures.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#171717] space-y-1">
+                  <span className="text-[10px] font-mono text-[#171717] uppercase font-bold block">EDITORIAL QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "What protects democratic trust when social cohesion comes under strain?"
+                  </p>
+                </div>
               </div>
-            </div>
+            </motion.div>
+
+            {/* CHAPTER 05 — THE ORDINARY WORK OF COEXISTENCE */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white border border-[#171717]/10 p-8 md:p-14 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
+            >
+              <div className="lg:col-span-6 space-y-6">
+                <span className="text-xs font-mono text-[#16734A] uppercase tracking-[0.25em] font-bold block">
+                  CHAPTER 05 · SOLIDARITY
+                </span>
+                <h3 className="font-serif text-3xl md:text-5xl text-[#171717] font-semibold uppercase leading-tight">
+                  COEXISTENCE IS BUILT EVERY DAY
+                </h3>
+                <p className="text-base md:text-xl font-serif italic text-[#171717] leading-relaxed">
+                  "The social fabric is not maintained only by laws. It is also maintained by everyday choices."
+                </p>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                  Neighbours helping during crises, volunteers running community kitchens, teachers bringing children from varied backgrounds together, and workers organizing across lines of caste and creed—these quiet, unheralded daily actions sustain the republic.
+                </p>
+                <div className="p-5 bg-[#FAF8F5] border-l-2 border-[#16734A] space-y-1">
+                  <span className="text-[10px] font-mono text-[#16734A] uppercase font-bold block">EDITORIAL QUESTION</span>
+                  <p className="text-sm md:text-base font-serif text-[#171717] italic">
+                    "How do ordinary citizens rebuild trust in daily life?"
+                  </p>
+                </div>
+              </div>
+              
+              <div className="lg:col-span-6 space-y-2">
+                <div className="aspect-[16/10] overflow-hidden rounded-sm relative border border-[#171717]/10 shadow-sm group">
+                  <img 
+                    src="/images/people/rural-farmers.jpg" 
+                    alt="Ordinary citizens and workers standing together in a community gathering" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                  <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
+                    DOCUMENTARY LOG: EVERYDAY CIVIC SOLIDARITY
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-[#6B6B6B] uppercase tracking-widest block text-right">
+                  Source: Rural Development & Community Archives
+                </span>
+              </div>
+            </motion.div>
 
           </div>
+
+          {/* QUIET CLOSING STATEMENT & NARRATIVE TRANSITION TO SECTION 13 (#building) */}
+          <div className="bg-[#171717] text-[#FAF8F5] p-10 md:p-16 rounded-sm text-center space-y-6 shadow-md max-w-5xl mx-auto my-16">
+            <span className="text-xs font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
+              THE DAILY TASK
+            </span>
+            <div className="space-y-3">
+              <h3 className="font-serif text-2xl md:text-4xl font-normal uppercase text-[#FAF8F5]">
+                "WE DO NOT HAVE TO AGREE ON EVERYTHING."
+              </h3>
+              <p className="font-serif text-lg md:text-2xl text-[#FAF8F5]/90 italic max-w-3xl mx-auto">
+                "BUT WE HAVE TO FIND A WAY TO LIVE TOGETHER."
+              </p>
+              <p className="font-sans text-xs md:text-sm font-light text-white/70 tracking-wide uppercase pt-2">
+                That is not a finished achievement. It is a daily task.
+              </p>
+            </div>
+            
+            <div className="h-[1px] w-16 bg-white/20 mx-auto"></div>
+
+            <div className="space-y-4 pt-2">
+              <span className="text-xs font-mono text-[#16734A] uppercase tracking-widest block font-bold">
+                THE INDIA WE ARE BUILDING
+              </span>
+              <p className="text-xs md:text-sm font-sans font-light text-white/80 max-w-2xl mx-auto leading-relaxed">
+                "The question is no longer only what India has inherited. It is what we choose to build from here."
+              </p>
+              <div className="pt-2">
+                <span className="text-xs font-mono text-[#16734A] bg-[#FAF8F5] px-4 py-2 rounded-sm uppercase tracking-widest font-bold">
+                  CONTINUE → 13 — THE INDIA WE ARE BUILDING
+                </span>
+              </div>
+            </div>
+          </div>
+
         </section>
 
         {/* 12 — THE INDIA WE ARE BUILDING */}
