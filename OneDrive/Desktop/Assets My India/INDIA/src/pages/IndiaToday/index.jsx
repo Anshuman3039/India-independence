@@ -302,12 +302,6 @@ export default function IndiaToday() {
     <PageTransition>
       <div className="w-full bg-[#F7F4EE] text-[#171717] min-h-screen relative font-sans">
         
-        {/* Dynamic Scroll Progress Bar */}
-        <div 
-          className="fixed top-0 left-0 h-1 bg-[#E8752A] z-50 transition-all duration-100 ease-out" 
-          style={{ width: `${scrollProgress * 100}%` }}
-        />
-
         {/* Minimal Floating Chapter Navigation Pill */}
         <div className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-[#171717]/95 text-[#FAF8F5] px-6 py-2.5 rounded-full shadow-xl flex items-center gap-6 z-40 text-[9px] font-sans tracking-widest uppercase backdrop-blur-sm max-w-[90vw] overflow-x-auto scrollbar-none">
           {chapters.map((ch) => {
@@ -354,7 +348,7 @@ export default function IndiaToday() {
             <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl text-[#FAF8F5] leading-none font-normal tracking-tight">
               THE INDIA<br/>WE LIVE IN
             </h1>
-            <h2 className="font-serif text-lg md:text-2xl lg:text-3xl text-[#16734A] font-medium leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] bg-[#171717]/75 backdrop-blur-xs px-3.5 py-1.5 rounded-sm border-l-2 border-[#16734A] inline-block shadow-sm">
+            <h2 className="font-serif text-lg md:text-2xl lg:text-3xl text-[#16734A] font-medium leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] bg-[#171717]/50 backdrop-blur-sm px-3.5 py-1.5 rounded-sm border border-white/10 border-l-2 border-l-[#16734A] inline-block shadow-xs">
               A country moving forward, carrying its contradictions with it.
             </h2>
             <div className="h-[1px] w-24 bg-[#E8752A]"></div>
