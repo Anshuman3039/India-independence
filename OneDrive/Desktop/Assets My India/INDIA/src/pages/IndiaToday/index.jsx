@@ -623,6 +623,57 @@ export default function IndiaToday() {
     handleManualBeyondSlide((beyondSlideIndex - 1 + beyondOneStoryItems.length) % beyondOneStoryItems.length);
   };
 
+  // Section 04 Slideshow State & Autoplay (7 seconds)
+  const [youngSlideIndex, setYoungSlideIndex] = useState(0);
+  const [isYoungAutoplayPaused, setIsYoungAutoplayPaused] = useState(false);
+
+  const youngCountrySlides = [
+    {
+      caption: "BUILDING THE FUTURE",
+      img: "/images/documentary/doc-lab.jpg",
+      alt: "Young Indian scientists and researchers in laboratory"
+    },
+    {
+      caption: "PREPARING FOR THE NEXT OPPORTUNITY",
+      img: "/images/documentary/doc-exam.jpg",
+      alt: "Students preparing for competitive examinations"
+    },
+    {
+      caption: "ENTERING THE WORLD OF WORK",
+      img: "/images/people/community-weaving.jpg",
+      alt: "Young workers in early career and informal workplaces"
+    },
+    {
+      caption: "LOOKING FOR A WAY FORWARD",
+      img: "/images/documentary/doc-smartphone.jpg",
+      alt: "Young people navigating daily life and digital tools"
+    }
+  ];
+
+  useEffect(() => {
+    let interval;
+    if (!isYoungAutoplayPaused) {
+      interval = setInterval(() => {
+        setYoungSlideIndex((prev) => (prev + 1) % youngCountrySlides.length);
+      }, 7000);
+    }
+    return () => clearInterval(interval);
+  }, [isYoungAutoplayPaused, youngCountrySlides.length]);
+
+  const handleManualYoungSlide = (newIndex) => {
+    setIsYoungAutoplayPaused(true);
+    setYoungSlideIndex(newIndex);
+    setTimeout(() => setIsYoungAutoplayPaused(false), 10000);
+  };
+
+  const handleNextYoungSlide = () => {
+    handleManualYoungSlide((youngSlideIndex + 1) % youngCountrySlides.length);
+  };
+
+  const handlePrevYoungSlide = () => {
+    handleManualYoungSlide((youngSlideIndex - 1 + youngCountrySlides.length) % youngCountrySlides.length);
+  };
+
   useEffect(() => {
     let timer;
     if (isPlayingTimeline) {
@@ -1047,99 +1098,94 @@ export default function IndiaToday() {
           </p>
         </section>
 
-        {/* 04 — A YOUNG COUNTRY (5 Story Editorial Sequence) */}
-        <section id="young-country" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5">
-          <div className="max-w-7xl mx-auto space-y-20">
+        {/* 04 — A YOUNG COUNTRY */}
+        <section id="young-country" className="w-full py-24 md:py-32 px-6 md:px-12 bg-[#FAF8F5] border-t border-b border-[#171717]/10">
+          <div className="max-w-5xl mx-auto space-y-12">
             
-            {/* Section Header */}
-            <div className="space-y-4 max-w-3xl">
-              <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.3em] uppercase block">
+            {/* SECTION LABEL, TITLE & SHORT QUOTE */}
+            <div className="max-w-3xl mx-auto text-center space-y-4">
+              <span className="text-[10px] font-mono font-bold text-[#16734A] tracking-[0.35em] uppercase block">
                 04 — A YOUNG COUNTRY
               </span>
-              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+              <h2 className="font-serif text-3xl md:text-6xl uppercase tracking-wider text-[#171717] font-semibold">
                 A YOUNG COUNTRY
               </h2>
-              <h3 className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-light">
+              <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-normal leading-relaxed">
                 "Millions are entering adulthood in a country changing faster than the world they grew up in."
-              </h3>
-              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                For some, the future is being built in laboratories, startups and new industries. For others, it is shaped by exams, migration, unstable work and the search for a first real opportunity.
+              </p>
+              <p className="text-xs md:text-sm font-mono text-[#6B6B6B] tracking-wider uppercase pt-2 max-w-2xl mx-auto">
+                "For some, the future is being built in new industries. For others, it begins with an exam, a job search, or the hope of a first opportunity."
               </p>
             </div>
 
-            {/* 5 Visual Story Sequence */}
-            <div className="space-y-16">
-              {youngCountryStories.map((story) => (
-                <div 
-                  key={story.id} 
-                  className="bg-[#F7F4EE] border border-[#171717]/10 p-6 md:p-10 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
-                >
-                  {/* Left Column: Editorial Copy */}
-                  <div className="lg:col-span-5 space-y-4">
-                    <div className="space-y-1">
-                      <span className="text-[9px] font-mono text-[#16734A] tracking-widest uppercase block font-bold">
-                        {story.chapter}
+            {/* CINEMATIC IMAGE SLIDER */}
+            <div className="space-y-6 max-w-4xl mx-auto">
+              <div className="relative overflow-hidden rounded-sm aspect-[16/9] md:aspect-[21/9] bg-[#171717] shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={youngSlideIndex}
+                    initial={{ opacity: 0, scale: 0.99 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.99 }}
+                    transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+                    className="w-full h-full relative"
+                  >
+                    <img 
+                      src={youngCountrySlides[youngSlideIndex].img} 
+                      alt={youngCountrySlides[youngSlideIndex].alt} 
+                      className="w-full h-full object-cover" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 md:p-8 text-left">
+                      <span className="text-[10px] font-mono text-[#FAF8F5] uppercase tracking-[0.25em] font-bold">
+                        DOCUMENTARY SLIDE {String(youngSlideIndex + 1).padStart(2, '0')}
                       </span>
-                      <h3 className="font-serif text-2xl md:text-3xl text-[#171717] font-semibold uppercase">
-                        {story.title}
-                      </h3>
-                      <h4 className="font-serif text-sm md:text-base text-[#E8752A] italic">
-                        "{story.subtitle}"
+                      <h4 className="font-serif text-lg md:text-2xl text-[#FAF8F5] font-normal uppercase tracking-wide">
+                        {youngCountrySlides[youngSlideIndex].caption}
                       </h4>
                     </div>
-                    <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
-                      {story.desc}
-                    </p>
-                    <div className="pt-2">
-                      <span className="text-[8px] font-mono text-[#171717] bg-white border border-[#171717]/15 px-3 py-1 rounded-sm uppercase tracking-widest font-semibold">
-                        {story.tag}
-                      </span>
-                    </div>
-                  </div>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
 
-                  {/* Right Column: Full-Color Photograph */}
-                  <div className="lg:col-span-7 aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative shadow-sm bg-[#171717]/5">
-                    <img 
-                      src={story.image} 
-                      alt={story.title}
-                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-102"
-                      loading="lazy"
-                    />
-                    <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
-                      {story.imageCaption}
-                    </div>
-                    <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
-                  </div>
+              {/* MINIMAL CONTROLS & INDICATOR DOTS */}
+              <div className="flex flex-wrap items-center justify-between gap-4 px-2">
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={handlePrevYoungSlide}
+                    aria-label="Previous Slide"
+                    className="px-3.5 py-1.5 text-xs font-mono text-[#171717] hover:text-[#E8752A] bg-white border border-[#171717]/15 rounded-sm transition-all cursor-pointer font-bold shadow-xs"
+                  >
+                    [ ← ]
+                  </button>
+                  <span className="text-xs font-mono tracking-widest text-[#16734A] font-bold">
+                    {String(youngSlideIndex + 1).padStart(2, '0')} / {String(youngCountrySlides.length).padStart(2, '0')}
+                  </span>
+                  <button
+                    onClick={handleNextYoungSlide}
+                    aria-label="Next Slide"
+                    className="px-3.5 py-1.5 text-xs font-mono text-[#171717] hover:text-[#E8752A] bg-white border border-[#171717]/15 rounded-sm transition-all cursor-pointer font-bold shadow-xs"
+                  >
+                    [ → ]
+                  </button>
                 </div>
-              ))}
-            </div>
 
-            {/* Final Reflection Block */}
-            <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-12 rounded-sm text-center space-y-4 shadow-md max-w-4xl mx-auto">
-              <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-[0.3em] block">
-                GENERATIONAL REFLECTION
-              </span>
-              <p className="font-serif text-xl md:text-3xl font-normal uppercase leading-relaxed text-[#FAF8F5]">
-                "What happens when a generation expects more from the future than the present can offer?"
-              </p>
+                {/* INDICATOR DOTS */}
+                <div className="flex items-center gap-2">
+                  {youngCountrySlides.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => handleManualYoungSlide(idx)}
+                      aria-label={`Go to slide ${idx + 1}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                        idx === youngSlideIndex ? "w-6 bg-[#16734A]" : "w-1.5 bg-[#171717]/20 hover:bg-[#171717]/40"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
 
           </div>
-        </section>
-
-        {/* Quiet Transition Section to Voice of a Generation */}
-        <section className="w-full py-20 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
-          <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
-            TRANSITION TO EXPRESSION
-          </span>
-          <div className="max-w-3xl mx-auto space-y-2 text-base md:text-xl font-serif text-[#171717]">
-            <p className="italic font-light">"Ambition can be patient.</p>
-            <p className="italic font-semibold text-[#E8752A]">But uncertainty has a limit."</p>
-          </div>
-          <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed pt-2">
-            When opportunities feel delayed, decisions feel unfair, or institutions stop listening, young people begin to make their voices heard.
-          </p>
-          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
         </section>
 
         {/* 05 — VOICE OF A GENERATION */}
