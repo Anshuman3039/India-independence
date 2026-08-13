@@ -354,7 +354,7 @@ export default function IndiaToday() {
             <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl text-[#FAF8F5] leading-none font-normal tracking-tight">
               THE INDIA<br/>WE LIVE IN
             </h1>
-            <h2 className="font-serif text-lg md:text-2xl lg:text-3xl text-[#16734A] leading-relaxed max-w-2xl font-light">
+            <h2 className="font-serif text-lg md:text-2xl lg:text-3xl text-[#16734A] font-medium leading-relaxed max-w-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] bg-[#171717]/75 backdrop-blur-xs px-3.5 py-1.5 rounded-sm border-l-2 border-[#16734A] inline-block shadow-sm">
               A country moving forward, carrying its contradictions with it.
             </h2>
             <div className="h-[1px] w-24 bg-[#E8752A]"></div>
