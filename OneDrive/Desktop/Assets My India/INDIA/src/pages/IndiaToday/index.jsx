@@ -278,6 +278,88 @@ const youthConcerns = [
   { label: "DEMOCRATIC PARTICIPATION", desc: "Safe channels for public expression and feedback." }
 ];
 
+const dissentImages = {
+  opening: "/images/stories/stories-intro-1.jpg",
+  formsOfDissent: "/images/stories/stories-intro-3.jpg",
+  publicAssembly: "/images/stories/stories-intro-2.jpg",
+  policeAndProtesters: "/images/stories/stories-intro-4.jpg",
+  transition: "/images/identity/republic-voices.jpg"
+};
+
+const formsOfDissent = [
+  { label: "QUESTION", desc: "Interrogating official statements, data, and policy decisions." },
+  { label: "PETITION", desc: "Formal administrative appeals and legal filings submitted to authorities." },
+  { label: "PROTEST", desc: "Physical gatherings, rallies, and placards in designated public spaces." },
+  { label: "STRIKE", desc: "Organized labor shutdowns or academic boycotts to highlight grievances." },
+  { label: "DEBATE", desc: "Public discussions, editorial journalism, and academic symposiums." },
+  { label: "JOURNALISM", desc: "Investigative reporting holding power accountable to facts." },
+  { label: "CIVIL DISOBEDIENCE", desc: "Non-violent symbolic non-cooperation with administrative directives." },
+  { label: "PUBLIC ASSEMBLY", desc: "Civic meetings in shared urban areas to demand representation." }
+];
+
+const grievanceExamples = [
+  { label: "EMPLOYMENT", desc: "Job creation guarantees and workforce security." },
+  { label: "FAIR RECRUITMENT", desc: "Systemic integrity in competitive examination hiring." },
+  { label: "EDUCATION", desc: "Affordable university tuition and campus infrastructure." },
+  { label: "LAND & LIVELIHOODS", desc: "Protection against displacement and agrarian price drops." },
+  { label: "ENVIRONMENT", desc: "Clean air standards, river conservation, and forest rights." },
+  { label: "SOCIAL JUSTICE", desc: "Equal protection under the law for marginalized communities." },
+  { label: "GOVERNMENT POLICY", desc: "Public consultation on legislative and regulatory bills." },
+  { label: "CIVIL RIGHTS", desc: "Freedom of expression, assembly, and personal liberty." }
+];
+
+const proportionalityFactors = [
+  { title: "PUBLIC SAFETY", desc: "Protecting citizens, commuters, and property from physical harm." },
+  { title: "RIGHT TO ASSEMBLY", desc: "Constitutional protection for citizens to gather peacefully without arms." },
+  { title: "LAW & ORDER", desc: "Maintaining traffic flow, emergency access, and public infrastructure." },
+  { title: "FREEDOM OF EXPRESSION", desc: "Safeguarding the right of citizens to express criticism of power." },
+  { title: "PROTESTERS' RIGHTS", desc: "Ensuring non-violent demonstrators face no arbitrary detention." },
+  { title: "RESPONSIBILITY OF AUTHORITIES", desc: "Exercising restraint, proportional force, and neutral facilitation." }
+];
+
+const dissentStories = [
+  {
+    id: "forms",
+    chapter: "01 — FORMS OF PARTICIPATION",
+    title: "WHAT IS DISSENT?",
+    subtitle: "Beyond elections: how citizens question power",
+    desc: "Democracy is not static; it is active. Citizens express disagreement through multiple legitimate avenues — asking questions, filing legal petitions, writing investigative reporting, organizing peaceful assemblies, and holding public debates.",
+    image: dissentImages.formsOfDissent,
+    imageCaption: "Civic Debate & Public Discussion",
+    tag: "DEMOCRATIC CHANNELS"
+  },
+  {
+    id: "grievances",
+    chapter: "02 — REASON FOR ASSEMBLY",
+    title: "WHY PEOPLE PROTEST",
+    subtitle: "Civic grievances, economic pressure and social justice",
+    desc: "Citizens enter public spaces when they feel formal administrative channels have failed to resolve pressing concerns — including job security, examination paper leaks, agrarian land rights, clean water access, or legislative policy shifts.",
+    image: dissentImages.opening,
+    imageCaption: "Documentary View of Peaceful Public Gathering",
+    tag: "CIVIC GRIEVANCES"
+  },
+  {
+    id: "right-order",
+    chapter: "03 — RIGHTS & RESPONSIBILITIES",
+    title: "THE RIGHT TO PROTEST & PUBLIC ORDER",
+    subtitle: "Constitutional assembly vs administrative regulation",
+    desc: "Article 19(1)(b) of the Constitution guarantees the right to assemble peacefully and without arms. Simultaneously, public authorities bear the responsibility of regulating traffic, preventing violence, and ensuring safety for non-participating citizens.",
+    image: dissentImages.publicAssembly,
+    imageCaption: "Student Placards & Peaceful Assembly",
+    tag: "CONSTITUTIONAL BALANCE"
+  },
+  {
+    id: "power",
+    chapter: "04 — WHEN PROTEST MEETS POWER",
+    title: "TENSION IN THE PUBLIC SQUARE",
+    subtitle: "Barricades, security arrangements and negotiation",
+    desc: "When demonstrators and state authorities occupy the same public space, tension naturally emerges. The quality of a democracy is reflected in whether authorities use dialogue and restraint, or rely on heavy restrictions and barricades.",
+    image: dissentImages.policeAndProtesters,
+    imageCaption: "Public Space Barricades & Security Deployments",
+    tag: "STATE & CITIZEN"
+  }
+];
+
 const youthProfiles = [
   {
     id: "tech-innovator",
@@ -1033,49 +1115,185 @@ export default function IndiaToday() {
           </p>
         </div>
 
-        {/* 06 — DEMOCRACY UNDER PRESSURE */}
-        <section id="democracy-pressure" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5">
+        {/* 06 — DEMOCRATIC DISSENT */}
+        <section id="democracy-pressure" className="w-full py-28 px-6 md:px-12 bg-white border-t border-b border-[#171717]/5 space-y-20">
+          
+          {/* Section Header */}
+          <div className="max-w-7xl mx-auto space-y-4 max-w-3xl">
+            <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.3em] uppercase block">
+              06 — DEMOCRATIC EXPRESSION
+            </span>
+            <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
+              DEMOCRATIC DISSENT
+            </h2>
+            <h3 className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-light">
+              "A democracy is tested not only by how it celebrates agreement, but by how it responds to disagreement."
+            </h3>
+            <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
+              Across India, people have taken to campuses, streets, courts, workplaces and public spaces to question decisions, demand accountability and make themselves heard.
+            </p>
+          </div>
+
           <div className="max-w-7xl mx-auto space-y-16">
             
-            <div className="max-w-3xl space-y-6">
-              <span className="text-[10px] font-sans font-bold text-[#16734A] tracking-[0.25em] uppercase block">
-                06 — THE INSTITUTIONS
-              </span>
-              <h2 className="font-serif text-3xl md:text-5xl uppercase tracking-wider text-[#171717]">
-                DEMOCRACY UNDER PRESSURE
-              </h2>
-              <h3 className="font-serif text-lg md:text-xl text-[#E8752A] italic leading-relaxed">
-                "When political disagreement becomes identity, what happens to democratic conversation?"
-              </h3>
-              <p className="text-[#6B6B6B] font-sans text-sm md:text-base font-light leading-relaxed">
-                The health of a democracy is tested by how its institutions balance disagreement, civic expression, and state authority. We ask questions rather than declare static political conclusions.
-              </p>
+            {/* Visual Opening Documentary Photograph */}
+            <div className="aspect-[21/9] overflow-hidden rounded-sm border border-[#171717]/10 relative shadow-sm bg-[#171717]/5">
+              <img 
+                src={dissentImages.opening} 
+                alt="Documentary photograph of a peaceful public gathering in India"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
+                PEOPLE GATHERING · PEOPLE SPEAKING · PEOPLE BEING HEARD
+              </div>
+              <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
             </div>
 
-            {/* Symmetrical split panel */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-4">
-              
-              <div className="p-6 bg-[#F7F4EE] border border-[#171717]/10 rounded-sm shadow-sm space-y-3">
-                <span className="text-[10px] font-sans font-bold text-[#16734A] uppercase tracking-wider block">
-                  DEMOCRATIC REPRESENTATION
+            {/* Typographic Editorial: WHAT IS DISSENT? */}
+            <div className="bg-[#F7F4EE] border border-[#171717]/10 p-8 md:p-10 rounded-sm space-y-8 shadow-sm">
+              <div className="space-y-1">
+                <span className="text-[10px] font-mono text-[#16734A] uppercase tracking-[0.25em] block font-bold">
+                  MULTIPLE AVENUES OF PARTICIPATION
                 </span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Supporters point to rising voter turnout, digital grievances registry channels, and deep regional legislative representation across federal assemblies.
+                <h3 className="font-serif text-xl md:text-3xl text-[#171717] font-semibold uppercase">
+                  WHAT IS DISSENT?
+                </h3>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] max-w-2xl leading-relaxed">
+                  Democratic participation extends far beyond voting once every five years. It manifests through distinct civic forms.
                 </p>
               </div>
 
-              <div className="p-6 bg-[#F7F4EE] border border-[#171717]/10 rounded-sm shadow-sm space-y-3">
-                <span className="text-[10px] font-sans font-bold text-[#E8752A] uppercase tracking-wider block">
-                  CIVIC SPACE QUESTIONS
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
+                {formsOfDissent.map((item) => (
+                  <div key={item.label} className="bg-white p-5 rounded-sm border border-[#171717]/10 space-y-2">
+                    <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-widest block font-bold">
+                      {item.label}
+                    </span>
+                    <p className="text-xs font-sans font-light text-[#171717] leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* 4 Visual Editorial Chapters */}
+            <div className="space-y-16">
+              {dissentStories.map((story) => (
+                <div 
+                  key={story.id} 
+                  className="bg-[#F7F4EE] border border-[#171717]/10 p-6 md:p-10 rounded-sm shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+                >
+                  {/* Left Column: Editorial Copy */}
+                  <div className="lg:col-span-5 space-y-4">
+                    <div className="space-y-1">
+                      <span className="text-[9px] font-mono text-[#16734A] tracking-widest uppercase block font-bold">
+                        {story.chapter}
+                      </span>
+                      <h3 className="font-serif text-2xl md:text-3xl text-[#171717] font-semibold uppercase">
+                        {story.title}
+                      </h3>
+                      <h4 className="font-serif text-sm md:text-base text-[#E8752A] italic">
+                        "{story.subtitle}"
+                      </h4>
+                    </div>
+                    <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed">
+                      {story.desc}
+                    </p>
+                    <div className="pt-2">
+                      <span className="text-[8px] font-mono text-[#171717] bg-white border border-[#171717]/15 px-3 py-1 rounded-sm uppercase tracking-widest font-semibold">
+                        {story.tag}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Right Column: Full-Color Photograph */}
+                  <div className="lg:col-span-7 aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative shadow-sm bg-[#171717]/5">
+                    <img 
+                      src={story.image} 
+                      alt={story.title}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-102"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-4 left-4 z-10 bg-[#171717] text-[#FAF8F5] px-2.5 py-0.5 text-[8px] font-mono tracking-widest uppercase">
+                      {story.imageCaption}
+                    </div>
+                    <div className="absolute inset-4 border border-dashed border-white/10 pointer-events-none"></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Why People Protest Grid */}
+            <div className="bg-white border border-[#171717]/10 p-8 md:p-10 rounded-sm space-y-8 shadow-sm">
+              <div className="space-y-1">
+                <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-[0.25em] block font-bold">
+                  CATALYSTS FOR DEMONSTRATION
                 </span>
-                <p className="text-xs font-sans font-light text-[#6B6B6B] leading-relaxed">
-                  Critics raise concerns over regulatory pressure on independent media outlets, political speech restrictions, and police deployments during capital protests.
+                <h3 className="font-serif text-xl md:text-3xl text-[#171717] font-semibold uppercase">
+                  WHY PEOPLE PROTEST
+                </h3>
+                <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] max-w-2xl leading-relaxed">
+                  Citizens gather in public spaces when they feel their core economic, social, or constitutional concerns require nationwide visibility.
                 </p>
               </div>
 
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
+                {grievanceExamples.map((item) => (
+                  <div key={item.label} className="bg-[#F7F4EE] p-5 rounded-sm border border-[#171717]/5 space-y-2">
+                    <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">
+                      {item.label}
+                    </span>
+                    <p className="text-xs font-sans font-light text-[#171717] leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Quiet Editorial Question: THE QUESTION OF PROPORTIONALITY */}
+            <div className="bg-[#171717] text-[#FAF8F5] p-8 md:p-12 rounded-sm text-center space-y-8 shadow-md max-w-5xl mx-auto">
+              <div className="space-y-3">
+                <span className="text-[9px] font-mono text-[#E8752A] uppercase tracking-[0.3em] block font-bold">
+                  THE QUESTION OF PROPORTIONALITY
+                </span>
+                <p className="font-serif text-xl md:text-3xl font-normal uppercase leading-relaxed text-[#FAF8F5] max-w-3xl mx-auto">
+                  "When does maintaining public order become an excessive restriction on dissent?"
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left pt-4">
+                {proportionalityFactors.map((f) => (
+                  <div key={f.title} className="bg-white/5 border border-white/10 p-5 rounded-sm space-y-2">
+                    <span className="text-[9px] font-mono text-[#16734A] uppercase tracking-widest block font-bold">
+                      {f.title}
+                    </span>
+                    <p className="text-xs font-sans font-light text-[#FAF8F5]/80 leading-relaxed">
+                      {f.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
 
           </div>
+        </section>
+
+        {/* Quiet Transition Section to CJP — A CASE STUDY */}
+        <section className="w-full py-20 bg-[#FAF8F5] border-t border-b border-[#171717]/10 px-6 md:px-12 text-center space-y-6">
+          <span className="text-[10px] font-sans font-bold text-[#E8752A] tracking-[0.3em] uppercase block">
+            TRANSITION TO SPECIFIC EVENT ANALYSIS
+          </span>
+          <div className="max-w-3xl mx-auto space-y-2 text-base md:text-xl font-serif text-[#171717]">
+            <p className="italic font-light">"These questions become more difficult — and more important — when democracy moves from principle to the street."</p>
+            <p className="italic font-semibold text-[#16734A]">"To understand dissent, sometimes we need to slow down and examine one story closely."</p>
+          </div>
+          <div className="h-[1px] w-16 bg-[#16734A] mx-auto pt-2"></div>
+          <p className="font-serif text-base md:text-xl text-[#E8752A] italic font-semibold pt-2">
+            "CJP — A CASE STUDY"
+          </p>
         </section>
 
         {/* 07 — MEDIA POLARISATION (Floating News Headline Ecosystem) */}
