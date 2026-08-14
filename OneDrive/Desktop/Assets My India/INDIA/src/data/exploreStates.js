@@ -1231,7 +1231,7 @@ export const exploreStates = [
     "capital": "Ranchi",
     "region": "East",
     "introduction": "A land of dense woodlands and mineral wealth, home to vibrant tribal communities and sacred Jain-Hindu mountain shrines. The Chotanagpur Plateau defines its landscape, covered in dry deciduous forests of sal and mahua. It is rich in mineral wealth, containing India's largest deposits of coal and iron.",
-    "image": "/images/nature/eco-forest.jpg",
+    "image": "/images/stories/jharkhand_hero.jpg",
     "imageCredit": "Chotanagpur Forest Survey",
     "geography": {
       "location": "Located in eastern India, bordered by Bihar, Odisha, West Bengal, Chhattisgarh, and UP.",
@@ -1324,28 +1324,28 @@ export const exploreStates = [
     ],
     "images": {
       "hero": {
-        "src": "/images/nature/eco-forest.jpg",
-        "alt": "Dense green sal forests and canopy typical of the Jharkhand wilderness",
+        "src": "/images/stories/jharkhand_hero.jpg",
+        "alt": "Dense Sal forest canopy reflected on serene lake waters in Chotanagpur Plateau, Jharkhand",
         "credit": "Chotanagpur Forest Survey",
         "source": "State Tourism Portal"
       },
       "geography": {
         "src": "/images/geography/jharkhand_geography.jpg",
-        "alt": "Geography landscape details for Jharkhand",
-        "credit": "Great Britain India Office / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Chota_Nagpur_Plateau-IGI.jpg"
+        "alt": "Multi-tier Dassam / Hundru Falls cascading over rocky plateau ledges in Jharkhand",
+        "credit": "Ranchi Plateau Geography Survey",
+        "source": "Geological Survey of India"
       },
       "culture": {
         "src": "/images/culture/jharkhand_culture.jpg",
-        "alt": "Traditional cultural details for Jharkhand",
-        "credit": "Shreyashprashu / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Sohrai_wall_painting_jharkhand_India.jpg"
+        "alt": "Seraikela Chhau and Paika tribal masked dancers performing in elaborate vibrant costumes, Jharkhand",
+        "credit": "Seraikela Chhau Cultural Archive",
+        "source": "State Cultural Department"
       },
       "food": {
         "src": "/images/food/jharkhand_food.jpg",
-        "alt": "Representative regional food and cuisine for Jharkhand",
-        "credit": "\u1c64\u1c67 \u1c62\u1c5f\u1c5b\u1c5f\u1c5e / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Local_market_in_Jharkhand_116.jpg"
+        "alt": "Traditional Jharkhand rice meal served with fried Dhuska, Pittha, dal, and spicy curry",
+        "credit": "Jharkhand Tribal Culinary Archive",
+        "source": "State Culinary Department"
       },
       "heritage": {
         "src": "/images/heritage/jharkhand_heritage.jpg",
@@ -1355,9 +1355,9 @@ export const exploreStates = [
       },
       "nature": {
         "src": "/images/nature/jharkhand_nature.jpg",
-        "alt": "Fauna, forests, and protected natural zones in Jharkhand",
-        "credit": "Dev0745 / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Betla_National_Park_forest_61125.jpg"
+        "alt": "Asian Elephant in Betla National Park and Palamau Tiger Reserve, Jharkhand",
+        "credit": "Betla National Park Wildlife Archive",
+        "source": "State Wildlife Protection Sanctuary Archive"
       }
     }
   },
