@@ -105,8 +105,8 @@ const promiseGapImages = {
   employmentGap: "/images/stories/story3-hands.jpg",
   urbanPromise: "/images/stories/mumbai-cityscape.jpg",
   urbanGap: "/images/stories/story1-inside.jpg",
-  migrationStation: "/images/stories/story1-station.jpg",
-  migrationTraveler: "/images/stories/story1-window.jpg"
+  migrationStation: "/images/stories/migration-station.jpg",
+  migrationTraveler: "/images/stories/migration-traveler.jpg"
 };
 
 const promiseGapStories = [
