@@ -247,7 +247,7 @@ const filmsList = [
     year: "2024",
     theme: "Memory, home & human connection",
     description: "Sometimes understanding where we come from begins with remembering the people and places we left behind.",
-    image: null,
+    image: "/images/culture/movie-meiyazhagan.jpg",
     bgStyle: "from-[#27AE60] to-[#1E8449]",
     textColor: "text-[#F7F4EE]",
     borderColor: "border-[#F7F4EE]/20",
