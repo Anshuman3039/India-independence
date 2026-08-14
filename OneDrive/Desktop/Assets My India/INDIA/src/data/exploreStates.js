@@ -1602,10 +1602,10 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "/images/nature/geo-ghats.jpg",
-        "alt": "Mist-covered green hills and tea gardens of the Western Ghats in Kerala",
-        "credit": "Western Ghats Survey",
-        "source": "Geological Survey"
+        "src": "/images/geography/kerala_geography.jpg",
+        "alt": "Anamudi and Chembra mountain peaks rising over high-altitude shola grasslands and Western Ghats ridges in Kerala",
+        "credit": "Western Ghats & Anamudi Mountain Geography Survey",
+        "source": "Geological Survey of India"
       },
       "culture": {
         "src": "/images/culture/dance-kathakali.jpg",
