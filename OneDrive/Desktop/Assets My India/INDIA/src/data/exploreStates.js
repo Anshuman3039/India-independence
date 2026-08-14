@@ -649,10 +649,10 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "/images/nature/eco-forest.jpg",
-        "alt": "Dense green deciduous forest canopy typical of Chhattisgarh",
-        "credit": "Chhattisgarh Forest Dept",
-        "source": "Geological Survey"
+        "src": "/images/geography/chhattisgarh_geography.jpg",
+        "alt": "Chitrakote Waterfalls, the wide horseshoe waterfall on Indravati River in Bastar, Chhattisgarh",
+        "credit": "Chitrakote Waterfalls Geography Survey",
+        "source": "Geological Survey of India"
       },
       "culture": {
         "src": "/images/culture/craft-dhokra.jpg",
@@ -662,9 +662,9 @@ export const exploreStates = [
       },
       "food": {
         "src": "/images/food/chhattisgarh_food.jpg",
-        "alt": "Representative regional food and cuisine for Chhattisgarh",
-        "credit": "Shweta1389 / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Butterfly_rolls_-_by_Shweta_Kushwaha_-_Chhattisgarh_-_22.jpg"
+        "alt": "Traditional Chhattisgarhi Chila (savory rice flour & chickpea pancake) cooked with herbs and spices",
+        "credit": "Chhattisgarhi Culinary Heritage Archive",
+        "source": "State Culinary Department"
       },
       "heritage": {
         "src": "/images/heritage/chhattisgarh_heritage.jpg",
@@ -674,9 +674,9 @@ export const exploreStates = [
       },
       "nature": {
         "src": "/images/nature/chhattisgarh_nature.jpg",
-        "alt": "Fauna, forests, and protected natural zones in Chhattisgarh",
-        "credit": "Harminder singh saini / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Kanger_valley_National_park_BABY_monkeys.jpg"
+        "alt": "Bastar Hill Myna (State bird of Chhattisgarh) perched on red Palash flower branch in Kanger Valley National Park",
+        "credit": "Kanger Valley Sanctuary Wildlife Archive",
+        "source": "State Wildlife Protection Sanctuary Archive"
       }
     }
   },
