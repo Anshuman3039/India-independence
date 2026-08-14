@@ -2082,22 +2082,22 @@ export default function IndiaToday() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
                 <img 
-                  src="/images/nature/manipur_nature.jpg" 
-                  alt="Affected communities and valley landscape in Manipur" 
+                  src="/images/manipur/manipur-slide-1.jpg" 
+                  alt="Nighttime street conflict and emergency response in Manipur" 
                   className="w-full h-full object-cover" 
                 />
                 <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                  DOCUMENTARY LOG: MANIPUR LANDSCAPE & COMMUNITIES
+                  DOCUMENTARY LOG: MANIPUR CONFLICT & EMERGENCY RESPONSE
                 </div>
               </div>
               <div className="aspect-[16/10] overflow-hidden rounded-sm border border-[#171717]/10 relative">
                 <img 
-                  src="/images/nature/geo-northeast.jpg" 
-                  alt="Northeast regional landscape and settlement context" 
+                  src="/images/manipur/manipur-slide-2.jpg" 
+                  alt="Children lining up for food at a Manipur relief camp" 
                   className="w-full h-full object-cover" 
                 />
                 <div className="absolute top-3 left-3 bg-[#171717] text-[#FAF8F5] px-2.5 py-1 text-[8px] font-mono tracking-widest uppercase">
-                  DOCUMENTARY LOG: NORTHEAST HUMAN SETTLEMENT CONTEXT
+                  DOCUMENTARY LOG: RELIEF CAMP & DISPLACED COMMUNITIES
                 </div>
               </div>
             </div>
