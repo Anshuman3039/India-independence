@@ -3645,34 +3645,34 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "/images/nature/geo-himalayas.jpg",
-        "alt": "Snowy Himalayan peaks and pine forests under bright sunlight",
+        "src": "/images/geography/uttarakhand_geography.jpg",
+        "alt": "Snowy Himalayan mountain peaks rising above green valleys under clear blue skies in Uttarakhand",
         "credit": "Garhwal Himalayas Survey",
-        "source": "Geological Survey"
+        "source": "Geological Survey of India"
       },
       "culture": {
         "src": "/images/culture/uttarakhand_culture.jpg",
-        "alt": "Traditional cultural details for Uttarakhand",
-        "credit": "J. M. W. Turner / Thomas Higham / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Haridwar_Kumbh_Mela_-_1850s.jpg"
+        "alt": "Traditional Hiljatra / Chholiya masked folk dancers performing during cultural festival in Uttarakhand",
+        "credit": "Kumaon Cultural Folk Archive",
+        "source": "State Cultural Department"
       },
       "food": {
         "src": "/images/food/uttarakhand_food.jpg",
-        "alt": "Representative regional food and cuisine for Uttarakhand",
-        "credit": "akshatsgi / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Baked_groundnuts,_Uttarakhand,_India_(2017).jpg"
+        "alt": "Traditional Garhwali Aloo ke Gutke dish seasoned with local spices, cumin, and fried red chili",
+        "credit": "Kumaoni & Garhwali Culinary Heritage",
+        "source": "State Culinary Archive"
       },
       "heritage": {
         "src": "/images/heritage/uttarakhand_heritage.jpg",
-        "alt": "Historic monuments and archaeological architecture in Uttarakhand",
-        "credit": "Billjones94 / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Kedarnath_Temple_in_Uttarakhand,_India,_by_Yogabrata_Chakraborty.jpg"
+        "alt": "Ancient stone temples of Jageshwar Dham nestled amidst sacred Deodar pine forests in Uttarakhand",
+        "credit": "Jageshwar Dham Archaeological Survey",
+        "source": "Archaeological Survey of India"
       },
       "nature": {
-        "src": "/images/nature/eco-himalayan.jpg",
-        "alt": "Pine tree forest slopes and rocky valleys in the high Himalayas",
-        "credit": "Himalayan Ecosystem Council",
-        "source": "Forest Conservation Board"
+        "src": "/images/nature/uttarakhand_nature.jpg",
+        "alt": "Himalayan Monal pheasant (State bird of Uttarakhand) perched on mountain rocks",
+        "credit": "Kedarnath Wildlife Sanctuary Archive",
+        "source": "State Wildlife Protection Sanctuary Archive"
       }
     }
   },
