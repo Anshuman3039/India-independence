@@ -128,9 +128,9 @@ export const exploreStates = [
       },
       "nature": {
         "src": "/images/nature/andhra_pradesh_nature.jpg",
-        "alt": "Fauna, forests, and protected natural zones in Andhra Pradesh",
-        "credit": "Satdeep Gill / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Chicken_tikka_in_Araku_Valley,_Andhra_Pradesh_01.jpg"
+        "alt": "Rare Fishing Cat (Prionailurus viverrinus) resting in Coringa Wildlife Sanctuary and mangrove wetland habitats of Andhra Pradesh",
+        "credit": "Coringa Wildlife Sanctuary Protection Archive",
+        "source": "State Wildlife Protection Sanctuary Archive"
       }
     }
   },
