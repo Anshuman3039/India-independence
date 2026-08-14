@@ -582,7 +582,7 @@ export default function IndiaToday() {
     { 
       category: "SCIENTIFIC TEMPER",
       title: "SCIENTIFIC RESEARCH & INQUIRY", 
-      img: "/images/documentary/doc-lab.jpg",
+      img: "/images/beyond/beyond-7-temper.jpg",
       aspect: "aspect-[16/10]",
       width: "w-80 md:w-[28rem]"
     },
