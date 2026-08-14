@@ -1316,8 +1316,8 @@ export default function IndiaToday() {
               >
                 <div className="aspect-[16/10] overflow-hidden rounded-sm bg-[#171717]/5 shadow-[0_15px_40px_rgba(0,0,0,0.1)] relative">
                   <img 
-                    src="/images/documentary/doc-exam.jpg" 
-                    alt="Young Indian students preparing for examinations" 
+                    src="/images/stories/voice-prep.jpg" 
+                    alt="Police officers checking exam hall admit cards of student candidates in line" 
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" 
                     loading="lazy"
                   />
@@ -1364,8 +1364,8 @@ export default function IndiaToday() {
               >
                 <div className="aspect-[16/10] overflow-hidden rounded-sm bg-[#171717]/5 shadow-[0_15px_40px_rgba(0,0,0,0.1)] relative">
                   <img 
-                    src="/images/documentary/doc-smartphone.jpg" 
-                    alt="Young people utilizing digital mobile devices" 
+                    src="/images/stories/voice-digital.jpg" 
+                    alt="Classroom of students in uniform working on laptops in a Smart Class" 
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" 
                     loading="lazy"
                   />
@@ -1388,8 +1388,8 @@ export default function IndiaToday() {
               >
                 <div className="aspect-[16/10] overflow-hidden rounded-sm bg-[#171717]/5 shadow-[0_15px_40px_rgba(0,0,0,0.1)] relative">
                   <img 
-                    src="/images/stories/stories-intro-4.jpg" 
-                    alt="Young people engaging in digital discourse and expressing opinions" 
+                    src="/images/stories/voice-expression.jpg" 
+                    alt="Youth delegates with Indian national flags at a youth assembly conference" 
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700" 
                     loading="lazy"
                   />
