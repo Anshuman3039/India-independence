@@ -1466,9 +1466,9 @@ export const exploreStates = [
       },
       "geography": {
         "src": "/images/geography/karnataka_geography.jpg",
-        "alt": "Geography landscape details for Karnataka",
-        "credit": "Arjunullas / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Deccan_Plateau.png"
+        "alt": "Aerial view of lush green forest canopy covering Western Ghats and Malnad hill ranges in Karnataka",
+        "credit": "Western Ghats & Malnad Forest Geography Survey",
+        "source": "Geological Survey of India"
       },
       "culture": {
         "src": "/images/culture/karnataka_culture.jpg",
