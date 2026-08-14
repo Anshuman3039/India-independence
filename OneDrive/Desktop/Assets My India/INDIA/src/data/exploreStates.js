@@ -3516,21 +3516,21 @@ export const exploreStates = [
       },
       "culture": {
         "src": "/images/culture/uttar_pradesh_culture.jpg",
-        "alt": "A plate of round golden-brown Tunday Kebabs served with onions and dipping chutney in Lucknow, Uttar Pradesh",
-        "credit": "Lucknow Culinary Department",
-        "source": "State Archive"
+        "alt": "Devotees gathering for the evening Ganga Aarti fire ritual on the sacred ghats of Varanasi, Uttar Pradesh",
+        "credit": "Varanasi Cultural Heritage Archive",
+        "source": "State Cultural Heritage Archive"
       },
       "food": {
-        "src": "/images/food/region-north.jpg",
-        "alt": "Awadhi culinary platter featuring kebabs, flatbread, and curry",
-        "credit": "Northern Grains Association",
-        "source": "State Archive"
+        "src": "/images/food/uttar_pradesh_food.jpg",
+        "alt": "Authentic aromatic Awadhi Dum Biryani cooked with saffron rice, spices, and mint in a traditional pan",
+        "credit": "Awadhi Culinary Heritage Archive",
+        "source": "Lucknow Culinary Department"
       },
       "heritage": {
         "src": "/images/heritage/uttar_pradesh_heritage.jpg",
-        "alt": "The white marble Taj Mahal perfectly reflected in the serene water pool during a pink and purple sunrise in Agra, Uttar Pradesh",
-        "credit": "Taj Mahal Preservation Archive",
-        "source": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_in_March_2004.jpg"
+        "alt": "Red sandstone court and majestic archway of Fatehpur Sikri, Uttar Pradesh",
+        "credit": "Fatehpur Sikri Archaeological Archive",
+        "source": "Archaeological Survey of India"
       },
       "nature": {
         "src": "/images/nature/wildlife-gharial.jpg",
