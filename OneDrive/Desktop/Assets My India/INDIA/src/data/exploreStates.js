@@ -2713,9 +2713,9 @@ export const exploreStates = [
       },
       "nature": {
         "src": "/images/nature/punjab_nature.jpg",
-        "alt": "Fauna, forests, and protected natural zones in Punjab",
-        "credit": "Jaypee / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Harike.jpg"
+        "alt": "Blackbuck antelope (State animal of Punjab) in Abohar Wildlife Sanctuary, Punjab",
+        "credit": "Abohar Wildlife Sanctuary Archive",
+        "source": "State Wildlife Protection Sanctuary Archive"
       }
     }
   },
