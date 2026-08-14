@@ -3781,22 +3781,22 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "/images/nature/geo-plains.jpg",
-        "alt": "Fertile green agricultural crop fields across the alluvial plains of West Bengal",
-        "credit": "Ganges Delta Plains Survey",
-        "source": "Geological Survey"
+        "src": "/images/geography/west_bengal_geography.jpg",
+        "alt": "Panoramic green tea gardens stretching across Darjeeling mountain slopes under rolling clouds, West Bengal",
+        "credit": "Darjeeling Tea Hills Geography Survey",
+        "source": "Geological Survey of India"
       },
       "culture": {
-        "src": "/images/culture/festival-durga.jpg",
-        "alt": "Ornately decorated clay idol of Goddess Durga during Durga Puja festival",
-        "credit": "Kolkata Puja Committee",
-        "source": "State Archive"
+        "src": "/images/culture/west_bengal_culture.jpg",
+        "alt": "Grand Durga Puja pandal idol of Goddess Durga decorated in traditional Sholar Saaj, Kolkata, West Bengal",
+        "credit": "Kolkata Durga Puja Cultural Archive",
+        "source": "State Cultural Department"
       },
       "food": {
-        "src": "/images/food/ingredient-mustardoil.jpg",
-        "alt": "Mustard crops in bloom and fresh golden mustard oil jars",
-        "credit": "Mustard Crops Association",
-        "source": "State Archive"
+        "src": "/images/food/west_bengal_food.jpg",
+        "alt": "Traditional Bengali Shorshe Ilish (Hilsa fish curry in mustard paste sauce with green chili)",
+        "credit": "Bengali Culinary Heritage Archive",
+        "source": "State Culinary Department"
       },
       "heritage": {
         "src": "/images/culture/craft-terracotta.jpg",
@@ -3805,10 +3805,10 @@ export const exploreStates = [
         "source": "Archaeological Survey of India"
       },
       "nature": {
-        "src": "/images/nature/eco-mangroves.jpg",
-        "alt": "Estuarine rivers and dense sundari mangrove forests of the Sundarbans",
-        "credit": "Sundarbans Tiger Reserve",
-        "source": "Forest Conservation Board"
+        "src": "/images/nature/west_bengal_nature.jpg",
+        "alt": "Royal Bengal Tiger standing on the muddy banks of Sundarbans Mangrove Reserve, West Bengal",
+        "credit": "Sundarbans Tiger Reserve Archive",
+        "source": "State Wildlife Protection Sanctuary Archive"
       }
     }
   },
