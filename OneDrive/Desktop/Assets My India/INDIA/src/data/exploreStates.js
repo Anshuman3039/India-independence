@@ -784,10 +784,10 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "/images/nature/geo-coastal.jpg",
-        "alt": "Golden sand beaches and palm trees along the coast of Goa",
-        "credit": "Goa Coastal Authority",
-        "source": "Geological Survey"
+        "src": "/images/geography/goa_geography.jpg",
+        "alt": "Golden sand beaches and lush green coastal cliffs overlooking the Arabian Sea in Goa",
+        "credit": "Goa Coastal Survey",
+        "source": "Geological Survey of India"
       },
       "culture": {
         "src": "/images/culture/goa_culture.jpg",
@@ -809,9 +809,9 @@ export const exploreStates = [
       },
       "nature": {
         "src": "/images/nature/goa_nature.jpg",
-        "alt": "Fauna, forests, and protected natural zones in Goa",
-        "credit": "Bala Chandran / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Merogomphus_longistigma_female_2_by_Bala_Chandran.jpg"
+        "alt": "Gaur (Indian Bison, State Animal of Goa) standing in Bhagwan Mahavir Wildlife Sanctuary, Goa",
+        "credit": "Bhagwan Mahavir Wildlife Sanctuary Archive",
+        "source": "State Wildlife Protection Sanctuary Archive"
       }
     }
   },
