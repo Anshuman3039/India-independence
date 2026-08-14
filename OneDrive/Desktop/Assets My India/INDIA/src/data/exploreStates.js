@@ -1739,10 +1739,10 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "/images/nature/geo-plains.jpg",
-        "alt": "Dry deciduous forests and flat scrub plains of Madhya Pradesh",
-        "credit": "Central Indian Plateau Survey",
-        "source": "Geological Survey"
+        "src": "/images/geography/madhya_pradesh_geography.jpg",
+        "alt": "Marble Rocks gorge towering over the Narmada River at Bhedaghat near Jabalpur, Madhya Pradesh",
+        "credit": "Narmada Valley Geography Survey",
+        "source": "Geological Survey of India"
       },
       "culture": {
         "src": "/images/culture/art-gond.jpg",
@@ -1751,10 +1751,10 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "food": {
-        "src": "/images/food/region-north.jpg",
-        "alt": "Wheat bread and spicy lentil curry platters from Madhya Pradesh",
-        "credit": "Central Food Board",
-        "source": "State Archive"
+        "src": "/images/food/madhya_pradesh_food.jpg",
+        "alt": "Authentic Indori Poha served with crispy golden Jalebi in a traditional terracotta bowl, Madhya Pradesh",
+        "credit": "Malwa Culinary Heritage Archive",
+        "source": "State Culinary Department"
       },
       "heritage": {
         "src": "/images/heritage/madhya_pradesh_heritage.jpg",
