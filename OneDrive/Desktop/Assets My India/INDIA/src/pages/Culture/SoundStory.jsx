@@ -510,7 +510,7 @@ export default function SoundStory() {
               India tells stories on screen.
             </h2>
             <p className="text-[#6B6B6B] font-sans text-xs md:text-sm leading-relaxed font-light">
-              Eight landmark windows into the evolution of Indian cinema. Researched and curated to represent realism, spectacle, identity, development, and social change.
+              Fourteen landmark windows into the evolution of Indian cinema. Researched and curated to represent realism, spectacle, identity, development, and social change.
             </p>
           </div>
 
