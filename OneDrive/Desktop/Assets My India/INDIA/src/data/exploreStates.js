@@ -2553,10 +2553,10 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "/images/nature/geo-coastal.jpg",
-        "alt": "Delta plains and coastal lagoons along the Bay of Bengal coastline in Odisha",
-        "credit": "Coastal Landscapes Survey",
-        "source": "Geological Survey"
+        "src": "/images/geography/odisha_geography.jpg",
+        "alt": "Barehipani and Sanaghagara forest waterfalls cascading down rocky gorges in Mayurbhanj, Odisha",
+        "credit": "Eastern Ghats & Simlipal Geography Survey",
+        "source": "Geological Survey of India"
       },
       "culture": {
         "src": "/images/culture/dance-odissi.jpg",
@@ -2565,10 +2565,10 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "food": {
-        "src": "/images/food/region-east.jpg",
-        "alt": "Odia culinary meal spread with rice, lentils, and local vegetable curry",
-        "credit": "Odia Food Council",
-        "source": "State Archive"
+        "src": "/images/food/odisha_food.jpg",
+        "alt": "Authentic Odia Pakhala Bhaba platter served with badi chura, potato fry, papad, onions, and green chilies",
+        "credit": "Odia Culinary Heritage Archive",
+        "source": "State Culinary Department"
       },
       "heritage": {
         "src": "/images/culture/craft-talapatra.jpg",
@@ -2577,10 +2577,10 @@ export const exploreStates = [
         "source": "Archaeological Survey of India"
       },
       "nature": {
-        "src": "/images/nature/eco-mangroves.jpg",
-        "alt": "Dense mangrove forests and estuaries inside Bhitarkanika National Park",
-        "credit": "Odisha Forest Dept",
-        "source": "Forest Conservation Board"
+        "src": "/images/nature/odisha_nature.jpg",
+        "alt": "Giant Saltwater Crocodile basking on the mudbanks of Bhitarkanika National Park, Odisha",
+        "credit": "Bhitarkanika Sanctuary Wildlife Archive",
+        "source": "State Wildlife Protection Sanctuary Archive"
       }
     }
   },
