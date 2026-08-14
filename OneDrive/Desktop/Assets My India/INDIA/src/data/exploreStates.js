@@ -4632,10 +4632,10 @@ export const exploreStates = [
         "source": "https://commons.wikimedia.org/wiki/File:Leh_Palace_-_Leh_-_Ladakh_-_View_from_Shanti_Stupa.jpg"
       },
       "nature": {
-        "src": "/images/nature/wildlife-snowleopard.jpg",
-        "alt": "Snow leopard sitting on a cold rocky ridge in the high mountains of Ladakh",
-        "credit": "Hemis National Park Board",
-        "source": "Forest Conservation Board"
+        "src": "/images/nature/ladakh_nature.jpg",
+        "alt": "Tibetan wild ass (Kiang) roaming the high-altitude cold desert plateau of Changthang Sanctuary, Ladakh",
+        "credit": "Changthang Wildlife Sanctuary Archive",
+        "source": "High Altitude Cold Desert Conservation Archive"
       }
     }
   },
