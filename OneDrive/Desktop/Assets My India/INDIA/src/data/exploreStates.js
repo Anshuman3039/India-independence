@@ -4496,9 +4496,9 @@ export const exploreStates = [
       },
       "nature": {
         "src": "/images/nature/jammu_and_kashmir_nature.jpg",
-        "alt": "Fauna, forests, and protected natural zones in Jammu and Kashmir",
-        "credit": "Jyoti Chaurasia / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Dachigam_National_Park-_Jammu_%26_Kashmir.jpg"
+        "alt": "Kashmir stag (Hangul) in Dachigam National Park protected sanctuary, Jammu and Kashmir",
+        "credit": "Dachigam Sanctuary Wildlife Archive",
+        "source": "State Wildlife Protection Sanctuary Archive"
       }
     }
   },
