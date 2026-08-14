@@ -192,7 +192,7 @@ export const wildlife = [
     region: "Ganga, Brahmaputra, and Meghna river courses.",
     description: "A blind freshwater dolphin that navigates and hunts using echolocation, representing the biological health of major river systems.",
     conservation: "Endangered. Main threats include net entanglement, river pollution, and dam constructions.",
-    image: "/images/nature/eco-wetlands.jpg"
+    image: "/images/nature/wildlife-dolphin.jpg"
   },
   {
     id: "tahr",
@@ -202,7 +202,7 @@ export const wildlife = [
     region: "Southern Western Ghats (Kerala and Tamil Nadu).",
     description: "An endemic wild mountain goat known for its exceptional climbing ability on sheer vertical rock faces in mist-covered mountains.",
     conservation: "Endangered. Highly vulnerable to habitat fragmentation, climate shifts, and competition from domestic grazing.",
-    image: "/images/nature/geo-ghats.jpg"
+    image: "/images/nature/wildlife-tahr.jpg"
   }
 ];
 
