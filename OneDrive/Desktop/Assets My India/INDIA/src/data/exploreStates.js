@@ -1887,10 +1887,10 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "food": {
-        "src": "/images/food/everyday-lunch.jpg",
-        "alt": "Traditional Maharashtrian thali featuring flatbread, vegetables, and lentils",
-        "credit": "Mumbai Food Association",
-        "source": "State Archive"
+        "src": "/images/food/maharashtra_food.jpg",
+        "alt": "Iconic Maharashtrian Vada Pav served with spicy red garlic chutney and charred green chili",
+        "credit": "Mumbai Street Food Heritage Archive",
+        "source": "State Culinary Department"
       },
       "heritage": {
         "src": "/images/heritage/maharashtra_heritage.jpg",
@@ -1899,10 +1899,10 @@ export const exploreStates = [
         "source": "https://commons.wikimedia.org/wiki/File:Kailasanatha_Temple-Ellora-Aurangabad-Maharashtra-IMG_9658.jpg"
       },
       "nature": {
-        "src": "/images/nature/eco-forest.jpg",
-        "alt": "Deciduous forest canopy and trail inside Sanjay Gandhi National Park",
-        "credit": "Sanjay Gandhi National Park",
-        "source": "Forest Conservation Board"
+        "src": "/images/nature/maharashtra_nature.jpg",
+        "alt": "Indian Leopard resting on a tree branch in Tadoba / Sanjay Gandhi National Park, Maharashtra",
+        "credit": "Tadoba-Andhari Tiger Reserve Archive",
+        "source": "State Wildlife Protection Sanctuary Archive"
       }
     }
   },
