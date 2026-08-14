@@ -4478,9 +4478,9 @@ export const exploreStates = [
       },
       "culture": {
         "src": "/images/culture/jammu_and_kashmir_culture.jpg",
-        "alt": "Cultural heritage representation of Jammu and Kashmir",
+        "alt": "Traditional attire and cultural heritage representation of Jammu and Kashmir",
         "credit": "Jammu & Kashmir Cultural Archive",
-        "source": "https://commons.wikimedia.org/wiki/File:World_horticultural_trade_%26_U.S._export_opportunities_-_United_States_Department_of_Agriculture,_Foreign_Agricultural_Service._(IA_CAT10659268034).pdf"
+        "source": "State Cultural Heritage Archive"
       },
       "food": {
         "src": "/images/food/jammu_and_kashmir_food.jpg",
