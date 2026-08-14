@@ -1434,8 +1434,8 @@ export default function IndiaToday() {
                 className="aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-sm bg-[#171717]/5 shadow-[0_20px_50px_rgba(0,0,0,0.12)] relative"
               >
                 <img 
-                  src="/images/stories/stories-intro-2.jpg" 
-                  alt="Peaceful public assembly and civic expression in India"
+                  src="/images/stories/democratic-dissent.jpg" 
+                  alt="Energetic crowd of young citizens raising hands and chanting in a public democratic protest demonstration"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
