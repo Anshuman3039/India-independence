@@ -139,8 +139,8 @@ export const cities = [
     urbanPlanning: "Laid out with a fortified citadel and lower town using sun-dried mud bricks, featuring unique fire altars.",
     waterManagement: "Residential blocks equipped with circular brick wells, and wooden drains scooped out of tree trunks.",
     tradeCraft: "Known for the manufacture of terracotta bangles (giving the city its name, 'black bangles') and pottery styles.",
-    primaryImage: "/images/history/city-harappa.jpg",
-    supportingImages: ["/images/history/city-mohenjo.jpg"]
+    primaryImage: "/images/history/city-kalibangan.jpg",
+    supportingImages: ["/images/history/city-kalibangan.jpg"]
   }
 ];
 
