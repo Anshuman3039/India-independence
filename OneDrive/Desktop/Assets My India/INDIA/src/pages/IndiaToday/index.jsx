@@ -98,7 +98,7 @@ const motionSlides = [
 
 const promiseGapImages = {
   digitalPromise: "/images/stories/digital-upi-payment.jpg",
-  digitalGap: "/images/stories/story4-prep.jpg",
+  digitalGap: "/images/stories/digital-lived-gap.jpg",
   educationPromise: "/images/stories/story6-lab.jpg",
   educationGap: "/images/people/everyday-school.jpg",
   employmentPromise: "/images/stories/airport-terminal.jpg",
