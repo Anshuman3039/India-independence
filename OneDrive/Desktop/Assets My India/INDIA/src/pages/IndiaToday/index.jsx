@@ -680,32 +680,32 @@ export default function IndiaToday() {
 
   const mediaWallSlides = [
     {
-      type: "NEWSPAPER",
-      caption: "ONE EVENT.",
-      tagline: "PRINT & EDITORIAL HEADLINES",
-      img: "/images/documentary/doc-headline.png",
-      alt: "Newspaper headlines and editorial printing frames"
+      id: "television",
+      label: "MEDIA FRAME 01 — TELEVISION NEWS",
+      img: "/images/documentary/media-tv-news.jpg",
+      alt: "Indian television newsroom with journalists, broadcast equipment, and production monitors",
+      caption: "“Television still shapes the national conversation — through anchors, headlines, debates and the stories chosen for the evening broadcast.”"
     },
     {
-      type: "TELEVISION",
-      caption: "ANOTHER FRAME.",
-      tagline: "BROADCAST NEWS & TELEVISION TICKERS",
-      img: "/images/stories/stories-intro-2.jpg",
-      alt: "Broadcast television news coverage and ticker framing"
+      id: "print",
+      label: "MEDIA FRAME 02 — PRINT JOURNALISM",
+      img: "/images/documentary/media-print-news.jpg",
+      alt: "Indian citizen reading a daily regional print newspaper",
+      caption: "“Newspapers continue to provide another way of encountering the country — through different editorial choices, regions, languages and priorities.”"
     },
     {
-      type: "PHONE",
-      caption: "ANOTHER FEED.",
-      tagline: "DIGITAL FEEDS & ALGORITHMIC NETWORKS",
-      img: "/images/documentary/doc-smartphone.jpg",
-      alt: "Smartphone mobile feeds and digital news streams"
+      id: "digital",
+      label: "MEDIA FRAME 03 — DIGITAL NEWS",
+      img: "/images/documentary/media-digital-news.jpg",
+      alt: "Indian individual reading news and digital feeds on a mobile smartphone",
+      caption: "“On a phone, news becomes immediate and personal — shaped by notifications, recommendations, social platforms and what each person chooses to follow.”"
     },
     {
-      type: "MANY STORIES",
-      caption: "MULTIPLE INFORMATION ENVIRONMENTS",
-      tagline: "OVERLAPPING MEDIA ECOSYSTEM",
-      img: "/images/stories/stories-intro-4.jpg",
-      alt: "Overlapping media fragments and competing perspectives"
+      id: "home",
+      label: "MEDIA FRAME 04 — NEWS AT HOME",
+      img: "/images/documentary/media-home-news.jpg",
+      alt: "Indian family and household members gathered around watching television news together",
+      caption: "“News does not remain on a screen. It enters homes, conversations, workplaces and everyday decisions.”"
     }
   ];
 
@@ -1481,7 +1481,7 @@ export default function IndiaToday() {
                     initial={{ opacity: 0, scale: 0.99 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.99 }}
-                    transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+                    transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
                     className="w-full h-full relative"
                   >
                     <img 
@@ -1489,13 +1489,13 @@ export default function IndiaToday() {
                       alt={mediaWallSlides[mediaSlideIndex].alt} 
                       className="w-full h-full object-cover opacity-90" 
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6 md:p-8 text-left">
-                      <span className="text-[10px] font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold mb-1">
-                        MEDIA FRAME {String(mediaSlideIndex + 1).padStart(2, '0')} · {mediaWallSlides[mediaSlideIndex].tagline}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 md:p-8 text-left">
+                      <span className="text-[10px] md:text-xs font-mono text-[#E8752A] uppercase tracking-[0.25em] font-bold mb-2 block">
+                        {mediaWallSlides[mediaSlideIndex].label}
                       </span>
-                      <h4 className="font-serif text-xl md:text-3xl text-[#FAF8F5] font-normal uppercase tracking-wide">
+                      <p className="font-serif text-base md:text-2xl text-[#FAF8F5] font-normal leading-snug max-w-3xl">
                         {mediaWallSlides[mediaSlideIndex].caption}
-                      </h4>
+                      </p>
                     </div>
                   </motion.div>
                 </AnimatePresence>
@@ -1539,13 +1539,14 @@ export default function IndiaToday() {
               </div>
             </div>
 
-            {/* FINAL CONCISE STATEMENT */}
-            <div className="pt-8 text-center max-w-3xl mx-auto space-y-2">
-              <h3 className="font-serif text-xl md:text-3xl text-[#171717] uppercase tracking-wider font-semibold leading-tight">
-                "WE CAN LIVE IN THE SAME COUNTRY
+            {/* CONCLUDING THOUGHT */}
+            <div className="pt-10 text-center max-w-3xl mx-auto space-y-4">
+              <h3 className="font-serif text-xl md:text-3xl text-[#171717] font-normal leading-snug">
+                “Who tells the story matters.<br />
+                So does what we choose to hear.”
               </h3>
-              <p className="font-serif text-lg md:text-2xl text-[#E8752A] italic font-normal">
-                AND SEE IT THROUGH VERY DIFFERENT STORIES."
+              <p className="text-xs md:text-sm font-sans font-light text-[#6B6B6B] leading-relaxed max-w-2xl mx-auto">
+                “In a country as large and diverse as India, democracy depends not only on the freedom to speak — but also on the ability to encounter more than one version of the story.”
               </p>
             </div>
 
