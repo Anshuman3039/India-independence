@@ -1349,9 +1349,9 @@ export const exploreStates = [
       },
       "heritage": {
         "src": "/images/heritage/jharkhand_heritage.jpg",
-        "alt": "Historic monuments and archaeological architecture in Jharkhand",
-        "credit": "Rohitmahali01 / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Atop_View_from_Shikharji_temple_in_Parasnath_Hill_,_Giridih_,_Jharkhand.jpg"
+        "alt": "Ancient Maluti terracotta temples with curved shikhara roofs in Dumka district, Jharkhand",
+        "credit": "Maluti Terracotta Temple Archaeological Archive",
+        "source": "Archaeological Survey of India"
       },
       "nature": {
         "src": "/images/nature/jharkhand_nature.jpg",
