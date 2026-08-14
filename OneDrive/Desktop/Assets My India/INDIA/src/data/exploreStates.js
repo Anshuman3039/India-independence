@@ -513,10 +513,10 @@ export const exploreStates = [
         "source": "State Tourism Portal"
       },
       "geography": {
-        "src": "/images/nature/geo-plains.jpg",
-        "alt": "Alluvial plains along the Ganges river basin in Bihar",
-        "credit": "Gangetic Alluvial Survey",
-        "source": "Geological Survey"
+        "src": "/images/geography/bihar_geography.jpg",
+        "alt": "Forest-lined river stream and hill terrain of Valmiki Tiger Reserve in Bihar",
+        "credit": "Valmiki Reserve Geography Survey",
+        "source": "Geological Survey of India"
       },
       "culture": {
         "src": "/images/culture/art-madhubani.jpg",
@@ -525,10 +525,10 @@ export const exploreStates = [
         "source": "State Archive"
       },
       "food": {
-        "src": "/images/food/region-east.jpg",
-        "alt": "Authentic eastern Indian meal featuring rice and curry",
-        "credit": "East India Food Council",
-        "source": "State Archive"
+        "src": "/images/food/bihar_food.jpg",
+        "alt": "Traditional Bihari Litti Chokha served on a terracotta platter with roasted eggplant and tomato mash",
+        "credit": "Bihari Culinary Heritage Archive",
+        "source": "State Culinary Department"
       },
       "heritage": {
         "src": "/images/heritage/bihar_heritage.jpg",
@@ -538,9 +538,9 @@ export const exploreStates = [
       },
       "nature": {
         "src": "/images/nature/bihar_nature.jpg",
-        "alt": "Fauna, forests, and protected natural zones in Bihar",
-        "credit": "Amit De Nimi / Wikimedia Commons",
-        "source": "https://commons.wikimedia.org/wiki/File:Live_behind_Art.jpg"
+        "alt": "Gangetic River Dolphin surfacing in the Ganges waters at Vikramshila Gangetic Dolphin Sanctuary, Bihar",
+        "credit": "Vikramshila Sanctuary Wildlife Archive",
+        "source": "State Wildlife Protection Sanctuary Archive"
       }
     }
   },
