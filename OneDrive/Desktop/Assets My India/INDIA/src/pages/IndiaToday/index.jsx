@@ -395,7 +395,7 @@ const cjpCaseTimeline = [
     source: "Indian Express / Supreme Court Records",
     sourceUrl: "https://indianexpress.com",
     type: "Digital Emergence",
-    image: "/images/stories/stories-intro-3.jpg",
+    image: "/images/cjp/cjp-step-1.jpg",
     why: "Satire and digital coordination enabled scattered candidates to unite behind shared administrative demands."
   },
   {
@@ -405,7 +405,7 @@ const cjpCaseTimeline = [
     source: "Indian Express / Commission Register",
     sourceUrl: "https://indianexpress.com",
     type: "Public Assembly",
-    image: "/images/stories/stories-intro-2.jpg",
+    image: "/images/cjp/cjp-step-2.jpg",
     why: "Shifted the online movement into a physical public assembly in the national capital."
   },
   {
@@ -415,7 +415,7 @@ const cjpCaseTimeline = [
     source: "Delhi Police Logs / Representative Register",
     sourceUrl: "https://theprint.in",
     type: "Sustained Protests",
-    image: "/images/stories/stories-intro-1.jpg",
+    image: "/images/cjp/cjp-step-3.jpg",
     why: "Demonstrated organizational discipline and sustained civic engagement through prolonged administrative delays."
   },
   {
@@ -425,7 +425,7 @@ const cjpCaseTimeline = [
     source: "Reuters / PTI / Hospital Logs",
     sourceUrl: "https://www.reuters.com",
     type: "Confrontation & Security Restrictions",
-    image: "/images/stories/stories-intro-4.jpg",
+    image: "/images/cjp/cjp-step-4.jpg",
     why: "The march brought national media visibility, legislative debates, and questions over crowd control proportionality."
   },
   {
@@ -435,7 +435,7 @@ const cjpCaseTimeline = [
     source: "Government Gazette / PTI Statements",
     sourceUrl: "https://pib.gov.in",
     type: "Political Outcome",
-    image: "/images/identity/constitution.jpg",
+    image: "/images/cjp/cjp-step-5.jpg",
     why: "Led to administrative audit commitments while physical demonstrations formally concluded."
   }
 ];
