@@ -540,7 +540,7 @@ export default function IndiaToday() {
     { 
       category: "MANIPUR",
       title: "MANIPUR & BELONGING", 
-      img: "/images/documentary/doc-manipur.jpg",
+      img: "/images/beyond/beyond-1-manipur.jpg",
       aspect: "aspect-[16/10]",
       width: "w-72 md:w-96"
     },
@@ -554,28 +554,28 @@ export default function IndiaToday() {
     { 
       category: "INEQUALITY",
       title: "INFORMAL WORKFORCE & INEQUALITY", 
-      img: "/images/people/community-weaving.jpg",
+      img: "/images/beyond/beyond-3-inequality.jpg",
       aspect: "aspect-[16/10]",
       width: "w-80 md:w-[28rem]"
     },
     { 
       category: "POLLUTION",
       title: "ATMOSPHERIC SMOG & ENVIRONMENT", 
-      img: "/images/documentary/doc-smog.jpg",
+      img: "/images/beyond/beyond-4-smog.jpg",
       aspect: "aspect-[16/9]",
       width: "w-72 md:w-[26rem]"
     },
     { 
       category: "POLARISATION",
       title: "COMPETING MEDIA HEADLINES", 
-      img: "/images/documentary/doc-headline.png",
+      img: "/images/beyond/beyond-5-polarisation.jpg",
       aspect: "aspect-[4/3]",
       width: "w-64 md:w-80"
     },
     { 
       category: "HATE SPEECH",
       title: "HOSTILE DIGITAL DISCOURSE", 
-      img: "/images/stories/stories-intro-4.jpg",
+      img: "/images/beyond/beyond-6-discourse.jpg",
       aspect: "aspect-[16/10]",
       width: "w-80 md:w-96"
     },
